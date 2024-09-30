@@ -1,8 +1,60 @@
-[gd_scene format=3 uid="uid://1l3xhks67ylh"]
+[gd_scene load_steps=3 format=3 uid="uid://1l3xhks67ylh"]
+
+[ext_resource type="Texture2D" uid="uid://dav0pq4hvlmto" path="res://KitchenBG.png" id="1_7nsr7"]
+[ext_resource type="Script" path="res://kitchen.gd" id="1_yn30c"]
 
 [node name="Kitchen" type="Node2D"]
+script = ExtResource("1_yn30c")
 
 [node name="Background" type="ColorRect" parent="."]
 offset_right = 1918.0
 offset_bottom = 1078.0
 color = Color(0.270238, 0.224179, 0.0172208, 1)
+
+[node name="KitchenBg" type="Sprite2D" parent="."]
+position = Vector2(959.5, 539.5)
+scale = Vector2(1.697, 1.32555)
+texture = ExtResource("1_7nsr7")
+
+[node name="PantryButton" type="Button" parent="."]
+offset_left = 42.0
+offset_top = -4.0
+offset_right = 454.0
+offset_bottom = 145.0
+
+[node name="CuttingButton" type="Button" parent="."]
+offset_left = 739.0
+offset_top = 29.0
+offset_right = 1377.0
+offset_bottom = 204.0
+
+[node name="StoveButton" type="Button" parent="."]
+offset_left = 3.0
+offset_top = 468.0
+offset_right = 261.0
+offset_bottom = 953.0
+
+[node name="MixingButton" type="Button" parent="."]
+offset_left = 632.0
+offset_top = 430.0
+offset_right = 1432.0
+offset_bottom = 671.0
+
+[node name="PlatingButton" type="Button" parent="."]
+offset_left = 1097.0
+offset_top = 666.0
+offset_right = 1440.0
+offset_bottom = 886.0
+
+[node name="ExitButton" type="Button" parent="."]
+offset_left = 1873.0
+offset_top = 559.0
+offset_right = 1919.0
+offset_bottom = 857.0
+
+[connection signal="pressed" from="PantryButton" to="." method="_on_pantry_button_pressed"]
+[connection signal="pressed" from="CuttingButton" to="." method="_on_cutting_button_pressed"]
+[connection signal="pressed" from="StoveButton" to="." method="_on_stove_button_pressed"]
+[connection signal="pressed" from="MixingButton" to="." method="_on_mixing_button_pressed"]
+[connection signal="pressed" from="PlatingButton" to="." method="_on_plating_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

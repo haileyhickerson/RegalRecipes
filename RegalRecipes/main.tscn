@@ -1,10 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://bg38vidlbq170"]
+[gd_scene load_steps=9 format=3 uid="uid://bg38vidlbq170"]
 
 [ext_resource type="PackedScene" uid="uid://1l3xhks67ylh" path="res://kitchen.tscn" id="1_62p3b"]
 [ext_resource type="PackedScene" uid="uid://dr14r7lup6t1b" path="res://recipe_selection.tscn" id="1_b3jq3"]
+[ext_resource type="PackedScene" uid="uid://cvr2aoqdlckoa" path="res://plating.tscn" id="1_cuynr"]
 [ext_resource type="PackedScene" uid="uid://c37trk53n1urg" path="res://main_menu.tscn" id="1_oiu34"]
+[ext_resource type="PackedScene" uid="uid://qlvok073syxy" path="res://stove.tscn" id="2_yyrjb"]
+[ext_resource type="PackedScene" uid="uid://bsnrxooacbi6h" path="res://mixing.tscn" id="3_jbcjk"]
+[ext_resource type="PackedScene" uid="uid://dipjhwol3m5ha" path="res://cutting.tscn" id="4_n7rps"]
+[ext_resource type="PackedScene" uid="uid://bhyucviieqbhs" path="res://pantry.tscn" id="5_36vvl"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Plating" parent="." instance=ExtResource("1_cuynr")]
+
+[node name="Stove" parent="." instance=ExtResource("2_yyrjb")]
+
+[node name="Mixing" parent="." instance=ExtResource("3_jbcjk")]
+
+[node name="Cutting" parent="." instance=ExtResource("4_n7rps")]
+
+[node name="Pantry" parent="." instance=ExtResource("5_36vvl")]
 
 [node name="Kitchen" parent="." instance=ExtResource("1_62p3b")]
 
