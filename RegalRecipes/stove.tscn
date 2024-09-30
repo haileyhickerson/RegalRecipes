@@ -18,4 +18,12 @@ offset_bottom = 136.0
 theme_override_font_sizes/font_size = 50
 text = "Back"
 
+[node name="Label" type="Label" parent="."]
+offset_left = 652.0
+offset_top = 537.0
+offset_right = 1321.0
+offset_bottom = 598.0
+theme_override_font_sizes/font_size = 44
+text = "This is where you cook the food"
+
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
