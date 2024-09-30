@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr14r7lup6t1b"]
+
+[ext_resource type="Script" path="res://recipe_selection.gd" id="1_y2ekt"]
+
+[node name="RecipeSelection" type="Node2D"]
+script = ExtResource("1_y2ekt")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1918.0
+offset_bottom = 1078.0
+color = Color(0.331171, 0.186529, 0.0616813, 1)
+
+[node name="Recipe1Button" type="Button" parent="."]
+offset_left = 250.0
+offset_top = 570.0
+offset_right = 653.0
+offset_bottom = 716.0
+theme_override_colors/icon_hover_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_font_sizes/font_size = 50
+text = "Recipe 1"
+
+[node name="Recipe2Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 759.0
+offset_top = 567.0
+offset_right = 1162.0
+offset_bottom = 713.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.359069, 0.359069, 0.359069, 1)
+theme_override_font_sizes/font_size = 50
+text = "Recipe 2"
+
+[node name="Recipe3Button" type="Button" parent="."]
+offset_left = 1242.0
+offset_top = 574.0
+offset_right = 1645.0
+offset_bottom = 720.0
+theme_override_colors/font_color = Color(0.360784, 0.360784, 0.360784, 1)
+theme_override_font_sizes/font_size = 50
+text = "Recipe 3"
+
+[node name="BackButton" type="Button" parent="."]
+offset_left = 52.0
+offset_top = 31.0
+offset_right = 232.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[node name="Text" type="Label" parent="."]
+offset_left = 553.0
+offset_top = 290.0
+offset_right = 1365.0
+offset_bottom = 472.0
+theme_override_font_sizes/font_size = 100
+text = "Choose a Recipe!"
+
+[connection signal="pressed" from="Recipe1Button" to="." method="_on_recipe_1_button_pressed"]
+[connection signal="pressed" from="Recipe2Button" to="." method="_on_recipe_2_button_pressed"]
+[connection signal="pressed" from="Recipe3Button" to="." method="_on_recipe_3_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
