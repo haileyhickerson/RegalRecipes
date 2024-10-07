@@ -1,10 +1,29 @@
-[gd_scene load_steps=8 format=3 uid="uid://1l3xhks67ylh"]
+[gd_scene load_steps=15 format=3 uid="uid://1l3xhks67ylh"]
 
 [ext_resource type="Texture2D" uid="uid://dav0pq4hvlmto" path="res://KitchenBG.png" id="1_7nsr7"]
 [ext_resource type="Script" path="res://kitchen.gd" id="1_yn30c"]
+[ext_resource type="Script" path="res://pantry.gd" id="3_720iv"]
 [ext_resource type="Script" path="res://player.gd" id="3_bb6cy"]
 [ext_resource type="Texture2D" uid="uid://b7jc62thfmogx" path="res://art/chef_hat.png" id="4_scx66"]
 [ext_resource type="AudioStream" uid="uid://cbvuee0iilek4" path="res://music&sounds/footsteps.wav" id="5_1fu2m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bg11"]
+size = Vector2(423.5, 141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tvkdp"]
+size = Vector2(637, 181)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c8ofu"]
+size = Vector2(263, 494)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7u0g"]
+size = Vector2(806, 247)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ubm7"]
+size = Vector2(349, 207)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnqku"]
+size = Vector2(42, 301)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rlpxr"]
 animations = [{
@@ -34,43 +53,45 @@ position = Vector2(959.5, 539.5)
 scale = Vector2(1.697, 1.32555)
 texture = ExtResource("1_7nsr7")
 
-[node name="PantryButton" type="Button" parent="."]
-offset_left = 42.0
-offset_top = -4.0
-offset_right = 454.0
-offset_bottom = 145.0
+[node name="PantryArea" type="Area2D" parent="."]
+script = ExtResource("3_720iv")
 
-[node name="CuttingButton" type="Button" parent="."]
-offset_left = 739.0
-offset_top = 29.0
-offset_right = 1377.0
-offset_bottom = 204.0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PantryArea"]
+position = Vector2(248.25, 69.5)
+shape = SubResource("RectangleShape2D_1bg11")
+one_way_collision_margin = 0.0
 
-[node name="StoveButton" type="Button" parent="."]
-offset_left = 3.0
-offset_top = 468.0
-offset_right = 261.0
-offset_bottom = 953.0
+[node name="CuttingArea" type="Area2D" parent="."]
 
-[node name="MixingButton" type="Button" parent="."]
-offset_left = 632.0
-offset_top = 430.0
-offset_right = 1432.0
-offset_bottom = 671.0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CuttingArea"]
+position = Vector2(1057.5, 115.5)
+shape = SubResource("RectangleShape2D_tvkdp")
 
-[node name="PlatingButton" type="Button" parent="."]
-offset_left = 1097.0
-offset_top = 666.0
-offset_right = 1440.0
-offset_bottom = 886.0
+[node name="StoveArea" type="Area2D" parent="."]
 
-[node name="ExitButton" type="Button" parent="."]
-offset_left = 1873.0
-offset_top = 559.0
-offset_right = 1919.0
-offset_bottom = 857.0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StoveArea"]
+position = Vector2(131.5, 711)
+shape = SubResource("RectangleShape2D_c8ofu")
 
-[node name="Player" type="Area2D" parent="."]
+[node name="MixingArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MixingArea"]
+position = Vector2(1030, 550.5)
+shape = SubResource("RectangleShape2D_o7u0g")
+
+[node name="PlatingArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatingArea"]
+position = Vector2(1272.5, 782.5)
+shape = SubResource("RectangleShape2D_6ubm7")
+
+[node name="ExitArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea"]
+position = Vector2(1896, 712.5)
+shape = SubResource("RectangleShape2D_bnqku")
+
+[node name="Player" type="Area2D" parent="." groups=["player"]]
 position = Vector2(300, 300)
 script = ExtResource("3_bb6cy")
 
@@ -88,9 +109,15 @@ position = Vector2(-300, -300)
 stream = ExtResource("5_1fu2m")
 volume_db = 20.1
 
-[connection signal="pressed" from="PantryButton" to="." method="_on_pantry_button_pressed"]
-[connection signal="pressed" from="CuttingButton" to="." method="_on_cutting_button_pressed"]
-[connection signal="pressed" from="StoveButton" to="." method="_on_stove_button_pressed"]
-[connection signal="pressed" from="MixingButton" to="." method="_on_mixing_button_pressed"]
-[connection signal="pressed" from="PlatingButton" to="." method="_on_plating_button_pressed"]
-[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="area_entered" from="PantryArea" to="." method="_on_pantry_area_entered"]
+[connection signal="area_exited" from="PantryArea" to="." method="_on_pantry_area_exited"]
+[connection signal="area_entered" from="CuttingArea" to="." method="_on_cutting_area_area_entered"]
+[connection signal="area_exited" from="CuttingArea" to="." method="_on_cutting_area_area_exited"]
+[connection signal="area_entered" from="StoveArea" to="." method="_on_stove_area_area_entered"]
+[connection signal="area_exited" from="StoveArea" to="." method="_on_stove_area_area_exited"]
+[connection signal="area_entered" from="MixingArea" to="." method="_on_mixing_area_area_entered"]
+[connection signal="area_exited" from="MixingArea" to="." method="_on_mixing_area_area_exited"]
+[connection signal="area_entered" from="PlatingArea" to="." method="_on_plating_area_area_entered"]
+[connection signal="area_exited" from="PlatingArea" to="." method="_on_plating_area_area_exited"]
+[connection signal="area_entered" from="ExitArea" to="." method="_on_exit_area_area_entered"]
+[connection signal="area_exited" from="ExitArea" to="." method="_on_exit_area_area_exited"]
