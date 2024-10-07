@@ -1,32 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://1l3xhks67ylh"]
+[gd_scene load_steps=8 format=3 uid="uid://1l3xhks67ylh"]
 
 [ext_resource type="Texture2D" uid="uid://dav0pq4hvlmto" path="res://KitchenBG.png" id="1_7nsr7"]
 [ext_resource type="Script" path="res://kitchen.gd" id="1_yn30c"]
 [ext_resource type="Script" path="res://player.gd" id="3_bb6cy"]
-[ext_resource type="Texture2D" uid="uid://dxb6astblrbf0" path="res://art/playerGrey_up1.png" id="4_d5csq"]
-[ext_resource type="Texture2D" uid="uid://d2xeygweo1rll" path="res://art/playerGrey_up2.png" id="5_4kmg7"]
-[ext_resource type="Texture2D" uid="uid://bggak6rak55bs" path="res://art/playerGrey_walk1.png" id="6_os3pl"]
-[ext_resource type="Texture2D" uid="uid://b0ixnc8u2dkq" path="res://art/playerGrey_walk2.png" id="7_ysqxo"]
+[ext_resource type="Texture2D" uid="uid://b7jc62thfmogx" path="res://art/chef_hat.png" id="4_scx66"]
+[ext_resource type="AudioStream" uid="uid://cbvuee0iilek4" path="res://music&sounds/footsteps.wav" id="5_1fu2m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rlpxr"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_d5csq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_4kmg7")
-}],
-"loop": true,
-"name": &"up",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_os3pl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_ysqxo")
+"texture": ExtResource("4_scx66")
 }],
 "loop": true,
 "name": &"walk",
@@ -34,8 +18,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bhulj"]
-radius = 54.0
-height = 140.0
+radius = 58.5366
+height = 170.0
 
 [node name="Kitchen" type="Node2D"]
 script = ExtResource("1_yn30c")
@@ -91,11 +75,18 @@ position = Vector2(300, 300)
 script = ExtResource("3_bb6cy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_rlpxr")
-animation = &"up"
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+scale = Vector2(1.64, 1)
 shape = SubResource("CapsuleShape2D_bhulj")
+
+[node name="FootstepSound" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2(-300, -300)
+stream = ExtResource("5_1fu2m")
+volume_db = 20.1
 
 [connection signal="pressed" from="PantryButton" to="." method="_on_pantry_button_pressed"]
 [connection signal="pressed" from="CuttingButton" to="." method="_on_cutting_button_pressed"]

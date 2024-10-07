@@ -1,22 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwk2ntxh5l3vg"]
+[gd_scene load_steps=4 format=3 uid="uid://bwk2ntxh5l3vg"]
 
 [ext_resource type="Script" path="res://final_score.gd" id="1_xacvp"]
+[ext_resource type="FontFile" uid="uid://dorvoffquppln" path="res://fonts/Hand of King.ttf" id="2_1ayek"]
+[ext_resource type="Texture2D" uid="uid://tvtfi67ekcg8" path="res://art/ScoreBoard.png" id="2_x2ms4"]
 
 [node name="Final Score" type="Node2D"]
 script = ExtResource("1_xacvp")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1918.0
-offset_bottom = 1087.0
-color = Color(0.698039, 0.603922, 0.509804, 1)
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_x2ms4")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 449.0
-offset_top = 438.0
-offset_right = 1584.0
-offset_bottom = 499.0
-theme_override_font_sizes/font_size = 44
-text = "your final score breakdown will appear on this screen"
+offset_left = 265.0
+offset_top = 445.0
+offset_right = 1725.0
+offset_bottom = 860.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 19
+theme_override_constants/shadow_outline_size = 25
+theme_override_fonts/font = ExtResource("2_1ayek")
+theme_override_font_sizes/font_size = 100
+text = "This is where your
+final score breakdown
+will be shown"
+horizontal_alignment = 1
 
 [node name="Back Button" type="Button" parent="."]
 offset_left = 52.0

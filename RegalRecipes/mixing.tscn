@@ -1,14 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsnrxooacbi6h"]
+[gd_scene load_steps=4 format=3 uid="uid://bsnrxooacbi6h"]
 
 [ext_resource type="Script" path="res://mixing.gd" id="1_gdquq"]
+[ext_resource type="Texture2D" uid="uid://bn31wngg2tmt7" path="res://art/MixingConcept.png" id="2_mfun3"]
+[ext_resource type="FontFile" uid="uid://dorvoffquppln" path="res://fonts/Hand of King.ttf" id="3_dhyr1"]
 
 [node name="Mixing" type="Node2D"]
 script = ExtResource("1_gdquq")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1918.0
-offset_bottom = 1078.0
-color = Color(0.698039, 0.603922, 0.509804, 1)
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_mfun3")
 
 [node name="BackButton" type="Button" parent="."]
 offset_left = 52.0
@@ -19,11 +21,19 @@ theme_override_font_sizes/font_size = 50
 text = "Back"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 644.0
-offset_top = 484.0
-offset_right = 1353.0
-offset_bottom = 545.0
-theme_override_font_sizes/font_size = 44
-text = "This is where you mix ingredients"
+offset_left = 226.0
+offset_top = 859.0
+offset_right = 1695.0
+offset_bottom = 1274.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 19
+theme_override_constants/shadow_outline_size = 25
+theme_override_fonts/font = ExtResource("3_dhyr1")
+theme_override_font_sizes/font_size = 100
+text = "This is where you will mix ingredients"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

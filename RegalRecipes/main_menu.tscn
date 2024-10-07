@@ -1,33 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://c37trk53n1urg"]
+[gd_scene load_steps=5 format=3 uid="uid://c37trk53n1urg"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_tbony"]
+[ext_resource type="Texture2D" uid="uid://bqyh7yvc1ulws" path="res://art/TitleBGConcept.png" id="2_y0t78"]
+[ext_resource type="Texture2D" uid="uid://brccfxrhh0qxv" path="res://art/TitleText.png" id="3_k67wy"]
+[ext_resource type="AudioStream" uid="uid://dm2t0amh1ug1i" path="res://music&sounds/ButtonPress.wav" id="4_lvspi"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_tbony")
 
-[node name="Background" type="ColorRect" parent="."]
-offset_right = 1918.0
-offset_bottom = 1078.0
-color = Color(0.418776, 0.0769203, 0.114138, 1)
-
-[node name="TitleText" type="Label" parent="."]
-anchors_preset = -1
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 393.0
-offset_top = 49.0
-offset_right = 1593.0
-offset_bottom = 462.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 150
-text = "Regal Recipes!"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-metadata/_edit_use_anchors_ = true
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_y0t78")
 
 [node name="StartButton" type="Button" parent="."]
 offset_left = 815.0
@@ -49,6 +33,14 @@ theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 60
 text = "Quit
 "
+
+[node name="TitleText2" type="Sprite2D" parent="."]
+position = Vector2(962, 491)
+texture = ExtResource("3_k67wy")
+
+[node name="ButtonSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_lvspi")
+volume_db = 24.0
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

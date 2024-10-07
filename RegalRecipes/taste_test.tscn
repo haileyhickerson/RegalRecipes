@@ -1,23 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://chyl17eul2opw"]
+[gd_scene load_steps=4 format=3 uid="uid://chyl17eul2opw"]
 
 [ext_resource type="Script" path="res://taste_test.gd" id="1_k0ye4"]
+[ext_resource type="FontFile" uid="uid://dorvoffquppln" path="res://fonts/Hand of King.ttf" id="2_y3bqx"]
+[ext_resource type="Texture2D" uid="uid://xv734cohretp" path="res://art/tasteTestConcept.png" id="2_ychkd"]
 
 [node name="Taste Test" type="Node2D"]
 script = ExtResource("1_k0ye4")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1918.0
-offset_bottom = 1078.0
-color = Color(0.698039, 0.603922, 0.509804, 1)
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 4.0
+offset_right = 44.0
+offset_bottom = 40.0
+texture = ExtResource("2_ychkd")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 411.0
-offset_top = 518.0
-offset_right = 1710.0
-offset_bottom = 579.0
-theme_override_font_sizes/font_size = 44
-text = "This is where the royals will taste your food and give it rating.
-"
+offset_left = 202.0
+offset_top = 76.0
+offset_right = 1798.0
+offset_bottom = 491.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 19
+theme_override_constants/shadow_outline_size = 25
+theme_override_fonts/font = ExtResource("2_y3bqx")
+theme_override_font_sizes/font_size = 100
+text = "This is where the royals will taste your
+meal & give it a rating"
+horizontal_alignment = 1
 
 [node name="Back Button" type="Button" parent="."]
 offset_left = 52.0
