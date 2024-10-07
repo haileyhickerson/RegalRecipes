@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://du3pdu0cl2frm"]
+
+[ext_resource type="AudioStream" uid="uid://kjdr06crhl1m" path="res://music&sounds/audio_hero_Yellow-Cafe_SIPML_C-0361.mp3" id="1_g2eos"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_g2eos")
+volume_db = -9.37
+autoplay = true
