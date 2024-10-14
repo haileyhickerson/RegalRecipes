@@ -88,7 +88,6 @@ animation = &"move"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Knife"]
 position = Vector2(5.62668, 12.0406)
 rotation = 2.4295
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_y8gqb")
 
 [node name="Score" type="Panel" parent="."]
