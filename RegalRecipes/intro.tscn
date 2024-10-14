@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://df31o36gjf4km"]
+
+[ext_resource type="Script" path="res://intro.gd" id="1_821br"]
+[ext_resource type="Texture2D" uid="uid://bqyh7yvc1ulws" path="res://art/TitleBGConcept.png" id="2_fqusa"]
+[ext_resource type="Texture2D" uid="uid://cedn7t2qeurcb" path="res://art/Firefly_mean_male_english_cartoony_fullbody_chef._he_looks_intimidating_64731-removebg-preview.png" id="3_378ms"]
+
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_821br")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_fqusa")
+
+[node name="Chef" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="Chef"]
+position = Vector2(811, 649)
+scale = Vector2(1.463, 1.417)
+texture = ExtResource("3_378ms")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 900.0
+offset_top = 364.0
+offset_right = 1625.0
+offset_bottom = 448.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 27.0
+offset_top = 2.0
+offset_right = -41.0
+offset_bottom = 111.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30

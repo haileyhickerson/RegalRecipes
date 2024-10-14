@@ -1,16 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://dipjhwol3m5ha"]
+[gd_scene load_steps=8 format=3 uid="uid://dipjhwol3m5ha"]
 
 [ext_resource type="Script" path="res://cutting.gd" id="1_wpq0h"]
-[ext_resource type="Texture2D" uid="uid://bc36h27em2sp0" path="res://art/CuttingConcept.png" id="2_xl8eb"]
+[ext_resource type="Texture2D" uid="uid://cmj6udruyo202" path="res://art/Firefly cutting board with a carrot on the middle. horizontally orientation, slightly cartoony 76076.jpg" id="2_7oo38"]
 [ext_resource type="FontFile" uid="uid://dorvoffquppln" path="res://fonts/Hand of King.ttf" id="3_rfq4m"]
+[ext_resource type="Texture2D" uid="uid://dcpt4itp8osp4" path="res://art/knifeart-removebg-preview.png" id="4_b3vdl"]
+[ext_resource type="Script" path="res://knife.gd" id="5_t5bmb"]
 
-[node name="Cutting" type="Node2D"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_r0u4g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_b3vdl")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8gqb"]
+size = Vector2(446.113, 87.6185)
+
+[node name="Cutting" type="Node2D" node_paths=PackedStringArray("Cut1", "Cut2", "Cut3", "Score_Label")]
 script = ExtResource("1_wpq0h")
+Cut1 = NodePath("Cut1")
+Cut2 = NodePath("Cut2")
+Cut3 = NodePath("Cut3")
+Score_Label = NodePath("Score/Score_Label")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_xl8eb")
+offset_right = 1923.0
+offset_bottom = 1085.0
+texture = ExtResource("2_7oo38")
+metadata/_edit_lock_ = true
 
 [node name="BackButton" type="Button" parent="."]
 offset_left = 52.0
@@ -35,5 +56,52 @@ theme_override_fonts/font = ExtResource("3_rfq4m")
 theme_override_font_sizes/font_size = 100
 text = "This is where you will chop ingredients"
 horizontal_alignment = 1
+
+[node name="Cut1" type="Line2D" parent="."]
+position = Vector2(31146.7, -16831.2)
+scale = Vector2(22.0741, 18.2301)
+points = PackedVector2Array(-1373.18, 949.214, -1365.25, 959.801)
+width = 1.0
+
+[node name="Cut2" type="Line2D" parent="."]
+position = Vector2(37717.2, -18884.8)
+scale = Vector2(26.843, 20.3569)
+points = PackedVector2Array(-1383.28, 957.278, -1378.8, 964.574)
+width = 1.0
+
+[node name="Cut3" type="Line2D" parent="."]
+position = Vector2(48898.9, -26430.5)
+scale = Vector2(34.9789, 28.2929)
+points = PackedVector2Array(-1377.26, 952.67, -1372.68, 959.966)
+width = 0.7
+
+[node name="Knife" type="Area2D" parent="."]
+position = Vector2(1444, 421)
+rotation = 1.55509
+scale = Vector2(1.02648, 1.19303)
+script = ExtResource("5_t5bmb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Knife"]
+sprite_frames = SubResource("SpriteFrames_r0u4g")
+animation = &"move"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Knife"]
+position = Vector2(5.62668, 12.0406)
+rotation = 2.4295
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_y8gqb")
+
+[node name="Score" type="Panel" parent="."]
+offset_left = 849.0
+offset_top = 31.0
+offset_right = 1251.0
+offset_bottom = 153.0
+
+[node name="Score_Label" type="Label" parent="Score"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 11.0
+offset_right = 371.0
+offset_bottom = 105.0
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

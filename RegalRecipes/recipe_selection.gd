@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 # Recipe 1
 func _on_recipe_1_button_pressed() -> void:
 	# Proceeds to Kitchen Scene
-	get_tree().change_scene_to_file("res://kitchen.tscn")
+	get_tree().change_scene_to_file("res://intro.tscn")
 
 # Recipe 2
 func _on_recipe_2_button_pressed() -> void:
