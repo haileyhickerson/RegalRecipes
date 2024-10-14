@@ -94,6 +94,7 @@ shape = SubResource("RectangleShape2D_bnqku")
 [node name="Player" type="Area2D" parent="." groups=["player"]]
 position = Vector2(300, 300)
 script = ExtResource("3_bb6cy")
+speed = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 scale = Vector2(0.15, 0.15)

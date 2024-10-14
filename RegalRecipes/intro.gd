@@ -30,7 +30,4 @@ func _input(event):
 # hide dialogue box when the conversation is over
 func hide_dialogue():
 	$Panel.hide()  # hides the Panel (dialogue box)
-	if $Button:  # if you're using a Button
-		$Button.hide()
-	
 	get_tree().change_scene_to_file("res://kitchen.tscn")
