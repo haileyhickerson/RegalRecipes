@@ -5,41 +5,56 @@ extends Node2D
 @export var Cut3: Line2D
 @export var Score_Label: Label
 
+# Array of ideal points along line at which cuts should be made
 var ideal_cut_points = []
-var score=0
+# Score variable
+var score = 0
+var total_possible_points = 0
 
+var total_cuts = 0
+
+# Ready function
 func _ready() -> void:
+	$NextButton.hide()
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	set_process_input(true)
 	ideal_cut_points=[Cut1.points, Cut2.points, Cut3.points]
 
 # the cut threshold (distance from cut points)
-var cut_threshold = 10.0
+var cut_threshold = 100.0
 
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
-		var knife_position= event.position
-		var points_gained=0
-		for cut_points in ideal_cut_points:
-			points_gained+= check_cut_accuracy(knife_position,cut_points)
-		score+= points_gained
-		update_score_display()
+		if total_cuts < 3:
+			total_cuts += 1
+			var knife_position= $Knife/KnifeTip.global_position
+			print(knife_position)
+			var points_gained=0
+			var point_distances = []
+			for cut_points in ideal_cut_points:
+				point_distances.append(check_cut_accuracy(knife_position,cut_points))
+			var closest_distance = point_distances.min()
+			score += 100 - int(closest_distance)
+			if score < 0:
+				score = 0
+			total_possible_points += 100
+			update_score_display()
+			if total_cuts == 3:
+				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+				$Knife.hide()
+				$NextButton.show()
+		else:
+			get_tree().change_scene_to_file("res://kitchen.tscn")
 
 			
 func check_cut_accuracy(knife_position: Vector2, cut_points:Array):
-	if cut_points.size()<2:
-		return 0
-	
-
 		# Get the two points from the line
 	for i in range(0, cut_points.size()-1):
 		var point_a = cut_points[i]
 		var point_b =cut_points[i+1]
 		var distance: float = point_to_line_distance(knife_position,point_a, point_b)
 		# check if the knife is near either point
-		if distance< cut_threshold:
-			print("Successful cut! Distance:", distance)
-			return 10
-	return 0
+		return distance
 
 func point_to_line_distance(point:Vector2, point_a:Vector2, point_b:Vector2)->float:
 	var line_vector: Vector2= point_b - point_a
@@ -53,7 +68,7 @@ func point_to_line_distance(point:Vector2, point_a:Vector2, point_b:Vector2)->fl
 # win points and update display
 func update_score_display():
 	if Score_Label!= null:
-		Score_Label.text= "Score: "+ str(score)
+		Score_Label.text= "Score: "+ str(score) + " / " + str(total_possible_points)
 	else:
 		print("error")
 

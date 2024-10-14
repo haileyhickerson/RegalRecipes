@@ -7,7 +7,7 @@ var in_plating = false
 var in_exit = false
 
 func _ready() -> void:
-	pass 
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 
 func _process(delta: float) -> void:
