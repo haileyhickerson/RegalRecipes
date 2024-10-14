@@ -5,6 +5,7 @@ var screen_size
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
+	position = PlayerVariables.location
 
 
 func _process(delta: float) -> void:
@@ -29,6 +30,7 @@ func _process(delta: float) -> void:
 		
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
+	PlayerVariables.location = global_position
 	
 	if velocity.x != 0:
 		$AnimatedSprite2D.animation = "walk"
