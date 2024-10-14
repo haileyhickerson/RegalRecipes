@@ -33,13 +33,13 @@ offset_bottom = 1085.0
 texture = ExtResource("2_7oo38")
 metadata/_edit_lock_ = true
 
-[node name="BackButton" type="Button" parent="."]
-offset_left = 52.0
-offset_top = 31.0
-offset_right = 232.0
-offset_bottom = 136.0
+[node name="NextButton" type="Button" parent="."]
+offset_left = 1531.0
+offset_top = 698.0
+offset_right = 1711.0
+offset_bottom = 803.0
 theme_override_font_sizes/font_size = 50
-text = "Back"
+text = "Next"
 
 [node name="Label" type="Label" parent="."]
 offset_left = 303.0
@@ -58,25 +58,21 @@ text = "This is where you will chop ingredients"
 horizontal_alignment = 1
 
 [node name="Cut1" type="Line2D" parent="."]
-position = Vector2(31146.7, -16831.2)
-scale = Vector2(22.0741, 18.2301)
-points = PackedVector2Array(-1373.18, 949.214, -1365.25, 959.801)
-width = 1.0
+points = PackedVector2Array(1038, 680, 838, 438)
+width = 5.0
+default_color = Color(0, 0, 0, 1)
 
 [node name="Cut2" type="Line2D" parent="."]
-position = Vector2(37717.2, -18884.8)
-scale = Vector2(26.843, 20.3569)
-points = PackedVector2Array(-1383.28, 957.278, -1378.8, 964.574)
-width = 1.0
+points = PackedVector2Array(659, 539, 805, 727)
+width = 5.0
+default_color = Color(0, 0, 0, 1)
 
 [node name="Cut3" type="Line2D" parent="."]
-position = Vector2(48898.9, -26430.5)
-scale = Vector2(34.9789, 28.2929)
-points = PackedVector2Array(-1377.26, 952.67, -1372.68, 959.966)
-width = 0.7
+points = PackedVector2Array(519, 660, 605, 779)
+width = 5.0
+default_color = Color(0, 0, 0, 1)
 
 [node name="Knife" type="Area2D" parent="."]
-position = Vector2(1444, 421)
 rotation = 1.55509
 scale = Vector2(1.02648, 1.19303)
 script = ExtResource("5_t5bmb")
@@ -89,6 +85,9 @@ animation = &"move"
 position = Vector2(5.62668, 12.0406)
 rotation = 2.4295
 shape = SubResource("RectangleShape2D_y8gqb")
+
+[node name="KnifeTip" type="Marker2D" parent="Knife"]
+position = Vector2(-170.449, 156.974)
 
 [node name="Score" type="Panel" parent="."]
 offset_left = 849.0
@@ -103,4 +102,4 @@ offset_top = 11.0
 offset_right = 371.0
 offset_bottom = 105.0
 
-[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_back_button_pressed"]
