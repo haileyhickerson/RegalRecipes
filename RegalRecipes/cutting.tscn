@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dipjhwol3m5ha"]
+[gd_scene load_steps=7 format=3 uid="uid://dipjhwol3m5ha"]
 
 [ext_resource type="Script" path="res://cutting.gd" id="1_wpq0h"]
-[ext_resource type="Texture2D" uid="uid://cmj6udruyo202" path="res://art/Firefly cutting board with a carrot on the middle. horizontally orientation, slightly cartoony 76076.jpg" id="2_7oo38"]
-[ext_resource type="FontFile" uid="uid://dorvoffquppln" path="res://fonts/Hand of King.ttf" id="3_rfq4m"]
+[ext_resource type="Texture2D" uid="uid://ba2dyq261747w" path="res://art/carrot_on_cuttingboard.png" id="2_c7x7m"]
 [ext_resource type="Texture2D" uid="uid://dcpt4itp8osp4" path="res://art/knifeart-removebg-preview.png" id="4_b3vdl"]
 [ext_resource type="Script" path="res://knife.gd" id="5_t5bmb"]
 
@@ -30,7 +29,7 @@ Score_Label = NodePath("Score/Score_Label")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1923.0
 offset_bottom = 1085.0
-texture = ExtResource("2_7oo38")
+texture = ExtResource("2_c7x7m")
 metadata/_edit_lock_ = true
 
 [node name="NextButton" type="Button" parent="."]
@@ -42,19 +41,18 @@ theme_override_font_sizes/font_size = 50
 text = "Next"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 303.0
-offset_top = 867.0
-offset_right = 1689.0
-offset_bottom = 1282.0
+offset_left = 294.0
+offset_top = 887.0
+offset_right = 1680.0
+offset_bottom = 1302.0
 scale = Vector2(0.99668, 1)
 theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
 theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
 theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
 theme_override_constants/outline_size = 19
 theme_override_constants/shadow_outline_size = 25
-theme_override_fonts/font = ExtResource("3_rfq4m")
-theme_override_font_sizes/font_size = 100
-text = "This is where you will chop ingredients"
+theme_override_font_sizes/font_size = 60
+text = "Click on each line to cut the carrot!"
 horizontal_alignment = 1
 
 [node name="Cut1" type="Line2D" parent="."]

@@ -34,9 +34,7 @@ func _input(event):
 			for cut_points in ideal_cut_points:
 				point_distances.append(check_cut_accuracy(knife_position,cut_points))
 			var closest_distance = point_distances.min()
-			score += 100 - int(closest_distance)
-			if score < 0:
-				score = 0
+			score += 100 - clamp(int(closest_distance), 0, 100)
 			total_possible_points += 100
 			update_score_display()
 			if total_cuts == 3:

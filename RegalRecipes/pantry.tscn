@@ -24,12 +24,14 @@ theme_override_font_sizes/font_size = 50
 text = "Back"
 
 [node name="StopwatchDisplay" type="Label" parent="."]
-offset_left = 735.0
-offset_top = 15.0
-offset_right = 1222.0
-offset_bottom = 206.0
+offset_left = 533.0
+offset_top = 31.0
+offset_right = 1483.0
+offset_bottom = 222.0
+theme_override_constants/outline_size = 13
+theme_override_constants/shadow_outline_size = 0
 theme_override_font_sizes/font_size = 60
-text = "Go!"
+text = "Drag ingredients into the basket!"
 horizontal_alignment = 1
 
 [node name="Timer" type="Timer" parent="."]
