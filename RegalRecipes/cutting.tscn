@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dipjhwol3m5ha"]
+[gd_scene load_steps=8 format=3 uid="uid://dipjhwol3m5ha"]
 
 [ext_resource type="Script" path="res://cutting.gd" id="1_wpq0h"]
-[ext_resource type="Texture2D" uid="uid://ba2dyq261747w" path="res://art/carrot_on_cuttingboard.png" id="2_c7x7m"]
+[ext_resource type="Texture2D" uid="uid://b7paioai6w1g5" path="res://art/CuttingBoard.png" id="2_htcmj"]
+[ext_resource type="Texture2D" uid="uid://daebuaiv8fa5s" path="res://art/Full_Carrot.png" id="3_uyh85"]
 [ext_resource type="Texture2D" uid="uid://dcpt4itp8osp4" path="res://art/knifeart-removebg-preview.png" id="4_b3vdl"]
 [ext_resource type="Script" path="res://knife.gd" id="5_t5bmb"]
 
@@ -29,8 +30,13 @@ Score_Label = NodePath("Score/Score_Label")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1923.0
 offset_bottom = 1085.0
-texture = ExtResource("2_c7x7m")
+texture = ExtResource("2_htcmj")
 metadata/_edit_lock_ = true
+
+[node name="FullCarrot" type="Sprite2D" parent="."]
+position = Vector2(796, 622)
+texture = ExtResource("3_uyh85")
+region_rect = Rect2(127.106, 323.257, 1579, 430.257)
 
 [node name="NextButton" type="Button" parent="."]
 offset_left = 1531.0
@@ -56,17 +62,17 @@ text = "Click on each line to cut the carrot!"
 horizontal_alignment = 1
 
 [node name="Cut1" type="Line2D" parent="."]
-points = PackedVector2Array(1038, 680, 838, 438)
+points = PackedVector2Array(1036, 734, 1028, 443)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 
 [node name="Cut2" type="Line2D" parent="."]
-points = PackedVector2Array(659, 539, 805, 727)
+points = PackedVector2Array(810, 442, 817, 739)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 
 [node name="Cut3" type="Line2D" parent="."]
-points = PackedVector2Array(519, 660, 605, 779)
+points = PackedVector2Array(601, 459, 606, 727)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 
