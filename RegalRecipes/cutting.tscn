@@ -73,6 +73,7 @@ width = 5.0
 default_color = Color(0, 0, 0, 1)
 
 [node name="Knife" type="Area2D" parent="."]
+position = Vector2(0, 587)
 rotation = 1.55509
 scale = Vector2(1.02648, 1.19303)
 script = ExtResource("5_t5bmb")

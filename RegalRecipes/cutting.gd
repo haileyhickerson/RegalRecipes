@@ -10,41 +10,55 @@ var ideal_cut_points = []
 # Score variable
 var score = 0
 var total_possible_points = 0
-
 var total_cuts = 0
 
 # Ready function
 func _ready() -> void:
 	$NextButton.hide()
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	#Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	set_process_input(true)
-	ideal_cut_points=[Cut1.points, Cut2.points, Cut3.points]
-
+	#ideal_cut_points=[Cut1.points, Cut2.points, Cut3.points]
+	for child in get_children():
+		if child is Line2D:
+			for i in range(child.get_point_count()):
+				ideal_cut_points.append(child.get_point_position(i))
+				
 # the cut threshold (distance from cut points)
 var cut_threshold = 100.0
 
-func _input(event):
-	if event is InputEventMouseButton and event.pressed:
-		if total_cuts < 3:
-			total_cuts += 1
-			var knife_position= $Knife/KnifeTip.global_position
-			print(knife_position)
-			var points_gained=0
-			var point_distances = []
-			for cut_points in ideal_cut_points:
-				point_distances.append(check_cut_accuracy(knife_position,cut_points))
-			var closest_distance = point_distances.min()
-			score += 100 - int(closest_distance)
-			if score < 0:
-				score = 0
-			total_possible_points += 100
-			update_score_display()
-			if total_cuts == 3:
-				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-				$Knife.hide()
-				$NextButton.show()
-		else:
-			get_tree().change_scene_to_file("res://kitchen.tscn")
+# takes current x position of the knife to find closest like to determine where knife is to the cut line
+func get_nearest_cut_line(knife_x):
+	var nearest_line = ideal_cut_points[0].x
+	for line in ideal_cut_points:
+		if abs(knife_x - line.x) < abs(knife_x - nearest_line):
+			nearest_line= line.x
+	return nearest_line
+			
+func make_cut(cut_line):
+	print("making cut")
+	
+#func _input(event):
+	#if event is InputEventMouseButton and event.pressed:
+		#if total_cuts < 3:
+			#total_cuts += 1
+			#var knife_position= $Knife/KnifeTip.global_position
+			#print(knife_position)
+			#var points_gained=0
+			#var point_distances = []
+			#for cut_points in ideal_cut_points:
+				#point_distances.append(check_cut_accuracy(knife_position,cut_points))
+			#var closest_distance = point_distances.min()
+			#score += 100 - int(closest_distance)
+			#if score < 0:
+				#score = 0
+			#total_possible_points += 100
+			#update_score_display()
+			#if total_cuts == 3:
+				#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+				#$Knife.hide()
+				#$NextButton.show()
+		#else:
+			#get_tree().change_scene_to_file("res://kitchen.tscn")
 
 			
 func check_cut_accuracy(knife_position: Vector2, cut_points:Array):
