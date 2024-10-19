@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dipjhwol3m5ha"]
+[gd_scene load_steps=8 format=3 uid="uid://dipjhwol3m5ha"]
 
 [ext_resource type="Script" path="res://cutting.gd" id="1_wpq0h"]
 [ext_resource type="Texture2D" uid="uid://ba2dyq261747w" path="res://art/carrot_on_cuttingboard.png" id="2_c7x7m"]
 [ext_resource type="Texture2D" uid="uid://dcpt4itp8osp4" path="res://art/knifeart-removebg-preview.png" id="4_b3vdl"]
+[ext_resource type="AudioStream" uid="uid://by3lauvagb334" path="res://music&sounds/533435__microtubule__carrots-slicing.wav" id="5_gvn0k"]
 [ext_resource type="Script" path="res://knife.gd" id="5_t5bmb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r0u4g"]
@@ -56,37 +57,45 @@ text = "Click on each line to cut the carrot!"
 horizontal_alignment = 1
 
 [node name="Cut1" type="Line2D" parent="."]
-points = PackedVector2Array(1038, 680, 838, 438)
+points = PackedVector2Array(1038, 406, 1038, 727)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 
 [node name="Cut2" type="Line2D" parent="."]
-points = PackedVector2Array(659, 539, 805, 727)
+points = PackedVector2Array(787, 406, 787, 727)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 
 [node name="Cut3" type="Line2D" parent="."]
-points = PackedVector2Array(519, 660, 605, 779)
+points = PackedVector2Array(1296, 406, 1296, 727)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 
 [node name="Knife" type="Area2D" parent="."]
-position = Vector2(0, 587)
-rotation = 1.55509
+position = Vector2(785, 598)
+rotation = -3.85543
 scale = Vector2(1.02648, 1.19303)
 script = ExtResource("5_t5bmb")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Knife"]
 sprite_frames = SubResource("SpriteFrames_r0u4g")
 animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Knife"]
-position = Vector2(5.62668, 12.0406)
+position = Vector2(5.62473, 19.2993)
 rotation = 2.4295
 shape = SubResource("RectangleShape2D_y8gqb")
 
 [node name="KnifeTip" type="Marker2D" parent="Knife"]
-position = Vector2(-170.449, 156.974)
+position = Vector2(-169.713, 157.523)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Knife"]
+stream = ExtResource("5_gvn0k")
+volume_db = 24.0
+
+[node name="Cutting_Timer" type="Timer" parent="Knife"]
+one_shot = true
 
 [node name="Score" type="Panel" parent="."]
 offset_left = 849.0
@@ -102,3 +111,4 @@ offset_right = 371.0
 offset_bottom = 105.0
 
 [connection signal="pressed" from="NextButton" to="." method="_on_back_button_pressed"]
+[connection signal="timeout" from="Knife/Cutting_Timer" to="." method="_on_cutting_timer_timeout"]

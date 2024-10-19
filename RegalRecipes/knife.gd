@@ -1,14 +1,14 @@
 extends Area2D
 @export var direction = 1 
-@export var speed = 200
+@export var speed = 300
 # Reference to the cutting script
 @onready var cutting_script = get_parent()
 # Knife dimensions
 var margin_of_error = 10  # How close knife needs to be to make a cut
 
 func _input(event):
-	if event.is_action_pressed("action"):
-		check_for_cut()
+	if event.is_action_pressed("action") or event is InputEventMouseButton and event.pressed:
+		emit_signal("attempt_cut")
 
 
 func _process(delta):
