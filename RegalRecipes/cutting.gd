@@ -55,7 +55,7 @@ func check_cut(knife_position_x):
 	for cut_x in ideal_cut_points:
 		if abs(knife_position_x - cut_x) <= cut_threshold:
 			#print("Successful cut at position:", knife_position_x,"and cut point", cut_x)
-			play_cutting_sound()
+			#play_cutting_sound()
 			return true
 			#print("no cut made, not close enough",cut_x)
 		return false #cut was not successful
@@ -87,9 +87,9 @@ func update_score_display():
 	else:
 		print("error")
 		
-func play_cutting_sound():
-	$Knife/AudioStreamPlayer2D.play()
-	Cutting_Timer.start()
+#func play_cutting_sound():
+	#$Knife/AudioStreamPlayer2D.play()
+	#Cutting_Timer.start()
 
 func _on_back_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://kitchen.tscn") # Replace with function body.
