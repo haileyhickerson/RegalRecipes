@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://e73djcjpuqbq"
+path="res://.godot/imported/Chef1FullMask.png-a9b7bfdb9f1ef57c92c7f3a40a888789.res"
+
+[deps]
+
+source_file="res://art/Chef1FullMask.png"
+dest_files=["res://.godot/imported/Chef1FullMask.png-a9b7bfdb9f1ef57c92c7f3a40a888789.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

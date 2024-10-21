@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6jjmdnn2im1d"
-path="res://.godot/imported/Basket.png-08a41b38a3a8213464d36550a3476684.ctex"
+uid="uid://hdj06jpn5nwm"
+path="res://.godot/imported/Chef1FullClick.png-792c73f28c162f75cb054d3bf35caf2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Basket.png"
-dest_files=["res://.godot/imported/Basket.png-08a41b38a3a8213464d36550a3476684.ctex"]
+source_file="res://art/Chef1FullClick.png"
+dest_files=["res://.godot/imported/Chef1FullClick.png-792c73f28c162f75cb054d3bf35caf2b.ctex"]
 
 [params]
 

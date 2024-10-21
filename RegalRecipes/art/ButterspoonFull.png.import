@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6jjmdnn2im1d"
-path="res://.godot/imported/Basket.png-08a41b38a3a8213464d36550a3476684.ctex"
+uid="uid://cs2rh6gt2psqx"
+path="res://.godot/imported/ButterspoonFull.png-82a93fca0b1d3c493b46e66d474d4318.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Basket.png"
-dest_files=["res://.godot/imported/Basket.png-08a41b38a3a8213464d36550a3476684.ctex"]
+source_file="res://art/ButterspoonFull.png"
+dest_files=["res://.godot/imported/ButterspoonFull.png-82a93fca0b1d3c493b46e66d474d4318.ctex"]
 
 [params]
 

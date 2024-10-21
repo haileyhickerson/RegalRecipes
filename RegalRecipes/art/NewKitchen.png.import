@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6jjmdnn2im1d"
-path="res://.godot/imported/Basket.png-08a41b38a3a8213464d36550a3476684.ctex"
+uid="uid://buktsyestd1nu"
+path="res://.godot/imported/NewKitchen.png-348d6648cfe8058f26724d3d60c51d4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Basket.png"
-dest_files=["res://.godot/imported/Basket.png-08a41b38a3a8213464d36550a3476684.ctex"]
+source_file="res://art/NewKitchen.png"
+dest_files=["res://.godot/imported/NewKitchen.png-348d6648cfe8058f26724d3d60c51d4b.ctex"]
 
 [params]
 

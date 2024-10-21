@@ -1,44 +1,61 @@
-[gd_scene load_steps=15 format=3 uid="uid://1l3xhks67ylh"]
+[gd_scene load_steps=18 format=3 uid="uid://1l3xhks67ylh"]
 
-[ext_resource type="Texture2D" uid="uid://dav0pq4hvlmto" path="res://KitchenBG.png" id="1_7nsr7"]
 [ext_resource type="Script" path="res://kitchen.gd" id="1_yn30c"]
+[ext_resource type="Texture2D" uid="uid://buktsyestd1nu" path="res://art/NewKitchen.png" id="2_klce6"]
 [ext_resource type="Script" path="res://pantry.gd" id="3_720iv"]
 [ext_resource type="Script" path="res://player.gd" id="3_bb6cy"]
-[ext_resource type="Texture2D" uid="uid://b7jc62thfmogx" path="res://art/chef_hat.png" id="4_scx66"]
 [ext_resource type="AudioStream" uid="uid://cbvuee0iilek4" path="res://music&sounds/footsteps.wav" id="5_1fu2m"]
+[ext_resource type="Texture2D" uid="uid://dpy33elb8np4b" path="res://art/Chef1Head.png" id="5_a2pkm"]
+[ext_resource type="Texture2D" uid="uid://cv50xmngw6bsk" path="res://art/Chef1Head2.png" id="6_72jo1"]
+[ext_resource type="Texture2D" uid="uid://dmsccgi64qkut" path="res://art/Chef2Head.png" id="6_yoocp"]
+[ext_resource type="Texture2D" uid="uid://jp8yig30n5js" path="res://art/Chef2Head2.png" id="8_6gm6v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bg11"]
-size = Vector2(423.5, 141)
+size = Vector2(440.75, 194.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tvkdp"]
-size = Vector2(637, 181)
+size = Vector2(578, 198.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c8ofu"]
-size = Vector2(263, 494)
+size = Vector2(263, 555)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o7u0g"]
-size = Vector2(806, 247)
+size = Vector2(710, 281.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ubm7"]
-size = Vector2(349, 207)
+size = Vector2(366, 275)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bnqku"]
-size = Vector2(42, 301)
+size = Vector2(59, 301)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_rlpxr"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_wr4ou"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_scx66")
+"texture": ExtResource("5_a2pkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_72jo1")
 }],
 "loop": true,
-"name": &"walk",
+"name": &"chef1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_yoocp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6gm6v")
+}],
+"loop": true,
+"name": &"chef2",
 "speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bhulj"]
-radius = 58.5366
-height = 170.0
+radius = 46.9512
+height = 224.0
 
 [node name="Kitchen" type="Node2D"]
 script = ExtResource("1_yn30c")
@@ -49,46 +66,46 @@ offset_bottom = 1078.0
 color = Color(0.270238, 0.224179, 0.0172208, 1)
 
 [node name="KitchenBg" type="Sprite2D" parent="."]
-position = Vector2(959.5, 539.5)
-scale = Vector2(1.697, 1.32555)
-texture = ExtResource("1_7nsr7")
+position = Vector2(961, 538)
+scale = Vector2(0.998958, 0.998148)
+texture = ExtResource("2_klce6")
 
 [node name="PantryArea" type="Area2D" parent="."]
 script = ExtResource("3_720iv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PantryArea"]
-position = Vector2(248.25, 69.5)
+position = Vector2(290.625, 91.75)
 shape = SubResource("RectangleShape2D_1bg11")
 one_way_collision_margin = 0.0
 
 [node name="CuttingArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CuttingArea"]
-position = Vector2(1057.5, 115.5)
+position = Vector2(1162, 102.75)
 shape = SubResource("RectangleShape2D_tvkdp")
 
 [node name="StoveArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StoveArea"]
-position = Vector2(131.5, 711)
+position = Vector2(134, 803.5)
 shape = SubResource("RectangleShape2D_c8ofu")
 
 [node name="MixingArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MixingArea"]
-position = Vector2(1030, 550.5)
+position = Vector2(889, 601.25)
 shape = SubResource("RectangleShape2D_o7u0g")
 
 [node name="PlatingArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlatingArea"]
-position = Vector2(1272.5, 782.5)
+position = Vector2(1707, 941.5)
 shape = SubResource("RectangleShape2D_6ubm7")
 
 [node name="ExitArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea"]
-position = Vector2(1896, 712.5)
+position = Vector2(1892.5, 371)
 shape = SubResource("RectangleShape2D_bnqku")
 
 [node name="Player" type="Area2D" parent="." groups=["player"]]
@@ -96,11 +113,14 @@ position = Vector2(300, 300)
 script = ExtResource("3_bb6cy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+position = Vector2(-11, 1)
 scale = Vector2(0.15, 0.15)
-sprite_frames = SubResource("SpriteFrames_rlpxr")
-animation = &"walk"
+sprite_frames = SubResource("SpriteFrames_wr4ou")
+animation = &"chef1"
+frame_progress = 0.503277
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-6, -2)
 scale = Vector2(1.64, 1)
 shape = SubResource("CapsuleShape2D_bhulj")
 

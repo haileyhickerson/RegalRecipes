@@ -90,7 +90,6 @@ animation = &"move"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Knife"]
 position = Vector2(3.05334, 18.8491)
 rotation = 2.4295
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_y8gqb")
 
 [node name="KnifeTip" type="Marker2D" parent="Knife"]

@@ -6,7 +6,10 @@ var screen_size
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
 	position = PlayerVariables.location
-
+	if PlayerVariables.chef_selected == 1:
+		$AnimatedSprite2D.animation = "chef1"
+	if PlayerVariables.chef_selected == 2:
+		$AnimatedSprite2D.animation = "chef2"
 
 func _process(delta: float) -> void:
 	var velocity = Vector2.ZERO 
@@ -32,11 +35,11 @@ func _process(delta: float) -> void:
 	position = position.clamp(Vector2.ZERO, screen_size)
 	PlayerVariables.location = global_position
 	
-	if velocity.x != 0:
-		$AnimatedSprite2D.animation = "walk"
+	#if velocity.x != 0:
+		#$AnimatedSprite2D.animation = "walk"
 		##$AnimatedSprite2D.flip_v = false
 
 		##$AnimatedSprite2D.flip_h = velocity.x < 0
-	elif velocity.y != 0:
-		$AnimatedSprite2D.animation = "walk"
+	#elif velocity.y != 0:
+		#$AnimatedSprite2D.animation = "walk"
 		##$AnimatedSprite2D.flip_v = velocity.y > 0
