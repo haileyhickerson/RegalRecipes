@@ -38,12 +38,15 @@ func _input(event):
 			print("knife:",knife_position_x)
 			if check_cut(knife_position_x):
 				var points_gained= calculate_score(knife_position_x)
+				score += points_gained
 				total_possible_points += 100
+				print("cut is made")
 				update_score_display()
 			else:
 				print("no cut is made")
 				total_possible_points += 100
 				update_score_display()
+	
 		if total_cuts==3:
 				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 				update_score_display()
@@ -52,13 +55,18 @@ func _input(event):
 			#get_tree().change_scene_to_file("res://kitchen.tscn")
 
 func check_cut(knife_position_x):
-	for cut_x in ideal_cut_points:
-		if abs(knife_position_x - cut_x) <= cut_threshold:
-			#print("Successful cut at position:", knife_position_x,"and cut point", cut_x)
+	var cut_made = false
+	for cut_point in ideal_cut_points:
+		#print("cutx:",cut_point)
+		if abs(knife_position_x - cut_point) <= cut_threshold:
+			print("Successful cut at position:", knife_position_x,"and cut point", cut_point)
 			#play_cutting_sound()
-			return true
-			#print("no cut made, not close enough",cut_x)
-		return false #cut was not successful
+			cut_made= true
+			break
+		else:
+			print("no cut made, not close enough",cut_point)
+	return cut_made
+		
 
 func calculate_score(knife_position_x):
 	var point_distances =[]
@@ -66,10 +74,8 @@ func calculate_score(knife_position_x):
 		point_distances.append(check_cut_accuracy(knife_position_x, cut_x))
 	var closest_distance= point_distances.min()
 	var points= 100 -int(closest_distance)
-	score += points
 	if score<0:
 		score=0
-	score+= points
 	return points
 	
 func check_cut_accuracy(knife_position_x, cut_x):
