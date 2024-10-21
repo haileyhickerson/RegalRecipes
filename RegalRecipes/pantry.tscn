@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bhyucviieqbhs"]
+[gd_scene load_steps=8 format=3 uid="uid://bhyucviieqbhs"]
 
 [ext_resource type="Script" path="res://pantry.gd" id="1_xewv2"]
-[ext_resource type="Texture2D" uid="uid://dyjfe4i5y4uev" path="res://art/PantryConcept.png" id="2_nvrjk"]
+[ext_resource type="Texture2D" uid="uid://ckbq14kxwn8jm" path="res://art/EmptryPantry.png" id="2_y0ii0"]
 [ext_resource type="FontFile" uid="uid://dorvoffquppln" path="res://fonts/Hand of King.ttf" id="3_6ftjj"]
-[ext_resource type="Texture2D" uid="uid://cgse66pn0kxug" path="res://art/basket.png" id="4_gmq4o"]
+[ext_resource type="Texture2D" uid="uid://c6jjmdnn2im1d" path="res://art/Basket.png" id="4_u3k4u"]
 [ext_resource type="Texture2D" uid="uid://b67hbohj0k0m1" path="res://art/meat.png" id="5_0danb"]
+[ext_resource type="Texture2D" uid="uid://bjjo7f753o4h2" path="res://art/BasketFront.png" id="5_5obv7"]
 [ext_resource type="Texture2D" uid="uid://xuvrnrkp684l" path="res://art/meat2.png" id="6_sbkeo"]
 
 [node name="Pantry" type="Node2D"]
@@ -13,7 +14,7 @@ script = ExtResource("1_xewv2")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_nvrjk")
+texture = ExtResource("2_y0ii0")
 
 [node name="BackButton" type="Button" parent="."]
 offset_left = 52.0
@@ -54,8 +55,9 @@ text = "This is where you will select ingredients"
 horizontal_alignment = 1
 
 [node name="Basket" type="Sprite2D" parent="."]
-position = Vector2(1678, 836)
-texture = ExtResource("4_gmq4o")
+position = Vector2(974, 1003)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_u3k4u")
 
 [node name="Ingredient1" type="Sprite2D" parent="." groups=["ingredients"]]
 position = Vector2(403, 229)
@@ -93,6 +95,11 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_sbkeo")
 
 [node name="Area2D" type="Area2D" parent="."]
+
+[node name="BasketFront" type="Sprite2D" parent="."]
+position = Vector2(974, 1003)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("5_5obv7")
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

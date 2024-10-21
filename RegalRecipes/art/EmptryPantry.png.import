@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6jjmdnn2im1d"
-path="res://.godot/imported/Basket.png-08a41b38a3a8213464d36550a3476684.ctex"
+uid="uid://ckbq14kxwn8jm"
+path="res://.godot/imported/EmptryPantry.png-c1918840c53df538a6234bae60959d60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Basket.png"
-dest_files=["res://.godot/imported/Basket.png-08a41b38a3a8213464d36550a3476684.ctex"]
+source_file="res://art/EmptryPantry.png"
+dest_files=["res://.godot/imported/EmptryPantry.png-c1918840c53df538a6234bae60959d60.ctex"]
 
 [params]
 
