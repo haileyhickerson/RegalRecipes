@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dipjhwol3m5ha"]
+[gd_scene load_steps=9 format=3 uid="uid://dipjhwol3m5ha"]
 
 [ext_resource type="Script" path="res://cutting.gd" id="1_wpq0h"]
-[ext_resource type="Texture2D" path="res://art/carrot_on_cuttingboard.png" id="2_c7x7m"]
+[ext_resource type="Texture2D" uid="uid://b7paioai6w1g5" path="res://art/CuttingBoard.png" id="2_jjt7a"]
+[ext_resource type="Texture2D" uid="uid://daebuaiv8fa5s" path="res://art/Full_Carrot.png" id="3_qof8h"]
 [ext_resource type="Texture2D" uid="uid://dcpt4itp8osp4" path="res://art/knifeart-removebg-preview.png" id="4_b3vdl"]
 [ext_resource type="AudioStream" uid="uid://by3lauvagb334" path="res://music&sounds/533435__microtubule__carrots-slicing.wav" id="5_gvn0k"]
 [ext_resource type="Script" path="res://knife.gd" id="5_t5bmb"]
@@ -18,7 +19,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y8gqb"]
-size = Vector2(446.113, 87.6185)
+size = Vector2(449.419, 83.7274)
 
 [node name="Cutting" type="Node2D" node_paths=PackedStringArray("Cut1", "Cut2", "Cut3", "Score_Label")]
 script = ExtResource("1_wpq0h")
@@ -30,14 +31,18 @@ Score_Label = NodePath("Score/Score_Label")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1923.0
 offset_bottom = 1085.0
-texture = ExtResource("2_c7x7m")
+texture = ExtResource("2_jjt7a")
 metadata/_edit_lock_ = true
 
+[node name="FullCarrot" type="Sprite2D" parent="."]
+position = Vector2(866, 614)
+texture = ExtResource("3_qof8h")
+
 [node name="NextButton" type="Button" parent="."]
-offset_left = 1531.0
-offset_top = 698.0
-offset_right = 1711.0
-offset_bottom = 803.0
+offset_left = 1605.0
+offset_top = 841.0
+offset_right = 1785.0
+offset_bottom = 946.0
 theme_override_font_sizes/font_size = 50
 text = "Next"
 
@@ -72,8 +77,8 @@ width = 5.0
 default_color = Color(0, 0, 0, 1)
 
 [node name="Knife" type="Area2D" parent="."]
-position = Vector2(785, 598)
-rotation = -3.85543
+position = Vector2(937, 598)
+rotation = -3.94297
 scale = Vector2(1.02648, 1.19303)
 script = ExtResource("5_t5bmb")
 metadata/_edit_group_ = true
@@ -83,12 +88,13 @@ sprite_frames = SubResource("SpriteFrames_r0u4g")
 animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Knife"]
-position = Vector2(5.62473, 19.2993)
+position = Vector2(3.05334, 18.8491)
 rotation = 2.4295
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_y8gqb")
 
 [node name="KnifeTip" type="Marker2D" parent="Knife"]
-position = Vector2(-169.713, 157.523)
+position = Vector2(5.58862, 70.0241)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Knife"]
 stream = ExtResource("5_gvn0k")
