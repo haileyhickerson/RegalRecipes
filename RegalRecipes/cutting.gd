@@ -14,7 +14,7 @@ var ideal_cut_points = []
 var score = 0
 var total_possible_points = 0
 var total_cuts = 0
-var cut_threshold = 50
+var cut_threshold = 30
 # Ready function
 func _ready() -> void:
 	$NextButton.hide()
