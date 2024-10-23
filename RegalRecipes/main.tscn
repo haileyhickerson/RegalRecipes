@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bg38vidlbq170"]
+[gd_scene load_steps=11 format=3 uid="uid://bg38vidlbq170"]
 
 [ext_resource type="PackedScene" uid="uid://1l3xhks67ylh" path="res://kitchen.tscn" id="1_62p3b"]
 [ext_resource type="PackedScene" uid="uid://dr14r7lup6t1b" path="res://recipe_selection.tscn" id="1_b3jq3"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bsnrxooacbi6h" path="res://mixing.tscn" id="3_jbcjk"]
 [ext_resource type="PackedScene" uid="uid://dipjhwol3m5ha" path="res://cutting.tscn" id="4_n7rps"]
 [ext_resource type="PackedScene" uid="uid://bhyucviieqbhs" path="res://pantry.tscn" id="5_36vvl"]
+[ext_resource type="PackedScene" uid="uid://bcm04qs33pvj" path="res://character_selection.tscn" id="10_drqa5"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_q4dq6")
@@ -26,5 +27,7 @@ script = ExtResource("1_q4dq6")
 [node name="Kitchen" parent="." instance=ExtResource("1_62p3b")]
 
 [node name="RecipeSelection" parent="." instance=ExtResource("1_b3jq3")]
+
+[node name="Character_Selection" parent="." instance=ExtResource("10_drqa5")]
 
 [node name="MainMenu" parent="." instance=ExtResource("1_oiu34")]

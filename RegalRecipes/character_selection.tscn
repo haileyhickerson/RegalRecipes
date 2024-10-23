@@ -1,0 +1,64 @@
+[gd_scene load_steps=12 format=3 uid="uid://bcm04qs33pvj"]
+
+[ext_resource type="Script" path="res://character_selection.gd" id="1_bgcax"]
+[ext_resource type="Texture2D" uid="uid://bqyh7yvc1ulws" path="res://art/TitleBGConcept.png" id="1_f37jl"]
+[ext_resource type="Texture2D" uid="uid://xhxuwr74u4i3" path="res://art/Chef1Full.png" id="2_72ynp"]
+[ext_resource type="FontFile" uid="uid://dorvoffquppln" path="res://fonts/Hand of King.ttf" id="2_fmmx4"]
+[ext_resource type="Texture2D" uid="uid://hdj06jpn5nwm" path="res://art/Chef1FullClick.png" id="3_4nh8n"]
+[ext_resource type="Texture2D" uid="uid://bxphpj1e8luuu" path="res://art/Chef1FullHover.png" id="4_a21he"]
+[ext_resource type="Texture2D" uid="uid://ddf5fqdrdwlcg" path="res://art/Chef2Full.png" id="5_tofo2"]
+[ext_resource type="Texture2D" uid="uid://bvv5v54558q6j" path="res://art/Chef2FullClick.png" id="6_c3jv8"]
+[ext_resource type="BitMap" uid="uid://e73djcjpuqbq" path="res://art/Chef1FullMask.png" id="7_6wwio"]
+[ext_resource type="Texture2D" uid="uid://5pbn7et5cu3s" path="res://art/Chef2FullHover.png" id="7_fjwq6"]
+[ext_resource type="BitMap" uid="uid://bwiys3geh3uel" path="res://art/Chef2FullMask.png" id="11_t85n8"]
+
+[node name="Character_Selection" type="Node2D"]
+script = ExtResource("1_bgcax")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_f37jl")
+
+[node name="Text" type="Label" parent="."]
+offset_left = 300.0
+offset_top = 85.0
+offset_right = 1686.0
+offset_bottom = 500.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 19
+theme_override_constants/shadow_outline_size = 25
+theme_override_fonts/font = ExtResource("2_fmmx4")
+theme_override_font_sizes/font_size = 140
+text = "Select a Character!"
+horizontal_alignment = 1
+
+[node name="Chef1" type="TextureButton" parent="."]
+offset_left = 444.0
+offset_top = 219.0
+offset_right = 1098.0
+offset_bottom = 1378.0
+texture_normal = ExtResource("2_72ynp")
+texture_pressed = ExtResource("3_4nh8n")
+texture_hover = ExtResource("4_a21he")
+texture_click_mask = ExtResource("7_6wwio")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Chef2" type="TextureButton" parent="."]
+offset_left = 828.0
+offset_top = 207.0
+offset_right = 1698.0
+offset_bottom = 1397.0
+texture_normal = ExtResource("5_tofo2")
+texture_pressed = ExtResource("6_c3jv8")
+texture_hover = ExtResource("7_fjwq6")
+texture_click_mask = ExtResource("11_t85n8")
+ignore_texture_size = true
+stretch_mode = 4
+
+[connection signal="pressed" from="Chef1" to="." method="_on_chef_1_pressed"]
+[connection signal="pressed" from="Chef2" to="." method="_on_chef_2_pressed"]
