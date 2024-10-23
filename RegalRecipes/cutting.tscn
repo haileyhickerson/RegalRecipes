@@ -1,23 +1,25 @@
-[gd_scene load_steps=7 format=3 uid="uid://dipjhwol3m5ha"]
+[gd_scene load_steps=9 format=3 uid="uid://dipjhwol3m5ha"]
 
 [ext_resource type="Script" path="res://cutting.gd" id="1_wpq0h"]
-[ext_resource type="Texture2D" uid="uid://dcpt4itp8osp4" path="res://art/knifeart-removebg-preview.png" id="4_b3vdl"]
+[ext_resource type="Texture2D" uid="uid://b7paioai6w1g5" path="res://art/CuttingBoard.png" id="2_dxffu"]
+[ext_resource type="Texture2D" uid="uid://daebuaiv8fa5s" path="res://art/Full_Carrot.png" id="3_mbxl7"]
+[ext_resource type="Texture2D" uid="uid://bmchu8ghxi03t" path="res://art/Untitled (3 x 7 in).png" id="5_51p7k"]
 [ext_resource type="AudioStream" uid="uid://by3lauvagb334" path="res://music&sounds/533435__microtubule__carrots-slicing.wav" id="5_gvn0k"]
 [ext_resource type="Script" path="res://knife.gd" id="5_t5bmb"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_r0u4g"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_0hlai"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_b3vdl")
+"texture": ExtResource("5_51p7k")
 }],
 "loop": true,
-"name": &"move",
+"name": &"default",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y8gqb"]
-size = Vector2(446.113, 87.6185)
+size = Vector2(25.3293, 344.501)
 
 [node name="Cutting" type="Node2D" node_paths=PackedStringArray("Cut1", "Cut2", "Cut3", "Score_Label")]
 script = ExtResource("1_wpq0h")
@@ -29,6 +31,7 @@ Score_Label = NodePath("Score/Score_Label")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1923.0
 offset_bottom = 1085.0
+texture = ExtResource("2_dxffu")
 metadata/_edit_lock_ = true
 
 [node name="NextButton" type="Button" parent="."]
@@ -54,6 +57,10 @@ theme_override_font_sizes/font_size = 60
 text = "Click on each line to cut the carrot!"
 horizontal_alignment = 1
 
+[node name="FullCarrot" type="Sprite2D" parent="."]
+position = Vector2(832, 603)
+texture = ExtResource("3_mbxl7")
+
 [node name="Cut1" type="Line2D" parent="."]
 points = PackedVector2Array(1038, 406, 1038, 727)
 width = 5.0
@@ -71,18 +78,17 @@ default_color = Color(0, 0, 0, 1)
 
 [node name="Knife" type="Area2D" parent="."]
 position = Vector2(785, 598)
-rotation = -3.85543
 scale = Vector2(1.02648, 1.19303)
 script = ExtResource("5_t5bmb")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Knife"]
-sprite_frames = SubResource("SpriteFrames_r0u4g")
-animation = &"move"
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_0hlai")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Knife"]
-position = Vector2(5.62473, 19.2993)
-rotation = 2.4295
+position = Vector2(2.92261, -8.80112)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_y8gqb")
 
 [node name="KnifeTip" type="Marker2D" parent="Knife"]

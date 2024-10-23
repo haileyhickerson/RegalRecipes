@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bhyucviieqbhs"]
 
 [ext_resource type="Script" path="res://pantry.gd" id="1_xewv2"]
-[ext_resource type="Texture2D" uid="uid://dyjfe4i5y4uev" path="res://art/PantryConcept.png" id="2_nvrjk"]
+[ext_resource type="Texture2D" uid="uid://ckbq14kxwn8jm" path="res://art/EmptryPantry.png" id="2_1174c"]
 [ext_resource type="PackedScene" uid="uid://cp4wximgsmflu" path="res://basket.tscn" id="3_v2w7e"]
 [ext_resource type="PackedScene" uid="uid://noax3wfo31l0" path="res://ingredient.tscn" id="4_js1qu"]
 [ext_resource type="Texture2D" uid="uid://b67hbohj0k0m1" path="res://art/meat.png" id="5_0danb"]
@@ -13,7 +13,7 @@ script = ExtResource("1_xewv2")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_nvrjk")
+texture = ExtResource("2_1174c")
 
 [node name="BackButton" type="Button" parent="."]
 offset_left = 52.0
