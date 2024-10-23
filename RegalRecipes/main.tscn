@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://main.gd" id="1_q4dq6"]
 [ext_resource type="PackedScene" uid="uid://qlvok073syxy" path="res://stove.tscn" id="2_yyrjb"]
 [ext_resource type="PackedScene" uid="uid://bsnrxooacbi6h" path="res://mixing.tscn" id="3_jbcjk"]
-[ext_resource type="PackedScene" uid="uid://dipjhwol3m5ha" path="res://cutting.tscn" id="4_n7rps"]
+[ext_resource type="PackedScene" path="res://cutting.tscn" id="4_n7rps"]
 [ext_resource type="PackedScene" uid="uid://bhyucviieqbhs" path="res://pantry.tscn" id="5_36vvl"]
 [ext_resource type="PackedScene" uid="uid://bcm04qs33pvj" path="res://character_selection.tscn" id="10_drqa5"]
 

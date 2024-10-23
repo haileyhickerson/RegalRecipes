@@ -23,7 +23,7 @@ func _input(event):
 						ingredient.speed = 0
 						print(ingredient.name)
 						update_progress(ingredient.name)
-						if len(selected_ingredients) == 3:
+						if len(selected_ingredients) == 2:
 							$NextButton.show()
 
 func update_progress(ingredient_name: String):
