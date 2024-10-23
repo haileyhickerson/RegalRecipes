@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dipjhwol3m5ha"]
+[gd_scene load_steps=7 format=3 uid="uid://dipjhwol3m5ha"]
 
 [ext_resource type="Script" path="res://cutting.gd" id="1_wpq0h"]
-[ext_resource type="Texture2D" path="res://art/carrot_on_cuttingboard.png" id="2_c7x7m"]
 [ext_resource type="Texture2D" uid="uid://dcpt4itp8osp4" path="res://art/knifeart-removebg-preview.png" id="4_b3vdl"]
 [ext_resource type="AudioStream" uid="uid://by3lauvagb334" path="res://music&sounds/533435__microtubule__carrots-slicing.wav" id="5_gvn0k"]
 [ext_resource type="Script" path="res://knife.gd" id="5_t5bmb"]
@@ -30,7 +29,6 @@ Score_Label = NodePath("Score/Score_Label")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1923.0
 offset_bottom = 1085.0
-texture = ExtResource("2_c7x7m")
 metadata/_edit_lock_ = true
 
 [node name="NextButton" type="Button" parent="."]

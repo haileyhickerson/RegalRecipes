@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://pantry.gd" id="1_xewv2"]
 [ext_resource type="Texture2D" uid="uid://dyjfe4i5y4uev" path="res://art/PantryConcept.png" id="2_nvrjk"]
-[ext_resource type="FontFile" uid="uid://dorvoffquppln" path="res://fonts/Hand of King.ttf" id="3_6ftjj"]
-[ext_resource type="Texture2D" uid="uid://cgse66pn0kxug" path="res://art/basket.png" id="4_gmq4o"]
+[ext_resource type="PackedScene" uid="uid://cp4wximgsmflu" path="res://basket.tscn" id="3_v2w7e"]
+[ext_resource type="PackedScene" uid="uid://noax3wfo31l0" path="res://ingredient.tscn" id="4_js1qu"]
 [ext_resource type="Texture2D" uid="uid://b67hbohj0k0m1" path="res://art/meat.png" id="5_0danb"]
 [ext_resource type="Texture2D" uid="uid://xuvrnrkp684l" path="res://art/meat2.png" id="6_sbkeo"]
 
@@ -23,76 +23,80 @@ offset_bottom = 136.0
 theme_override_font_sizes/font_size = 50
 text = "Back"
 
-[node name="StopwatchDisplay" type="Label" parent="."]
-offset_left = 533.0
-offset_top = 31.0
-offset_right = 1483.0
-offset_bottom = 222.0
+[node name="Instructions" type="Label" parent="."]
+offset_left = 298.0
+offset_top = 23.0
+offset_right = 1686.0
+offset_bottom = 214.0
 theme_override_constants/outline_size = 13
 theme_override_constants/shadow_outline_size = 0
 theme_override_font_sizes/font_size = 60
-text = "Drag ingredients into the basket!"
+text = "Grab 1 Carrot and 1 Ham! Drag into the basket!"
 horizontal_alignment = 1
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="Label" type="Label" parent="."]
-visible = false
-offset_left = 298.0
-offset_top = 523.0
-offset_right = 1684.0
-offset_bottom = 938.0
-scale = Vector2(0.99668, 1)
-theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
-theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
-theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
-theme_override_constants/outline_size = 19
-theme_override_constants/shadow_outline_size = 25
-theme_override_fonts/font = ExtResource("3_6ftjj")
-theme_override_font_sizes/font_size = 100
-text = "This is where you will select ingredients"
-horizontal_alignment = 1
+[node name="Basket" parent="." groups=["basket"] instance=ExtResource("3_v2w7e")]
+position = Vector2(1707, 902)
 
-[node name="Basket" type="Sprite2D" parent="."]
-position = Vector2(1678, 836)
-texture = ExtResource("4_gmq4o")
+[node name="Carrot1" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
+position = Vector2(852, 488)
 
-[node name="Ingredient1" type="Sprite2D" parent="." groups=["ingredients"]]
-position = Vector2(403, 229)
-scale = Vector2(0.2, 0.2)
+[node name="Carrot2" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
+position = Vector2(1219, 212)
+scale = Vector2(0.1, 0.1)
+
+[node name="Carrot3" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
+position = Vector2(466, 303)
+scale = Vector2(0.1, 0.1)
+
+[node name="Carrot4" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
+position = Vector2(356, 759)
+scale = Vector2(0.1, 0.1)
+
+[node name="Ham1" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
+position = Vector2(977, 775)
 texture = ExtResource("5_0danb")
 
-[node name="Ingredient2" type="Sprite2D" parent="." groups=["ingredients"]]
-position = Vector2(527, 500)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("5_0danb")
-
-[node name="Ingredient3" type="Sprite2D" parent="." groups=["ingredients"]]
-position = Vector2(447, 382)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("5_0danb")
-
-[node name="Ingredient4" type="Sprite2D" parent="." groups=["ingredients"]]
-position = Vector2(929, 369)
-scale = Vector2(0.2, 0.2)
+[node name="Ham2" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
+position = Vector2(1384, 455)
 texture = ExtResource("6_sbkeo")
 
-[node name="Ingredient5" type="Sprite2D" parent="." groups=["ingredients"]]
-position = Vector2(311, 770)
-scale = Vector2(0.2, 0.2)
+[node name="Ham3" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
+position = Vector2(1374, 722)
 texture = ExtResource("6_sbkeo")
 
-[node name="Ingredient6" type="Sprite2D" parent="." groups=["ingredients"]]
-position = Vector2(899, 688)
-scale = Vector2(0.2, 0.2)
+[node name="Ham4" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
+position = Vector2(279, 477)
 texture = ExtResource("6_sbkeo")
 
-[node name="Ingredient7" type="Sprite2D" parent="." groups=["ingredients"]]
-position = Vector2(1196, 491)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("6_sbkeo")
+[node name="NextButton" type="Button" parent="."]
+offset_left = 885.0
+offset_top = 903.0
+offset_right = 1065.0
+offset_bottom = 1008.0
+theme_override_font_sizes/font_size = 50
+text = "Next"
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 1685.0
+offset_top = 166.0
+offset_right = 1905.0
+offset_bottom = 280.0
+
+[node name="Carrot1_label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Carrot (0/1)"
+horizontal_alignment = 2
+
+[node name="Ham1_label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Ham (0/1)"
+horizontal_alignment = 2
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Basket" to="." method="_on_basket_area_entered"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

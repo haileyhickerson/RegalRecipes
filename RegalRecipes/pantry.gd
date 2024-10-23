@@ -1,52 +1,40 @@
 extends Node2D
-
-var correct_ingredients = ["Ingredient1", "Ingredient2", "Ingredient3"]
+var baskets
+var ingredient_list
 var selected_ingredients = []
-var stopwatch_time = 0.0
-var stopwatch_started = true
-var is_dragging = false
-var mouse_offset
-var delay = 10
-var original_position = Vector2.ZERO
-var curr_ingredient
+var correct_ingredients = ["Carrot1", "Ham1"]
 
-@onready var timer = $Timer
-@onready var stopwatch_label = $StopwatchDisplay
-@onready var basket = $Basket
-@onready var popup = $Popup
-
-func _ready():
-	pass
+func _ready() -> void:
+	baskets = get_tree().get_nodes_in_group("basket")
+	ingredient_list = get_tree().get_nodes_in_group("ingredients")
+	if $NextButton != null:
+		$NextButton.hide()
 	
-func _physics_process(delta: float) -> void:
-	if is_dragging:
-		var tween = get_tree().create_tween()
-		tween.tween_property(curr_ingredient, "position", get_global_mouse_position(), delay * delta)
-
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
-			for ingredient in get_tree().get_nodes_in_group("ingredients"):
-				# Check if the mouse position is within the Sprite2D's rectangle
+		# Loop through all ingredients to check which one was clicked
+			for ingredient in ingredient_list:
 				if ingredient.get_rect().has_point(ingredient.to_local(event.position)):
-					print("Clicked on ingredient: ", ingredient.name)
-					curr_ingredient = ingredient
-					is_dragging = true
-		else:
-			print("down")
-			is_dragging = false
+					print("Clicked on: " + ingredient.name) # Debugging: print the clicked ingredient's name
+					# You can now handle the click logic here (e.g., start dragging)
+					if ingredient.name in correct_ingredients:
+						selected_ingredients.append(ingredient.name)
+						ingredient.speed = 0
+						print(ingredient.name)
+						update_progress(ingredient.name)
+						if len(selected_ingredients) == 3:
+							$NextButton.show()
 
-func _on_back_button_pressed() -> void:
+func update_progress(ingredient_name: String):
+	if get_node("VBoxContainer/" + ingredient_name + "_label") != null:
+		var progress_label = get_node("VBoxContainer/" + ingredient_name + "_label")
+		progress_label.text = ingredient_name.capitalize() + ": 1/1"
+		progress_label.modulate = Color(0, 1, 0)  # Green color
+
+func _on_back_button_pressed():
 	get_tree().change_scene_to_file("res://kitchen.tscn")
 
-func _end_game(success):
-	if success:
-		print("All ingredients selected! Final time: ", str(round(stopwatch_time * 10) / 10), " seconds")
-		# Load the next station scene (e.g., cutting_station.tscn)
-		get_tree().change_scene("res://scenes/cutting_station.tscn")  # Adjust path to the next station scene
-	else:
-		print("Game Over!")
 
-func _on_timer_timeout() -> void:
-	stopwatch_time += 1
-	stopwatch_label.text = str(stopwatch_time)
+func _on_next_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://kitchen.tscn") # Replace with function body.
