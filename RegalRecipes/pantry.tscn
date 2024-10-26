@@ -1,21 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://bhyucviieqbhs"]
 
 [ext_resource type="Script" path="res://pantry.gd" id="1_xewv2"]
-<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://ckbq14kxwn8jm" path="res://art/EmptryPantry.png" id="2_1174c"]
 [ext_resource type="PackedScene" uid="uid://cp4wximgsmflu" path="res://basket.tscn" id="3_v2w7e"]
 [ext_resource type="PackedScene" uid="uid://noax3wfo31l0" path="res://ingredient.tscn" id="4_js1qu"]
-=======
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://ckbq14kxwn8jm" path="res://art/EmptryPantry.png" id="2_y0ii0"]
-[ext_resource type="FontFile" uid="uid://dorvoffquppln" path="res://fonts/Hand of King.ttf" id="3_6ftjj"]
-[ext_resource type="Texture2D" uid="uid://c6jjmdnn2im1d" path="res://art/basket.png" id="4_u3k4u"]
-=======
-[ext_resource type="Texture2D" uid="uid://ckbq14kxwn8jm" path="res://art/EmptryPantry.png" id="2_1174c"]
-[ext_resource type="PackedScene" uid="uid://cp4wximgsmflu" path="res://basket.tscn" id="3_v2w7e"]
-[ext_resource type="PackedScene" uid="uid://noax3wfo31l0" path="res://ingredient.tscn" id="4_js1qu"]
->>>>>>> 3cca22ad507f0cf366037818c052f6c2a473bfd8
->>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://b67hbohj0k0m1" path="res://art/meat.png" id="5_0danb"]
 [ext_resource type="Texture2D" uid="uid://xuvrnrkp684l" path="res://art/meat2.png" id="6_sbkeo"]
 
