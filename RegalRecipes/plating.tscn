@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cvr2aoqdlckoa"]
 
 [ext_resource type="Script" path="res://plating.gd" id="1_w55mi"]
-[ext_resource type="Texture2D" uid="uid://5pcd20io30ld" path="res://art/PlatingConcept.png" id="2_26o1j"]
+[ext_resource type="Texture2D" path="res://art/woodenbackground.JPEG" id="2_jqaib"]
 [ext_resource type="FontFile" uid="uid://dorvoffquppln" path="res://fonts/Hand of King.ttf" id="3_ewksq"]
 
 [node name="Plating" type="Node2D"]
@@ -10,7 +10,7 @@ script = ExtResource("1_w55mi")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_26o1j")
+texture = ExtResource("2_jqaib")
 
 [node name="BackButton" type="Button" parent="."]
 offset_left = 52.0
@@ -22,9 +22,9 @@ text = "Back"
 
 [node name="Label" type="Label" parent="."]
 offset_left = 224.0
-offset_top = 141.0
+offset_top = 62.0
 offset_right = 1724.0
-offset_bottom = 556.0
+offset_bottom = 477.0
 scale = Vector2(0.99668, 1)
 theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
 theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
@@ -33,7 +33,7 @@ theme_override_constants/outline_size = 19
 theme_override_constants/shadow_outline_size = 25
 theme_override_fonts/font = ExtResource("3_ewksq")
 theme_override_font_sizes/font_size = 100
-text = "This is where you will plate ingredients"
+text = "Drag ingredients to its spot!"
 horizontal_alignment = 1
 
 [node name="Taste Test Button" type="Button" parent="."]
