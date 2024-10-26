@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6jjmdnn2im1d"
-path="res://.godot/imported/basket.png-5bb032bd51f09405e9be7e1d4826037b.ctex"
+uid="uid://cdxkwv6ddgfwv"
+path="res://.godot/imported/TileFloor.png-6b5cc6aa1de39e99d72a0dd55da6dc3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/basket.png"
-dest_files=["res://.godot/imported/basket.png-5bb032bd51f09405e9be7e1d4826037b.ctex"]
+source_file="res://art/TileFloor.png"
+dest_files=["res://.godot/imported/TileFloor.png-6b5cc6aa1de39e99d72a0dd55da6dc3b.ctex"]
 
 [params]
 

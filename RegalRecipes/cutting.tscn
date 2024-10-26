@@ -88,11 +88,10 @@ sprite_frames = SubResource("SpriteFrames_0hlai")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Knife"]
 position = Vector2(2.92261, -8.80112)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_y8gqb")
 
 [node name="KnifeTip" type="Marker2D" parent="Knife"]
-position = Vector2(-169.713, 157.523)
+position = Vector2(1.94838, -98.9078)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Knife"]
 stream = ExtResource("5_gvn0k")

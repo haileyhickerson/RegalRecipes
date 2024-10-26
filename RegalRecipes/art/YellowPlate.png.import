@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6jjmdnn2im1d"
-path="res://.godot/imported/basket.png-5bb032bd51f09405e9be7e1d4826037b.ctex"
+uid="uid://c62e2e1i4yprm"
+path="res://.godot/imported/YellowPlate.png-2b6eaded2ad2fe9eaf07557aca0404b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/basket.png"
-dest_files=["res://.godot/imported/basket.png-5bb032bd51f09405e9be7e1d4826037b.ctex"]
+source_file="res://art/YellowPlate.png"
+dest_files=["res://.godot/imported/YellowPlate.png-2b6eaded2ad2fe9eaf07557aca0404b4.ctex"]
 
 [params]
 

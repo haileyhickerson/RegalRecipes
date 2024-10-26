@@ -1,8 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvr2aoqdlckoa"]
+[gd_scene load_steps=15 format=3 uid="uid://cvr2aoqdlckoa"]
 
 [ext_resource type="Script" path="res://plating.gd" id="1_w55mi"]
-[ext_resource type="Texture2D" uid="uid://5pcd20io30ld" path="res://art/PlatingConcept.png" id="2_26o1j"]
+[ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_efjw4"]
+[ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="3_ew156"]
 [ext_resource type="FontFile" uid="uid://dorvoffquppln" path="res://fonts/Hand of King.ttf" id="3_ewksq"]
+[ext_resource type="Texture2D" uid="uid://binglwbf545x1" path="res://art/Peas.png" id="5_3jh3m"]
+[ext_resource type="Texture2D" uid="uid://b18m0772uijl1" path="res://art/BlueBowl.png" id="5_e5mgo"]
+[ext_resource type="Texture2D" uid="uid://c62e2e1i4yprm" path="res://art/YellowPlate.png" id="6_n6qvo"]
+[ext_resource type="Texture2D" uid="uid://cjf5u74cpopra" path="res://art/Cheese1.png" id="8_qvrqc"]
+[ext_resource type="Texture2D" uid="uid://clgcslohqk5j1" path="res://art/Cheese2.png" id="9_gqfg7"]
+[ext_resource type="Texture2D" uid="uid://byp1abx3b0u5y" path="res://art/Cheese3.png" id="10_iuj5u"]
+[ext_resource type="Texture2D" uid="uid://c4ycusavn61xp" path="res://art/PinkBowl.png" id="11_ubmik"]
+[ext_resource type="Texture2D" uid="uid://byirk4ntkiej2" path="res://art/Bacon1.png" id="12_w3eif"]
+[ext_resource type="Texture2D" uid="uid://urirejdrw4w5" path="res://art/Bacon2.png" id="13_b4shs"]
+[ext_resource type="Texture2D" uid="uid://cnn7n3sd7xt8c" path="res://art/Bacon3.png" id="14_dncc1"]
 
 [node name="Plating" type="Node2D"]
 script = ExtResource("1_w55mi")
@@ -10,7 +21,12 @@ script = ExtResource("1_w55mi")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_26o1j")
+texture = ExtResource("2_efjw4")
+
+[node name="Plate" type="Sprite2D" parent="."]
+position = Vector2(965, 553)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_ew156")
 
 [node name="BackButton" type="Button" parent="."]
 offset_left = 52.0
@@ -21,10 +37,10 @@ theme_override_font_sizes/font_size = 50
 text = "Back"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 224.0
-offset_top = 141.0
-offset_right = 1724.0
-offset_bottom = 556.0
+offset_left = 240.0
+offset_top = 58.0
+offset_right = 1740.0
+offset_bottom = 473.0
 scale = Vector2(0.99668, 1)
 theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
 theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
@@ -43,6 +59,59 @@ offset_right = 1178.0
 offset_bottom = 1002.0
 theme_override_font_sizes/font_size = 50
 text = "Serve the food!"
+
+[node name="BlueBowl" type="Sprite2D" parent="."]
+position = Vector2(220, 817)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_e5mgo")
+
+[node name="YellowPlate" type="Sprite2D" parent="."]
+position = Vector2(1649, 818)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("6_n6qvo")
+
+[node name="Peas" type="Sprite2D" parent="."]
+position = Vector2(210, 819)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("5_3jh3m")
+
+[node name="PinkBowl" type="Sprite2D" parent="."]
+position = Vector2(1653, 268)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("11_ubmik")
+
+[node name="Cheese1" type="Sprite2D" parent="."]
+position = Vector2(1595, 262)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_qvrqc")
+
+[node name="Cheese2" type="Sprite2D" parent="."]
+position = Vector2(1693, 211)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_gqfg7")
+
+[node name="Cheese3" type="Sprite2D" parent="."]
+position = Vector2(1693, 317)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_iuj5u")
+
+[node name="Bacon1" type="Sprite2D" parent="."]
+position = Vector2(1543, 868)
+rotation = -0.404799
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("12_w3eif")
+
+[node name="Bacon2" type="Sprite2D" parent="."]
+position = Vector2(1748, 830)
+rotation = 0.445925
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("13_b4shs")
+
+[node name="Bacon3" type="Sprite2D" parent="."]
+position = Vector2(1663, 749)
+rotation = 0.434543
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("14_dncc1")
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Taste Test Button" to="." method="_on_taste_test_button_pressed"]
