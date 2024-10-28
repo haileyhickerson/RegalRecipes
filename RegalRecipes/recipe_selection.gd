@@ -12,6 +12,7 @@ func _process(delta: float) -> void:
 # Recipe 1
 func _on_recipe_1_button_pressed() -> void:
 	# Proceeds to Kitchen Scene
+	PlayerVariables.location = Vector2(400, 400)
 	get_tree().change_scene_to_file("res://intro.tscn")
 
 # Recipe 2

@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://qlvok073syxy"]
+[gd_scene load_steps=3 format=3 uid="uid://qlvok073syxy"]
 
 [ext_resource type="Script" path="res://stove.gd" id="1_iiek0"]
-[ext_resource type="Texture2D" uid="uid://cy5mrv4eejggj" path="res://art/StoveConcept.png" id="2_slacr"]
-[ext_resource type="FontFile" uid="uid://dorvoffquppln" path="res://fonts/Hand of King.ttf" id="3_fcf2t"]
+[ext_resource type="Texture2D" uid="uid://bwr0ddbtgcvhg" path="res://art/Stovetop.png" id="2_4eufi"]
 
 [node name="Stove" type="Node2D"]
 script = ExtResource("1_iiek0")
@@ -10,7 +9,7 @@ script = ExtResource("1_iiek0")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_slacr")
+texture = ExtResource("2_4eufi")
 
 [node name="BackButton" type="Button" parent="."]
 offset_left = 52.0
@@ -19,21 +18,5 @@ offset_right = 232.0
 offset_bottom = 136.0
 theme_override_font_sizes/font_size = 50
 text = "Back"
-
-[node name="Label" type="Label" parent="."]
-offset_left = 267.0
-offset_top = 859.0
-offset_right = 1653.0
-offset_bottom = 1274.0
-scale = Vector2(0.99668, 1)
-theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
-theme_override_colors/font_shadow_color = Color(0.0822576, 0.0567242, 0.00980327, 1)
-theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
-theme_override_constants/outline_size = 21
-theme_override_constants/shadow_outline_size = 38
-theme_override_fonts/font = ExtResource("3_fcf2t")
-theme_override_font_sizes/font_size = 100
-text = "This is where you will cook the food"
-horizontal_alignment = 1
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

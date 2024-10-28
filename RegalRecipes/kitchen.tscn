@@ -1,32 +1,181 @@
-[gd_scene load_steps=18 format=3 uid="uid://1l3xhks67ylh"]
+[gd_scene load_steps=39 format=3 uid="uid://1l3xhks67ylh"]
 
 [ext_resource type="Script" path="res://kitchen.gd" id="1_yn30c"]
-[ext_resource type="Texture2D" uid="uid://buktsyestd1nu" path="res://art/NewKitchen.png" id="2_klce6"]
+[ext_resource type="Texture2D" uid="uid://cdxkwv6ddgfwv" path="res://art/TileFloor.png" id="2_rbyka"]
 [ext_resource type="Script" path="res://pantry.gd" id="3_720iv"]
 [ext_resource type="Script" path="res://player.gd" id="3_bb6cy"]
+[ext_resource type="Texture2D" uid="uid://b35117ravrebr" path="res://art/PantryIcon.png" id="4_k75ut"]
+[ext_resource type="Texture2D" uid="uid://wudiggfigrr7" path="res://art/PantryIconHover.png" id="4_mui7s"]
 [ext_resource type="AudioStream" uid="uid://cbvuee0iilek4" path="res://music&sounds/footsteps.wav" id="5_1fu2m"]
+[ext_resource type="Texture2D" uid="uid://bclxihli2x64f" path="res://art/CuttingIconHover.png" id="5_7kiax"]
+[ext_resource type="Texture2D" uid="uid://bfimm21ebg0kc" path="res://art/StoveIcon.png" id="5_28m7m"]
 [ext_resource type="Texture2D" uid="uid://dpy33elb8np4b" path="res://art/Chef1Head.png" id="5_a2pkm"]
+[ext_resource type="Texture2D" uid="uid://httkp4j4autg" path="res://art/StoveIconHover.png" id="5_ac52r"]
+[ext_resource type="Texture2D" uid="uid://sl26yik0i50i" path="res://art/CuttingIcon.png" id="5_rijq2"]
 [ext_resource type="Texture2D" uid="uid://cv50xmngw6bsk" path="res://art/Chef1Head2.png" id="6_72jo1"]
+[ext_resource type="Texture2D" uid="uid://b811eivn165p4" path="res://art/PantryIconPressed.png" id="6_x1k46"]
 [ext_resource type="Texture2D" uid="uid://dmsccgi64qkut" path="res://art/Chef2Head.png" id="6_yoocp"]
+[ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="7_hrdey"]
+[ext_resource type="Texture2D" uid="uid://ba8t23w6rikdg" path="res://art/CuttingIconPress.png" id="7_tkfhy"]
+[ext_resource type="Texture2D" uid="uid://6lnf11tox141" path="res://art/StoveIconPressed.png" id="7_vgaw6"]
+[ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="7_yfsju"]
 [ext_resource type="Texture2D" uid="uid://jp8yig30n5js" path="res://art/Chef2Head2.png" id="8_6gm6v"]
+[ext_resource type="Texture2D" uid="uid://r38mkxy1kak1" path="res://art/MixingIconHover.png" id="10_f6sw1"]
+[ext_resource type="Texture2D" uid="uid://dfbe6mkatupwe" path="res://art/PlatingIconHover.png" id="11_3qr84"]
+[ext_resource type="Texture2D" uid="uid://dl663ugmxm8hf" path="res://art/MixingIcon.png" id="11_ahau7"]
+[ext_resource type="Texture2D" uid="uid://c8i4j4swg5hix" path="res://art/PlatingIcon.png" id="12_7di3w"]
+[ext_resource type="Texture2D" uid="uid://bmsxp1gx2xnji" path="res://art/MixingIconPress.png" id="12_h7llt"]
+[ext_resource type="Texture2D" uid="uid://cuhoyxngu4vr1" path="res://art/PlatingIconPress.png" id="13_025dv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bg11"]
-size = Vector2(440.75, 194.5)
+size = Vector2(338.375, 233.25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l5u2r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mui7s")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_k75ut")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_x1k46")
+}],
+"loop": true,
+"name": &"pressed",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g72pm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_7kiax")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rijq2")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_tkfhy")
+}],
+"loop": true,
+"name": &"press",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tvkdp"]
-size = Vector2(578, 198.5)
+size = Vector2(434, 229)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7logs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ac52r")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_28m7m")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_vgaw6")
+}],
+"loop": true,
+"name": &"press",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c8ofu"]
-size = Vector2(263, 555)
+size = Vector2(279, 485)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4w83i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_f6sw1")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_ahau7")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_h7llt")
+}],
+"loop": true,
+"name": &"press",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o7u0g"]
-size = Vector2(710, 281.5)
+size = Vector2(380, 245.75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cqss0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_3qr84")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_7di3w")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_025dv")
+}],
+"loop": true,
+"name": &"press",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ubm7"]
-size = Vector2(366, 275)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnqku"]
-size = Vector2(59, 301)
+size = Vector2(601.193, 251.909)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wr4ou"]
 animations = [{
@@ -54,59 +203,209 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bhulj"]
-radius = 46.9512
-height = 224.0
+radius = 42.6829
+height = 212.0
 
 [node name="Kitchen" type="Node2D"]
 script = ExtResource("1_yn30c")
 
-[node name="Background" type="ColorRect" parent="."]
-offset_right = 1918.0
-offset_bottom = 1078.0
-color = Color(0.270238, 0.224179, 0.0172208, 1)
-
 [node name="KitchenBg" type="Sprite2D" parent="."]
 position = Vector2(961, 538)
 scale = Vector2(0.998958, 0.998148)
-texture = ExtResource("2_klce6")
+texture = ExtResource("2_rbyka")
 
 [node name="PantryArea" type="Area2D" parent="."]
 script = ExtResource("3_720iv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PantryArea"]
-position = Vector2(290.625, 91.75)
+position = Vector2(207.813, 117.375)
 shape = SubResource("RectangleShape2D_1bg11")
 one_way_collision_margin = 0.0
 
+[node name="PantryIcon" type="AnimatedSprite2D" parent="PantryArea"]
+position = Vector2(206, 114)
+scale = Vector2(0.226968, 0.226968)
+sprite_frames = SubResource("SpriteFrames_l5u2r")
+animation = &"pressed"
+
+[node name="PantryText" type="Sprite2D" parent="PantryArea"]
+position = Vector2(507, 100)
+scale = Vector2(0.199074, 0.199074)
+texture = ExtResource("7_hrdey")
+
+[node name="Label" type="Label" parent="PantryArea/PantryText"]
+offset_left = -683.163
+offset_top = -190.884
+offset_right = 729.837
+offset_bottom = 170.116
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_yfsju")
+theme_override_font_sizes/font_size = 130
+text = "Press \"Space\" to open 
+the Cupboard"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="CuttingArea" type="Area2D" parent="."]
+position = Vector2(40, 7)
+
+[node name="CuttingIcon" type="AnimatedSprite2D" parent="CuttingArea"]
+position = Vector2(1153.89, 112.5)
+scale = Vector2(0.267824, 0.252778)
+sprite_frames = SubResource("SpriteFrames_g72pm")
+animation = &"press"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CuttingArea"]
-position = Vector2(1162, 102.75)
+position = Vector2(1157, 110.5)
 shape = SubResource("RectangleShape2D_tvkdp")
 
+[node name="CuttingText" type="Sprite2D" parent="CuttingArea"]
+position = Vector2(1512, 205)
+scale = Vector2(0.212875, 0.212875)
+texture = ExtResource("7_hrdey")
+
+[node name="Label" type="Label" parent="CuttingArea/CuttingText"]
+offset_left = -683.163
+offset_top = -190.884
+offset_right = 729.837
+offset_bottom = 170.116
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_yfsju")
+theme_override_font_sizes/font_size = 130
+text = "Press \"Space\" to enter
+the Chopping Station"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="StoveArea" type="Area2D" parent="."]
+position = Vector2(-7, 45)
+
+[node name="StoveIcon" type="AnimatedSprite2D" parent="StoveArea"]
+position = Vector2(157.433, 775.422)
+rotation = -1.5708
+scale = Vector2(0.279629, 0.283547)
+sprite_frames = SubResource("SpriteFrames_7logs")
+animation = &"normal"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StoveArea"]
-position = Vector2(134, 803.5)
+position = Vector2(156.5, 780.5)
 shape = SubResource("RectangleShape2D_c8ofu")
 
+[node name="StoveText" type="Sprite2D" parent="StoveArea"]
+position = Vector2(377, 904)
+scale = Vector2(0.212875, 0.212875)
+texture = ExtResource("7_hrdey")
+
+[node name="Label" type="Label" parent="StoveArea/StoveText"]
+offset_left = -683.163
+offset_top = -190.884
+offset_right = 729.837
+offset_bottom = 170.116
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_yfsju")
+theme_override_font_sizes/font_size = 130
+text = "Press \"Space\" to enter
+the Cooking Station"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="MixingArea" type="Area2D" parent="."]
+position = Vector2(113, 3)
+
+[node name="MixingIcon" type="AnimatedSprite2D" parent="MixingArea"]
+position = Vector2(795, 551)
+scale = Vector2(0.265509, 0.265509)
+sprite_frames = SubResource("SpriteFrames_4w83i")
+animation = &"normal"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MixingArea"]
-position = Vector2(889, 601.25)
+position = Vector2(796, 554.125)
 shape = SubResource("RectangleShape2D_o7u0g")
 
+[node name="MixingText" type="Sprite2D" parent="MixingArea"]
+position = Vector2(1082, 431)
+scale = Vector2(0.212875, 0.212875)
+texture = ExtResource("7_hrdey")
+
+[node name="Label" type="Label" parent="MixingArea/MixingText"]
+offset_left = -683.163
+offset_top = -190.884
+offset_right = 729.837
+offset_bottom = 170.116
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_yfsju")
+theme_override_font_sizes/font_size = 130
+text = "Press \"Space\" to enter
+the Mixing Station"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="PlatingArea" type="Area2D" parent="."]
+scale = Vector2(0.982729, 1.01836)
+
+[node name="PlatingIcon" type="AnimatedSprite2D" parent="PlatingArea"]
+position = Vector2(1646.44, 922.074)
+scale = Vector2(0.31689, 0.31689)
+sprite_frames = SubResource("SpriteFrames_cqss0")
+animation = &"normal"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlatingArea"]
-position = Vector2(1707, 941.5)
+position = Vector2(1649.9, 924.3)
 shape = SubResource("RectangleShape2D_6ubm7")
 
-[node name="ExitArea" type="Area2D" parent="."]
+[node name="PlatingText" type="Sprite2D" parent="PlatingArea"]
+position = Vector2(1763.46, 716.841)
+scale = Vector2(0.216616, 0.209038)
+texture = ExtResource("7_hrdey")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea"]
-position = Vector2(1892.5, 371)
-shape = SubResource("RectangleShape2D_bnqku")
+[node name="Label" type="Label" parent="PlatingArea/PlatingText"]
+offset_left = -683.163
+offset_top = -190.884
+offset_right = 729.837
+offset_bottom = 170.116
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_yfsju")
+theme_override_font_sizes/font_size = 130
+text = "Press \"Space\" to enter
+the Plating Station"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MoveText" type="Sprite2D" parent="."]
+position = Vector2(1518, 454)
+scale = Vector2(0.326389, 0.326389)
+texture = ExtResource("7_hrdey")
+
+[node name="Label" type="Label" parent="MoveText"]
+offset_left = -683.163
+offset_top = -190.884
+offset_right = 729.837
+offset_bottom = 170.116
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_yfsju")
+theme_override_font_sizes/font_size = 127
+text = "Use W, A, S, D, or the
+Arrow Keys to Move"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Player" type="Area2D" parent="." groups=["player"]]
 position = Vector2(300, 300)
@@ -120,7 +419,7 @@ animation = &"chef1"
 frame_progress = 0.503277
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(-6, -2)
+position = Vector2(-11, 0)
 scale = Vector2(1.64, 1)
 shape = SubResource("CapsuleShape2D_bhulj")
 
@@ -139,5 +438,3 @@ volume_db = 20.1
 [connection signal="area_exited" from="MixingArea" to="." method="_on_mixing_area_area_exited"]
 [connection signal="area_entered" from="PlatingArea" to="." method="_on_plating_area_area_entered"]
 [connection signal="area_exited" from="PlatingArea" to="." method="_on_plating_area_area_exited"]
-[connection signal="area_entered" from="ExitArea" to="." method="_on_exit_area_area_entered"]
-[connection signal="area_exited" from="ExitArea" to="." method="_on_exit_area_area_exited"]

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://kdtfcv3g1m5w"
+path="res://.godot/imported/play_pressed.png-f97d23b6d0cc2a476161abc0b9fccd27.res"
+
+[deps]
+
+source_file="res://art/play_pressed.png"
+dest_files=["res://.godot/imported/play_pressed.png-f97d23b6d0cc2a476161abc0b9fccd27.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
