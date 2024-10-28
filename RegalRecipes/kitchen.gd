@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 		
 	if Input.is_action_pressed("action") and in_pantry:
 		get_tree().change_scene_to_file("res://pantry.tscn")
-		await get_tree().create_timer(0.1).timeout 
+		#await get_tree().create_timer(0.1).timeout 
 		$PantryArea/PantryIcon.play("press")
 	if Input.is_action_pressed("action") and in_cutting:
 		$CuttingArea/CuttingIcon.play("press")

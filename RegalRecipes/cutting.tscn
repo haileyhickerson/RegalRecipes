@@ -3,15 +3,15 @@
 [ext_resource type="Script" path="res://cutting.gd" id="1_wpq0h"]
 [ext_resource type="Texture2D" uid="uid://b7paioai6w1g5" path="res://art/CuttingBoard.png" id="2_dxffu"]
 [ext_resource type="Texture2D" uid="uid://daebuaiv8fa5s" path="res://art/Full_Carrot.png" id="3_mbxl7"]
-[ext_resource type="Texture2D" uid="uid://bmchu8ghxi03t" path="res://art/Untitled (3 x 7 in).png" id="5_51p7k"]
 [ext_resource type="AudioStream" uid="uid://by3lauvagb334" path="res://music&sounds/533435__microtubule__carrots-slicing.wav" id="5_gvn0k"]
 [ext_resource type="Script" path="res://knife.gd" id="5_t5bmb"]
+[ext_resource type="Texture2D" uid="uid://b1fq84if3d2ys" path="res://art/Knife.png" id="5_ttaix"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0hlai"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_51p7k")
+"texture": ExtResource("5_ttaix")
 }],
 "loop": true,
 "name": &"default",
