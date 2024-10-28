@@ -1,7 +1,46 @@
-[gd_scene load_steps=3 format=3 uid="uid://qlvok073syxy"]
+[gd_scene load_steps=14 format=3 uid="uid://qlvok073syxy"]
 
 [ext_resource type="Script" path="res://stove.gd" id="1_iiek0"]
 [ext_resource type="Texture2D" uid="uid://bwr0ddbtgcvhg" path="res://art/Stovetop.png" id="2_4eufi"]
+[ext_resource type="Texture2D" uid="uid://va34mugwsatg" path="res://art/pan.png" id="3_sdr8y"]
+[ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="4_e1ow1"]
+[ext_resource type="Texture2D" uid="uid://cnn7n3sd7xt8c" path="res://art/Bacon3.png" id="5_o77wj"]
+[ext_resource type="Texture2D" uid="uid://byirk4ntkiej2" path="res://art/Bacon1.png" id="6_i3n4i"]
+[ext_resource type="Texture2D" uid="uid://urirejdrw4w5" path="res://art/Bacon2.png" id="7_psqrh"]
+[ext_resource type="Texture2D" uid="uid://bv0bjc7b8ggu4" path="res://art/Stovetop copy.png" id="8_pdfbk"]
+[ext_resource type="Script" path="res://stove_knob.gd" id="9_o0uvf"]
+[ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="10_efodi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0k282"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_sdr8y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ip8xg"]
+size = Vector2(229.73, 720.507)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pggyy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_o77wj")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_i3n4i")
+}, {
+"duration": 5.0,
+"texture": ExtResource("7_psqrh")
+}],
+"loop": true,
+"name": &"cooked",
+"speed": 1.0
+}]
 
 [node name="Stove" type="Node2D"]
 script = ExtResource("1_iiek0")
@@ -19,4 +58,88 @@ offset_bottom = 136.0
 theme_override_font_sizes/font_size = 50
 text = "Back"
 
+[node name="Pan" type="Area2D" parent="."]
+scale = Vector2(0.37, 0.37)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pan"]
+position = Vector2(2608.11, 1197.3)
+sprite_frames = SubResource("SpriteFrames_0k282")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pan"]
+position = Vector2(2622.97, 1758.67)
+shape = SubResource("RectangleShape2D_ip8xg")
+
+[node name="TextBox" type="Sprite2D" parent="."]
+position = Vector2(463, 666)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_e1ow1")
+
+[node name="Instructions" type="Label" parent="TextBox"]
+offset_left = -740.0
+offset_top = -177.143
+offset_right = 718.0
+offset_bottom = 362.857
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("10_efodi")
+theme_override_font_sizes/font_size = 75
+text = "Click on the knob at the right temperature. Once the bar reaches 50%, click the pan handle to flip the meat. Don't take too long!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Bacon" type="Area2D" parent="."]
+
+[node name="BaconAnimation" type="AnimatedSprite2D" parent="Bacon"]
+position = Vector2(967, 335)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_pggyy")
+animation = &"cooked"
+
+[node name="StoveKnob" type="Sprite2D" parent="." node_paths=PackedStringArray("stove_script")]
+position = Vector2(799, 929)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("8_pdfbk")
+script = ExtResource("9_o0uvf")
+stove_script = NodePath("..")
+
+[node name="Label" type="Label" parent="StoveKnob"]
+offset_left = -93.3325
+offset_top = -746.667
+offset_right = 175.667
+offset_bottom = -64.6666
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 500
+text = "^"
+
+[node name="TempMarker" type="Label" parent="."]
+offset_left = 843.0
+offset_top = 891.0
+offset_right = 1015.0
+offset_bottom = 1437.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "-"
+
+[node name="CookingBar" type="ProgressBar" parent="."]
+offset_left = 714.0
+offset_top = 23.0
+offset_right = 1221.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("10_efodi")
+theme_override_font_sizes/font_size = 60
+step = 0.005
+
+[node name="NextButton" type="Button" parent="."]
+offset_left = 1385.0
+offset_top = 875.0
+offset_right = 1579.0
+offset_bottom = 989.0
+theme_override_font_sizes/font_size = 50
+text = "Next"
+
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="mouse_entered" from="Pan" to="." method="_on_pan_mouse_entered"]
+[connection signal="mouse_exited" from="Pan" to="." method="_on_pan_mouse_exited"]
+[connection signal="animation_finished" from="Bacon/BaconAnimation" to="." method="_on_bacon_animation_animation_finished"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
