@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cvr2aoqdlckoa"]
+[gd_scene load_steps=27 format=3 uid="uid://cvr2aoqdlckoa"]
 
 [ext_resource type="Script" path="res://plating.gd" id="1_w55mi"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_efjw4"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://byirk4ntkiej2" path="res://art/Bacon1.png" id="12_w3eif"]
 [ext_resource type="Texture2D" uid="uid://urirejdrw4w5" path="res://art/Bacon2.png" id="13_b4shs"]
 [ext_resource type="Texture2D" uid="uid://cnn7n3sd7xt8c" path="res://art/Bacon3.png" id="14_dncc1"]
+[ext_resource type="Script" path="res://Target.gd" id="17_akse5"]
+[ext_resource type="Texture2D" uid="uid://bcy0vuuqef6m8" path="res://art/checkmark-removebg-preview.png" id="18_3ouu3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_saocq"]
 radius = 518.628
@@ -40,6 +42,9 @@ height = 302.857
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kug67"]
 radius = 148.571
 height = 297.143
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j20a5"]
+radius = 286.0
 
 [node name="Plating" type="Node2D"]
 script = ExtResource("1_w55mi")
@@ -87,6 +92,7 @@ theme_override_font_sizes/font_size = 50
 text = "Serve the food!"
 
 [node name="ReferencePic" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(970, 587)
 scale = Vector2(0.835648, 0.858796)
 texture = ExtResource("5_ofxoc")
@@ -204,7 +210,23 @@ shape = SubResource("CapsuleShape2D_kug67")
 
 [node name="Timer1" type="Timer" parent="."]
 
+[node name="Target Spots" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Target Spots"]
+script = ExtResource("17_akse5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Target Spots/Area2D"]
+position = Vector2(965, 549)
+shape = SubResource("CircleShape2D_j20a5")
+
+[node name="CheckmarkTimer" type="Timer" parent="Target Spots/Area2D"]
+
+[node name="Checkmark" type="Sprite2D" parent="Target Spots/Area2D"]
+position = Vector2(295, 292)
+texture = ExtResource("18_3ouu3")
+
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Taste Test Button" to="." method="_on_taste_test_button_pressed"]
 [connection signal="input_event" from="BowlsContainer/BlueBowl/Peas" to="BowlsContainer/BlueBowl/Peas" method="_on_input_event"]
 [connection signal="timeout" from="Timer1" to="." method="_on_timer_1_timeout"]
+[connection signal="body_entered" from="Target Spots/Area2D" to="Target Spots/Area2D" method="_on_TargetPeas_body_entered"]
