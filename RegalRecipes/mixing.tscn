@@ -285,6 +285,27 @@ rotation = -1.17585
 scale = Vector2(0.182995, 0.162549)
 texture = ExtResource("18_dwrdl")
 
+[node name="StartButton" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 935.0
+offset_top = 28.0
+offset_right = 985.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-0.06, 0)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("12_j0k0i")
+texture_hover = ExtResource("14_xh4n6")
+texture_click_mask = ExtResource("14_awd4v")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="MarkerButton" type="TextureButton" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
@@ -355,30 +376,9 @@ text = "Mix ingredients by clicking along the yellow circle as quickly as possib
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="StartButton" type="TextureButton" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 933.0
-offset_top = 28.0
-offset_right = 983.0
-offset_bottom = 78.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(-0.06, 0)
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("12_j0k0i")
-texture_hover = ExtResource("14_xh4n6")
-texture_click_mask = ExtResource("14_awd4v")
-ignore_texture_size = true
-stretch_mode = 0
-
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MarkerButton" to="." method="_on_marker_button_pressed"]
 [connection signal="mouse_entered" from="OutsideOfCircle" to="." method="_on_outside_of_circle_mouse_entered"]
 [connection signal="mouse_exited" from="OutsideOfCircle" to="." method="_on_outside_of_circle_mouse_exited"]
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
-[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://qlvok073syxy"]
+[gd_scene load_steps=15 format=3 uid="uid://qlvok073syxy"]
 
 [ext_resource type="Script" path="res://stove.gd" id="1_iiek0"]
 [ext_resource type="Texture2D" uid="uid://bwr0ddbtgcvhg" path="res://art/Stovetop.png" id="2_4eufi"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bv0bjc7b8ggu4" path="res://art/Stovetop copy.png" id="8_pdfbk"]
 [ext_resource type="Script" path="res://stove_knob.gd" id="9_o0uvf"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="10_efodi"]
+[ext_resource type="Texture2D" path="res://art/KnobExample.png" id="11_gam63"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0k282"]
 animations = [{
@@ -51,6 +52,7 @@ offset_bottom = 40.0
 texture = ExtResource("2_4eufi")
 
 [node name="BackButton" type="Button" parent="."]
+visible = false
 offset_left = 52.0
 offset_top = 31.0
 offset_right = 232.0
@@ -69,25 +71,6 @@ sprite_frames = SubResource("SpriteFrames_0k282")
 position = Vector2(2622.97, 1758.67)
 shape = SubResource("RectangleShape2D_ip8xg")
 
-[node name="TextBox" type="Sprite2D" parent="."]
-position = Vector2(463, 666)
-scale = Vector2(0.35, 0.35)
-texture = ExtResource("4_e1ow1")
-
-[node name="Instructions" type="Label" parent="TextBox"]
-offset_left = -740.0
-offset_top = -177.143
-offset_right = 718.0
-offset_bottom = 362.857
-theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("10_efodi")
-theme_override_font_sizes/font_size = 75
-text = "Click on the knob at the right temperature. Once the bar reaches 50%, click the pan handle to flip the meat. Don't take too long!"
-horizontal_alignment = 1
-autowrap_mode = 3
-
 [node name="Bacon" type="Area2D" parent="."]
 
 [node name="BaconAnimation" type="AnimatedSprite2D" parent="Bacon"]
@@ -98,6 +81,7 @@ animation = &"cooked"
 
 [node name="StoveKnob" type="Sprite2D" parent="." node_paths=PackedStringArray("stove_script")]
 position = Vector2(799, 929)
+rotation = 1.5708
 scale = Vector2(0.075, 0.075)
 texture = ExtResource("8_pdfbk")
 script = ExtResource("9_o0uvf")
@@ -138,8 +122,51 @@ offset_bottom = 989.0
 theme_override_font_sizes/font_size = 50
 text = "Next"
 
+[node name="TextBox" type="Sprite2D" parent="."]
+position = Vector2(955, 473)
+scale = Vector2(0.565, 0.565)
+texture = ExtResource("4_e1ow1")
+
+[node name="Instructions" type="Label" parent="TextBox"]
+offset_left = -725.664
+offset_top = -192.92
+offset_right = 732.336
+offset_bottom = 347.08
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("10_efodi")
+theme_override_font_sizes/font_size = 70
+text = "Click on the knob at the right temperature."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="KnobExample" type="Sprite2D" parent="TextBox"]
+position = Vector2(12.5177, 36.0354)
+scale = Vector2(1.39816, 1.19389)
+texture = ExtResource("11_gam63")
+
+[node name="Label" type="Label" parent="TextBox"]
+offset_left = -231.858
+offset_top = 242.478
+offset_right = 261.142
+offset_bottom = 297.478
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_efodi")
+theme_override_font_sizes/font_size = 30
+text = "Press \"Space\" to continue"
+horizontal_alignment = 1
+
+[node name="FlipText" type="Label" parent="."]
+offset_left = 849.0
+offset_top = 208.0
+offset_right = 1106.0
+offset_bottom = 332.0
+theme_override_fonts/font = ExtResource("10_efodi")
+theme_override_font_sizes/font_size = 90
+text = "FLIP!!!"
+
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="mouse_entered" from="Pan" to="." method="_on_pan_mouse_entered"]
 [connection signal="mouse_exited" from="Pan" to="." method="_on_pan_mouse_exited"]
-[connection signal="animation_finished" from="Bacon/BaconAnimation" to="." method="_on_bacon_animation_animation_finished"]
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

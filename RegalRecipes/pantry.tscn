@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cp4wximgsmflu" path="res://basket.tscn" id="3_v2w7e"]
 [ext_resource type="PackedScene" uid="uid://noax3wfo31l0" path="res://ingredient.tscn" id="4_js1qu"]
 [ext_resource type="Texture2D" uid="uid://b67hbohj0k0m1" path="res://art/meat.png" id="5_0danb"]
-[ext_resource type="Texture2D" uid="uid://xuvrnrkp684l" path="res://art/meat2.png" id="6_sbkeo"]
+[ext_resource type="Texture2D" uid="uid://njintfu88w8s" path="res://art/BadMeat.png" id="7_3rodr"]
 
 [node name="Pantry" type="Node2D"]
 script = ExtResource("1_xewv2")
@@ -60,15 +60,15 @@ texture = ExtResource("5_0danb")
 
 [node name="Ham2" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
 position = Vector2(1384, 455)
-texture = ExtResource("6_sbkeo")
+texture = ExtResource("7_3rodr")
 
 [node name="Ham3" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
 position = Vector2(1374, 722)
-texture = ExtResource("6_sbkeo")
+texture = ExtResource("7_3rodr")
 
 [node name="Ham4" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
 position = Vector2(279, 477)
-texture = ExtResource("6_sbkeo")
+texture = ExtResource("7_3rodr")
 
 [node name="NextButton" type="Button" parent="."]
 offset_left = 885.0
