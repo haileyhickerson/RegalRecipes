@@ -1,15 +1,19 @@
-[gd_scene load_steps=14 format=3 uid="uid://qlvok073syxy"]
+[gd_scene load_steps=18 format=3 uid="uid://qlvok073syxy"]
 
 [ext_resource type="Script" path="res://stove.gd" id="1_iiek0"]
-[ext_resource type="Texture2D" uid="uid://bwr0ddbtgcvhg" path="res://art/Stovetop.png" id="2_4eufi"]
+[ext_resource type="Texture2D" uid="uid://c860lwsyjoy1s" path="res://art/Stovetop.png" id="2_4eufi"]
 [ext_resource type="Texture2D" uid="uid://va34mugwsatg" path="res://art/pan.png" id="3_sdr8y"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="4_e1ow1"]
-[ext_resource type="Texture2D" uid="uid://cnn7n3sd7xt8c" path="res://art/Bacon3.png" id="5_o77wj"]
-[ext_resource type="Texture2D" uid="uid://byirk4ntkiej2" path="res://art/Bacon1.png" id="6_i3n4i"]
-[ext_resource type="Texture2D" uid="uid://urirejdrw4w5" path="res://art/Bacon2.png" id="7_psqrh"]
-[ext_resource type="Texture2D" uid="uid://bv0bjc7b8ggu4" path="res://art/Stovetop copy.png" id="8_pdfbk"]
+[ext_resource type="Texture2D" uid="uid://cfrufedn7v213" path="res://art/BaconFrame1.png" id="6_77y5g"]
+[ext_resource type="Texture2D" uid="uid://dj31n0uk5tir0" path="res://art/BaconFrame2.png" id="7_ogt5h"]
+[ext_resource type="Texture2D" uid="uid://bjschdfxi3vf7" path="res://art/BaconFrame3.png" id="8_8u77b"]
+[ext_resource type="Texture2D" uid="uid://cp5ioqnp4xfpi" path="res://art/BaconFrame4.png" id="9_8k374"]
+[ext_resource type="Texture2D" uid="uid://dr6ufyql5fgqb" path="res://art/Knob.png" id="9_iirgp"]
 [ext_resource type="Script" path="res://stove_knob.gd" id="9_o0uvf"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="10_efodi"]
+[ext_resource type="Texture2D" uid="uid://b8oh2f8sv105p" path="res://art/BaconFrame5.png" id="10_kf7eo"]
+[ext_resource type="Texture2D" uid="uid://4ddvwylw5rmo" path="res://art/BaconFrame6.png" id="11_sskwn"]
+[ext_resource type="Texture2D" uid="uid://b3diuhm1wjhtq" path="res://art/BaconFrame7.png" id="12_fecjs"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0k282"]
 animations = [{
@@ -29,26 +33,55 @@ size = Vector2(229.73, 720.507)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_o77wj")
-}, {
-"duration": 2.0,
-"texture": ExtResource("6_i3n4i")
-}, {
-"duration": 5.0,
-"texture": ExtResource("7_psqrh")
+"texture": ExtResource("12_fecjs")
 }],
 "loop": true,
 "name": &"cooked",
-"speed": 1.0
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_77y5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ogt5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8u77b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8k374")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kf7eo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_sskwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fecjs")
+}],
+"loop": false,
+"name": &"flip",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_77y5g")
+}],
+"loop": true,
+"name": &"raw",
+"speed": 5.0
 }]
 
 [node name="Stove" type="Node2D"]
 script = ExtResource("1_iiek0")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1963.0
+offset_bottom = 1099.0
 texture = ExtResource("2_4eufi")
+expand_mode = 3
 
 [node name="BackButton" type="Button" parent="."]
 offset_left = 52.0
@@ -97,26 +130,27 @@ sprite_frames = SubResource("SpriteFrames_pggyy")
 animation = &"cooked"
 
 [node name="StoveKnob" type="Sprite2D" parent="." node_paths=PackedStringArray("stove_script")]
-position = Vector2(799, 929)
-scale = Vector2(0.075, 0.075)
-texture = ExtResource("8_pdfbk")
+position = Vector2(1010.64, 937.953)
+scale = Vector2(0.110204, 0.110204)
+texture = ExtResource("9_iirgp")
 script = ExtResource("9_o0uvf")
 stove_script = NodePath("..")
 
 [node name="Label" type="Label" parent="StoveKnob"]
-offset_left = -93.3325
-offset_top = -746.667
-offset_right = 175.667
-offset_bottom = -64.6666
+visible = false
+offset_left = -120.0
+offset_top = -713.0
+offset_right = 149.0
+offset_bottom = -30.9996
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 500
 text = "^"
 
 [node name="TempMarker" type="Label" parent="."]
-offset_left = 843.0
-offset_top = 891.0
-offset_right = 1015.0
-offset_bottom = 1437.0
+offset_left = 1069.0
+offset_top = 899.0
+offset_right = 1241.0
+offset_bottom = 1445.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "-"

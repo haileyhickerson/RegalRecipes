@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c860lwsyjoy1s"
-path="res://.godot/imported/Stovetop.png-06efddbed2a68bd971de208258d4e155.ctex"
+uid="uid://cfrufedn7v213"
+path="res://.godot/imported/BaconFrame1.png-f9bc1002e5bd9d15df6cc6fc33384e01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Stovetop.png"
-dest_files=["res://.godot/imported/Stovetop.png-06efddbed2a68bd971de208258d4e155.ctex"]
+source_file="res://art/BaconFrame1.png"
+dest_files=["res://.godot/imported/BaconFrame1.png-f9bc1002e5bd9d15df6cc6fc33384e01.ctex"]
 
 [params]
 

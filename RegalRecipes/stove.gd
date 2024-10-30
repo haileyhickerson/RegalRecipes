@@ -13,6 +13,7 @@ var cook_score
 @onready var meat_animated_sprite = $Bacon/BaconAnimation
 
 func _ready() -> void:
+	meat_animated_sprite.play("raw")
 	$NextButton.hide()
 	
 # Start cooking when the correct temperature is set
@@ -32,6 +33,8 @@ func on_pan_click():
 	if flip_allowed:
 		print("Meat flipped!")
 		flip_allowed = false
+		meat_animated_sprite.play("flip")
+		await get_tree().create_timer(0.5).timeout
 		meat_animated_sprite.play("cooked")
 		$CookingBar.value = 60  # Set a new point if needed for second stage
 	else:
