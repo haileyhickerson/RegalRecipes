@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy5mrv4eejggj"
-path="res://.godot/imported/StoveConcept.png-884b991295c3125e9270ac2b877986fe.ctex"
+uid="uid://bjwj8dwr2ac1k"
+path="res://.godot/imported/PeaBag .png-03b921fb1286a0897d433505d8ebcd36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/StoveConcept.png"
-dest_files=["res://.godot/imported/StoveConcept.png-884b991295c3125e9270ac2b877986fe.ctex"]
+source_file="res://art/PeaBag .png"
+dest_files=["res://.godot/imported/PeaBag .png-03b921fb1286a0897d433505d8ebcd36.ctex"]
 
 [params]
 
