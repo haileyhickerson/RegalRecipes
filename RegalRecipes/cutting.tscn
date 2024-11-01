@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://cutting.gd" id="1_wpq0h"]
 [ext_resource type="Texture2D" uid="uid://b7paioai6w1g5" path="res://art/CuttingBoard.png" id="2_dxffu"]
-[ext_resource type="Texture2D" uid="uid://daebuaiv8fa5s" path="res://art/Full_Carrot.png" id="3_mbxl7"]
+[ext_resource type="Texture2D" uid="uid://t4aivsex2etl" path="res://art/CheeseBlock.png" id="3_qctmb"]
 [ext_resource type="AudioStream" uid="uid://by3lauvagb334" path="res://music&sounds/533435__microtubule__carrots-slicing.wav" id="5_gvn0k"]
 [ext_resource type="Script" path="res://knife.gd" id="5_t5bmb"]
 [ext_resource type="Texture2D" uid="uid://b1fq84if3d2ys" path="res://art/Knife.png" id="5_ttaix"]
@@ -42,37 +42,23 @@ offset_bottom = 803.0
 theme_override_font_sizes/font_size = 50
 text = "Next"
 
-[node name="Label" type="Label" parent="."]
-offset_left = 294.0
-offset_top = 887.0
-offset_right = 1680.0
-offset_bottom = 1302.0
-scale = Vector2(0.99668, 1)
-theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
-theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
-theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
-theme_override_constants/outline_size = 19
-theme_override_constants/shadow_outline_size = 25
-theme_override_font_sizes/font_size = 60
-text = "Click on each line to cut the carrot!"
-horizontal_alignment = 1
-
 [node name="FullCarrot" type="Sprite2D" parent="."]
-position = Vector2(832, 603)
-texture = ExtResource("3_mbxl7")
+position = Vector2(958, 573)
+scale = Vector2(0.870833, 0.671296)
+texture = ExtResource("3_qctmb")
 
 [node name="Cut1" type="Line2D" parent="."]
-points = PackedVector2Array(1038, 406, 1038, 727)
+points = PackedVector2Array(938, 311, 938, 874)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 
 [node name="Cut2" type="Line2D" parent="."]
-points = PackedVector2Array(787, 406, 787, 727)
+points = PackedVector2Array(695, 428, 698, 798)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 
 [node name="Cut3" type="Line2D" parent="."]
-points = PackedVector2Array(1296, 406, 1296, 727)
+points = PackedVector2Array(1167, 203, 1167, 935)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 
