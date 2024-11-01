@@ -13,7 +13,7 @@ var flip_score
 var cook_score
 @onready var meat_animated_sprite = $Bacon/BaconAnimation
 var dialogue_index = 0
-var instructions = ["Click on the knob at the right temperature.", "Once the bar reaches 50%, click the PAN HANDLE to flip the meat!", "Make sure the meat isn't undercooked or overcooked!"]
+var instructions = ["Click on the knob at the right temperature.", "Once the bar reaches 50%, click the PAN HANDLE to flip the meat!", "Make sure the meat isn't undercooked or overcooked!", "Well done! You cooked the meat perfectly!"]
 
 func _ready() -> void:
 	$FlipText.hide()
@@ -22,7 +22,7 @@ func _ready() -> void:
 	show_next_dialogue()
 
 func show_next_dialogue():
-	if dialogue_index < instructions.size():
+	if dialogue_index < instructions.size() - 1:
 		$TextBox/Instructions.text = instructions[dialogue_index]  # Updates the label with the current dialogue
 		dialogue_index += 1
 	else:
@@ -47,11 +47,12 @@ func _input(event):
 
 func on_pan_click():
 	flipped = true
-	$FlipText.hide()
 	if flip_allowed:
 		print("Meat flipped!")
 		flip_allowed = false
 		meat_animated_sprite.play("cooked")
+		$CookingBar.value = 60
+		$FlipText.hide()
 	else:
 		print("Too early! Meat is undercooked.")
 		undercooked = true
@@ -66,6 +67,7 @@ func _process(delta):
 		# Flip allowed around 50% of the bar (adjust as needed)
 		if $CookingBar.value >= 50 and $CookingBar.value <= 60:
 			flip_allowed = true
+			$FlipText.show()
 
 		# Check if flip point has passed without action
 		elif $CookingBar.value > 60 and flip_allowed:
@@ -85,6 +87,8 @@ func end_cooking():
 	# Score logic
 	var score = calculate_score(correct_temp, !undercooked, !overcooked)
 	print("Final Score:", score)
+	$TextBox/Instructions.text = instructions[dialogue_index] 
+	$TextBox.show()
 	$NextButton.show()
 
 func calculate_score(temp_correct: bool, flip_correct: bool, perfect_cook: bool) -> int:
