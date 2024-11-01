@@ -1,11 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://bhyucviieqbhs"]
+[gd_scene load_steps=16 format=3 uid="uid://bhyucviieqbhs"]
 
 [ext_resource type="Script" path="res://pantry.gd" id="1_xewv2"]
 [ext_resource type="Texture2D" uid="uid://ckbq14kxwn8jm" path="res://art/EmptryPantry.png" id="2_1174c"]
 [ext_resource type="PackedScene" uid="uid://cp4wximgsmflu" path="res://basket.tscn" id="3_v2w7e"]
+[ext_resource type="Texture2D" uid="uid://t4aivsex2etl" path="res://art/CheeseBlock.png" id="4_54dwm"]
 [ext_resource type="PackedScene" uid="uid://noax3wfo31l0" path="res://ingredient.tscn" id="4_js1qu"]
 [ext_resource type="Texture2D" uid="uid://b67hbohj0k0m1" path="res://art/meat.png" id="5_0danb"]
+[ext_resource type="Texture2D" uid="uid://djk73qf2bjl02" path="res://art/CheeseBlock_Click.png" id="5_lyyq0"]
+[ext_resource type="Texture2D" uid="uid://bbvcbpm5alw22" path="res://art/CheeseBlock_Hover.png" id="6_om6r2"]
 [ext_resource type="Texture2D" uid="uid://njintfu88w8s" path="res://art/BadMeat.png" id="7_3rodr"]
+[ext_resource type="BitMap" uid="uid://ddtwa657nm2p8" path="res://art/CheeseBlock_Mask.png" id="7_a03bm"]
 [ext_resource type="Texture2D" uid="uid://cjf5u74cpopra" path="res://art/Cheese1.png" id="7_apk8s"]
 [ext_resource type="Texture2D" uid="uid://clgcslohqk5j1" path="res://art/Cheese2.png" id="8_gnceg"]
 [ext_resource type="Texture2D" uid="uid://byp1abx3b0u5y" path="res://art/Cheese3.png" id="9_y0ral"]
@@ -32,6 +36,18 @@ text = "Back"
 
 [node name="Basket" parent="." groups=["basket"] instance=ExtResource("3_v2w7e")]
 position = Vector2(1707, 902)
+
+[node name="Cheese" type="TextureButton" parent="."]
+offset_left = 795.0
+offset_top = 538.0
+offset_right = 1077.0
+offset_bottom = 820.0
+texture_normal = ExtResource("4_54dwm")
+texture_pressed = ExtResource("5_lyyq0")
+texture_hover = ExtResource("6_om6r2")
+texture_click_mask = ExtResource("7_a03bm")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Carrot1" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
 position = Vector2(795, 538)
