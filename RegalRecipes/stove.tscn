@@ -1,16 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://qlvok073syxy"]
+[gd_scene load_steps=14 format=3 uid="uid://qlvok073syxy"]
 
 [ext_resource type="Script" path="res://stove.gd" id="1_iiek0"]
-[ext_resource type="Texture2D" uid="uid://bwr0ddbtgcvhg" path="res://art/Stovetop.png" id="2_4eufi"]
+[ext_resource type="Texture2D" uid="uid://c860lwsyjoy1s" path="res://art/Stovetop.png" id="2_4eufi"]
 [ext_resource type="Texture2D" uid="uid://va34mugwsatg" path="res://art/pan.png" id="3_sdr8y"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="4_e1ow1"]
 [ext_resource type="Texture2D" uid="uid://cnn7n3sd7xt8c" path="res://art/Bacon3.png" id="5_o77wj"]
 [ext_resource type="Texture2D" uid="uid://byirk4ntkiej2" path="res://art/Bacon1.png" id="6_i3n4i"]
+[ext_resource type="Texture2D" uid="uid://dr6ufyql5fgqb" path="res://art/Knob.png" id="7_5dsup"]
 [ext_resource type="Texture2D" uid="uid://urirejdrw4w5" path="res://art/Bacon2.png" id="7_psqrh"]
-[ext_resource type="Texture2D" uid="uid://bv0bjc7b8ggu4" path="res://art/Stovetop copy.png" id="8_pdfbk"]
 [ext_resource type="Script" path="res://stove_knob.gd" id="9_o0uvf"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="10_efodi"]
-[ext_resource type="Texture2D" path="res://art/KnobExample.png" id="11_gam63"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0k282"]
 animations = [{
@@ -80,30 +79,12 @@ sprite_frames = SubResource("SpriteFrames_pggyy")
 animation = &"cooked"
 
 [node name="StoveKnob" type="Sprite2D" parent="." node_paths=PackedStringArray("stove_script")]
-position = Vector2(799, 929)
+position = Vector2(989.603, 921.603)
 rotation = 1.5708
-scale = Vector2(0.075, 0.075)
-texture = ExtResource("8_pdfbk")
+scale = Vector2(0.105131, 0.105131)
+texture = ExtResource("7_5dsup")
 script = ExtResource("9_o0uvf")
 stove_script = NodePath("..")
-
-[node name="Label" type="Label" parent="StoveKnob"]
-offset_left = -93.3325
-offset_top = -746.667
-offset_right = 175.667
-offset_bottom = -64.6666
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 500
-text = "^"
-
-[node name="TempMarker" type="Label" parent="."]
-offset_left = 843.0
-offset_top = 891.0
-offset_right = 1015.0
-offset_bottom = 1437.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-text = "-"
 
 [node name="CookingBar" type="ProgressBar" parent="."]
 offset_left = 714.0
@@ -144,7 +125,6 @@ autowrap_mode = 3
 [node name="KnobExample" type="Sprite2D" parent="TextBox"]
 position = Vector2(12.5177, 36.0354)
 scale = Vector2(1.39816, 1.19389)
-texture = ExtResource("11_gam63")
 
 [node name="Label" type="Label" parent="TextBox"]
 offset_left = -231.858
