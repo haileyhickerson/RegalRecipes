@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c860lwsyjoy1s"
-path="res://.godot/imported/Stovetop.png-06efddbed2a68bd971de208258d4e155.ctex"
+uid="uid://bv0bjc7b8ggu4"
+path="res://.godot/imported/Stovetop copy.png-5ccf0b0d595a0624aacd35640782ac16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Stovetop.png"
-dest_files=["res://.godot/imported/Stovetop.png-06efddbed2a68bd971de208258d4e155.ctex"]
+source_file="res://art/Stovetop copy.png"
+dest_files=["res://.godot/imported/Stovetop copy.png-5ccf0b0d595a0624aacd35640782ac16.ctex"]
 
 [params]
 

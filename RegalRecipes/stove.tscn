@@ -1,7 +1,63 @@
-[gd_scene load_steps=3 format=3 uid="uid://qlvok073syxy"]
+[gd_scene load_steps=19 format=3 uid="uid://qlvok073syxy"]
 
 [ext_resource type="Script" path="res://stove.gd" id="1_iiek0"]
-[ext_resource type="Texture2D" uid="uid://bwr0ddbtgcvhg" path="res://art/Stovetop.png" id="2_4eufi"]
+[ext_resource type="Texture2D" uid="uid://c860lwsyjoy1s" path="res://art/Stovetop.png" id="2_4eufi"]
+[ext_resource type="Texture2D" uid="uid://va34mugwsatg" path="res://art/pan.png" id="3_sdr8y"]
+[ext_resource type="Texture2D" uid="uid://cfrufedn7v213" path="res://art/BaconFrame1.png" id="4_0a35h"]
+[ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="4_e1ow1"]
+[ext_resource type="Texture2D" uid="uid://dj31n0uk5tir0" path="res://art/BaconFrame2.png" id="5_uhdxa"]
+[ext_resource type="Texture2D" uid="uid://bjschdfxi3vf7" path="res://art/BaconFrame3.png" id="6_dqolx"]
+[ext_resource type="Texture2D" uid="uid://cp5ioqnp4xfpi" path="res://art/BaconFrame4.png" id="7_troxc"]
+[ext_resource type="Texture2D" uid="uid://bv0bjc7b8ggu4" path="res://art/Stovetop copy.png" id="8_pdfbk"]
+[ext_resource type="Texture2D" uid="uid://b8oh2f8sv105p" path="res://art/BaconFrame5.png" id="8_u6fsx"]
+[ext_resource type="Texture2D" uid="uid://4ddvwylw5rmo" path="res://art/BaconFrame6.png" id="9_nqwqk"]
+[ext_resource type="Script" path="res://stove_knob.gd" id="9_o0uvf"]
+[ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="10_efodi"]
+[ext_resource type="Texture2D" uid="uid://b3diuhm1wjhtq" path="res://art/BaconFrame7.png" id="10_iwdbq"]
+[ext_resource type="Texture2D" uid="uid://dr6ufyql5fgqb" path="res://art/Knob.png" id="11_gam63"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0k282"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_sdr8y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ip8xg"]
+size = Vector2(229.73, 720.507)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pggyy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_0a35h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uhdxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dqolx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_troxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_u6fsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nqwqk")
+}, {
+"duration": 40.0,
+"texture": ExtResource("10_iwdbq")
+}],
+"loop": true,
+"name": &"cooked",
+"speed": 3.0
+}]
 
 [node name="Stove" type="Node2D"]
 script = ExtResource("1_iiek0")
@@ -12,6 +68,7 @@ offset_bottom = 40.0
 texture = ExtResource("2_4eufi")
 
 [node name="BackButton" type="Button" parent="."]
+visible = false
 offset_left = 52.0
 offset_top = 31.0
 offset_right = 232.0
@@ -19,4 +76,105 @@ offset_bottom = 136.0
 theme_override_font_sizes/font_size = 50
 text = "Back"
 
+[node name="Pan" type="Area2D" parent="."]
+scale = Vector2(0.37, 0.37)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pan"]
+position = Vector2(2608.11, 1197.3)
+sprite_frames = SubResource("SpriteFrames_0k282")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pan"]
+position = Vector2(2622.97, 1758.67)
+shape = SubResource("RectangleShape2D_ip8xg")
+
+[node name="Bacon" type="Area2D" parent="."]
+
+[node name="BaconAnimation" type="AnimatedSprite2D" parent="Bacon"]
+position = Vector2(967, 335)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_pggyy")
+animation = &"cooked"
+
+[node name="StoveKnob" type="Sprite2D" parent="." node_paths=PackedStringArray("stove_script")]
+position = Vector2(988, 919)
+rotation = 1.5708
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_pdfbk")
+script = ExtResource("9_o0uvf")
+stove_script = NodePath("..")
+
+[node name="Label" type="Label" parent="StoveKnob"]
+offset_left = -93.3325
+offset_top = -746.667
+offset_right = 175.667
+offset_bottom = -64.6666
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 500
+text = "^"
+
+[node name="CookingBar" type="ProgressBar" parent="."]
+offset_left = 714.0
+offset_top = 23.0
+offset_right = 1221.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("10_efodi")
+theme_override_font_sizes/font_size = 60
+step = 0.005
+
+[node name="NextButton" type="Button" parent="."]
+offset_left = 1385.0
+offset_top = 875.0
+offset_right = 1579.0
+offset_bottom = 989.0
+theme_override_font_sizes/font_size = 50
+text = "Next"
+
+[node name="TextBox" type="Sprite2D" parent="."]
+position = Vector2(955, 473)
+scale = Vector2(0.565, 0.565)
+texture = ExtResource("4_e1ow1")
+
+[node name="Instructions" type="Label" parent="TextBox"]
+offset_left = -725.664
+offset_top = -192.92
+offset_right = 732.336
+offset_bottom = 347.08
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("10_efodi")
+theme_override_font_sizes/font_size = 70
+text = "Click on the knob at the right temperature."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="KnobExample" type="Sprite2D" parent="TextBox"]
+position = Vector2(12.5177, 36.0354)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_gam63")
+
+[node name="Label" type="Label" parent="TextBox"]
+offset_left = -231.858
+offset_top = 242.478
+offset_right = 261.142
+offset_bottom = 297.478
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_efodi")
+theme_override_font_sizes/font_size = 30
+text = "Press \"Space\" to continue"
+horizontal_alignment = 1
+
+[node name="FlipText" type="Label" parent="."]
+offset_left = 849.0
+offset_top = 208.0
+offset_right = 1106.0
+offset_bottom = 332.0
+theme_override_fonts/font = ExtResource("10_efodi")
+theme_override_font_sizes/font_size = 90
+text = "FLIP!!!"
+
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="mouse_entered" from="Pan" to="." method="_on_pan_mouse_entered"]
+[connection signal="mouse_exited" from="Pan" to="." method="_on_pan_mouse_exited"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

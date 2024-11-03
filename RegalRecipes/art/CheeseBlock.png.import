@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c860lwsyjoy1s"
-path="res://.godot/imported/Stovetop.png-06efddbed2a68bd971de208258d4e155.ctex"
+uid="uid://t4aivsex2etl"
+path="res://.godot/imported/CheeseBlock.png-04295206d836bab6afaeb745085c4e1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Stovetop.png"
-dest_files=["res://.godot/imported/Stovetop.png-06efddbed2a68bd971de208258d4e155.ctex"]
+source_file="res://art/CheeseBlock.png"
+dest_files=["res://.godot/imported/CheeseBlock.png-04295206d836bab6afaeb745085c4e1e.ctex"]
 
 [params]
 

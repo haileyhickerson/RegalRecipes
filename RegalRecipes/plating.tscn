@@ -1,9 +1,8 @@
-[gd_scene load_steps=27 format=3 uid="uid://cvr2aoqdlckoa"]
+[gd_scene load_steps=26 format=3 uid="uid://cvr2aoqdlckoa"]
 
 [ext_resource type="Script" path="res://plating.gd" id="1_w55mi"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_efjw4"]
 [ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="3_ew156"]
-[ext_resource type="FontFile" uid="uid://dorvoffquppln" path="res://fonts/Hand of King.ttf" id="3_ewksq"]
 [ext_resource type="Texture2D" uid="uid://binglwbf545x1" path="res://art/Peas.png" id="5_3jh3m"]
 [ext_resource type="Texture2D" uid="uid://b18m0772uijl1" path="res://art/BlueBowl.png" id="5_e5mgo"]
 [ext_resource type="Texture2D" uid="uid://trehlrsg5tl0" path="res://art/ReferencePic.png" id="5_ofxoc"]
@@ -66,22 +65,6 @@ offset_right = 232.0
 offset_bottom = 136.0
 theme_override_font_sizes/font_size = 50
 text = "Back"
-
-[node name="Label" type="Label" parent="."]
-offset_left = 240.0
-offset_top = 58.0
-offset_right = 1740.0
-offset_bottom = 473.0
-scale = Vector2(0.99668, 1)
-theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
-theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
-theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
-theme_override_constants/outline_size = 19
-theme_override_constants/shadow_outline_size = 25
-theme_override_fonts/font = ExtResource("3_ewksq")
-theme_override_font_sizes/font_size = 100
-text = "This is where you will plate ingredients"
-horizontal_alignment = 1
 
 [node name="Taste Test Button" type="Button" parent="."]
 offset_left = 806.0

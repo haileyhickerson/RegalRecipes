@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c860lwsyjoy1s"
-path="res://.godot/imported/Stovetop.png-06efddbed2a68bd971de208258d4e155.ctex"
+uid="uid://bbvcbpm5alw22"
+path="res://.godot/imported/CheeseBlock_Hover.png-6c75dbda66911c4c395a83ed6d57c1c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Stovetop.png"
-dest_files=["res://.godot/imported/Stovetop.png-06efddbed2a68bd971de208258d4e155.ctex"]
+source_file="res://art/CheeseBlock_Hover.png"
+dest_files=["res://.godot/imported/CheeseBlock_Hover.png-6c75dbda66911c4c395a83ed6d57c1c1.ctex"]
 
 [params]
 
