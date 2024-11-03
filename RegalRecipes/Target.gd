@@ -1,10 +1,8 @@
 extends Area2D
 
-@onready var Checkmark
-@onready var CheckmarkTimer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Checkmark.visible = false
+	#$Checkmark.visible = false
 	connect("area_entered", Callable(self, "_on_TargetPeas_area_entered"))
 	#connect("timeout", Callable(self, "_on_CheckmarkTimer_timeout"))
 	print("connected")
