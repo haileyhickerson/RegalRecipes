@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://qlvok073syxy"]
+[gd_scene load_steps=18 format=3 uid="uid://qlvok073syxy"]
 
 [ext_resource type="Script" path="res://stove.gd" id="1_iiek0"]
 [ext_resource type="Texture2D" uid="uid://c860lwsyjoy1s" path="res://art/Stovetop.png" id="2_4eufi"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dj31n0uk5tir0" path="res://art/BaconFrame2.png" id="5_uhdxa"]
 [ext_resource type="Texture2D" uid="uid://bjschdfxi3vf7" path="res://art/BaconFrame3.png" id="6_dqolx"]
 [ext_resource type="Texture2D" uid="uid://cp5ioqnp4xfpi" path="res://art/BaconFrame4.png" id="7_troxc"]
-[ext_resource type="Texture2D" uid="uid://bv0bjc7b8ggu4" path="res://art/Stovetop copy.png" id="8_pdfbk"]
 [ext_resource type="Texture2D" uid="uid://b8oh2f8sv105p" path="res://art/BaconFrame5.png" id="8_u6fsx"]
 [ext_resource type="Texture2D" uid="uid://4ddvwylw5rmo" path="res://art/BaconFrame6.png" id="9_nqwqk"]
 [ext_resource type="Script" path="res://stove_knob.gd" id="9_o0uvf"]
@@ -99,18 +98,9 @@ animation = &"cooked"
 position = Vector2(988, 919)
 rotation = 1.5708
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("8_pdfbk")
+texture = ExtResource("11_gam63")
 script = ExtResource("9_o0uvf")
 stove_script = NodePath("..")
-
-[node name="Label" type="Label" parent="StoveKnob"]
-offset_left = -93.3325
-offset_top = -746.667
-offset_right = 175.667
-offset_bottom = -64.6666
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 500
-text = "^"
 
 [node name="CookingBar" type="ProgressBar" parent="."]
 offset_left = 714.0

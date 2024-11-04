@@ -27,8 +27,7 @@ func show_next_dialogue():
 		dialogue_index += 1
 	else:
 		$TextBox.hide() 
-		
-	
+
 # Start cooking when the correct temperature is set
 func start_cooking():
 	$CookingBar.visible = true
@@ -51,6 +50,7 @@ func on_pan_click():
 		print("Meat flipped!")
 		flip_allowed = false
 		meat_animated_sprite.play("cooked")
+		print($StoveKnob.rotation)
 		$CookingBar.value = 60
 		$FlipText.hide()
 	else:
