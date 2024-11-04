@@ -90,6 +90,8 @@ func end_cooking():
 	print("Final Score:", score)
 	$ScoreTextBox/Score.text = str(score) + " points. Nice job!"
 	$ScoreTextBox.show()
+	PlayerVariables.stove_completed = true
+	PlayerVariables.stove_score = score
 	$NextButton.show()
 
 func calculate_score(temp_correct: bool, flip_correct: bool, perfect_cook: bool) -> int:
