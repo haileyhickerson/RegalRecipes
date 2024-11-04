@@ -12,6 +12,8 @@ var current_arrow
 # int denoting the index of the currently active marker
 var current_marker_index
 
+var first_space_pressed = false
+
 # boolean to determine if the player is currently attempting to complete the station
 var station_begin
 # boolean to determine if the player has started their first attempt
@@ -26,6 +28,8 @@ var exited_circle
 var time_elapsed := 0.0
 var final_time
 
+var final_score = 100
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	station_completed = false
@@ -35,11 +39,21 @@ func _ready() -> void:
 	arrow_array = [$Arrow1, $Arrow2, $Arrow3, $Arrow4,
 					$Arrow5, $Arrow6, $Arrow7, $Arrow8,]
 	$NextButton.hide()
+	$StartButton.hide()
 	$Peas.play("idle")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Input.is_action_pressed("action"):
+		if !first_space_pressed:
+			first_space_pressed = true
+			$TextBox/Instructions.hide()
+			$TextBox/PressSpace.hide()
+			$TextBox/Instructions2.show()
+			$TextBox/Instructions2/ArrowStart.play()
+			$StartButton.show()
+			
 	if first_station_begin && !station_completed:
 		time_elapsed += delta
 		$Timer.text = str(int(time_elapsed))
@@ -64,10 +78,18 @@ func _process(delta: float) -> void:
 		if exited_circle:
 			reset_mixing()
 	if station_completed:
+		PlayerVariables.mixing_completed = true
 		final_time = int(time_elapsed)
 		for arrow in arrow_array:
 			arrow.hide()
 			$MarkerButton.hide()
+		var score_deduction = int(final_time - 10)
+		if score_deduction < 0:
+			score_deduction = 0
+		final_score = 100 - score_deduction
+		PlayerVariables.mixing_score = final_score
+		$ScoreBox/FinalScore.text = "Final Score: " + str(final_score) + "/100"
+		$ScoreBox.show()
 			
 func reset_mixing():
 		station_begin = false
