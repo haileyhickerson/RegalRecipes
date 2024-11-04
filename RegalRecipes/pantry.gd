@@ -48,6 +48,8 @@ func _input(event):
 							$ScoreTextbox/Score.text = str(starting_score) + " points! Great job!"
 							$ScoreTextbox.show()
 							$NextButton.show()
+							PlayerVariables.pantry_completed = true
+							PlayerVariables.pantry_score = starting_score
 					else:
 						print("No!")
 						starting_score -= 10

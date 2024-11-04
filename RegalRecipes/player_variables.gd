@@ -5,9 +5,11 @@ var location
 var first_move = false;
 
 var pantry_completed = false;
+var pantry_score = 0;
 var cutting_completed = false;
 var mixing_completed = false;
 var stove_completed = false;
+var stove_score = 0;
 var plating_completed = false;
 
 var pantry_score
