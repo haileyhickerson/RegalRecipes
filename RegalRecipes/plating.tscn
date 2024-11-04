@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cvr2aoqdlckoa"]
+[gd_scene load_steps=51 format=3 uid="uid://cvr2aoqdlckoa"]
 
 [ext_resource type="Script" path="res://plating.gd" id="1_w55mi"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_efjw4"]
@@ -36,6 +36,13 @@
 [ext_resource type="Texture2D" uid="uid://mho8cum637qm" path="res://art/Cheese3_Click.png" id="25_kbvam"]
 [ext_resource type="Texture2D" uid="uid://fixh5h580sxq" path="res://art/Cheese3_Hover.png" id="26_y3ehw"]
 [ext_resource type="BitMap" uid="uid://8ub7j5bf2sxj" path="res://art/Cheese3_Mask.png" id="27_sgidx"]
+[ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="37_wvajo"]
+[ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="38_7o3ny"]
+[ext_resource type="Texture2D" uid="uid://cjcpi4m5np1fv" path="res://art/play.png" id="39_t2x56"]
+[ext_resource type="Texture2D" uid="uid://dxugxbw6gpt0n" path="res://art/play_hover.png" id="40_tqmxu"]
+[ext_resource type="BitMap" uid="uid://kdtfcv3g1m5w" path="res://art/play_pressed.png" id="41_0m4k8"]
+[ext_resource type="Texture2D" uid="uid://clopys7kwhryi" path="res://art/FancyCircle (1).png" id="42_ny8xw"]
+[ext_resource type="Texture2D" uid="uid://62217bqvvk7l" path="res://art/ButterspoonHead.png" id="43_gp3ct"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7l5m4"]
 radius = 34.6811
@@ -72,13 +79,13 @@ position = Vector2(965, 553)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_ew156")
 
-[node name="BackButton" type="Button" parent="."]
+[node name="HintButton" type="Button" parent="."]
 offset_left = 52.0
 offset_top = 31.0
 offset_right = 232.0
 offset_bottom = 136.0
 theme_override_font_sizes/font_size = 50
-text = "Back"
+text = "Hint"
 
 [node name="Taste Test Button" type="Button" parent="."]
 offset_left = 806.0
@@ -87,6 +94,12 @@ offset_right = 1178.0
 offset_bottom = 1002.0
 theme_override_font_sizes/font_size = 50
 text = "Serve the food!"
+
+[node name="HintReferencePic" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(258, 230)
+scale = Vector2(0.403009, 0.37662)
+texture = ExtResource("5_ofxoc")
 
 [node name="ReferencePic" type="Sprite2D" parent="."]
 visible = false
@@ -328,7 +341,95 @@ scale = Vector2(0.45, 0.45)
 shape = SubResource("RectangleShape2D_s0vrs")
 debug_color = Color(0, 0.870588, 0.341176, 0.419608)
 
-[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[node name="TextBox" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.564815, 0.564815)
+texture = ExtResource("37_wvajo")
+
+[node name="Instructions" type="Label" parent="TextBox"]
+offset_left = -729.443
+offset_top = -141.64
+offset_right = 764.557
+offset_bottom = 363.36
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("38_7o3ny")
+theme_override_font_sizes/font_size = 75
+text = "Place the ingredients following the reference guide. The more precise the better! "
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ScoreTextBox" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.564815, 0.564815)
+texture = ExtResource("37_wvajo")
+
+[node name="Scoring" type="Label" parent="ScoreTextBox"]
+offset_left = -729.443
+offset_top = -141.64
+offset_right = 764.557
+offset_bottom = 363.36
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("38_7o3ny")
+theme_override_font_sizes/font_size = 75
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="StartButton" type="TextureButton" parent="."]
+offset_left = 946.0
+offset_top = 28.0
+offset_right = 996.0
+offset_bottom = 78.0
+texture_normal = ExtResource("39_t2x56")
+texture_hover = ExtResource("40_tqmxu")
+texture_click_mask = ExtResource("41_0m4k8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ContinueButton" type="Button" parent="."]
+offset_left = 806.0
+offset_top = 883.0
+offset_right = 1178.0
+offset_bottom = 1002.0
+theme_override_font_sizes/font_size = 50
+text = "Continue!"
+
+[node name="HintTimer" type="Timer" parent="."]
+
+[node name="FancyCircle" type="Sprite2D" parent="."]
+position = Vector2(356, 133)
+scale = Vector2(0.234465, 0.234465)
+texture = ExtResource("42_ny8xw")
+
+[node name="HintText" type="Sprite2D" parent="."]
+position = Vector2(159, 274)
+scale = Vector2(0.189699, 0.184259)
+texture = ExtResource("37_wvajo")
+metadata/_edit_group_ = true
+
+[node name="HintLabel" type="Label" parent="HintText"]
+offset_left = -729.443
+offset_top = -141.64
+offset_right = 764.557
+offset_bottom = 363.36
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("38_7o3ny")
+theme_override_font_sizes/font_size = 75
+text = "Can't remember? Take another look. However points will be deducted."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ButterspoonHead" type="Sprite2D" parent="."]
+position = Vector2(348, 131)
+scale = Vector2(0.187037, 0.187037)
+texture = ExtResource("43_gp3ct")
+
+[connection signal="pressed" from="HintButton" to="." method="_on_hint_button_pressed"]
 [connection signal="pressed" from="Taste Test Button" to="." method="_on_taste_test_button_pressed"]
 [connection signal="input_event" from="BowlsContainer/BlueBowl/Peas" to="BowlsContainer/BlueBowl/Peas" method="_on_input_event"]
 [connection signal="button_down" from="BowlsContainer/BlueBowl/Peas/PeaButton" to="." method="_on_pea_button_button_down"]
@@ -360,3 +461,6 @@ debug_color = Color(0, 0.870588, 0.341176, 0.419608)
 [connection signal="area_exited" from="TargetSpots/BaconTarget2" to="." method="_on_bacon_target_2_area_exited"]
 [connection signal="area_entered" from="TargetSpots/BaconTarget3" to="." method="_on_bacon_target_3_area_entered"]
 [connection signal="area_exited" from="TargetSpots/BaconTarget3" to="." method="_on_bacon_target_3_area_exited"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="timeout" from="HintTimer" to="." method="_on_hint_timer_timeout"]
