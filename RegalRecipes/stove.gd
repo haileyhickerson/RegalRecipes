@@ -1,7 +1,7 @@
 extends Node2D
 
 # Variables to control cooking stages
-var correct_temp = true
+var correct_temp = false
 var cooking_started = false
 var flip_allowed = false
 var undercooked = false
@@ -13,16 +13,17 @@ var flip_score
 var cook_score
 @onready var meat_animated_sprite = $Bacon/BaconAnimation
 var dialogue_index = 0
-var instructions = ["Click on the knob at the right temperature.", "Once the bar reaches 50%, click the PAN HANDLE to flip the meat!", "Make sure the meat isn't undercooked or overcooked!", "Well done! You cooked the meat perfectly!"]
+var instructions = ["Click on the knob at the right temperature.", "Once the bar reaches 50%, click the PAN HANDLE to flip the meat!", "Make sure the meat isn't undercooked or overcooked!"]
 
 func _ready() -> void:
 	$FlipText.hide()
 	$NextButton.hide()
+	$ScoreTextBox.hide()
 	$TextBox/KnobExample.show()
 	show_next_dialogue()
 
 func show_next_dialogue():
-	if dialogue_index < instructions.size() - 1:
+	if dialogue_index < instructions.size():
 		$TextBox/Instructions.text = instructions[dialogue_index]  # Updates the label with the current dialogue
 		dialogue_index += 1
 	else:
@@ -87,24 +88,24 @@ func end_cooking():
 	# Score logic
 	var score = calculate_score(correct_temp, !undercooked, !overcooked)
 	print("Final Score:", score)
-	$TextBox/Instructions.text = instructions[dialogue_index] 
-	$TextBox.show()
+	$ScoreTextBox/Score.text = str(score) + " points. Nice job!"
+	$ScoreTextBox.show()
 	$NextButton.show()
 
 func calculate_score(temp_correct: bool, flip_correct: bool, perfect_cook: bool) -> int:
-	if temp_correct:
+	var stove_knob = $StoveKnob
+	if stove_knob.final_temperature():
 		temp_score = 50
 	else:
 		temp_score = 0
 	if flip_correct:
-		flip_score = 50
+		flip_score = 25
 	else:
 		flip_score = 0
 	if perfect_cook:
-		cook_score = 50
+		cook_score = 25
 	else:
 		cook_score = 0
-	print(temp_score)
 	return temp_score + flip_score + cook_score
 
 func _on_back_button_pressed() -> void:

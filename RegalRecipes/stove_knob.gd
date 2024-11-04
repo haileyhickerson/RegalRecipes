@@ -1,11 +1,10 @@
 extends Sprite2D
 
 @export var stove_script: Node
-
 # Target rotation for the correct temperature (e.g., 90 degrees)
 var target_rotation = 90
 # Tolerance for how close the player needs to get (5 degrees)
-var rotation_tolerance = 5
+var rotation_tolerance = 15
 # Speed of rotation in degrees per second
 var rotation_speed = 200
 # Track if the temperature was set correctly
@@ -26,7 +25,7 @@ func _input(event):
 func check_temperature():
 	# Check if the current rotation is within the target range
 	var current_rotation = rotation_degrees
-	print(abs(current_rotation - target_rotation))
+	print(abs(current_rotation))
 	if abs(current_rotation - target_rotation) <= rotation_tolerance:
 		correct_temp = true
 		print("Correct temperature!")
@@ -34,4 +33,8 @@ func check_temperature():
 		correct_temp = false
 		print("Incorrect temperature.")
 	rotation_speed = 0
+	emit_signal("temperature_set")
 	stove_script.start_cooking()
+	
+func final_temperature():
+	return correct_temp
