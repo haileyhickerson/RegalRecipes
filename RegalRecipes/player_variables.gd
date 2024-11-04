@@ -10,6 +10,8 @@ var mixing_completed = false;
 var stove_completed = false;
 var plating_completed = false;
 
+var plating_score
+
 var chef_selected
 
 # Called when the node enters the scene tree for the first time.
