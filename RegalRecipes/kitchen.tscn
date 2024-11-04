@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://1l3xhks67ylh"]
+[gd_scene load_steps=50 format=3 uid="uid://1l3xhks67ylh"]
 
 [ext_resource type="Script" path="res://kitchen.gd" id="1_yn30c"]
 [ext_resource type="Texture2D" uid="uid://cdxkwv6ddgfwv" path="res://art/TileFloor.png" id="2_rbyka"]
@@ -26,9 +26,16 @@
 [ext_resource type="Texture2D" uid="uid://c8i4j4swg5hix" path="res://art/PlatingIcon.png" id="12_7di3w"]
 [ext_resource type="Texture2D" uid="uid://bmsxp1gx2xnji" path="res://art/MixingIconPress.png" id="12_h7llt"]
 [ext_resource type="Texture2D" uid="uid://cuhoyxngu4vr1" path="res://art/PlatingIconPress.png" id="13_025dv"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bg11"]
-size = Vector2(338.375, 233.25)
+[ext_resource type="Texture2D" uid="uid://4ku7r1pae5c" path="res://art/ArrowFrames/1.png" id="27_smsw7"]
+[ext_resource type="Texture2D" uid="uid://bi7ai5wq7luin" path="res://art/ArrowFrames/2.png" id="28_spthw"]
+[ext_resource type="Texture2D" uid="uid://4sm7eplfenyi" path="res://art/ArrowFrames/3.png" id="29_qn5f2"]
+[ext_resource type="Texture2D" uid="uid://bovgkx1fg1n1p" path="res://art/ArrowFrames/4.png" id="30_4wxq4"]
+[ext_resource type="Texture2D" uid="uid://byskijp7yp1gl" path="res://art/ArrowFrames/5.png" id="31_o2jxi"]
+[ext_resource type="Texture2D" uid="uid://cadne302r2unw" path="res://art/ArrowFrames/6.png" id="32_wv8kl"]
+[ext_resource type="Texture2D" uid="uid://crxasd4ld3lyk" path="res://art/ArrowFrames/7.png" id="33_whd8b"]
+[ext_resource type="Texture2D" uid="uid://20x43rtvmljf" path="res://art/ArrowFrames/8.png" id="34_fcjti"]
+[ext_resource type="Texture2D" uid="uid://clopys7kwhryi" path="res://art/FancyCircle (1).png" id="35_oolft"]
+[ext_resource type="Texture2D" uid="uid://62217bqvvk7l" path="res://art/ButterspoonHead.png" id="36_ooni6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l5u2r"]
 animations = [{
@@ -56,6 +63,9 @@ animations = [{
 "name": &"pressed",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bg11"]
+size = Vector2(338.375, 233.25)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g72pm"]
 animations = [{
@@ -206,7 +216,40 @@ animations = [{
 radius = 42.6829
 height = 212.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_aul7k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_smsw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_spthw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_qn5f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_4wxq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_o2jxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_wv8kl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_whd8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_fcjti")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
 [node name="Kitchen" type="Node2D"]
+position = Vector2(0, 4)
 script = ExtResource("1_yn30c")
 
 [node name="KitchenBg" type="Sprite2D" parent="."]
@@ -215,22 +258,24 @@ scale = Vector2(0.998958, 0.998148)
 texture = ExtResource("2_rbyka")
 
 [node name="PantryArea" type="Area2D" parent="."]
+position = Vector2(-32, 2)
+scale = Vector2(1.0908, 1.0908)
 script = ExtResource("3_720iv")
+
+[node name="PantryIcon" type="AnimatedSprite2D" parent="PantryArea"]
+position = Vector2(206, 114)
+scale = Vector2(0.226968, 0.226968)
+sprite_frames = SubResource("SpriteFrames_l5u2r")
+animation = &"normal"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PantryArea"]
 position = Vector2(207.813, 117.375)
 shape = SubResource("RectangleShape2D_1bg11")
 one_way_collision_margin = 0.0
 
-[node name="PantryIcon" type="AnimatedSprite2D" parent="PantryArea"]
-position = Vector2(206, 114)
-scale = Vector2(0.226968, 0.226968)
-sprite_frames = SubResource("SpriteFrames_l5u2r")
-animation = &"pressed"
-
 [node name="PantryText" type="Sprite2D" parent="PantryArea"]
-position = Vector2(507, 100)
-scale = Vector2(0.199074, 0.199074)
+position = Vector2(529.887, 105.427)
+scale = Vector2(0.22458, 0.22458)
 texture = ExtResource("7_hrdey")
 
 [node name="Label" type="Label" parent="PantryArea/PantryText"]
@@ -250,7 +295,8 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="CuttingArea" type="Area2D" parent="."]
-position = Vector2(40, 7)
+position = Vector2(-24, 11)
+scale = Vector2(1.13628, 1.13628)
 
 [node name="CuttingIcon" type="AnimatedSprite2D" parent="CuttingArea"]
 position = Vector2(1153.89, 112.5)
@@ -263,7 +309,7 @@ position = Vector2(1157, 110.5)
 shape = SubResource("RectangleShape2D_tvkdp")
 
 [node name="CuttingText" type="Sprite2D" parent="CuttingArea"]
-position = Vector2(1512, 205)
+position = Vector2(1518.11, 96.8071)
 scale = Vector2(0.212875, 0.212875)
 texture = ExtResource("7_hrdey")
 
@@ -284,7 +330,8 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="StoveArea" type="Area2D" parent="."]
-position = Vector2(-7, 45)
+position = Vector2(-13, -125)
+scale = Vector2(1.17195, 1.17195)
 
 [node name="StoveIcon" type="AnimatedSprite2D" parent="StoveArea"]
 position = Vector2(157.433, 775.422)
@@ -298,7 +345,7 @@ position = Vector2(156.5, 780.5)
 shape = SubResource("RectangleShape2D_c8ofu")
 
 [node name="StoveText" type="Sprite2D" parent="StoveArea"]
-position = Vector2(377, 904)
+position = Vector2(286.701, 463.33)
 scale = Vector2(0.212875, 0.212875)
 texture = ExtResource("7_hrdey")
 
@@ -319,7 +366,8 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="MixingArea" type="Area2D" parent="."]
-position = Vector2(113, 3)
+position = Vector2(26, -56)
+scale = Vector2(1.12072, 1.12072)
 
 [node name="MixingIcon" type="AnimatedSprite2D" parent="MixingArea"]
 position = Vector2(795, 551)
@@ -332,7 +380,7 @@ position = Vector2(796, 554.125)
 shape = SubResource("RectangleShape2D_o7u0g")
 
 [node name="MixingText" type="Sprite2D" parent="MixingArea"]
-position = Vector2(1082, 431)
+position = Vector2(614.782, 720.072)
 scale = Vector2(0.212875, 0.212875)
 texture = ExtResource("7_hrdey")
 
@@ -353,7 +401,8 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="PlatingArea" type="Area2D" parent="."]
-scale = Vector2(0.982729, 1.01836)
+position = Vector2(-314, -176)
+scale = Vector2(1.14867, 1.19031)
 
 [node name="PlatingIcon" type="AnimatedSprite2D" parent="PlatingArea"]
 position = Vector2(1646.44, 922.074)
@@ -366,7 +415,7 @@ position = Vector2(1649.9, 924.3)
 shape = SubResource("RectangleShape2D_6ubm7")
 
 [node name="PlatingText" type="Sprite2D" parent="PlatingArea"]
-position = Vector2(1763.46, 716.841)
+position = Vector2(1210.1, 923.286)
 scale = Vector2(0.216616, 0.209038)
 texture = ExtResource("7_hrdey")
 
@@ -386,29 +435,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="MoveText" type="Sprite2D" parent="."]
-position = Vector2(1518, 454)
-scale = Vector2(0.326389, 0.326389)
-texture = ExtResource("7_hrdey")
-
-[node name="Label" type="Label" parent="MoveText"]
-offset_left = -683.163
-offset_top = -190.884
-offset_right = 729.837
-offset_bottom = 170.116
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 6
-theme_override_fonts/font = ExtResource("7_yfsju")
-theme_override_font_sizes/font_size = 127
-text = "Use W, A, S, D, or the
-Arrow Keys to Move"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
 [node name="Player" type="Area2D" parent="." groups=["player"]]
-position = Vector2(300, 300)
+position = Vector2(467, 446)
 script = ExtResource("3_bb6cy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
@@ -427,6 +455,83 @@ shape = SubResource("CapsuleShape2D_bhulj")
 position = Vector2(-300, -300)
 stream = ExtResource("5_1fu2m")
 volume_db = 20.1
+
+[node name="ChefText" type="Sprite2D" parent="."]
+position = Vector2(1470, 497)
+scale = Vector2(0.34897, 0.34897)
+texture = ExtResource("7_hrdey")
+
+[node name="MoveText" type="Label" parent="ChefText"]
+offset_left = -694.714
+offset_top = -175.163
+offset_right = 718.286
+offset_bottom = 185.837
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_yfsju")
+theme_override_font_sizes/font_size = 121
+text = "Use W, A, S, D, or the
+Arrow Keys to Move"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="GoToPantry" type="Label" parent="ChefText"]
+offset_left = -810.958
+offset_top = -194.859
+offset_right = 810.042
+offset_bottom = 166.141
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_yfsju")
+theme_override_font_sizes/font_size = 98
+text = "Great! Now we must grab some
+ingredients from the cupboard!"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="PantryArrow" type="AnimatedSprite2D" parent="ChefText/GoToPantry"]
+position = Vector2(-2341.17, -504.341)
+rotation = -2.6377
+sprite_frames = SubResource("SpriteFrames_aul7k")
+frame_progress = 0.0334122
+
+[node name="GoToCutting" type="Label" parent="ChefText"]
+offset_left = -810.958
+offset_top = -194.859
+offset_right = 810.042
+offset_bottom = 166.141
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_yfsju")
+theme_override_font_sizes/font_size = 114
+text = "Now, we must chop
+our ingredients!"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CuttingArrow" type="AnimatedSprite2D" parent="ChefText/GoToCutting"]
+position = Vector2(-512.938, -613.233)
+rotation = -0.303205
+sprite_frames = SubResource("SpriteFrames_aul7k")
+frame_progress = 0.633514
+
+[node name="FancyCircle" type="Sprite2D" parent="."]
+position = Vector2(1802.61, 614.944)
+scale = Vector2(0.234465, 0.234465)
+texture = ExtResource("35_oolft")
+
+[node name="ButterspoonHead" type="Sprite2D" parent="."]
+position = Vector2(1798.22, 600.555)
+scale = Vector2(0.187037, 0.187037)
+texture = ExtResource("36_ooni6")
 
 [connection signal="area_entered" from="PantryArea" to="." method="_on_pantry_area_entered"]
 [connection signal="area_exited" from="PantryArea" to="." method="_on_pantry_area_exited"]

@@ -1,52 +1,63 @@
-[gd_scene load_steps=27 format=3 uid="uid://cvr2aoqdlckoa"]
+[gd_scene load_steps=44 format=3 uid="uid://cvr2aoqdlckoa"]
 
 [ext_resource type="Script" path="res://plating.gd" id="1_w55mi"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_efjw4"]
 [ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="3_ew156"]
-[ext_resource type="Script" path="res://plate_area.gd" id="4_wtnmm"]
 [ext_resource type="Texture2D" uid="uid://binglwbf545x1" path="res://art/Peas.png" id="5_3jh3m"]
 [ext_resource type="Texture2D" uid="uid://b18m0772uijl1" path="res://art/BlueBowl.png" id="5_e5mgo"]
 [ext_resource type="Texture2D" uid="uid://trehlrsg5tl0" path="res://art/ReferencePic.png" id="5_ofxoc"]
 [ext_resource type="Texture2D" uid="uid://c62e2e1i4yprm" path="res://art/YellowPlate.png" id="6_n6qvo"]
 [ext_resource type="Script" path="res://plating_ingredients.gd" id="7_xoyhb"]
+[ext_resource type="Texture2D" uid="uid://c4dp5tiodvt7i" path="res://art/Peas_Click.png" id="8_oeu68"]
 [ext_resource type="Texture2D" uid="uid://cjf5u74cpopra" path="res://art/Cheese1.png" id="8_qvrqc"]
 [ext_resource type="Texture2D" uid="uid://clgcslohqk5j1" path="res://art/Cheese2.png" id="9_gqfg7"]
+[ext_resource type="Texture2D" uid="uid://c60bsg05jjrx1" path="res://art/Peas_Hover.png" id="9_x0ysl"]
 [ext_resource type="Texture2D" uid="uid://byp1abx3b0u5y" path="res://art/Cheese3.png" id="10_iuj5u"]
+[ext_resource type="BitMap" uid="uid://c7h528nnwpdw" path="res://art/Peas_Mask.png" id="10_tnwu8"]
 [ext_resource type="Texture2D" uid="uid://c4ycusavn61xp" path="res://art/PinkBowl.png" id="11_ubmik"]
 [ext_resource type="Texture2D" uid="uid://byirk4ntkiej2" path="res://art/Bacon1.png" id="12_w3eif"]
 [ext_resource type="Texture2D" uid="uid://urirejdrw4w5" path="res://art/Bacon2.png" id="13_b4shs"]
+[ext_resource type="Texture2D" uid="uid://pyqbk5n5ykrc" path="res://art/Bacon1_Click.png" id="13_h8fw5"]
+[ext_resource type="Texture2D" uid="uid://bxkp6kxham0t6" path="res://art/Bacon1_Hover.png" id="14_dd71y"]
 [ext_resource type="Texture2D" uid="uid://cnn7n3sd7xt8c" path="res://art/Bacon3.png" id="14_dncc1"]
-[ext_resource type="Script" path="res://Target.gd" id="17_akse5"]
+[ext_resource type="BitMap" uid="uid://dsgobjwmfbuex" path="res://art/Bacon1_Mask.png" id="15_6rbb4"]
+[ext_resource type="Texture2D" uid="uid://bjpn8sxkmaq4u" path="res://art/Cheese1_Click.png" id="17_1i8wo"]
+[ext_resource type="Texture2D" uid="uid://bpmes2cwg0vi4" path="res://art/Bacon2_Click.png" id="17_u6vm5"]
+[ext_resource type="Texture2D" uid="uid://0jbunubngt6t" path="res://art/Cheese1_Hover.png" id="18_7k6v8"]
+[ext_resource type="Texture2D" uid="uid://co7ae1a3f4nc7" path="res://art/Bacon2_Hover.png" id="18_msueh"]
+[ext_resource type="BitMap" uid="uid://bx7bk3qp6lmvl" path="res://art/Cheese1_Mask.png" id="19_5mugr"]
+[ext_resource type="BitMap" uid="uid://ds766m48xywcf" path="res://art/Bacon2_Mask.png" id="19_471g3"]
+[ext_resource type="Texture2D" uid="uid://csg58dfxpfdnl" path="res://art/Cheese2_Click.png" id="21_eg8c8"]
+[ext_resource type="Texture2D" uid="uid://k3g7amjj2jjk" path="res://art/Bacon3_Click.png" id="21_yx3q0"]
+[ext_resource type="Texture2D" uid="uid://c2srcj60r14bk" path="res://art/Bacon3_Hover.png" id="22_1h3be"]
+[ext_resource type="Texture2D" uid="uid://c8y7l2oslupes" path="res://art/Cheese2_Hover.png" id="22_h2vo1"]
+[ext_resource type="BitMap" uid="uid://cdx5bj3468ymh" path="res://art/Bacon3_Mask.png" id="23_a7m60"]
+[ext_resource type="BitMap" uid="uid://c1qk31dohby7y" path="res://art/Cheese2_Mask.png" id="23_twxra"]
+[ext_resource type="Texture2D" uid="uid://mho8cum637qm" path="res://art/Cheese3_Click.png" id="25_kbvam"]
+[ext_resource type="Texture2D" uid="uid://fixh5h580sxq" path="res://art/Cheese3_Hover.png" id="26_y3ehw"]
+[ext_resource type="BitMap" uid="uid://8ub7j5bf2sxj" path="res://art/Cheese3_Mask.png" id="27_sgidx"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7eebt"]
-radius = 319.006
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_saocq"]
-radius = 518.628
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hkgn"]
-size = Vector2(663.486, 146.452)
+[sub_resource type="CircleShape2D" id="CircleShape2D_7l5m4"]
+radius = 34.6811
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s0vrs"]
-size = Vector2(129.445, 523.681)
+size = Vector2(29.2029, 82.0212)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hkgn"]
+size = Vector2(84.245, 29.8053)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81ynu"]
-size = Vector2(170.844, 512.76)
+size = Vector2(33.133, 92.0198)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ck5dp"]
+radius = 37.1426
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7eebt"]
+radius = 51.0098
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_li8jf"]
 radius = 160.0
 height = 320.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q71y0"]
-radius = 145.714
-height = 302.857
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kug67"]
-radius = 148.571
-height = 297.143
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_j20a5"]
-radius = 286.0
 
 [node name="Plating" type="Node2D"]
 script = ExtResource("1_w55mi")
@@ -60,13 +71,6 @@ texture = ExtResource("2_efjw4")
 position = Vector2(965, 553)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_ew156")
-
-[node name="PlateArea" type="Area2D" parent="."]
-script = ExtResource("4_wtnmm")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlateArea"]
-position = Vector2(963, 554)
-shape = SubResource("CircleShape2D_7eebt")
 
 [node name="BackButton" type="Button" parent="."]
 offset_left = 52.0
@@ -97,114 +101,180 @@ position = Vector2(281, 772)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("5_e5mgo")
 
-[node name="Peas" type="Area2D" parent="BowlsContainer/BlueBowl" groups=["plating_ingredients"]]
+[node name="Peas" type="Area2D" parent="BowlsContainer/BlueBowl" groups=["peas", "plating_ingredients"]]
 position = Vector2(3.33333, 13.3333)
 script = ExtResource("7_xoyhb")
 metadata/_edit_group_ = true
 
-[node name="Sprite" type="Sprite2D" parent="BowlsContainer/BlueBowl/Peas"]
-position = Vector2(-3.33331, -1.66663)
-scale = Vector2(0.916667, 0.916667)
-texture = ExtResource("5_3jh3m")
+[node name="PeaButton" type="TextureButton" parent="BowlsContainer/BlueBowl/Peas"]
+offset_left = -495.0
+offset_top = -492.0
+offset_right = 492.0
+offset_bottom = 495.0
+keep_pressed_outside = true
+texture_normal = ExtResource("5_3jh3m")
+texture_pressed = ExtResource("8_oeu68")
+texture_hover = ExtResource("9_x0ysl")
+texture_click_mask = ExtResource("10_tnwu8")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/BlueBowl/Peas"]
-position = Vector2(-7.15256e-07, 23.3333)
-scale = Vector2(0.916667, 0.916667)
-shape = SubResource("CircleShape2D_saocq")
+shape = SubResource("CircleShape2D_7l5m4")
+debug_color = Color(0.921569, 0, 0.160784, 0.607843)
 
 [node name="YellowPlate" type="Sprite2D" parent="BowlsContainer"]
 position = Vector2(1656, 826)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("6_n6qvo")
 
-[node name="Bacon2" type="Area2D" parent="BowlsContainer/YellowPlate" groups=["plating_ingredients"]]
+[node name="Bacon1" type="Area2D" parent="BowlsContainer/YellowPlate" groups=["bacon", "plating_ingredients"]]
 script = ExtResource("7_xoyhb")
 
-[node name="Sprite" type="Sprite2D" parent="BowlsContainer/YellowPlate/Bacon2"]
-position = Vector2(220, 26.6667)
-rotation = 0.445925
-scale = Vector2(0.311111, 0.311111)
-texture = ExtResource("13_b4shs")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/YellowPlate/Bacon2"]
-position = Vector2(229.187, 22.1556)
-rotation = 2.0944
-shape = SubResource("RectangleShape2D_0hkgn")
-
-[node name="Bacon1" type="Area2D" parent="BowlsContainer/YellowPlate" groups=["plating_ingredients"]]
-script = ExtResource("7_xoyhb")
-
-[node name="Sprite" type="Sprite2D" parent="BowlsContainer/YellowPlate/Bacon1"]
-position = Vector2(-235.555, 111.111)
-rotation = -0.404799
-scale = Vector2(0.311111, 0.311111)
-texture = ExtResource("12_w3eif")
+[node name="Bacon1Button" type="TextureButton" parent="BowlsContainer/YellowPlate/Bacon1"]
+offset_left = -417.778
+offset_top = -120.0
+offset_right = -261.778
+offset_bottom = 444.0
+rotation = -0.406926
+texture_normal = ExtResource("12_w3eif")
+texture_pressed = ExtResource("13_h8fw5")
+texture_hover = ExtResource("14_dd71y")
+texture_click_mask = ExtResource("15_6rbb4")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/YellowPlate/Bacon1"]
-position = Vector2(-233.333, 102.222)
-rotation = 2.73842
+position = Vector2(-229.419, 115.01)
+rotation = 2.74139
 shape = SubResource("RectangleShape2D_s0vrs")
+debug_color = Color(0, 0.870752, 0.339255, 0.42)
 
-[node name="Bacon3" type="Area2D" parent="BowlsContainer/YellowPlate" groups=["plating_ingredients"]]
+[node name="Bacon2" type="Area2D" parent="BowlsContainer/YellowPlate" groups=["bacon", "plating_ingredients"]]
 script = ExtResource("7_xoyhb")
 
-[node name="Sprite" type="Sprite2D" parent="BowlsContainer/YellowPlate/Bacon3"]
-position = Vector2(31.1111, -153.333)
-rotation = 0.434543
-scale = Vector2(0.311111, 0.311111)
-texture = ExtResource("14_dncc1")
+[node name="Bacon2Button" type="TextureButton" parent="BowlsContainer/YellowPlate/Bacon2"]
+offset_left = 297.778
+offset_top = -291.111
+offset_right = 518.778
+offset_bottom = 344.889
+rotation = 0.467225
+texture_normal = ExtResource("13_b4shs")
+texture_pressed = ExtResource("17_u6vm5")
+texture_hover = ExtResource("18_msueh")
+texture_click_mask = ExtResource("19_471g3")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/YellowPlate/Bacon2"]
+position = Vector2(199.883, 48.8918)
+rotation = 2.01312
+shape = SubResource("RectangleShape2D_0hkgn")
+debug_color = Color(0, 0.870752, 0.339255, 0.42)
+
+[node name="Bacon3" type="Area2D" parent="BowlsContainer/YellowPlate" groups=["bacon", "plating_ingredients"]]
+script = ExtResource("7_xoyhb")
+
+[node name="Bacon3Button" type="TextureButton" parent="BowlsContainer/YellowPlate/Bacon3"]
+offset_left = 55.5555
+offset_top = -448.889
+offset_right = 263.556
+offset_bottom = 304.111
+rotation = 0.453363
+texture_normal = ExtResource("14_dncc1")
+texture_pressed = ExtResource("21_yx3q0")
+texture_hover = ExtResource("22_1h3be")
+texture_click_mask = ExtResource("23_a7m60")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/YellowPlate/Bacon3"]
-position = Vector2(37.6519, -169.767)
+position = Vector2(56.666, -171.111)
 rotation = 0.322886
 shape = SubResource("RectangleShape2D_81ynu")
+debug_color = Color(0, 0.870752, 0.339255, 0.42)
 
 [node name="PinkBowl" type="Sprite2D" parent="BowlsContainer"]
 position = Vector2(1675, 279)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("11_ubmik")
 
-[node name="Cheese1" type="Area2D" parent="BowlsContainer/PinkBowl" groups=["plating_ingredients"]]
+[node name="Cheese1" type="Area2D" parent="BowlsContainer/PinkBowl" groups=["cheese", "plating_ingredients"]]
 script = ExtResource("7_xoyhb")
 metadata/_edit_group_ = true
 
-[node name="Sprite" type="Sprite2D" parent="BowlsContainer/PinkBowl/Cheese1"]
-position = Vector2(-165.714, -17.1428)
-scale = Vector2(0.285714, 0.285714)
-texture = ExtResource("8_qvrqc")
+[node name="Cheese1Button" type="TextureButton" parent="BowlsContainer/PinkBowl/Cheese1"]
+offset_left = -320.0
+offset_top = -174.286
+offset_right = -9.0
+offset_bottom = 136.714
+texture_normal = ExtResource("8_qvrqc")
+texture_pressed = ExtResource("17_1i8wo")
+texture_hover = ExtResource("18_7k6v8")
+texture_click_mask = ExtResource("19_5mugr")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/PinkBowl/Cheese1"]
 position = Vector2(-165.714, -28.5715)
 scale = Vector2(0.999999, 0.999999)
-shape = SubResource("CapsuleShape2D_li8jf")
+shape = SubResource("CircleShape2D_ck5dp")
+debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
 
-[node name="Cheese2" type="Area2D" parent="BowlsContainer/PinkBowl" groups=["plating_ingredients"]]
+[node name="Cheese2" type="Area2D" parent="BowlsContainer/PinkBowl" groups=["cheese", "plating_ingredients"]]
 script = ExtResource("7_xoyhb")
 
-[node name="Sprite" type="Sprite2D" parent="BowlsContainer/PinkBowl/Cheese2"]
-position = Vector2(114.286, -162.857)
-scale = Vector2(0.285714, 0.285714)
-texture = ExtResource("9_gqfg7")
+[node name="Cheese2Button" type="TextureButton" parent="BowlsContainer/PinkBowl/Cheese2"]
+offset_left = -40.0
+offset_top = -317.143
+offset_right = 271.0
+offset_bottom = -6.14285
+texture_normal = ExtResource("9_gqfg7")
+texture_pressed = ExtResource("21_eg8c8")
+texture_hover = ExtResource("22_h2vo1")
+texture_click_mask = ExtResource("23_twxra")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/PinkBowl/Cheese2"]
 position = Vector2(117.143, -174.286)
-shape = SubResource("CapsuleShape2D_q71y0")
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("CircleShape2D_ck5dp")
+debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
 
-[node name="Cheese3" type="Area2D" parent="BowlsContainer/PinkBowl" groups=["plating_ingredients"]]
+[node name="Cheese3" type="Area2D" parent="BowlsContainer/PinkBowl" groups=["cheese", "plating_ingredients"]]
 script = ExtResource("7_xoyhb")
 
-[node name="Sprite" type="Sprite2D" parent="BowlsContainer/PinkBowl/Cheese3"]
-position = Vector2(114.286, 140)
-scale = Vector2(0.285714, 0.285714)
-texture = ExtResource("10_iuj5u")
+[node name="Cheese3Button" type="TextureButton" parent="BowlsContainer/PinkBowl/Cheese3"]
+offset_left = -37.1429
+offset_top = -20.0
+offset_right = 273.857
+offset_bottom = 291.0
+texture_normal = ExtResource("10_iuj5u")
+texture_pressed = ExtResource("25_kbvam")
+texture_hover = ExtResource("26_y3ehw")
+texture_click_mask = ExtResource("27_sgidx")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/PinkBowl/Cheese3"]
 position = Vector2(117.143, 128.571)
-shape = SubResource("CapsuleShape2D_kug67")
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("CircleShape2D_ck5dp")
+debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
 
 [node name="Timer1" type="Timer" parent="."]
 
 [node name="TargetSpots" type="Node2D" parent="."]
+
+[node name="PeaTarget" type="Area2D" parent="TargetSpots"]
+position = Vector2(-4, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/PeaTarget"]
+position = Vector2(976, 546)
+shape = SubResource("CircleShape2D_7eebt")
+debug_color = Color(0.921569, 0, 0.160784, 0.607843)
 
 [node name="CheeseTarget1" type="Area2D" parent="TargetSpots"]
 position = Vector2(788, 430)
@@ -212,22 +282,16 @@ position = Vector2(788, 430)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/CheeseTarget1"]
 scale = Vector2(0.35, 0.35)
 shape = SubResource("CapsuleShape2D_li8jf")
-
-[node name="PeastTarget" type="Area2D" parent="TargetSpots"]
-script = ExtResource("17_akse5")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/PeastTarget"]
-visible = false
-position = Vector2(965, 549)
-shape = SubResource("CircleShape2D_j20a5")
-metadata/_edit_lock_ = true
+debug_color = Color(0.0991462, 0.0976386, 1, 0.627451)
 
 [node name="CheeseTarget2" type="Area2D" parent="TargetSpots"]
 position = Vector2(1114, 477)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="TargetSpots/CheeseTarget2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/CheeseTarget2"]
+position = Vector2(-1, 1)
 scale = Vector2(0.35, 0.35)
 shape = SubResource("CapsuleShape2D_li8jf")
+debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
 
 [node name="CheeseTarget3" type="Area2D" parent="TargetSpots"]
 position = Vector2(926, 722)
@@ -235,34 +299,64 @@ position = Vector2(926, 722)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/CheeseTarget3"]
 scale = Vector2(0.35, 0.35)
 shape = SubResource("CapsuleShape2D_li8jf")
+debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
 
 [node name="BaconTarget1" type="Area2D" parent="TargetSpots"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BaconTarget1"]
-position = Vector2(967, 380)
+position = Vector2(978.524, 365.824)
 rotation = 0.322886
 scale = Vector2(0.45, 0.45)
 shape = SubResource("RectangleShape2D_81ynu")
+debug_color = Color(0, 0.870588, 0.341176, 0.419608)
 
 [node name="BaconTarget2" type="Area2D" parent="TargetSpots"]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="TargetSpots/BaconTarget2"]
-position = Vector2(1097.64, 721.026)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BaconTarget2"]
+position = Vector2(1114.31, 703.887)
 rotation = 2.0944
 scale = Vector2(0.45, 0.45)
 shape = SubResource("RectangleShape2D_0hkgn")
+debug_color = Color(0, 0.870588, 0.341176, 0.419608)
 
 [node name="BaconTarget3" type="Area2D" parent="TargetSpots"]
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="TargetSpots/BaconTarget3"]
-position = Vector2(773, 642)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BaconTarget3"]
+position = Vector2(773.978, 629.743)
 rotation = 2.89899
 scale = Vector2(0.45, 0.45)
 shape = SubResource("RectangleShape2D_s0vrs")
+debug_color = Color(0, 0.870588, 0.341176, 0.419608)
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Taste Test Button" to="." method="_on_taste_test_button_pressed"]
 [connection signal="input_event" from="BowlsContainer/BlueBowl/Peas" to="BowlsContainer/BlueBowl/Peas" method="_on_input_event"]
+[connection signal="button_down" from="BowlsContainer/BlueBowl/Peas/PeaButton" to="." method="_on_pea_button_button_down"]
+[connection signal="button_up" from="BowlsContainer/BlueBowl/Peas/PeaButton" to="." method="_on_pea_button_button_up"]
+[connection signal="button_down" from="BowlsContainer/YellowPlate/Bacon1/Bacon1Button" to="." method="_on_bacon_1_button_button_down"]
+[connection signal="button_up" from="BowlsContainer/YellowPlate/Bacon1/Bacon1Button" to="." method="_on_bacon_1_button_button_up"]
+[connection signal="button_down" from="BowlsContainer/YellowPlate/Bacon2/Bacon2Button" to="." method="_on_bacon_2_button_button_down"]
+[connection signal="button_up" from="BowlsContainer/YellowPlate/Bacon2/Bacon2Button" to="." method="_on_bacon_2_button_button_up"]
+[connection signal="button_down" from="BowlsContainer/YellowPlate/Bacon3/Bacon3Button" to="." method="_on_bacon_3_button_button_down"]
+[connection signal="button_up" from="BowlsContainer/YellowPlate/Bacon3/Bacon3Button" to="." method="_on_bacon_3_button_button_up"]
+[connection signal="button_down" from="BowlsContainer/PinkBowl/Cheese1/Cheese1Button" to="." method="_on_cheese_1_button_button_down"]
+[connection signal="button_up" from="BowlsContainer/PinkBowl/Cheese1/Cheese1Button" to="." method="_on_cheese_1_button_button_up"]
+[connection signal="button_down" from="BowlsContainer/PinkBowl/Cheese2/Cheese2Button" to="." method="_on_cheese_2_button_button_down"]
+[connection signal="button_up" from="BowlsContainer/PinkBowl/Cheese2/Cheese2Button" to="." method="_on_cheese_2_button_button_up"]
+[connection signal="button_down" from="BowlsContainer/PinkBowl/Cheese3/Cheese3Button" to="." method="_on_cheese_3_button_button_down"]
+[connection signal="button_up" from="BowlsContainer/PinkBowl/Cheese3/Cheese3Button" to="." method="_on_cheese_3_button_button_up"]
 [connection signal="timeout" from="Timer1" to="." method="_on_timer_1_timeout"]
-[connection signal="body_entered" from="TargetSpots/PeastTarget" to="TargetSpots/PeastTarget" method="_on_TargetPeas_body_entered"]
-[connection signal="area_entered" from="TargetSpots/CheeseTarget2" to="PlateArea" method="_on_Plate_area_entered"]
+[connection signal="area_entered" from="TargetSpots/PeaTarget" to="." method="_on_pea_target_area_entered"]
+[connection signal="area_exited" from="TargetSpots/PeaTarget" to="." method="_on_pea_target_area_exited"]
+[connection signal="area_entered" from="TargetSpots/CheeseTarget1" to="." method="_on_cheese_target_1_area_entered"]
+[connection signal="area_exited" from="TargetSpots/CheeseTarget1" to="." method="_on_cheese_target_1_area_exited"]
+[connection signal="area_entered" from="TargetSpots/CheeseTarget2" to="." method="_on_cheese_target_2_area_entered"]
+[connection signal="area_exited" from="TargetSpots/CheeseTarget2" to="." method="_on_cheese_target_2_area_exited"]
+[connection signal="area_entered" from="TargetSpots/CheeseTarget3" to="." method="_on_cheese_target_3_area_entered"]
+[connection signal="area_exited" from="TargetSpots/CheeseTarget3" to="." method="_on_cheese_target_3_area_exited"]
+[connection signal="area_entered" from="TargetSpots/BaconTarget1" to="." method="_on_bacon_target_1_area_entered"]
+[connection signal="area_exited" from="TargetSpots/BaconTarget1" to="." method="_on_bacon_target_1_area_exited"]
+[connection signal="area_entered" from="TargetSpots/BaconTarget2" to="." method="_on_bacon_target_2_area_entered"]
+[connection signal="area_exited" from="TargetSpots/BaconTarget2" to="." method="_on_bacon_target_2_area_exited"]
+[connection signal="area_entered" from="TargetSpots/BaconTarget3" to="." method="_on_bacon_target_3_area_entered"]
+[connection signal="area_exited" from="TargetSpots/BaconTarget3" to="." method="_on_bacon_target_3_area_exited"]

@@ -7,8 +7,8 @@ var correct_ingredients = ["Carrot1", "Ham1"]
 func _ready() -> void:
 	baskets = get_tree().get_nodes_in_group("basket")
 	ingredient_list = get_tree().get_nodes_in_group("ingredients")
-	if $NextButton != null:
-		$NextButton.hide()
+	#if $NextButton != null:
+		#$NextButton.hide()
 	
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -24,6 +24,7 @@ func _input(event):
 						print(ingredient.name)
 						update_progress(ingredient.name)
 						if len(selected_ingredients) == 2:
+							PlayerVariables.pantry_completed = true
 							$NextButton.show()
 
 func update_progress(ingredient_name: String):

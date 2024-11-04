@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bx7bk3qp6lmvl"
+path="res://.godot/imported/Cheese1_Mask.png-30d6ee4f1a1ad87fdd10413745f79ad7.res"
+
+[deps]
+
+source_file="res://art/Cheese1_Mask.png"
+dest_files=["res://.godot/imported/Cheese1_Mask.png-30d6ee4f1a1ad87fdd10413745f79ad7.res"]
+
+[params]
+
+create_from=0
+threshold=0.0

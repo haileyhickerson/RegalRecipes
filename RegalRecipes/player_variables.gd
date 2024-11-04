@@ -1,6 +1,15 @@
 extends Node
 
 var location
+
+var first_move = false;
+
+var pantry_completed = false;
+var cutting_completed = false;
+var mixing_completed = false;
+var stove_completed = false;
+var plating_completed = false;
+
 var chef_selected
 
 # Called when the node enters the scene tree for the first time.

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cdx5bj3468ymh"
+path="res://.godot/imported/Bacon3_Mask.png-d6b7574deb1be7db85a0e5e239b5fa51.res"
+
+[deps]
+
+source_file="res://art/Bacon3_Mask.png"
+dest_files=["res://.godot/imported/Bacon3_Mask.png-d6b7574deb1be7db85a0e5e239b5fa51.res"]
+
+[params]
+
+create_from=0
+threshold=0.4

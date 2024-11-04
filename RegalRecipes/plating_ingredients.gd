@@ -1,25 +1,26 @@
 extends Area2D
-var is_dragging = false
-var mouse_offset = Vector2.ZERO
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	$CollisionShape2D.disabled = false
-	set_process_input(true)
-	self.connect("input_event", Callable(self, "_on_input_event"))
+#
+#var mouse_offset = Vector2.ZERO
+## Called when the node enters the scene tree for the first time.
+#func _ready() -> void:
+	#$CollisionShape2D.disabled = false
+	#set_process_input(true)
+	#self.connect("input_event", Callable(self, "_on_input_event"))
 
-func _on_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed:
-			# Check if the mouse click is inside the CollisionShape2D
-			is_dragging = true
-			mouse_offset = global_position- event.position
-		else:
-			is_dragging = false
 
-func _process(delta):
-	# If dragging, follow the mouse
-	if is_dragging:
-		global_position= get_global_mouse_position() +mouse_offset
+#func _on_input_event(viewport, event, shape_idx):
+	#if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		#if event.pressed:
+			## Check if the mouse click is inside the CollisionShape2D
+			#mouse_offset = global_position- event.position
+#
+#func _process(delta):
+	## If dragging, follow the mouse
+	#if is_dragging:
+		#global_position= get_global_mouse_position() +mouse_offset
+		#
+		#
+
 
 
 #func _on_Area2D_input_event(viewport,event, shape_idx):

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://c7h528nnwpdw"
+path="res://.godot/imported/Peas_Mask.png-664c7590e699760c164bf442dfc6df62.res"
+
+[deps]
+
+source_file="res://art/Peas_Mask.png"
+dest_files=["res://.godot/imported/Peas_Mask.png-664c7590e699760c164bf442dfc6df62.res"]
+
+[params]
+
+create_from=0
+threshold=0.0
