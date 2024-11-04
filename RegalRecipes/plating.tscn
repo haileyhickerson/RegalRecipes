@@ -1,8 +1,9 @@
-[gd_scene load_steps=26 format=3 uid="uid://cvr2aoqdlckoa"]
+[gd_scene load_steps=27 format=3 uid="uid://cvr2aoqdlckoa"]
 
 [ext_resource type="Script" path="res://plating.gd" id="1_w55mi"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_efjw4"]
 [ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="3_ew156"]
+[ext_resource type="Script" path="res://plate_area.gd" id="4_wtnmm"]
 [ext_resource type="Texture2D" uid="uid://binglwbf545x1" path="res://art/Peas.png" id="5_3jh3m"]
 [ext_resource type="Texture2D" uid="uid://b18m0772uijl1" path="res://art/BlueBowl.png" id="5_e5mgo"]
 [ext_resource type="Texture2D" uid="uid://trehlrsg5tl0" path="res://art/ReferencePic.png" id="5_ofxoc"]
@@ -16,16 +17,18 @@
 [ext_resource type="Texture2D" uid="uid://urirejdrw4w5" path="res://art/Bacon2.png" id="13_b4shs"]
 [ext_resource type="Texture2D" uid="uid://cnn7n3sd7xt8c" path="res://art/Bacon3.png" id="14_dncc1"]
 [ext_resource type="Script" path="res://Target.gd" id="17_akse5"]
-[ext_resource type="Texture2D" uid="uid://bcy0vuuqef6m8" path="res://art/checkmark-removebg-preview.png" id="18_3ouu3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7eebt"]
+radius = 319.006
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_saocq"]
 radius = 518.628
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hkgn"]
-size = Vector2(616.819, 125.292)
+size = Vector2(663.486, 146.452)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s0vrs"]
-size = Vector2(129.445, 593.333)
+size = Vector2(129.445, 523.681)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81ynu"]
 size = Vector2(170.844, 512.76)
@@ -58,6 +61,13 @@ position = Vector2(965, 553)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_ew156")
 
+[node name="PlateArea" type="Area2D" parent="."]
+script = ExtResource("4_wtnmm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlateArea"]
+position = Vector2(963, 554)
+shape = SubResource("CircleShape2D_7eebt")
+
 [node name="BackButton" type="Button" parent="."]
 offset_left = 52.0
 offset_top = 31.0
@@ -87,7 +97,7 @@ position = Vector2(281, 772)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("5_e5mgo")
 
-[node name="Peas" type="Area2D" parent="BowlsContainer/BlueBowl"]
+[node name="Peas" type="Area2D" parent="BowlsContainer/BlueBowl" groups=["plating_ingredients"]]
 position = Vector2(3.33333, 13.3333)
 script = ExtResource("7_xoyhb")
 metadata/_edit_group_ = true
@@ -107,7 +117,7 @@ position = Vector2(1656, 826)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("6_n6qvo")
 
-[node name="Bacon2" type="Area2D" parent="BowlsContainer/YellowPlate"]
+[node name="Bacon2" type="Area2D" parent="BowlsContainer/YellowPlate" groups=["plating_ingredients"]]
 script = ExtResource("7_xoyhb")
 
 [node name="Sprite" type="Sprite2D" parent="BowlsContainer/YellowPlate/Bacon2"]
@@ -121,7 +131,7 @@ position = Vector2(229.187, 22.1556)
 rotation = 2.0944
 shape = SubResource("RectangleShape2D_0hkgn")
 
-[node name="Bacon1" type="Area2D" parent="BowlsContainer/YellowPlate"]
+[node name="Bacon1" type="Area2D" parent="BowlsContainer/YellowPlate" groups=["plating_ingredients"]]
 script = ExtResource("7_xoyhb")
 
 [node name="Sprite" type="Sprite2D" parent="BowlsContainer/YellowPlate/Bacon1"]
@@ -135,7 +145,7 @@ position = Vector2(-233.333, 102.222)
 rotation = 2.73842
 shape = SubResource("RectangleShape2D_s0vrs")
 
-[node name="Bacon3" type="Area2D" parent="BowlsContainer/YellowPlate"]
+[node name="Bacon3" type="Area2D" parent="BowlsContainer/YellowPlate" groups=["plating_ingredients"]]
 script = ExtResource("7_xoyhb")
 
 [node name="Sprite" type="Sprite2D" parent="BowlsContainer/YellowPlate/Bacon3"]
@@ -154,62 +164,105 @@ position = Vector2(1675, 279)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("11_ubmik")
 
-[node name="Cheese1_2" type="Area2D" parent="BowlsContainer/PinkBowl"]
+[node name="Cheese1" type="Area2D" parent="BowlsContainer/PinkBowl" groups=["plating_ingredients"]]
 script = ExtResource("7_xoyhb")
+metadata/_edit_group_ = true
 
-[node name="Sprite" type="Sprite2D" parent="BowlsContainer/PinkBowl/Cheese1_2"]
+[node name="Sprite" type="Sprite2D" parent="BowlsContainer/PinkBowl/Cheese1"]
 position = Vector2(-165.714, -17.1428)
 scale = Vector2(0.285714, 0.285714)
 texture = ExtResource("8_qvrqc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/PinkBowl/Cheese1_2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/PinkBowl/Cheese1"]
 position = Vector2(-165.714, -28.5715)
 scale = Vector2(0.999999, 0.999999)
 shape = SubResource("CapsuleShape2D_li8jf")
 
-[node name="Cheese2_1" type="Area2D" parent="BowlsContainer/PinkBowl"]
+[node name="Cheese2" type="Area2D" parent="BowlsContainer/PinkBowl" groups=["plating_ingredients"]]
 script = ExtResource("7_xoyhb")
 
-[node name="Sprite" type="Sprite2D" parent="BowlsContainer/PinkBowl/Cheese2_1"]
+[node name="Sprite" type="Sprite2D" parent="BowlsContainer/PinkBowl/Cheese2"]
 position = Vector2(114.286, -162.857)
 scale = Vector2(0.285714, 0.285714)
 texture = ExtResource("9_gqfg7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/PinkBowl/Cheese2_1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/PinkBowl/Cheese2"]
 position = Vector2(117.143, -174.286)
 shape = SubResource("CapsuleShape2D_q71y0")
 
-[node name="Cheese3_1" type="Area2D" parent="BowlsContainer/PinkBowl"]
+[node name="Cheese3" type="Area2D" parent="BowlsContainer/PinkBowl" groups=["plating_ingredients"]]
 script = ExtResource("7_xoyhb")
 
-[node name="Sprite" type="Sprite2D" parent="BowlsContainer/PinkBowl/Cheese3_1"]
+[node name="Sprite" type="Sprite2D" parent="BowlsContainer/PinkBowl/Cheese3"]
 position = Vector2(114.286, 140)
 scale = Vector2(0.285714, 0.285714)
 texture = ExtResource("10_iuj5u")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/PinkBowl/Cheese3_1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/PinkBowl/Cheese3"]
 position = Vector2(117.143, 128.571)
 shape = SubResource("CapsuleShape2D_kug67")
 
 [node name="Timer1" type="Timer" parent="."]
 
-[node name="Target Spots" type="Node2D" parent="."]
+[node name="TargetSpots" type="Node2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="Target Spots"]
+[node name="CheeseTarget1" type="Area2D" parent="TargetSpots"]
+position = Vector2(788, 430)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/CheeseTarget1"]
+scale = Vector2(0.35, 0.35)
+shape = SubResource("CapsuleShape2D_li8jf")
+
+[node name="PeastTarget" type="Area2D" parent="TargetSpots"]
 script = ExtResource("17_akse5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Target Spots/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/PeastTarget"]
+visible = false
 position = Vector2(965, 549)
 shape = SubResource("CircleShape2D_j20a5")
+metadata/_edit_lock_ = true
 
-[node name="CheckmarkTimer" type="Timer" parent="Target Spots/Area2D"]
+[node name="CheeseTarget2" type="Area2D" parent="TargetSpots"]
+position = Vector2(1114, 477)
 
-[node name="Checkmark" type="Sprite2D" parent="Target Spots/Area2D"]
-position = Vector2(295, 292)
-texture = ExtResource("18_3ouu3")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TargetSpots/CheeseTarget2"]
+scale = Vector2(0.35, 0.35)
+shape = SubResource("CapsuleShape2D_li8jf")
+
+[node name="CheeseTarget3" type="Area2D" parent="TargetSpots"]
+position = Vector2(926, 722)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/CheeseTarget3"]
+scale = Vector2(0.35, 0.35)
+shape = SubResource("CapsuleShape2D_li8jf")
+
+[node name="BaconTarget1" type="Area2D" parent="TargetSpots"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BaconTarget1"]
+position = Vector2(967, 380)
+rotation = 0.322886
+scale = Vector2(0.45, 0.45)
+shape = SubResource("RectangleShape2D_81ynu")
+
+[node name="BaconTarget2" type="Area2D" parent="TargetSpots"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TargetSpots/BaconTarget2"]
+position = Vector2(1097.64, 721.026)
+rotation = 2.0944
+scale = Vector2(0.45, 0.45)
+shape = SubResource("RectangleShape2D_0hkgn")
+
+[node name="BaconTarget3" type="Area2D" parent="TargetSpots"]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TargetSpots/BaconTarget3"]
+position = Vector2(773, 642)
+rotation = 2.89899
+scale = Vector2(0.45, 0.45)
+shape = SubResource("RectangleShape2D_s0vrs")
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Taste Test Button" to="." method="_on_taste_test_button_pressed"]
 [connection signal="input_event" from="BowlsContainer/BlueBowl/Peas" to="BowlsContainer/BlueBowl/Peas" method="_on_input_event"]
 [connection signal="timeout" from="Timer1" to="." method="_on_timer_1_timeout"]
-[connection signal="body_entered" from="Target Spots/Area2D" to="Target Spots/Area2D" method="_on_TargetPeas_body_entered"]
+[connection signal="body_entered" from="TargetSpots/PeastTarget" to="TargetSpots/PeastTarget" method="_on_TargetPeas_body_entered"]
+[connection signal="area_entered" from="TargetSpots/CheeseTarget2" to="PlateArea" method="_on_Plate_area_entered"]
