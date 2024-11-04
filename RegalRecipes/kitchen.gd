@@ -13,9 +13,6 @@ func _ready() -> void:
 	$ChefText/MoveText.hide()
 	$ChefText/GoToPantry.hide()
 	$ChefText/GoToCutting.hide()
-	$ChefText/GoToMixing.hide()
-	$ChefText/GoToStove.hide()
-	$ChefText/GoToPlating.hide()
 	
 	$PantryArea/PantryIcon.play("normal")
 	$PantryArea/PantryText.hide()
@@ -54,18 +51,7 @@ func _process(delta: float) -> void:
 		
 	if PlayerVariables.cutting_completed:
 		$ChefText/GoToCutting.hide()
-		$ChefText/GoToMixing.show()
-		$ChefText/GoToMixing/MixingArrow.play()
-		
-	if PlayerVariables.mixing_completed:
-		$ChefText/GoToMixing.hide()
-		$ChefText/GoToStove.show()
-		$ChefText/GoToStove/StoveArrow.play()
-		
-	if PlayerVariables.stove_completed:
-		$ChefText/GoToStove.hide()
-		$ChefText/GoToPlating.show()
-		$ChefText/GoToPlating/PlatingArrow.play()
+		$ChefText/GoToCutting/CuttingArrow.play()
 		
 		
 	if Input.is_action_pressed("action") and in_pantry:

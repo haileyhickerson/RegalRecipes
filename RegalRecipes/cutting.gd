@@ -12,7 +12,7 @@ extends Node2D
 var ideal_cut_points = []
 # Score variable
 var score = 0
-var total_possible_points = 100
+var total_possible_points = 0
 var total_cuts = 0
 var cut_threshold = 30
 # Ready function
@@ -39,14 +39,15 @@ func _input(event):
 			if check_cut(knife_position_x):
 				var points_gained= calculate_score(knife_position_x)
 				score += points_gained
+				total_possible_points += 100
 				print("cut is made")
 				update_score_display()
 			else:
 				print("no cut is made")
+				total_possible_points += 100
 				update_score_display()
 	
 		if total_cuts==3:
-				PlayerVariables.cutting_completed = true
 				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 				update_score_display()
 				$NextButton.show()
@@ -72,7 +73,7 @@ func calculate_score(knife_position_x):
 	for cut_x in ideal_cut_points:
 		point_distances.append(check_cut_accuracy(knife_position_x, cut_x))
 	var closest_distance= point_distances.min()
-	var points= int((100 - closest_distance)/3)
+	var points= 100 -int(closest_distance)
 	if score<0:
 		score=0
 	return points

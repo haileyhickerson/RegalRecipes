@@ -44,7 +44,6 @@ func _input(event):
 						print(ingredient.name)
 						update_progress(ingredient.name)
 						if len(selected_ingredients) == 2:
-							PlayerVariables.pantry_completed = true
 							$ScoreTextbox/Score.text = str(starting_score) + " points! Great job!"
 							$ScoreTextbox.show()
 							$NextButton.show()

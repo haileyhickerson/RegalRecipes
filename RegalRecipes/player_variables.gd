@@ -12,10 +12,6 @@ var stove_completed = false;
 var stove_score = 0;
 var plating_completed = false;
 
-var pantry_score
-var cutting_score
-var mixing_score
-var stove_score
 var plating_score
 
 var chef_selected

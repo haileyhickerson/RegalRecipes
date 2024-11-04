@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bsnrxooacbi6h"]
+[gd_scene load_steps=30 format=3 uid="uid://bsnrxooacbi6h"]
 
 [ext_resource type="Script" path="res://mixing.gd" id="1_gdquq"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_bn235"]
@@ -27,14 +27,6 @@
 [ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="19_pv0pt"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="20_4p5ep"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="27_jemm5"]
-[ext_resource type="Texture2D" uid="uid://4ku7r1pae5c" path="res://art/ArrowFrames/1.png" id="28_5cidu"]
-[ext_resource type="Texture2D" uid="uid://bi7ai5wq7luin" path="res://art/ArrowFrames/2.png" id="29_7j3pe"]
-[ext_resource type="Texture2D" uid="uid://4sm7eplfenyi" path="res://art/ArrowFrames/3.png" id="30_auf2h"]
-[ext_resource type="Texture2D" uid="uid://bovgkx1fg1n1p" path="res://art/ArrowFrames/4.png" id="31_y8ejm"]
-[ext_resource type="Texture2D" uid="uid://byskijp7yp1gl" path="res://art/ArrowFrames/5.png" id="32_qc7wr"]
-[ext_resource type="Texture2D" uid="uid://cadne302r2unw" path="res://art/ArrowFrames/6.png" id="33_lsjmw"]
-[ext_resource type="Texture2D" uid="uid://crxasd4ld3lyk" path="res://art/ArrowFrames/7.png" id="34_d3dis"]
-[ext_resource type="Texture2D" uid="uid://20x43rtvmljf" path="res://art/ArrowFrames/8.png" id="35_3x35c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vysqn"]
 animations = [{
@@ -188,38 +180,6 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aynwm"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_gfxvl"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("28_5cidu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_7j3pe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_auf2h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_y8ejm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_qc7wr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_lsjmw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_d3dis")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_3x35c")
-}],
-"loop": true,
-"name": &"default",
-"speed": 8.0
-}]
-
 [node name="Mixing" type="Node2D"]
 script = ExtResource("1_gdquq")
 
@@ -326,7 +286,6 @@ scale = Vector2(0.182995, 0.162549)
 texture = ExtResource("18_dwrdl")
 
 [node name="StartButton" type="TextureButton" parent="."]
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -403,20 +362,6 @@ position = Vector2(960, 540)
 scale = Vector2(0.564815, 0.564815)
 texture = ExtResource("27_jemm5")
 
-[node name="PressSpace" type="Label" parent="TextBox"]
-offset_left = -720.59
-offset_top = 249.639
-offset_right = 773.41
-offset_bottom = 754.639
-theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("20_4p5ep")
-theme_override_font_sizes/font_size = 50
-text = "Press \"Space\" to continue"
-horizontal_alignment = 1
-autowrap_mode = 3
-
 [node name="Instructions" type="Label" parent="TextBox"]
 offset_left = -729.443
 offset_top = -161.115
@@ -427,50 +372,7 @@ theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392,
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("20_4p5ep")
 theme_override_font_sizes/font_size = 75
-text = "Mix ingredients by following the arrows
-and clicking the black dots as quickly as possible."
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="Instructions2" type="Label" parent="TextBox"]
-visible = false
-offset_left = -722.36
-offset_top = -115.082
-offset_right = 771.64
-offset_bottom = 389.918
-theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("20_4p5ep")
-theme_override_font_sizes/font_size = 75
-text = "DON'T let your mouse go outside of the circle, or you will have to restart!"
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="ArrowStart" type="AnimatedSprite2D" parent="TextBox/Instructions2"]
-position = Vector2(713.508, -541.77)
-rotation = -1.5708
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_gfxvl")
-
-[node name="ScoreBox" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(960, 540)
-scale = Vector2(0.564815, 0.564815)
-texture = ExtResource("27_jemm5")
-
-[node name="FinalScore" type="Label" parent="ScoreBox"]
-offset_left = -743.606
-offset_top = -61.9672
-offset_right = 750.394
-offset_bottom = 443.033
-theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("20_4p5ep")
-theme_override_font_sizes/font_size = 75
-text = "b
-"
+text = "Mix ingredients by clicking along the yellow circle as quickly as possible, but DON'T let your mouse go outside of the lines!"
 horizontal_alignment = 1
 autowrap_mode = 3
 
