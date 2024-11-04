@@ -212,6 +212,15 @@ position = Vector2(129.204, 76.1062)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_0danb")
 
+[node name="ScoreDisplay" type="Label" parent="."]
+offset_left = 865.0
+offset_top = 9.0
+offset_right = 1051.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("14_ru7wo")
+theme_override_font_sizes/font_size = 70
+text = "Score: 100"
+
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="Basket" to="." method="_on_basket_area_entered"]
