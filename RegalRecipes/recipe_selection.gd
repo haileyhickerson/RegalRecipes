@@ -2,9 +2,11 @@ extends Node2D
 
 
 func _ready() -> void:
-	pass # Replace with function body.
-
-
+	if PlayerVariables.recipe1_completed:
+		$Recipe2Button.add_theme_color_override("font_color", "White")
+	if PlayerVariables.recipe2_completed:
+		$Recipe3Button.add_theme_color_override("font_color", "White")
+	PlayerVariables.location = Vector2(400, 400)
 func _process(delta: float) -> void:
 	pass
 
@@ -12,18 +14,24 @@ func _process(delta: float) -> void:
 # Recipe 1
 func _on_recipe_1_button_pressed() -> void:
 	# Proceeds to Kitchen Scene
-	PlayerVariables.location = Vector2(400, 400)
-	get_tree().change_scene_to_file("res://intro.tscn")
+	PlayerVariables.curr_recipe = 1
+	if PlayerVariables.intro_completed != true:
+		get_tree().change_scene_to_file("res://intro.tscn")
+	else:
+		get_tree().change_scene_to_file("res://kitchen.tscn")
 
 # Recipe 2
 func _on_recipe_2_button_pressed() -> void:
-	# Do nothing for now
-	pass
-
+	# If score achieved on recipe 1, allow recipe 2 to be clicked
+	if PlayerVariables.recipe1_completed:
+		PlayerVariables.curr_recipe = 2
+		get_tree().change_scene_to_file("res://kitchen.tscn")
 # Recipe 3
 func _on_recipe_3_button_pressed() -> void:
 	# Do nothing for now
-	pass
+	if PlayerVariables.recipe2_completed:
+		PlayerVariables.curr_recipe = 2
+		get_tree().change_scene_to_file("res://kitchen.tscn")
 
 # Back Button
 func _on_back_button_pressed() -> void:

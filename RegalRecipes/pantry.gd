@@ -57,7 +57,8 @@ func _input(event):
 					update_score()
 
 func update_score():
-	$ScoreDisplay.text = "Score: " + str(starting_score)
+	if $ScoreDisplay.text != null:
+		$ScoreDisplay.text = "Score: " + str(starting_score)
 
 func update_progress(ingredient_name: String):
 	if get_node("VBoxContainer/" + ingredient_name + "_label") != null:

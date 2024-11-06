@@ -39,5 +39,5 @@ func hide_dialogue():
 
 	#if $Button:  # if you're using a Button
 		#$Button.hide()
-	
+	PlayerVariables.intro_completed = true
 	get_tree().change_scene_to_file("res://kitchen.tscn")

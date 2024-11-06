@@ -2,18 +2,22 @@ extends Node
 
 var location
 
-var first_move = false;
+var first_move = false
+var intro_completed = false
+var recipe1_completed = false
+var recipe2_completed = false
+var curr_recipe = 1
 
-var pantry_completed = false;
-var cutting_completed = false;
-var mixing_completed = false;
-var stove_completed = false;
-var plating_completed = false;
+var pantry_completed = false
+var cutting_completed = false
+var mixing_completed = false
+var stove_completed = false
+var plating_completed = false
 
-var pantry_score = 0;
+var pantry_score = 0
 var cutting_score = 0
 var mixing_score = 0
-var stove_score = 0;
+var stove_score = 0
 var plating_score = 0
 
 var chef_selected
