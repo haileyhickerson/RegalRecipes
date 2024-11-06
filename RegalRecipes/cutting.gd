@@ -15,6 +15,7 @@ var score = 0
 var total_possible_points = 100
 var total_cuts = 0
 var cut_threshold = 30
+var first_space_pressed
 # Ready function
 func _ready() -> void:
 	$NextButton.hide()
@@ -24,7 +25,13 @@ func _ready() -> void:
 			var points = child.points
 			for point in points:
 				ideal_cut_points.append(point.x)
-	
+				
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("action"):
+		if !first_space_pressed:
+			first_space_pressed = true
+			$TextBox.visible= false
+
 			
 func make_cut(cut_line):
 	print("making cut")

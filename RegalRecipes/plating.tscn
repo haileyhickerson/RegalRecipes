@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://cvr2aoqdlckoa"]
+[gd_scene load_steps=48 format=3 uid="uid://cvr2aoqdlckoa"]
 
 [ext_resource type="Script" path="res://plating.gd" id="1_w55mi"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_efjw4"]
@@ -38,9 +38,6 @@
 [ext_resource type="BitMap" uid="uid://8ub7j5bf2sxj" path="res://art/Cheese3_Mask.png" id="27_sgidx"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="37_wvajo"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="38_7o3ny"]
-[ext_resource type="Texture2D" uid="uid://cjcpi4m5np1fv" path="res://art/play.png" id="39_t2x56"]
-[ext_resource type="Texture2D" uid="uid://dxugxbw6gpt0n" path="res://art/play_hover.png" id="40_tqmxu"]
-[ext_resource type="BitMap" uid="uid://kdtfcv3g1m5w" path="res://art/play_pressed.png" id="41_0m4k8"]
 [ext_resource type="Texture2D" uid="uid://clopys7kwhryi" path="res://art/FancyCircle (1).png" id="42_ny8xw"]
 [ext_resource type="Texture2D" uid="uid://62217bqvvk7l" path="res://art/ButterspoonHead.png" id="43_gp3ct"]
 
@@ -48,13 +45,13 @@
 radius = 34.6811
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s0vrs"]
-size = Vector2(29.2029, 82.0212)
+size = Vector2(26.4349, 138.979)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hkgn"]
-size = Vector2(84.245, 29.8053)
+size = Vector2(147.338, 34.4383)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81ynu"]
-size = Vector2(33.133, 92.0198)
+size = Vector2(33.133, 176.991)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ck5dp"]
 radius = 37.1426
@@ -160,6 +157,7 @@ stretch_mode = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/YellowPlate/Bacon1"]
 position = Vector2(-229.419, 115.01)
 rotation = 2.74139
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_s0vrs")
 debug_color = Color(0, 0.870752, 0.339255, 0.42)
 
@@ -180,8 +178,9 @@ ignore_texture_size = true
 stretch_mode = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/YellowPlate/Bacon2"]
-position = Vector2(199.883, 48.8918)
+position = Vector2(199.883, 48.8917)
 rotation = 2.01312
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_0hkgn")
 debug_color = Color(0, 0.870752, 0.339255, 0.42)
 
@@ -204,6 +203,7 @@ stretch_mode = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BowlsContainer/YellowPlate/Bacon3"]
 position = Vector2(56.666, -171.111)
 rotation = 0.322886
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_81ynu")
 debug_color = Color(0, 0.870752, 0.339255, 0.42)
 
@@ -317,27 +317,25 @@ debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
 [node name="BaconTarget1" type="Area2D" parent="TargetSpots"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BaconTarget1"]
-position = Vector2(978.524, 365.824)
+position = Vector2(961.043, 406.114)
 rotation = 0.322886
-scale = Vector2(0.45, 0.45)
 shape = SubResource("RectangleShape2D_81ynu")
 debug_color = Color(0, 0.870588, 0.341176, 0.419608)
 
 [node name="BaconTarget2" type="Area2D" parent="TargetSpots"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BaconTarget2"]
-position = Vector2(1114.31, 703.887)
+position = Vector2(1128.08, 675.409)
 rotation = 2.0944
-scale = Vector2(0.45, 0.45)
 shape = SubResource("RectangleShape2D_0hkgn")
 debug_color = Color(0, 0.870588, 0.341176, 0.419608)
 
 [node name="BaconTarget3" type="Area2D" parent="TargetSpots"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BaconTarget3"]
-position = Vector2(773.978, 629.743)
+position = Vector2(779.476, 657.721)
 rotation = 2.89899
-scale = Vector2(0.45, 0.45)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_s0vrs")
 debug_color = Color(0, 0.870588, 0.341176, 0.419608)
 
@@ -360,6 +358,20 @@ text = "Place the ingredients following the reference guide. The more precise th
 horizontal_alignment = 1
 autowrap_mode = 3
 
+[node name="PressSpace" type="Label" parent="TextBox"]
+offset_left = -720.59
+offset_top = 242.557
+offset_right = 773.41
+offset_bottom = 747.557
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("38_7o3ny")
+theme_override_font_sizes/font_size = 50
+text = "Press \"Space\" to continue"
+horizontal_alignment = 1
+autowrap_mode = 3
+
 [node name="ScoreTextBox" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
 scale = Vector2(0.564815, 0.564815)
@@ -377,17 +389,6 @@ theme_override_fonts/font = ExtResource("38_7o3ny")
 theme_override_font_sizes/font_size = 75
 horizontal_alignment = 1
 autowrap_mode = 3
-
-[node name="StartButton" type="TextureButton" parent="."]
-offset_left = 946.0
-offset_top = 28.0
-offset_right = 996.0
-offset_bottom = 78.0
-texture_normal = ExtResource("39_t2x56")
-texture_hover = ExtResource("40_tqmxu")
-texture_click_mask = ExtResource("41_0m4k8")
-ignore_texture_size = true
-stretch_mode = 0
 
 [node name="ContinueButton" type="Button" parent="."]
 offset_left = 806.0
@@ -461,6 +462,5 @@ texture = ExtResource("43_gp3ct")
 [connection signal="area_exited" from="TargetSpots/BaconTarget2" to="." method="_on_bacon_target_2_area_exited"]
 [connection signal="area_entered" from="TargetSpots/BaconTarget3" to="." method="_on_bacon_target_3_area_entered"]
 [connection signal="area_exited" from="TargetSpots/BaconTarget3" to="." method="_on_bacon_target_3_area_exited"]
-[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
 [connection signal="timeout" from="HintTimer" to="." method="_on_hint_timer_timeout"]

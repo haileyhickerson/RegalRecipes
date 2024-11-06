@@ -3,7 +3,6 @@ extends Node2D
 @onready var bowl_sprites=$BowlsContainer
 @onready var Timer1 = $Timer1
 @onready var TextBox= $TextBox
-@onready var StartButton= $StartButton
 @onready var ScoreTextBox =$ScoreTextBox
 @onready var ScoringLabel =$ScoreTextBox/Scoring
 
@@ -28,7 +27,7 @@ var bacon3_correct = false;
 var mouse_offset = Vector3.ZERO;
 
 var score=0
-
+var first_space_pressed = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	ReferencePic.visible= true
@@ -45,6 +44,17 @@ func _ready():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Input.is_action_pressed("action"):
+		if !first_space_pressed:
+			first_space_pressed = true
+			TextBox.visible= false
+			Timer1.wait_time= 3.0
+			Timer1.start()
+			
+		
+	
+	
+	
 	if peas_dragging:
 		$BowlsContainer/BlueBowl/Peas.global_position = get_global_mouse_position() + mouse_offset
 	if cheese1_dragging:
@@ -59,6 +69,7 @@ func _process(delta: float) -> void:
 		$BowlsContainer/YellowPlate/Bacon2.global_position = get_global_mouse_position() + mouse_offset
 	if bacon3_dragging:
 		$BowlsContainer/YellowPlate/Bacon3.global_position = get_global_mouse_position() + mouse_offset
+	
 
 func update_score_label():
 	if score<0:
@@ -264,14 +275,6 @@ func _on_bacon_target_3_area_exited(area: Area2D) -> void:
 		print("bacon 3 is no longer in correct location!")
 		bacon3_correct = false;
 		subtract_score(15)
-
-
-func _on_start_button_pressed() -> void:
-	StartButton.hide()
-	TextBox.visible= false
-	Timer1.wait_time= 3.0
-	Timer1.start()
-
 
 func _on_continue_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://taste_test.tscn")
