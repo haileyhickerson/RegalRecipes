@@ -1,45 +1,45 @@
-[gd_scene load_steps=48 format=3 uid="uid://cvr2aoqdlckoa"]
+[gd_scene load_steps=48 format=3 uid="uid://fnpxcxl4dqgq"]
 
-[ext_resource type="Script" path="res://plating.gd" id="1_w55mi"]
-[ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_efjw4"]
-[ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="3_ew156"]
-[ext_resource type="Texture2D" uid="uid://binglwbf545x1" path="res://art/Peas.png" id="5_3jh3m"]
-[ext_resource type="Texture2D" uid="uid://b18m0772uijl1" path="res://art/BlueBowl.png" id="5_e5mgo"]
-[ext_resource type="Texture2D" uid="uid://trehlrsg5tl0" path="res://art/ReferencePic.png" id="5_ofxoc"]
-[ext_resource type="Texture2D" uid="uid://c62e2e1i4yprm" path="res://art/YellowPlate.png" id="6_n6qvo"]
-[ext_resource type="Script" path="res://plating_ingredients.gd" id="7_xoyhb"]
-[ext_resource type="Texture2D" uid="uid://c4dp5tiodvt7i" path="res://art/Peas_Click.png" id="8_oeu68"]
-[ext_resource type="Texture2D" uid="uid://cjf5u74cpopra" path="res://art/Cheese1.png" id="8_qvrqc"]
-[ext_resource type="Texture2D" uid="uid://clgcslohqk5j1" path="res://art/Cheese2.png" id="9_gqfg7"]
-[ext_resource type="Texture2D" uid="uid://c60bsg05jjrx1" path="res://art/Peas_Hover.png" id="9_x0ysl"]
-[ext_resource type="Texture2D" uid="uid://byp1abx3b0u5y" path="res://art/Cheese3.png" id="10_iuj5u"]
-[ext_resource type="BitMap" uid="uid://c7h528nnwpdw" path="res://art/Peas_Mask.png" id="10_tnwu8"]
-[ext_resource type="Texture2D" uid="uid://c4ycusavn61xp" path="res://art/PinkBowl.png" id="11_ubmik"]
-[ext_resource type="Texture2D" uid="uid://byirk4ntkiej2" path="res://art/Bacon1.png" id="12_w3eif"]
-[ext_resource type="Texture2D" uid="uid://urirejdrw4w5" path="res://art/Bacon2.png" id="13_b4shs"]
-[ext_resource type="Texture2D" uid="uid://pyqbk5n5ykrc" path="res://art/Bacon1_Click.png" id="13_h8fw5"]
-[ext_resource type="Texture2D" uid="uid://bxkp6kxham0t6" path="res://art/Bacon1_Hover.png" id="14_dd71y"]
-[ext_resource type="Texture2D" uid="uid://cnn7n3sd7xt8c" path="res://art/Bacon3.png" id="14_dncc1"]
-[ext_resource type="BitMap" uid="uid://dsgobjwmfbuex" path="res://art/Bacon1_Mask.png" id="15_6rbb4"]
-[ext_resource type="Texture2D" uid="uid://bjpn8sxkmaq4u" path="res://art/Cheese1_Click.png" id="17_1i8wo"]
-[ext_resource type="Texture2D" uid="uid://bpmes2cwg0vi4" path="res://art/Bacon2_Click.png" id="17_u6vm5"]
-[ext_resource type="Texture2D" uid="uid://0jbunubngt6t" path="res://art/Cheese1_Hover.png" id="18_7k6v8"]
-[ext_resource type="Texture2D" uid="uid://co7ae1a3f4nc7" path="res://art/Bacon2_Hover.png" id="18_msueh"]
-[ext_resource type="BitMap" uid="uid://bx7bk3qp6lmvl" path="res://art/Cheese1_Mask.png" id="19_5mugr"]
-[ext_resource type="BitMap" uid="uid://ds766m48xywcf" path="res://art/Bacon2_Mask.png" id="19_471g3"]
-[ext_resource type="Texture2D" uid="uid://csg58dfxpfdnl" path="res://art/Cheese2_Click.png" id="21_eg8c8"]
-[ext_resource type="Texture2D" uid="uid://k3g7amjj2jjk" path="res://art/Bacon3_Click.png" id="21_yx3q0"]
-[ext_resource type="Texture2D" uid="uid://c2srcj60r14bk" path="res://art/Bacon3_Hover.png" id="22_1h3be"]
-[ext_resource type="Texture2D" uid="uid://c8y7l2oslupes" path="res://art/Cheese2_Hover.png" id="22_h2vo1"]
-[ext_resource type="BitMap" uid="uid://cdx5bj3468ymh" path="res://art/Bacon3_Mask.png" id="23_a7m60"]
-[ext_resource type="BitMap" uid="uid://c1qk31dohby7y" path="res://art/Cheese2_Mask.png" id="23_twxra"]
-[ext_resource type="Texture2D" uid="uid://mho8cum637qm" path="res://art/Cheese3_Click.png" id="25_kbvam"]
-[ext_resource type="Texture2D" uid="uid://fixh5h580sxq" path="res://art/Cheese3_Hover.png" id="26_y3ehw"]
-[ext_resource type="BitMap" uid="uid://8ub7j5bf2sxj" path="res://art/Cheese3_Mask.png" id="27_sgidx"]
-[ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="37_wvajo"]
-[ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="38_7o3ny"]
-[ext_resource type="Texture2D" uid="uid://clopys7kwhryi" path="res://art/FancyCircle (1).png" id="42_ny8xw"]
-[ext_resource type="Texture2D" uid="uid://62217bqvvk7l" path="res://art/ButterspoonHead.png" id="43_gp3ct"]
+[ext_resource type="Script" path="res://plating.gd" id="1_yamtd"]
+[ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_ehwaa"]
+[ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="3_osp1p"]
+[ext_resource type="Texture2D" uid="uid://trehlrsg5tl0" path="res://art/ReferencePic.png" id="4_r5maw"]
+[ext_resource type="Texture2D" uid="uid://b18m0772uijl1" path="res://art/BlueBowl.png" id="5_ykyll"]
+[ext_resource type="Script" path="res://plating_ingredients.gd" id="6_wrqxh"]
+[ext_resource type="Texture2D" uid="uid://binglwbf545x1" path="res://art/Peas.png" id="7_xruff"]
+[ext_resource type="Texture2D" uid="uid://c4dp5tiodvt7i" path="res://art/Peas_Click.png" id="8_dtpr1"]
+[ext_resource type="Texture2D" uid="uid://c60bsg05jjrx1" path="res://art/Peas_Hover.png" id="9_3xlf1"]
+[ext_resource type="BitMap" uid="uid://c7h528nnwpdw" path="res://art/Peas_Mask.png" id="10_3w0f2"]
+[ext_resource type="Texture2D" uid="uid://c62e2e1i4yprm" path="res://art/YellowPlate.png" id="11_4nj7g"]
+[ext_resource type="Texture2D" uid="uid://byirk4ntkiej2" path="res://art/Bacon1.png" id="12_uu5bx"]
+[ext_resource type="Texture2D" uid="uid://pyqbk5n5ykrc" path="res://art/Bacon1_Click.png" id="13_oqewc"]
+[ext_resource type="Texture2D" uid="uid://bxkp6kxham0t6" path="res://art/Bacon1_Hover.png" id="14_u0wbl"]
+[ext_resource type="BitMap" uid="uid://dsgobjwmfbuex" path="res://art/Bacon1_Mask.png" id="15_pfuhh"]
+[ext_resource type="Texture2D" uid="uid://urirejdrw4w5" path="res://art/Bacon2.png" id="16_vbgpu"]
+[ext_resource type="Texture2D" uid="uid://bpmes2cwg0vi4" path="res://art/Bacon2_Click.png" id="17_gksw0"]
+[ext_resource type="Texture2D" uid="uid://co7ae1a3f4nc7" path="res://art/Bacon2_Hover.png" id="18_od3h4"]
+[ext_resource type="BitMap" uid="uid://ds766m48xywcf" path="res://art/Bacon2_Mask.png" id="19_u83jn"]
+[ext_resource type="Texture2D" uid="uid://cnn7n3sd7xt8c" path="res://art/Bacon3.png" id="20_8p8si"]
+[ext_resource type="Texture2D" uid="uid://k3g7amjj2jjk" path="res://art/Bacon3_Click.png" id="21_23iko"]
+[ext_resource type="Texture2D" uid="uid://c2srcj60r14bk" path="res://art/Bacon3_Hover.png" id="22_g02ue"]
+[ext_resource type="BitMap" uid="uid://cdx5bj3468ymh" path="res://art/Bacon3_Mask.png" id="23_fofds"]
+[ext_resource type="Texture2D" uid="uid://c4ycusavn61xp" path="res://art/PinkBowl.png" id="24_ysdoo"]
+[ext_resource type="Texture2D" uid="uid://cjf5u74cpopra" path="res://art/Cheese1.png" id="25_n3yyn"]
+[ext_resource type="Texture2D" uid="uid://bjpn8sxkmaq4u" path="res://art/Cheese1_Click.png" id="26_vgb82"]
+[ext_resource type="Texture2D" uid="uid://0jbunubngt6t" path="res://art/Cheese1_Hover.png" id="27_5lr03"]
+[ext_resource type="BitMap" uid="uid://bx7bk3qp6lmvl" path="res://art/Cheese1_Mask.png" id="28_o7j3m"]
+[ext_resource type="Texture2D" uid="uid://clgcslohqk5j1" path="res://art/Cheese2.png" id="29_wpi0o"]
+[ext_resource type="Texture2D" uid="uid://csg58dfxpfdnl" path="res://art/Cheese2_Click.png" id="30_dsvx5"]
+[ext_resource type="Texture2D" uid="uid://c8y7l2oslupes" path="res://art/Cheese2_Hover.png" id="31_7t1ou"]
+[ext_resource type="BitMap" uid="uid://c1qk31dohby7y" path="res://art/Cheese2_Mask.png" id="32_r4xv0"]
+[ext_resource type="Texture2D" uid="uid://byp1abx3b0u5y" path="res://art/Cheese3.png" id="33_y51wr"]
+[ext_resource type="Texture2D" uid="uid://mho8cum637qm" path="res://art/Cheese3_Click.png" id="34_glbwk"]
+[ext_resource type="Texture2D" uid="uid://fixh5h580sxq" path="res://art/Cheese3_Hover.png" id="35_lv8ia"]
+[ext_resource type="BitMap" uid="uid://8ub7j5bf2sxj" path="res://art/Cheese3_Mask.png" id="36_e1dbm"]
+[ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="37_gfi2s"]
+[ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="38_104ty"]
+[ext_resource type="Texture2D" uid="uid://clopys7kwhryi" path="res://art/FancyCircle (1).png" id="39_vfia2"]
+[ext_resource type="Texture2D" uid="uid://62217bqvvk7l" path="res://art/ButterspoonHead.png" id="40_ixw7m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7l5m4"]
 radius = 34.6811
@@ -63,18 +63,18 @@ radius = 51.0098
 radius = 160.0
 height = 320.0
 
-[node name="Plating" type="Node2D"]
-script = ExtResource("1_w55mi")
+[node name="Plating2" type="Node2D"]
+script = ExtResource("1_yamtd")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_efjw4")
+texture = ExtResource("2_ehwaa")
 
 [node name="Plate" type="Sprite2D" parent="."]
 position = Vector2(965, 553)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("3_ew156")
+texture = ExtResource("3_osp1p")
 
 [node name="HintButton" type="Button" parent="."]
 offset_left = 52.0
@@ -96,24 +96,24 @@ text = "Serve the food!"
 visible = false
 position = Vector2(258, 230)
 scale = Vector2(0.403009, 0.37662)
-texture = ExtResource("5_ofxoc")
+texture = ExtResource("4_r5maw")
 
 [node name="ReferencePic" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(970, 587)
 scale = Vector2(0.835648, 0.858796)
-texture = ExtResource("5_ofxoc")
+texture = ExtResource("4_r5maw")
 
 [node name="BowlsContainer" type="Node2D" parent="."]
 
 [node name="BlueBowl" type="Sprite2D" parent="BowlsContainer"]
 position = Vector2(281, 772)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("5_e5mgo")
+texture = ExtResource("5_ykyll")
 
 [node name="Peas" type="Area2D" parent="BowlsContainer/BlueBowl" groups=["peas", "plating_ingredients"]]
 position = Vector2(3.33333, 13.3333)
-script = ExtResource("7_xoyhb")
+script = ExtResource("6_wrqxh")
 metadata/_edit_group_ = true
 
 [node name="PeaButton" type="TextureButton" parent="BowlsContainer/BlueBowl/Peas"]
@@ -122,10 +122,10 @@ offset_top = -492.0
 offset_right = 492.0
 offset_bottom = 495.0
 keep_pressed_outside = true
-texture_normal = ExtResource("5_3jh3m")
-texture_pressed = ExtResource("8_oeu68")
-texture_hover = ExtResource("9_x0ysl")
-texture_click_mask = ExtResource("10_tnwu8")
+texture_normal = ExtResource("7_xruff")
+texture_pressed = ExtResource("8_dtpr1")
+texture_hover = ExtResource("9_3xlf1")
+texture_click_mask = ExtResource("10_3w0f2")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -136,10 +136,10 @@ debug_color = Color(0.921569, 0, 0.160784, 0.607843)
 [node name="YellowPlate" type="Sprite2D" parent="BowlsContainer"]
 position = Vector2(1656, 826)
 scale = Vector2(0.45, 0.45)
-texture = ExtResource("6_n6qvo")
+texture = ExtResource("11_4nj7g")
 
 [node name="Bacon1" type="Area2D" parent="BowlsContainer/YellowPlate" groups=["bacon", "plating_ingredients"]]
-script = ExtResource("7_xoyhb")
+script = ExtResource("6_wrqxh")
 
 [node name="Bacon1Button" type="TextureButton" parent="BowlsContainer/YellowPlate/Bacon1"]
 offset_left = -417.778
@@ -147,10 +147,10 @@ offset_top = -120.0
 offset_right = -261.778
 offset_bottom = 444.0
 rotation = -0.406926
-texture_normal = ExtResource("12_w3eif")
-texture_pressed = ExtResource("13_h8fw5")
-texture_hover = ExtResource("14_dd71y")
-texture_click_mask = ExtResource("15_6rbb4")
+texture_normal = ExtResource("12_uu5bx")
+texture_pressed = ExtResource("13_oqewc")
+texture_hover = ExtResource("14_u0wbl")
+texture_click_mask = ExtResource("15_pfuhh")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -162,7 +162,7 @@ shape = SubResource("RectangleShape2D_s0vrs")
 debug_color = Color(0, 0.870752, 0.339255, 0.42)
 
 [node name="Bacon2" type="Area2D" parent="BowlsContainer/YellowPlate" groups=["bacon", "plating_ingredients"]]
-script = ExtResource("7_xoyhb")
+script = ExtResource("6_wrqxh")
 
 [node name="Bacon2Button" type="TextureButton" parent="BowlsContainer/YellowPlate/Bacon2"]
 offset_left = 297.778
@@ -170,10 +170,10 @@ offset_top = -291.111
 offset_right = 518.778
 offset_bottom = 344.889
 rotation = 0.467225
-texture_normal = ExtResource("13_b4shs")
-texture_pressed = ExtResource("17_u6vm5")
-texture_hover = ExtResource("18_msueh")
-texture_click_mask = ExtResource("19_471g3")
+texture_normal = ExtResource("16_vbgpu")
+texture_pressed = ExtResource("17_gksw0")
+texture_hover = ExtResource("18_od3h4")
+texture_click_mask = ExtResource("19_u83jn")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -185,7 +185,7 @@ shape = SubResource("RectangleShape2D_0hkgn")
 debug_color = Color(0, 0.870752, 0.339255, 0.42)
 
 [node name="Bacon3" type="Area2D" parent="BowlsContainer/YellowPlate" groups=["bacon", "plating_ingredients"]]
-script = ExtResource("7_xoyhb")
+script = ExtResource("6_wrqxh")
 
 [node name="Bacon3Button" type="TextureButton" parent="BowlsContainer/YellowPlate/Bacon3"]
 offset_left = 55.5555
@@ -193,10 +193,10 @@ offset_top = -448.889
 offset_right = 263.556
 offset_bottom = 304.111
 rotation = 0.453363
-texture_normal = ExtResource("14_dncc1")
-texture_pressed = ExtResource("21_yx3q0")
-texture_hover = ExtResource("22_1h3be")
-texture_click_mask = ExtResource("23_a7m60")
+texture_normal = ExtResource("20_8p8si")
+texture_pressed = ExtResource("21_23iko")
+texture_hover = ExtResource("22_g02ue")
+texture_click_mask = ExtResource("23_fofds")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -210,10 +210,10 @@ debug_color = Color(0, 0.870752, 0.339255, 0.42)
 [node name="PinkBowl" type="Sprite2D" parent="BowlsContainer"]
 position = Vector2(1675, 279)
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("11_ubmik")
+texture = ExtResource("24_ysdoo")
 
 [node name="Cheese1" type="Area2D" parent="BowlsContainer/PinkBowl" groups=["cheese", "plating_ingredients"]]
-script = ExtResource("7_xoyhb")
+script = ExtResource("6_wrqxh")
 metadata/_edit_group_ = true
 
 [node name="Cheese1Button" type="TextureButton" parent="BowlsContainer/PinkBowl/Cheese1"]
@@ -221,10 +221,10 @@ offset_left = -320.0
 offset_top = -174.286
 offset_right = -9.0
 offset_bottom = 136.714
-texture_normal = ExtResource("8_qvrqc")
-texture_pressed = ExtResource("17_1i8wo")
-texture_hover = ExtResource("18_7k6v8")
-texture_click_mask = ExtResource("19_5mugr")
+texture_normal = ExtResource("25_n3yyn")
+texture_pressed = ExtResource("26_vgb82")
+texture_hover = ExtResource("27_5lr03")
+texture_click_mask = ExtResource("28_o7j3m")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -235,17 +235,17 @@ shape = SubResource("CircleShape2D_ck5dp")
 debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
 
 [node name="Cheese2" type="Area2D" parent="BowlsContainer/PinkBowl" groups=["cheese", "plating_ingredients"]]
-script = ExtResource("7_xoyhb")
+script = ExtResource("6_wrqxh")
 
 [node name="Cheese2Button" type="TextureButton" parent="BowlsContainer/PinkBowl/Cheese2"]
 offset_left = -40.0
 offset_top = -317.143
 offset_right = 271.0
 offset_bottom = -6.14285
-texture_normal = ExtResource("9_gqfg7")
-texture_pressed = ExtResource("21_eg8c8")
-texture_hover = ExtResource("22_h2vo1")
-texture_click_mask = ExtResource("23_twxra")
+texture_normal = ExtResource("29_wpi0o")
+texture_pressed = ExtResource("30_dsvx5")
+texture_hover = ExtResource("31_7t1ou")
+texture_click_mask = ExtResource("32_r4xv0")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -256,17 +256,17 @@ shape = SubResource("CircleShape2D_ck5dp")
 debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
 
 [node name="Cheese3" type="Area2D" parent="BowlsContainer/PinkBowl" groups=["cheese", "plating_ingredients"]]
-script = ExtResource("7_xoyhb")
+script = ExtResource("6_wrqxh")
 
 [node name="Cheese3Button" type="TextureButton" parent="BowlsContainer/PinkBowl/Cheese3"]
 offset_left = -37.1429
 offset_top = -20.0
 offset_right = 273.857
 offset_bottom = 291.0
-texture_normal = ExtResource("10_iuj5u")
-texture_pressed = ExtResource("25_kbvam")
-texture_hover = ExtResource("26_y3ehw")
-texture_click_mask = ExtResource("27_sgidx")
+texture_normal = ExtResource("33_y51wr")
+texture_pressed = ExtResource("34_glbwk")
+texture_hover = ExtResource("35_lv8ia")
+texture_click_mask = ExtResource("36_e1dbm")
 ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
@@ -341,7 +341,7 @@ debug_color = Color(0, 0.870588, 0.341176, 0.419608)
 [node name="TextBox" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
 scale = Vector2(0.564815, 0.564815)
-texture = ExtResource("37_wvajo")
+texture = ExtResource("37_gfi2s")
 
 [node name="Instructions" type="Label" parent="TextBox"]
 offset_left = -729.443
@@ -351,7 +351,7 @@ offset_bottom = 363.36
 theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("38_7o3ny")
+theme_override_fonts/font = ExtResource("38_104ty")
 theme_override_font_sizes/font_size = 75
 text = "Place the ingredients following the reference guide. The more precise the better! "
 horizontal_alignment = 1
@@ -365,7 +365,7 @@ offset_bottom = 747.557
 theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("38_7o3ny")
+theme_override_fonts/font = ExtResource("38_104ty")
 theme_override_font_sizes/font_size = 50
 text = "Press \"Space\" to continue"
 horizontal_alignment = 1
@@ -374,7 +374,7 @@ autowrap_mode = 3
 [node name="ScoreTextBox" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
 scale = Vector2(0.564815, 0.564815)
-texture = ExtResource("37_wvajo")
+texture = ExtResource("37_gfi2s")
 
 [node name="Scoring" type="Label" parent="ScoreTextBox"]
 offset_left = -729.443
@@ -384,7 +384,7 @@ offset_bottom = 363.36
 theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("38_7o3ny")
+theme_override_fonts/font = ExtResource("38_104ty")
 theme_override_font_sizes/font_size = 75
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -402,12 +402,12 @@ text = "Continue!"
 [node name="FancyCircle" type="Sprite2D" parent="."]
 position = Vector2(356, 133)
 scale = Vector2(0.234465, 0.234465)
-texture = ExtResource("42_ny8xw")
+texture = ExtResource("39_vfia2")
 
 [node name="HintText" type="Sprite2D" parent="."]
 position = Vector2(159, 274)
 scale = Vector2(0.189699, 0.184259)
-texture = ExtResource("37_wvajo")
+texture = ExtResource("37_gfi2s")
 metadata/_edit_group_ = true
 
 [node name="HintLabel" type="Label" parent="HintText"]
@@ -418,7 +418,7 @@ offset_bottom = 363.36
 theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("38_7o3ny")
+theme_override_fonts/font = ExtResource("38_104ty")
 theme_override_font_sizes/font_size = 75
 text = "Can't remember? Take another look. However points will be deducted."
 horizontal_alignment = 1
@@ -427,7 +427,7 @@ autowrap_mode = 3
 [node name="ButterspoonHead" type="Sprite2D" parent="."]
 position = Vector2(348, 131)
 scale = Vector2(0.187037, 0.187037)
-texture = ExtResource("43_gp3ct")
+texture = ExtResource("40_ixw7m")
 
 [connection signal="pressed" from="HintButton" to="." method="_on_hint_button_pressed"]
 [connection signal="pressed" from="Taste Test Button" to="." method="_on_taste_test_button_pressed"]

@@ -74,8 +74,10 @@ func _process(delta: float) -> void:
 		
 	if Input.is_action_pressed("action") and in_cutting and PlayerVariables.pantry_completed:
 		$CuttingArea/CuttingIcon.play("press")
-		get_tree().change_scene_to_file("res://cutting.tscn") 
-		
+		if PlayerVariables.curr_recipe == 0:
+			get_tree().change_scene_to_file("res://cutting.tscn") 
+		if PlayerVariables.curr_recipe == 1:
+			get_tree().change_scene_to_file("res://cutting2.tscn")
 	if Input.is_action_pressed("action") and in_mixing and PlayerVariables.pantry_completed and PlayerVariables.cutting_completed:
 		$MixingArea/MixingIcon.play("press")
 		get_tree().change_scene_to_file("res://mixing.tscn") 
@@ -86,8 +88,10 @@ func _process(delta: float) -> void:
 		
 	if Input.is_action_pressed("action") and in_plating and PlayerVariables.pantry_completed and PlayerVariables.cutting_completed and PlayerVariables.mixing_completed and PlayerVariables.stove_completed:
 		$PlatingArea/PlatingIcon.play("press")
-		get_tree().change_scene_to_file("res://plating.tscn") 
-
+		if PlayerVariables.curr_recipe == 0:
+			get_tree().change_scene_to_file("res://plating.tscn") 
+		if PlayerVariables.curr_recipe == 2:
+			get_tree().change_scene_to_file("res://plating2.tscn")
 
 func _on_pantry_area_entered(area: Area2D) -> void:
 	if area.is_in_group("player"):
