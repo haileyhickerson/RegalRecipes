@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bhyucviieqbhs"]
+[gd_scene load_steps=16 format=3 uid="uid://bhyucviieqbhs"]
 
 [ext_resource type="Script" path="res://pantry.gd" id="1_xewv2"]
 [ext_resource type="Texture2D" uid="uid://ckbq14kxwn8jm" path="res://art/EmptryPantry.png" id="2_1174c"]
@@ -14,6 +14,7 @@
 [ext_resource type="BitMap" uid="uid://b4v7manlijkpx" path="res://art/meatmask.png" id="12_xg31g"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="13_ty1ql"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="14_ru7wo"]
+[ext_resource type="Texture2D" uid="uid://daebuaiv8fa5s" path="res://art/Full_Carrot.png" id="15_8npqf"]
 
 [node name="Pantry" type="Node2D"]
 script = ExtResource("1_xewv2")
@@ -38,6 +39,7 @@ position = Vector2(1707, 902)
 
 [node name="Carrot1" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
 position = Vector2(795, 538)
+scale = Vector2(0.3, 0.3)
 
 [node name="Carrot2" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
 position = Vector2(1219, 212)
@@ -106,13 +108,13 @@ offset_top = 166.0
 offset_right = 1905.0
 offset_bottom = 280.0
 
-[node name="PeaBag_label" type="Label" parent="VBoxContainer"]
+[node name="ingredient_label1" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Peas (0/1)"
 horizontal_alignment = 2
 
-[node name="Ham1_label" type="Label" parent="VBoxContainer"]
+[node name="ingredient_label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Ham (0/1)"
@@ -178,7 +180,7 @@ offset_bottom = -103.0
 theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
 theme_override_fonts/font = ExtResource("14_ru7wo")
-theme_override_font_sizes/font_size = 65
+theme_override_font_sizes/font_size = 63
 horizontal_alignment = 1
 
 [node name="Score" type="Label" parent="InstructionsTextbox"]
@@ -204,13 +206,23 @@ text = "Press \"Space\" to continue"
 
 [node name="ExamplePea" type="Sprite2D" parent="InstructionsTextbox"]
 position = Vector2(-162.832, 70.7965)
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.13, 0.13)
 texture = ExtResource("11_0k253")
 
 [node name="ExampleHam" type="Sprite2D" parent="InstructionsTextbox"]
-position = Vector2(129.204, 76.1062)
-scale = Vector2(0.1, 0.1)
+position = Vector2(153.982, 74.3363)
+scale = Vector2(0.16, 0.16)
 texture = ExtResource("5_0danb")
+
+[node name="ExampleOnion" type="Sprite2D" parent="InstructionsTextbox"]
+position = Vector2(-231.858, 69.0265)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_7r1yh")
+
+[node name="ExampleCarrot" type="Sprite2D" parent="InstructionsTextbox"]
+position = Vector2(176.991, 77.8761)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("15_8npqf")
 
 [node name="ScoreDisplay" type="Label" parent="."]
 offset_left = 865.0

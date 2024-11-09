@@ -120,6 +120,7 @@ theme_override_font_sizes/font_size = 50
 text = "Next"
 
 [node name="TextBox" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(955, 473)
 scale = Vector2(0.565, 0.565)
 texture = ExtResource("4_e1ow1")
@@ -156,6 +157,7 @@ text = "Press \"Space\" to continue"
 horizontal_alignment = 1
 
 [node name="ScoreTextBox" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(955, 473)
 scale = Vector2(0.565, 0.565)
 texture = ExtResource("4_e1ow1")

@@ -4,9 +4,10 @@ var location
 
 var first_move = false
 var intro_completed = false
-var recipe1_completed = false
+var recipe1_completed = true #SET TO TRUE FOR DEBUGGING
 var recipe2_completed = false
-var curr_recipe = 1
+var curr_recipe = 0
+var correct_ingredients = [["PeaBag", "Ham1"], ["Onion1", "Carrot1"], ["Recipe3Ingredients"]]
 
 var pantry_completed = false
 var cutting_completed = false

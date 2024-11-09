@@ -1,19 +1,28 @@
 extends Node2D
 var baskets
 var ingredient_list
+var progress_label
 var selected_ingredients = []
-var correct_ingredients = ["PeaBag", "Ham1"]
+var correct_ingredients = PlayerVariables.correct_ingredients[PlayerVariables.curr_recipe]
 var starting_score = 100
 var dialogue_index = 0
-var instructions = ["Drag 1 Bag of Peas and 1 Ham into the basket!", "If you click the wrong ingredient, you lose points!"]
+var instructions = ["Drag the correct ingredients into the basket!", "If you click the wrong ingredient, you lose points!"]
 
 func _ready() -> void:
 	if $ScoreTextbox != null:
 		$ScoreTextbox.hide()
-	baskets = get_tree().get_nodes_in_group("basket")
-	ingredient_list = get_tree().get_nodes_in_group("ingredients")
 	if $NextButton != null:
 		$NextButton.hide()
+	baskets = get_tree().get_nodes_in_group("basket")
+	ingredient_list = get_tree().get_nodes_in_group("ingredients")
+	if $InstructionsTextbox != null:
+		if PlayerVariables.curr_recipe == 0:
+			$InstructionsTextbox/ExampleOnion.hide()
+			$InstructionsTextbox/ExampleCarrot.hide()
+		elif PlayerVariables.curr_recipe == 1:
+			$InstructionsTextbox/ExampleHam.hide()
+			$InstructionsTextbox/ExamplePea.hide()
+		set_display()
 	show_next_dialogue()
 
 func show_next_dialogue():
@@ -60,9 +69,17 @@ func update_score():
 	if $ScoreDisplay.text != null:
 		$ScoreDisplay.text = "Score: " + str(starting_score)
 
+func set_display():
+	if get_node("VBoxContainer") != null:
+		get_node("VBoxContainer/ingredient_label1").text = correct_ingredients[0] + ": 0/1"
+		get_node("VBoxContainer/ingredient_label2").text = correct_ingredients[1] + ": 0/1"
+	
 func update_progress(ingredient_name: String):
-	if get_node("VBoxContainer/" + ingredient_name + "_label") != null:
-		var progress_label = get_node("VBoxContainer/" + ingredient_name + "_label")
+	if get_node("VBoxContainer") != null:
+		if len(selected_ingredients) == 1:
+			progress_label = get_node("VBoxContainer/ingredient_label1")
+		else:
+			progress_label = get_node("VBoxContainer/ingredient_label2")
 		progress_label.text = ingredient_name.capitalize() + ": 1/1"
 		progress_label.modulate = Color(0, 1, 0)  # Green color
 
