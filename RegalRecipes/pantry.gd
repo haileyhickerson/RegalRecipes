@@ -1,7 +1,5 @@
 extends Node2D
-var baskets
 var ingredient_list
-var progress_label
 var selected_ingredients = []
 var correct_ingredients = PlayerVariables.correct_ingredients[PlayerVariables.curr_recipe]
 var starting_score = 100
@@ -13,7 +11,6 @@ func _ready() -> void:
 		$ScoreTextbox.hide()
 	if $NextButton != null:
 		$NextButton.hide()
-	baskets = get_tree().get_nodes_in_group("basket")
 	ingredient_list = get_tree().get_nodes_in_group("ingredients")
 	if $InstructionsTextbox != null:
 		if PlayerVariables.curr_recipe == 0:
@@ -76,12 +73,12 @@ func set_display():
 	
 func update_progress(ingredient_name: String):
 	if get_node("VBoxContainer") != null:
-		if len(selected_ingredients) == 1:
-			progress_label = get_node("VBoxContainer/ingredient_label1")
+		if get_node("VBoxContainer/ingredient_label1").text == ingredient_name + ": 0/1":
+			get_node("VBoxContainer/ingredient_label1").text = ingredient_name.capitalize() + ": 1/1"
+			get_node("VBoxContainer/ingredient_label1").modulate = Color(0, 1, 0)
 		else:
-			progress_label = get_node("VBoxContainer/ingredient_label2")
-		progress_label.text = ingredient_name.capitalize() + ": 1/1"
-		progress_label.modulate = Color(0, 1, 0)  # Green color
+			get_node("VBoxContainer/ingredient_label2").text = ingredient_name.capitalize() + ": 1/1"
+			get_node("VBoxContainer/ingredient_label2").modulate = Color(0, 1, 0)
 
 func _on_back_button_pressed():
 	get_tree().change_scene_to_file("res://kitchen.tscn")
