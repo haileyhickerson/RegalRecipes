@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://ddlvucvofn2v0"
+path="res://.godot/imported/ButterSlice_Mask.png-40ebfe691eed8a172131366af17bfbaf.res"
+
+[deps]
+
+source_file="res://art/ButterSlice_Mask.png"
+dest_files=["res://.godot/imported/ButterSlice_Mask.png-40ebfe691eed8a172131366af17bfbaf.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,239 @@
+[gd_scene load_steps=16 format=3 uid="uid://bwxvpoakwx51i"]
+
+[ext_resource type="Script" path="res://pantry2.gd" id="1_s83qn"]
+[ext_resource type="Texture2D" uid="uid://ckbq14kxwn8jm" path="res://art/EmptryPantry.png" id="2_yqhef"]
+[ext_resource type="PackedScene" uid="uid://cp4wximgsmflu" path="res://basket.tscn" id="3_ul00v"]
+[ext_resource type="PackedScene" uid="uid://noax3wfo31l0" path="res://ingredient.tscn" id="4_l0s7r"]
+[ext_resource type="Texture2D" uid="uid://b67hbohj0k0m1" path="res://art/meat.png" id="5_jd7kt"]
+[ext_resource type="Texture2D" uid="uid://njintfu88w8s" path="res://art/BadMeat.png" id="6_4ffhh"]
+[ext_resource type="Texture2D" uid="uid://cjf5u74cpopra" path="res://art/Cheese1.png" id="7_i8iuq"]
+[ext_resource type="Texture2D" uid="uid://clgcslohqk5j1" path="res://art/Cheese2.png" id="8_b062t"]
+[ext_resource type="Texture2D" uid="uid://byp1abx3b0u5y" path="res://art/Cheese3.png" id="9_8ihmi"]
+[ext_resource type="Texture2D" uid="uid://65vsgg3p4ejk" path="res://art/Onion.png" id="10_hetd7"]
+[ext_resource type="Texture2D" uid="uid://bjwj8dwr2ac1k" path="res://art/PeaBag .png" id="11_m0g0i"]
+[ext_resource type="BitMap" uid="uid://b4v7manlijkpx" path="res://art/meatmask.png" id="12_745s0"]
+[ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="13_sdvfa"]
+[ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="14_m1q0k"]
+[ext_resource type="Texture2D" uid="uid://daebuaiv8fa5s" path="res://art/Full_Carrot.png" id="15_s65ci"]
+
+[node name="Pantry2" type="Node2D"]
+script = ExtResource("1_s83qn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_yqhef")
+
+[node name="BackButton" type="Button" parent="."]
+offset_left = 52.0
+offset_top = 31.0
+offset_right = 232.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Basket" parent="." groups=["basket"] instance=ExtResource("3_ul00v")]
+position = Vector2(1707, 902)
+
+[node name="Carrot1" parent="." groups=["ingredients"] instance=ExtResource("4_l0s7r")]
+position = Vector2(795, 538)
+scale = Vector2(0.3, 0.3)
+
+[node name="Carrot2" parent="." groups=["ingredients"] instance=ExtResource("4_l0s7r")]
+position = Vector2(1219, 212)
+scale = Vector2(0.1, 0.1)
+
+[node name="Carrot3" parent="." groups=["ingredients"] instance=ExtResource("4_l0s7r")]
+position = Vector2(466, 303)
+scale = Vector2(0.1, 0.1)
+
+[node name="Carrot4" parent="." groups=["ingredients"] instance=ExtResource("4_l0s7r")]
+position = Vector2(425, 702)
+scale = Vector2(0.1, 0.1)
+
+[node name="Ham1" parent="." groups=["ingredients"] instance=ExtResource("4_l0s7r")]
+position = Vector2(977, 775)
+texture = ExtResource("5_jd7kt")
+
+[node name="Ham2" parent="." groups=["ingredients"] instance=ExtResource("4_l0s7r")]
+position = Vector2(1384, 455)
+texture = ExtResource("6_4ffhh")
+
+[node name="Ham3" parent="." groups=["ingredients"] instance=ExtResource("4_l0s7r")]
+position = Vector2(1374, 722)
+texture = ExtResource("6_4ffhh")
+
+[node name="Ham4" parent="." groups=["ingredients"] instance=ExtResource("4_l0s7r")]
+position = Vector2(279, 477)
+texture = ExtResource("6_4ffhh")
+
+[node name="Cheese1" parent="." groups=["ingredients"] instance=ExtResource("4_l0s7r")]
+position = Vector2(1028, 323)
+texture = ExtResource("7_i8iuq")
+
+[node name="Cheese2" parent="." groups=["ingredients"] instance=ExtResource("4_l0s7r")]
+position = Vector2(1791, 489)
+texture = ExtResource("8_b062t")
+
+[node name="Cheese3" parent="." groups=["ingredients"] instance=ExtResource("4_l0s7r")]
+position = Vector2(276, 894)
+texture = ExtResource("9_8ihmi")
+
+[node name="Onion1" parent="." groups=["ingredients"] instance=ExtResource("4_l0s7r")]
+position = Vector2(727, 186)
+texture = ExtResource("10_hetd7")
+
+[node name="Onion2" parent="." groups=["ingredients"] instance=ExtResource("4_l0s7r")]
+position = Vector2(1527, 247)
+texture = ExtResource("10_hetd7")
+
+[node name="PeaBag" parent="." groups=["ingredients"] instance=ExtResource("4_l0s7r")]
+position = Vector2(608, 875)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("11_m0g0i")
+
+[node name="NextButton" type="Button" parent="."]
+offset_left = 885.0
+offset_top = 903.0
+offset_right = 1065.0
+offset_bottom = 1008.0
+theme_override_font_sizes/font_size = 50
+text = "Next"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 1685.0
+offset_top = 166.0
+offset_right = 1905.0
+offset_bottom = 280.0
+
+[node name="ingredient_label1" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Peas (0/1)"
+horizontal_alignment = 2
+
+[node name="ingredient_label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Ham (0/1)"
+horizontal_alignment = 2
+
+[node name="TextureButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 440.0
+offset_top = 180.0
+offset_right = 2440.0
+offset_bottom = 2180.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("5_jd7kt")
+texture_click_mask = ExtResource("12_745s0")
+
+[node name="ScoreTextbox" type="Sprite2D" parent="."]
+position = Vector2(975, 530)
+scale = Vector2(0.565, 0.565)
+texture = ExtResource("13_sdvfa")
+
+[node name="ScoreText" type="Label" parent="ScoreTextbox"]
+offset_left = -635.398
+offset_top = -201.77
+offset_right = 638.602
+offset_bottom = -104.77
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_fonts/font = ExtResource("14_m1q0k")
+theme_override_font_sizes/font_size = 70
+text = "You picked all the ingredients! You scored:"
+
+[node name="Score" type="Label" parent="ScoreTextbox"]
+offset_left = -647.788
+offset_top = -38.938
+offset_right = 626.212
+offset_bottom = 58.062
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_fonts/font = ExtResource("14_m1q0k")
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="ScoreTextbox"]
+offset_left = -153.982
+offset_top = 253.097
+offset_right = 158.018
+offset_bottom = 295.097
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_m1q0k")
+theme_override_font_sizes/font_size = 30
+text = "Press \"Next\" to continue"
+
+[node name="InstructionsTextbox" type="Sprite2D" parent="."]
+position = Vector2(975, 530)
+scale = Vector2(0.565, 0.565)
+texture = ExtResource("13_sdvfa")
+
+[node name="InstructionText" type="Label" parent="InstructionsTextbox"]
+offset_left = -697.345
+offset_top = -200.0
+offset_right = 722.655
+offset_bottom = -103.0
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_fonts/font = ExtResource("14_m1q0k")
+theme_override_font_sizes/font_size = 63
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="InstructionsTextbox"]
+offset_left = -647.788
+offset_top = -38.938
+offset_right = 626.212
+offset_bottom = 58.062
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_fonts/font = ExtResource("14_m1q0k")
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="InstructionsTextbox"]
+offset_left = -153.982
+offset_top = 253.097
+offset_right = 158.018
+offset_bottom = 295.097
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_m1q0k")
+theme_override_font_sizes/font_size = 30
+text = "Press \"Space\" to continue"
+
+[node name="ExamplePea" type="Sprite2D" parent="InstructionsTextbox"]
+position = Vector2(-162.832, 70.7965)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("11_m0g0i")
+
+[node name="ExampleHam" type="Sprite2D" parent="InstructionsTextbox"]
+position = Vector2(153.982, 74.3363)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("5_jd7kt")
+
+[node name="ExampleOnion" type="Sprite2D" parent="InstructionsTextbox"]
+position = Vector2(-231.858, 69.0265)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_hetd7")
+
+[node name="ExampleCarrot" type="Sprite2D" parent="InstructionsTextbox"]
+position = Vector2(176.991, 77.8761)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("15_s65ci")
+
+[node name="ScoreDisplay" type="Label" parent="."]
+offset_left = 865.0
+offset_top = 9.0
+offset_right = 1051.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("14_m1q0k")
+theme_override_font_sizes/font_size = 70
+text = "Score: 100"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Basket" to="." method="_on_basket_area_entered"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

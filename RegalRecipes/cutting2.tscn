@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dh7a77tjt2pm2"]
 
-[ext_resource type="Script" path="res://cutting.gd" id="1_kq3rv"]
+[ext_resource type="Script" path="res://cutting2.gd" id="1_6rne2"]
 [ext_resource type="Texture2D" uid="uid://b7paioai6w1g5" path="res://art/CuttingBoard.png" id="2_uxtnr"]
 [ext_resource type="Texture2D" uid="uid://daebuaiv8fa5s" path="res://art/Full_Carrot.png" id="3_662m0"]
 [ext_resource type="Script" path="res://knife.gd" id="4_l7mgb"]
@@ -23,12 +23,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y8gqb"]
 size = Vector2(25.3293, 344.501)
 
-[node name="Cutting2" type="Node2D" node_paths=PackedStringArray("Cut1", "Cut2", "Cut3", "Score_Label")]
-script = ExtResource("1_kq3rv")
-Cut1 = NodePath("Cut1")
-Cut2 = NodePath("Cut2")
-Cut3 = NodePath("Cut3")
-Score_Label = NodePath("Score/Score_Label")
+[node name="Cutting2" type="Node2D"]
+script = ExtResource("1_6rne2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1923.0

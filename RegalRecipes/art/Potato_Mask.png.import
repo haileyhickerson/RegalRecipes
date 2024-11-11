@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://xri70cf7kml5"
+path="res://.godot/imported/Potato_Mask.png-2fef3e8c4deb8f6fa2137d94d401116f.res"
+
+[deps]
+
+source_file="res://art/Potato_Mask.png"
+dest_files=["res://.godot/imported/Potato_Mask.png-2fef3e8c4deb8f6fa2137d94d401116f.res"]
+
+[params]
+
+create_from=0
+threshold=0.2

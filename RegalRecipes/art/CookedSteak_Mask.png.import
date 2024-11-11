@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://com3rvwrxh3fk"
+path="res://.godot/imported/CookedSteak_Mask.png-7c2be9e6535339f852cf143934c96953.res"
+
+[deps]
+
+source_file="res://art/CookedSteak_Mask.png"
+dest_files=["res://.godot/imported/CookedSteak_Mask.png-7c2be9e6535339f852cf143934c96953.res"]
+
+[params]
+
+create_from=0
+threshold=0.3

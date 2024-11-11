@@ -1,0 +1,482 @@
+[gd_scene load_steps=39 format=3 uid="uid://c4s3ews8gcl2"]
+
+[ext_resource type="Script" path="res://mixing2.gd" id="1_h51pr"]
+[ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_qsd4i"]
+[ext_resource type="Texture2D" uid="uid://b18m0772uijl1" path="res://art/BlueBowl.png" id="3_bylvb"]
+[ext_resource type="Texture2D" uid="uid://cdh6rhnkupr41" path="res://art/MixingCircle (2).png" id="4_e26ix"]
+[ext_resource type="Texture2D" uid="uid://d0u63rvbndu1n" path="res://art/peas_0.png" id="5_eg8df"]
+[ext_resource type="Texture2D" uid="uid://csw2fjckuri0j" path="res://art/peas_1.png" id="6_ieiyt"]
+[ext_resource type="Texture2D" uid="uid://cemy4kts2lwfg" path="res://art/peas_2.png" id="7_dqnbr"]
+[ext_resource type="Texture2D" uid="uid://dsfm5yxl5mprq" path="res://art/peas_3.png" id="8_1hssg"]
+[ext_resource type="Texture2D" uid="uid://c6c0bcx71bufb" path="res://art/peas_4.png" id="9_thp6m"]
+[ext_resource type="Texture2D" uid="uid://v6ddfxjwlhjj" path="res://art/peas_5.png" id="10_5cpui"]
+[ext_resource type="Texture2D" uid="uid://ygaw1nn3wgfd" path="res://art/peas_6.png" id="11_nfr2v"]
+[ext_resource type="Texture2D" uid="uid://bv8x03xc1qiep" path="res://art/peas_7.png" id="12_bjlc4"]
+[ext_resource type="Texture2D" uid="uid://chgr0jm7kiipr" path="res://art/peas_8.png" id="13_xnqtf"]
+[ext_resource type="Texture2D" uid="uid://cexxxbrdxax3l" path="res://art/peas_9.png" id="14_ffe6x"]
+[ext_resource type="Texture2D" uid="uid://b2or7g0wtou7r" path="res://art/peas_10.png" id="15_lijgm"]
+[ext_resource type="Texture2D" uid="uid://cypvp6gji8rvk" path="res://art/peas_mixed.png" id="16_qru4u"]
+[ext_resource type="Texture2D" uid="uid://becchsg8p16r1" path="res://art/CurvedArrow.png" id="17_m76eu"]
+[ext_resource type="Texture2D" uid="uid://cjcpi4m5np1fv" path="res://art/play.png" id="18_0dqq6"]
+[ext_resource type="Texture2D" uid="uid://dxugxbw6gpt0n" path="res://art/play_hover.png" id="19_g8p73"]
+[ext_resource type="BitMap" uid="uid://kdtfcv3g1m5w" path="res://art/play_pressed.png" id="20_pgdks"]
+[ext_resource type="Texture2D" uid="uid://bggxy023qjunk" path="res://art/dot.png" id="21_l7t1j"]
+[ext_resource type="Texture2D" uid="uid://bqsuix2nuppwa" path="res://art/dot_press.png" id="22_l4jl1"]
+[ext_resource type="Texture2D" uid="uid://csx4mhfl5y8g6" path="res://art/dot_hover.png" id="23_0txwv"]
+[ext_resource type="BitMap" uid="uid://m4vjlqcojn4q" path="res://art/dot_clickmask.png" id="24_c36uh"]
+[ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="25_8qay7"]
+[ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="26_cslqq"]
+[ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="27_ofais"]
+[ext_resource type="Texture2D" uid="uid://4ku7r1pae5c" path="res://art/ArrowFrames/1.png" id="28_cg4cv"]
+[ext_resource type="Texture2D" uid="uid://bi7ai5wq7luin" path="res://art/ArrowFrames/2.png" id="29_1v16a"]
+[ext_resource type="Texture2D" uid="uid://4sm7eplfenyi" path="res://art/ArrowFrames/3.png" id="30_jkji2"]
+[ext_resource type="Texture2D" uid="uid://bovgkx1fg1n1p" path="res://art/ArrowFrames/4.png" id="31_uqbdf"]
+[ext_resource type="Texture2D" uid="uid://byskijp7yp1gl" path="res://art/ArrowFrames/5.png" id="32_mtsus"]
+[ext_resource type="Texture2D" uid="uid://cadne302r2unw" path="res://art/ArrowFrames/6.png" id="33_7np2a"]
+[ext_resource type="Texture2D" uid="uid://crxasd4ld3lyk" path="res://art/ArrowFrames/7.png" id="34_2julr"]
+[ext_resource type="Texture2D" uid="uid://20x43rtvmljf" path="res://art/ArrowFrames/8.png" id="35_ajeec"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vysqn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_eg8df")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_eg8df")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ieiyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dqnbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1hssg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_thp6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5cpui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nfr2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_bjlc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xnqtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ffe6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lijgm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ieiyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dqnbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1hssg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_thp6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5cpui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nfr2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_bjlc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xnqtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ffe6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lijgm")
+}],
+"loop": false,
+"name": &"mix",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_eg8df")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ieiyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dqnbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1hssg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_thp6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5cpui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nfr2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_bjlc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xnqtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ffe6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lijgm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ieiyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dqnbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1hssg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_thp6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5cpui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nfr2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_bjlc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xnqtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ffe6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lijgm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qru4u")
+}],
+"loop": false,
+"name": &"mixed",
+"speed": 25.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aynwm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gfxvl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_cg4cv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_1v16a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_jkji2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_uqbdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_mtsus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_7np2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_2julr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ajeec")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Mixing2" type="Node2D"]
+script = ExtResource("1_h51pr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_qsd4i")
+
+[node name="BackButton" type="Button" parent="."]
+offset_left = 52.0
+offset_top = 31.0
+offset_right = 232.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[node name="BlueBowl" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.849537, 0.832322)
+texture = ExtResource("3_bylvb")
+
+[node name="MixingCircle(2)" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("4_e26ix")
+
+[node name="Peas" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_vysqn")
+animation = &"mixed"
+frame = 21
+frame_progress = 1.0
+
+[node name="Marker1" type="Marker2D" parent="."]
+position = Vector2(1270, 170)
+
+[node name="Arrow1" type="Sprite2D" parent="."]
+position = Vector2(1135.82, 96.3004)
+rotation = -0.449457
+scale = Vector2(0.181118, 0.166302)
+texture = ExtResource("17_m76eu")
+
+[node name="Marker2" type="Marker2D" parent="."]
+position = Vector2(1425, 520)
+
+[node name="Arrow2" type="Sprite2D" parent="."]
+position = Vector2(1397, 349)
+rotation = 0.309588
+scale = Vector2(0.181118, 0.166302)
+texture = ExtResource("17_m76eu")
+
+[node name="Marker3" type="Marker2D" parent="."]
+position = Vector2(1275, 875)
+
+[node name="Arrow3" type="Sprite2D" parent="."]
+position = Vector2(1390, 746)
+rotation = 1.1603
+scale = Vector2(0.181118, 0.166302)
+texture = ExtResource("17_m76eu")
+
+[node name="Marker4" type="Marker2D" parent="."]
+position = Vector2(940, 1005)
+
+[node name="Arrow4" type="Sprite2D" parent="."]
+position = Vector2(1144.94, 978.119)
+rotation = 1.88636
+scale = Vector2(0.176779, 0.165655)
+texture = ExtResource("17_m76eu")
+
+[node name="Marker5" type="Marker2D" parent="."]
+position = Vector2(605, 875)
+
+[node name="Arrow5" type="Sprite2D" parent="."]
+position = Vector2(775.119, 981)
+rotation = 2.7012
+scale = Vector2(0.182995, 0.162549)
+texture = ExtResource("17_m76eu")
+
+[node name="Marker6" type="Marker2D" parent="."]
+position = Vector2(453, 520)
+
+[node name="Arrow6" type="Sprite2D" parent="."]
+position = Vector2(521, 733)
+rotation = 3.47017
+scale = Vector2(0.182995, 0.162549)
+texture = ExtResource("17_m76eu")
+
+[node name="Marker7" type="Marker2D" parent="."]
+position = Vector2(605, 165)
+
+[node name="Arrow7" type="Sprite2D" parent="."]
+position = Vector2(524, 340)
+rotation = -1.98326
+scale = Vector2(0.182995, 0.162549)
+texture = ExtResource("17_m76eu")
+
+[node name="Marker8" type="Marker2D" parent="."]
+position = Vector2(940, 28)
+
+[node name="Arrow8" type="Sprite2D" parent="."]
+position = Vector2(791, 94)
+rotation = -1.17585
+scale = Vector2(0.182995, 0.162549)
+texture = ExtResource("17_m76eu")
+
+[node name="StartButton" type="TextureButton" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 935.0
+offset_top = 28.0
+offset_right = 985.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-0.06, 0)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("18_0dqq6")
+texture_hover = ExtResource("19_g8p73")
+texture_click_mask = ExtResource("20_pgdks")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarkerButton" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("21_l7t1j")
+texture_pressed = ExtResource("22_l4jl1")
+texture_hover = ExtResource("23_0txwv")
+texture_click_mask = ExtResource("24_c36uh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="OutsideOfCircle" type="Area2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="LeftSide" type="CollisionPolygon2D" parent="OutsideOfCircle"]
+rotation = -3.14159
+polygon = PackedVector2Array(-11.0001, -546, -6.00006, -523, 60, -519, 118, -509, 176, -491, 234, -467, 279, -441, 312, -418, 352, -386, 386, -350, 427, -301, 455, -253, 484, -194, 502, -142, 510, -108, 518, -65, 522, 4, 516, 78, 506, 134, 490, 183, 458, 253, 403, 334, 357, 380, 311, 418, 258, 454, 188, 487, 110, 511, 33, 522, -0.999939, 523, -0.999939, 558, 986, 552, 988, -564)
+
+[node name="RightSide" type="CollisionPolygon2D" parent="OutsideOfCircle"]
+polygon = PackedVector2Array(0, -545, 1, -522, 60, -519, 118, -509, 176, -491, 232, -466, 279, -441, 312, -418, 351, -385, 386, -350, 427, -301, 455, -253, 484, -194, 502, -142, 510, -108, 518, -65, 522, 4, 516, 78, 506, 134, 491, 185, 458, 253, 403, 334, 357, 380, 311, 418, 258, 454, 188, 487, 110, 511, 33, 522, 3, 523, 2, 558, 986, 552, 988, -564)
+
+[node name="InnerCircle" type="CollisionShape2D" parent="OutsideOfCircle"]
+scale = Vector2(45.5, 45.5)
+shape = SubResource("CircleShape2D_aynwm")
+debug_color = Color(0.992157, 0, 0.113725, 0.419608)
+
+[node name="NextButton" type="Button" parent="."]
+offset_left = 1679.0
+offset_top = 906.0
+offset_right = 1873.0
+offset_bottom = 1020.0
+theme_override_font_sizes/font_size = 50
+text = "Next"
+
+[node name="Plate" type="Sprite2D" parent="."]
+position = Vector2(210, 551)
+scale = Vector2(0.199537, 0.199537)
+texture = ExtResource("25_8qay7")
+
+[node name="Timer" type="Label" parent="."]
+offset_left = 142.0
+offset_top = 497.0
+offset_right = 282.0
+offset_bottom = 607.0
+theme_override_colors/font_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("26_cslqq")
+theme_override_font_sizes/font_size = 80
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextBox" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.564815, 0.564815)
+texture = ExtResource("27_ofais")
+
+[node name="PressSpace" type="Label" parent="TextBox"]
+offset_left = -720.59
+offset_top = 249.639
+offset_right = 773.41
+offset_bottom = 754.639
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("26_cslqq")
+theme_override_font_sizes/font_size = 50
+text = "Press \"Space\" to continue"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Instructions" type="Label" parent="TextBox"]
+offset_left = -729.443
+offset_top = -161.115
+offset_right = 764.557
+offset_bottom = 343.885
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("26_cslqq")
+theme_override_font_sizes/font_size = 75
+text = "Mix ingredients by following the arrows
+and clicking the black dots as quickly as possible."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Instructions2" type="Label" parent="TextBox"]
+visible = false
+offset_left = -722.36
+offset_top = -115.082
+offset_right = 771.64
+offset_bottom = 389.918
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("26_cslqq")
+theme_override_font_sizes/font_size = 75
+text = "DON'T let your mouse go outside of the circle, or you will have to restart!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ArrowStart" type="AnimatedSprite2D" parent="TextBox/Instructions2"]
+position = Vector2(713.508, -541.77)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_gfxvl")
+
+[node name="ScoreBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(0.564815, 0.564815)
+texture = ExtResource("27_ofais")
+
+[node name="FinalScore" type="Label" parent="ScoreBox"]
+offset_left = -743.606
+offset_top = -61.9672
+offset_right = 750.394
+offset_bottom = 443.033
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("26_cslqq")
+theme_override_font_sizes/font_size = 75
+text = "b
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarkerButton" to="." method="_on_marker_button_pressed"]
+[connection signal="mouse_entered" from="OutsideOfCircle" to="." method="_on_outside_of_circle_mouse_entered"]
+[connection signal="mouse_exited" from="OutsideOfCircle" to="." method="_on_outside_of_circle_mouse_exited"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
