@@ -558,7 +558,7 @@ theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("7_yfsju")
 theme_override_font_sizes/font_size = 114
 text = "Next, we will cook the
-bacon on the stove!"
+meat on the stove!"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true

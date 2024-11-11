@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bg38vidlbq170"]
+[gd_scene load_steps=15 format=3 uid="uid://bg38vidlbq170"]
 
 [ext_resource type="PackedScene" uid="uid://1l3xhks67ylh" path="res://kitchen.tscn" id="1_62p3b"]
 [ext_resource type="PackedScene" uid="uid://dr14r7lup6t1b" path="res://recipe_selection.tscn" id="1_b3jq3"]
@@ -7,9 +7,11 @@
 [ext_resource type="Script" path="res://main.gd" id="1_q4dq6"]
 [ext_resource type="PackedScene" uid="uid://bwk2ntxh5l3vg" path="res://final_score.tscn" id="2_vxv3v"]
 [ext_resource type="PackedScene" uid="uid://qlvok073syxy" path="res://stove.tscn" id="2_yyrjb"]
+[ext_resource type="PackedScene" uid="uid://fnpxcxl4dqgq" path="res://plating2.tscn" id="3_277jo"]
 [ext_resource type="PackedScene" uid="uid://bsnrxooacbi6h" path="res://mixing.tscn" id="3_jbcjk"]
 [ext_resource type="PackedScene" uid="uid://dipjhwol3m5ha" path="res://cutting.tscn" id="4_n7rps"]
 [ext_resource type="PackedScene" uid="uid://bhyucviieqbhs" path="res://pantry.tscn" id="5_36vvl"]
+[ext_resource type="PackedScene" uid="uid://oaoi60miqi1f" path="res://stove2.tscn" id="5_lycn0"]
 [ext_resource type="PackedScene" uid="uid://bcm04qs33pvj" path="res://character_selection.tscn" id="10_drqa5"]
 [ext_resource type="PackedScene" uid="uid://c4s3ews8gcl2" path="res://mixing2.tscn" id="11_520y8"]
 
@@ -18,7 +20,11 @@ script = ExtResource("1_q4dq6")
 
 [node name="Final Score" parent="." instance=ExtResource("2_vxv3v")]
 
+[node name="Plating2" parent="." instance=ExtResource("3_277jo")]
+
 [node name="Plating" parent="." instance=ExtResource("1_cuynr")]
+
+[node name="Stove2" parent="." instance=ExtResource("5_lycn0")]
 
 [node name="Stove" parent="." instance=ExtResource("2_yyrjb")]
 

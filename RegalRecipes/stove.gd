@@ -1,6 +1,7 @@
 extends Node2D
 
 # Variables to control cooking stages
+var current_recipe = PlayerVariables.curr_recipe
 var correct_temp = false
 var cooking_started = false
 var flip_allowed = false
@@ -11,7 +12,7 @@ var flipped = false
 var temp_score
 var flip_score
 var cook_score
-@onready var meat_animated_sprite = $Bacon/BaconAnimation
+var meat_animated_sprite
 var dialogue_index = 0
 var instructions = ["Click on the knob at the right temperature.", "Once the bar reaches 50%, click the PAN HANDLE to flip the meat!", "Make sure the meat isn't undercooked or overcooked!"]
 
@@ -20,6 +21,12 @@ func _ready() -> void:
 	$NextButton.hide()
 	$ScoreTextBox.hide()
 	$TextBox/KnobExample.show()
+	if current_recipe == 0:
+		$Steak.hide()
+		meat_animated_sprite = $Bacon/BaconAnimation
+	elif current_recipe == 1:
+		$Bacon.hide()
+		meat_animated_sprite = $Steak/SteakAnimation
 	show_next_dialogue()
 
 func show_next_dialogue():

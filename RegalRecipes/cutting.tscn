@@ -23,12 +23,15 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y8gqb"]
 size = Vector2(25.3293, 344.501)
 
-[node name="Cutting" type="Node2D" node_paths=PackedStringArray("Cut1", "Cut2", "Cut3", "Score_Label")]
+[node name="Cutting" type="Node2D" node_paths=PackedStringArray("Cut1", "Cut2", "Cut3", "Score_Label", "knife", "KnifeTip", "Cutting_Timer")]
 script = ExtResource("1_wpq0h")
 Cut1 = NodePath("Cut1")
 Cut2 = NodePath("Cut2")
 Cut3 = NodePath("Cut3")
 Score_Label = NodePath("Score/Score_Label")
+knife = NodePath("Knife")
+KnifeTip = NodePath("Knife/KnifeTip")
+Cutting_Timer = NodePath("Knife/Cutting_Timer")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1923.0

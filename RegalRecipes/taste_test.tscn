@@ -23,6 +23,7 @@ scale = Vector2(0.579745, 0.490741)
 texture = ExtResource("3_2vj1n")
 
 [node name="Label" type="Label" parent="HappyKing"]
+layout_mode = 0
 offset_left = 582.0
 offset_top = 704.0
 offset_right = 1397.0
@@ -52,6 +53,7 @@ scale = Vector2(0.579745, 0.490741)
 texture = ExtResource("3_2vj1n")
 
 [node name="Label" type="Label" parent="MidKing"]
+layout_mode = 0
 offset_left = 582.0
 offset_top = 704.0
 offset_right = 1397.0
@@ -81,6 +83,7 @@ scale = Vector2(0.579745, 0.490741)
 texture = ExtResource("3_2vj1n")
 
 [node name="Label" type="Label" parent="AngryKing"]
+layout_mode = 0
 offset_left = 582.0
 offset_top = 704.0
 offset_right = 1397.0
