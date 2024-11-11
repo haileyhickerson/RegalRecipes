@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dh7a77tjt2pm2"]
+[gd_scene load_steps=12 format=3 uid="uid://dh7a77tjt2pm2"]
 
 [ext_resource type="Script" path="res://cutting2.gd" id="1_6rne2"]
 [ext_resource type="Texture2D" uid="uid://b7paioai6w1g5" path="res://art/CuttingBoard.png" id="2_uxtnr"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://by3lauvagb334" path="res://music&sounds/533435__microtubule__carrots-slicing.wav" id="6_tnh2f"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="7_3o1xc"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="8_egk7h"]
+[ext_resource type="Texture2D" uid="uid://65vsgg3p4ejk" path="res://art/Onion.png" id="9_dju51"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0hlai"]
 animations = [{
@@ -44,6 +45,12 @@ text = "Next"
 position = Vector2(958, 573)
 scale = Vector2(0.870833, 0.671296)
 texture = ExtResource("3_662m0")
+
+[node name="Onion" type="Sprite2D" parent="."]
+position = Vector2(987, 541)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_dju51")
 
 [node name="Cut1" type="Line2D" parent="."]
 points = PackedVector2Array(1000, 400, 1000, 700)

@@ -19,7 +19,7 @@ var first_space_pressed
 # Ready function
 func _ready() -> void:
 	$NextButton.hide()
-
+	$Onion.visible=false
 	for child in get_children():
 		if child is Line2D:
 			var points = child.points
@@ -38,7 +38,7 @@ func make_cut(cut_line):
 	
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
-		if total_cuts < 3:
+		if total_cuts < 4:
 			total_cuts += 1
 			##use marker2d position for knife
 			var knife_position_x= $Knife/KnifeTip.global_position.x
@@ -53,6 +53,13 @@ func _input(event):
 				update_score_display()
 	
 		if total_cuts==3:
+			total_cuts += 1
+			$FullCarrot.visible= false
+			$Onion.visible= true
+			$Cut1.visible= false
+			$Cut2.visible= false
+		
+		if total_cuts ==4:
 			PlayerVariables.cutting_completed = true
 			
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -98,8 +105,7 @@ func update_score_display():
 	if Score_Label!= null:
 		Score_Label.text= "Score: "+ str(score) + " / " + str(total_possible_points)
 	else:
-		print("error")
-		
+		print("score null")
 #func play_cutting_sound():
 	#$Knife/AudioStreamPlayer2D.play()
 	#Cutting_Timer.start()
