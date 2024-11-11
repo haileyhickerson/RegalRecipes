@@ -115,7 +115,7 @@ func _on_basket_body_entered(body: RigidBody2D) -> void:
 	body.over_basket = true
 
 
-func _on_basket_body_exited(body: Node2D) -> void:
+func _on_basket_body_exited(body: RigidBody2D) -> void:
 	body.over_basket = false
 		
 # bounce at top of screen

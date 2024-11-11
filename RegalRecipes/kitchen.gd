@@ -17,6 +17,14 @@ func _ready() -> void:
 	$ChefText/GoToStove.hide()
 	$ChefText/GoToPlating.hide()
 	
+	$PantryArrow.show()
+	$PantryArrow.play()
+	$CuttingArrow.hide()
+	$MixingArrow.hide()
+	$StoveArrow.hide()
+	$PlatingArrow.hide()
+	
+	
 	$PantryArea/PantryIcon.play("normal")
 	$PantryArea/PantryText.hide()
 	
@@ -51,31 +59,39 @@ func _process(delta: float) -> void:
 		if PlayerVariables.curr_recipe == 0:
 			$ChefText/MoveText.hide()
 			$ChefText/GoToPantry.show()
-			$ChefText/GoToPantry/PantryArrow.play()
+			
 		
 	if PlayerVariables.pantry_completed:
+		$PantryArrow.hide()
+		$CuttingArrow.show()
+		$CuttingArrow.play()
 		if PlayerVariables.curr_recipe == 0:
 			$ChefText/GoToPantry.hide()
 			$ChefText/GoToCutting.show()
-			$ChefText/GoToCutting/CuttingArrow.play()
 		
 	if PlayerVariables.cutting_completed:
+		$CuttingArrow.hide()
+		$MixingArrow.show()
+		$MixingArrow.play()
 		if PlayerVariables.curr_recipe == 0:
 			$ChefText/GoToCutting.hide()
 			$ChefText/GoToMixing.show()
-			$ChefText/GoToMixing/MixingArrow.play()
 		
 	if PlayerVariables.mixing_completed:
+		$MixingArrow.hide()
+		$StoveArrow.show()
+		$StoveArrow.play()
 		if PlayerVariables.curr_recipe == 0:
 			$ChefText/GoToMixing.hide()
 			$ChefText/GoToStove.show()
-			$ChefText/GoToStove/StoveArrow.play()
 		
 	if PlayerVariables.stove_completed:
+		$StoveArrow.hide()
+		$PlatingArrow.show()
+		$PlatingArrow.play()
 		if PlayerVariables.curr_recipe == 0:
 			$ChefText/GoToStove.hide()
 			$ChefText/GoToPlating.show()
-			$ChefText/GoToPlating/PlatingArrow.play()
 		
 		
 	if Input.is_action_pressed("action") and in_pantry:
