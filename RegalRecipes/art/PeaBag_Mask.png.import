@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://beg4ptcq5uoix"
+path="res://.godot/imported/PeaBag_Mask.png-05b773d0a7cf14993aa1f9575afa106b.res"
+
+[deps]
+
+source_file="res://art/PeaBag_Mask.png"
+dest_files=["res://.godot/imported/PeaBag_Mask.png-05b773d0a7cf14993aa1f9575afa106b.res"]
+
+[params]
+
+create_from=0
+threshold=0.35

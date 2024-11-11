@@ -51,24 +51,21 @@ func _process(delta: float) -> void:
 			Timer1.wait_time= 3.0
 			Timer1.start()
 			
-		
 	
-	
-	
-	if peas_dragging:
-		$BowlsContainer/BlueBowl/Peas.global_position = get_global_mouse_position() + mouse_offset
-	if cheese1_dragging:
-		$BowlsContainer/PinkBowl/Cheese1.global_position = get_global_mouse_position() + mouse_offset
-	if cheese2_dragging:
-		$BowlsContainer/PinkBowl/Cheese2.global_position = get_global_mouse_position() + mouse_offset
-	if cheese3_dragging:
-		$BowlsContainer/PinkBowl/Cheese3.global_position = get_global_mouse_position() + mouse_offset
-	if bacon1_dragging:
-		$BowlsContainer/YellowPlate/Bacon1.global_position = get_global_mouse_position() + mouse_offset
-	if bacon2_dragging:
-		$BowlsContainer/YellowPlate/Bacon2.global_position = get_global_mouse_position() + mouse_offset
-	if bacon3_dragging:
-		$BowlsContainer/YellowPlate/Bacon3.global_position = get_global_mouse_position() + mouse_offset
+	if steak_dragging:
+		$PlateContainer/BluePlate/Steak.global_position = get_global_mouse_position() + mouse_offset
+	if potato_dragging:
+		$PlateContainer/PurplePlate/Potato.global_position = get_global_mouse_position() + mouse_offset
+	if butter1_dragging:
+		$PlateContainer/GreenPlate/Butter1.global_position = get_global_mouse_position() + mouse_offset
+	if butter2_dragging:
+		$PlateContainer/GreenPlate/Butter2.global_position = get_global_mouse_position() + mouse_offset
+	if carrot1_dragging:
+		$PlateContainer/PinkPlate/Carrot1.global_position = get_global_mouse_position() + mouse_offset
+	if carrot2_dragging:
+		$PlateContainer/PinkPlate/Carrot2.global_position = get_global_mouse_position() + mouse_offset
+	if carrot3_dragging:
+		$PlateContainer/PinkPlate/Carrot3.global_position = get_global_mouse_position() + mouse_offset
 	
 
 func update_score_label():
@@ -91,11 +88,6 @@ func _on_taste_test_button_pressed()-> void:
 	print("Plating complete! Final Score: ", score)
 	PlayerVariables.plating_completed=true
 	$ContinueButton.show()
-
-
-
-	
-	
 
 
 

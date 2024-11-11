@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://c5d5rdi7ghx4d"
+path="res://.godot/imported/Dressing_Mask.png-b7fe1b42b0b2c24cc353dee109110ac9.res"
+
+[deps]
+
+source_file="res://art/Dressing_Mask.png"
+dest_files=["res://.godot/imported/Dressing_Mask.png-b7fe1b42b0b2c24cc353dee109110ac9.res"]
+
+[params]
+
+create_from=0
+threshold=0.35

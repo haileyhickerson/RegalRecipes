@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://ca7s7wuii83nd"
+path="res://.godot/imported/Butter_Mask.png-41e764c83d744cbb05b3597b173dad06.res"
+
+[deps]
+
+source_file="res://art/Butter_Mask.png"
+dest_files=["res://.godot/imported/Butter_Mask.png-41e764c83d744cbb05b3597b173dad06.res"]
+
+[params]
+
+create_from=0
+threshold=0.3

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bkp1hkj87mbhc"
+path="res://.godot/imported/RawSteak_Mask.png-e59b3af6aaca4e99e912d36f1a237bf8.res"
+
+[deps]
+
+source_file="res://art/RawSteak_Mask.png"
+dest_files=["res://.godot/imported/RawSteak_Mask.png-e59b3af6aaca4e99e912d36f1a237bf8.res"]
+
+[params]
+
+create_from=0
+threshold=0.3

@@ -1,20 +1,92 @@
-[gd_scene load_steps=16 format=3 uid="uid://bhyucviieqbhs"]
+[gd_scene load_steps=71 format=3 uid="uid://bhyucviieqbhs"]
 
 [ext_resource type="Script" path="res://pantry.gd" id="1_xewv2"]
 [ext_resource type="Texture2D" uid="uid://ckbq14kxwn8jm" path="res://art/EmptryPantry.png" id="2_1174c"]
 [ext_resource type="PackedScene" uid="uid://cp4wximgsmflu" path="res://basket.tscn" id="3_v2w7e"]
-[ext_resource type="PackedScene" uid="uid://noax3wfo31l0" path="res://ingredient.tscn" id="4_js1qu"]
 [ext_resource type="Texture2D" uid="uid://b67hbohj0k0m1" path="res://art/meat.png" id="5_0danb"]
-[ext_resource type="Texture2D" uid="uid://njintfu88w8s" path="res://art/BadMeat.png" id="7_3rodr"]
-[ext_resource type="Texture2D" uid="uid://cjf5u74cpopra" path="res://art/Cheese1.png" id="7_apk8s"]
-[ext_resource type="Texture2D" uid="uid://clgcslohqk5j1" path="res://art/Cheese2.png" id="8_gnceg"]
-[ext_resource type="Texture2D" uid="uid://byp1abx3b0u5y" path="res://art/Cheese3.png" id="9_y0ral"]
+[ext_resource type="Texture2D" uid="uid://drd6guywl6oru" path="res://art/UncookedCarrot.png" id="5_oewdp"]
+[ext_resource type="Texture2D" uid="uid://2sy5alxqijvc" path="res://art/UncookedCarrot_Click.png" id="6_6axbd"]
+[ext_resource type="Texture2D" uid="uid://dw4yopp188vtu" path="res://art/UncookedCarrot_Hover.png" id="7_oxbmr"]
+[ext_resource type="BitMap" uid="uid://b3o1v15ufosw1" path="res://art/UncookedCarrot_Mask.png" id="8_cahu0"]
+[ext_resource type="Script" path="res://ingredient_pantry.gd" id="9_nqxk6"]
 [ext_resource type="Texture2D" uid="uid://65vsgg3p4ejk" path="res://art/Onion.png" id="10_7r1yh"]
+[ext_resource type="Texture2D" uid="uid://cfu5lckiegwg" path="res://art/PeaBag_Click.png" id="10_dvo2e"]
 [ext_resource type="Texture2D" uid="uid://bjwj8dwr2ac1k" path="res://art/PeaBag .png" id="11_0k253"]
+[ext_resource type="Texture2D" uid="uid://gv3roq8kfd18" path="res://art/PeaBag_Hover.png" id="11_avgs8"]
+[ext_resource type="BitMap" uid="uid://beg4ptcq5uoix" path="res://art/PeaBag_Mask.png" id="12_xfoct"]
 [ext_resource type="BitMap" uid="uid://b4v7manlijkpx" path="res://art/meatmask.png" id="12_xg31g"]
+[ext_resource type="Texture2D" uid="uid://cvo1bjtufplax" path="res://art/UncookedBacon2.png" id="13_aoyft"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="13_ty1ql"]
+[ext_resource type="Texture2D" uid="uid://dau4vvd17tfax" path="res://art/UncookedBacon1.png" id="13_y4n0q"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="14_ru7wo"]
+[ext_resource type="Texture2D" uid="uid://dkw5xg6e4mmtm" path="res://art/UncookedBacon1_Click.png" id="14_xed6p"]
 [ext_resource type="Texture2D" uid="uid://daebuaiv8fa5s" path="res://art/Full_Carrot.png" id="15_8npqf"]
+[ext_resource type="Texture2D" uid="uid://bg7yq1uynypye" path="res://art/UncookedBacon1_Hover.png" id="15_lojo1"]
+[ext_resource type="BitMap" uid="uid://dfv5xj3wxkgiv" path="res://art/UncookedBacon1_Mask.png" id="16_iueia"]
+[ext_resource type="Texture2D" uid="uid://b1rht71w30j38" path="res://art/UncookedBacon2_Click.png" id="18_rnw4i"]
+[ext_resource type="Texture2D" uid="uid://cavfdgt0u0i41" path="res://art/UncookedBacon2_Hover.png" id="19_o8b2v"]
+[ext_resource type="BitMap" uid="uid://c1rrjibs63m1s" path="res://art/UncookedBacon2_Mask.png" id="20_vjmlv"]
+[ext_resource type="Texture2D" uid="uid://ctw6n4f0g627p" path="res://art/UncookedBacon3.png" id="21_qejjl"]
+[ext_resource type="Texture2D" uid="uid://3kqgjjm26sk2" path="res://art/UncookedBacon3_Click.png" id="22_glbao"]
+[ext_resource type="Texture2D" uid="uid://2s4kbqc4mher" path="res://art/UncookedBacon3_Hover.png" id="23_t1sgg"]
+[ext_resource type="BitMap" uid="uid://x5g0r58cov7e" path="res://art/UncookedBacon3_Mask.png" id="24_w2fyj"]
+[ext_resource type="Texture2D" uid="uid://t4aivsex2etl" path="res://art/CheeseBlock.png" id="25_i7bv4"]
+[ext_resource type="Texture2D" uid="uid://djk73qf2bjl02" path="res://art/CheeseBlock_Click.png" id="26_ylotb"]
+[ext_resource type="Texture2D" uid="uid://bbvcbpm5alw22" path="res://art/CheeseBlock_Hover.png" id="27_tdvmw"]
+[ext_resource type="BitMap" uid="uid://ddtwa657nm2p8" path="res://art/CheeseBlock_Mask.png" id="28_b2ae3"]
+[ext_resource type="Texture2D" uid="uid://bbwqnsaf63c56" path="res://art/Dressing.png" id="29_1cm3f"]
+[ext_resource type="Texture2D" uid="uid://iyjgwfkr1eeq" path="res://art/Dressing_Click.png" id="30_qltko"]
+[ext_resource type="Texture2D" uid="uid://chxs6frr7q876" path="res://art/Dressing_Hover.png" id="31_wdkuw"]
+[ext_resource type="BitMap" uid="uid://c5d5rdi7ghx4d" path="res://art/Dressing_Mask.png" id="32_0w2br"]
+[ext_resource type="Texture2D" uid="uid://q3oyltx2sfdp" path="res://art/RawSteak.png" id="33_v7f7j"]
+[ext_resource type="Texture2D" uid="uid://cl2vkxx0hxfuc" path="res://art/RawSteak_Click.png" id="34_vabft"]
+[ext_resource type="Texture2D" uid="uid://dl0sifmec5cm0" path="res://art/RawSteak_Hover.png" id="35_0tigd"]
+[ext_resource type="BitMap" uid="uid://bkp1hkj87mbhc" path="res://art/RawSteak_Mask.png" id="36_odm80"]
+[ext_resource type="Texture2D" uid="uid://b1arja734r8pv" path="res://art/Potato.png" id="37_jjg77"]
+[ext_resource type="Texture2D" uid="uid://bhwndpgya3aox" path="res://art/Potato_Click.png" id="38_qsbdo"]
+[ext_resource type="Texture2D" uid="uid://3gi2mc7h4sa1" path="res://art/Potato_Hover.png" id="39_shluj"]
+[ext_resource type="BitMap" uid="uid://xri70cf7kml5" path="res://art/Potato_Mask.png" id="40_3mfdr"]
+[ext_resource type="Texture2D" uid="uid://b4inqrf27djdb" path="res://art/Butter.png" id="41_edoje"]
+[ext_resource type="Texture2D" uid="uid://dks2ixf2kjmqe" path="res://art/Butter_Click.png" id="42_6nsar"]
+[ext_resource type="Texture2D" uid="uid://cxn4l64rcdt1l" path="res://art/Butter_Hover.png" id="43_ais7e"]
+[ext_resource type="BitMap" uid="uid://ca7s7wuii83nd" path="res://art/Butter_Mask.png" id="44_pp3c6"]
+[ext_resource type="Texture2D" uid="uid://cywrytcg208xl" path="res://art/Garlic.png" id="45_r338q"]
+[ext_resource type="Texture2D" uid="uid://cki320334fers" path="res://art/Garlic_Click.png" id="46_nawrd"]
+[ext_resource type="Texture2D" uid="uid://ftsgpv6yvf4f" path="res://art/Garlic_Hover.png" id="47_rjsbi"]
+[ext_resource type="BitMap" uid="uid://c5mnfkgpfsfgx" path="res://art/Garlic_Mask.png" id="48_ij13x"]
+[ext_resource type="Texture2D" uid="uid://drupq6h4trhxg" path="res://art/Onion_Click.png" id="50_ufmdy"]
+[ext_resource type="Texture2D" uid="uid://cp2sb5j2dfebb" path="res://art/Onion_Hover.png" id="51_u5g3b"]
+[ext_resource type="BitMap" uid="uid://drypgbcnykpja" path="res://art/Onion_Mask.png" id="52_2ntwe"]
+[ext_resource type="Texture2D" uid="uid://bpldgwi3rgel" path="res://art/SteakSauce.png" id="53_21q5q"]
+[ext_resource type="Texture2D" uid="uid://uytogkj1b67g" path="res://art/SteakSauce_Click.png" id="54_otxpy"]
+[ext_resource type="Texture2D" uid="uid://dbc7wjsy37w6k" path="res://art/SteakSauce_Hover.png" id="55_4qe3m"]
+[ext_resource type="BitMap" uid="uid://bb8ewjh1yb0p2" path="res://art/SteakSauce_Mask.png" id="56_bb3pn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rcusd"]
+radius = 156.32
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iw35t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ivjej"]
+radius = 25.2534
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ob3ng"]
+radius = 31.4266
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wkmwy"]
+radius = 13.5245
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v8fbb"]
+radius = 15.2197
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eklmv"]
+radius = 35.5596
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vw0ky"]
+size = Vector2(6426.67, 141.667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0sd4u"]
+size = Vector2(196.666, 3898.33)
 
 [node name="Pantry" type="Node2D"]
 script = ExtResource("1_xewv2")
@@ -36,63 +108,442 @@ text = "Back"
 
 [node name="Basket" parent="." groups=["basket"] instance=ExtResource("3_v2w7e")]
 position = Vector2(1707, 902)
+collision_layer = 4
+collision_mask = 3
 
-[node name="Carrot1" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
-position = Vector2(795, 538)
-scale = Vector2(0.3, 0.3)
+[node name="Carrot1" type="RigidBody2D" parent="." groups=["carrots", "ingredients"]]
+position = Vector2(1083, 558)
+rotation = 1.08766
+collision_mask = 2
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+contact_monitor = true
+script = ExtResource("9_nqxk6")
 
-[node name="Carrot2" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
-position = Vector2(1219, 212)
-scale = Vector2(0.1, 0.1)
+[node name="Button" type="TextureButton" parent="Carrot1"]
+offset_left = -207.391
+offset_top = -99.7636
+offset_right = 238.609
+offset_bottom = 151.236
+scale = Vector2(0.835346, 0.835346)
+texture_normal = ExtResource("5_oewdp")
+texture_pressed = ExtResource("6_6axbd")
+texture_hover = ExtResource("7_oxbmr")
+texture_click_mask = ExtResource("8_cahu0")
+ignore_texture_size = true
+stretch_mode = 4
 
-[node name="Carrot3" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
-position = Vector2(466, 303)
-scale = Vector2(0.1, 0.1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carrot1"]
+scale = Vector2(1.03404, 0.177265)
+shape = SubResource("CircleShape2D_rcusd")
 
-[node name="Carrot4" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
-position = Vector2(425, 702)
-scale = Vector2(0.1, 0.1)
+[node name="Carrot2" type="RigidBody2D" parent="." groups=["carrots", "ingredients"]]
+position = Vector2(302, 747)
+rotation = -1.06853
+collision_mask = 2
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+contact_monitor = true
+script = ExtResource("9_nqxk6")
 
-[node name="Ham1" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
-position = Vector2(977, 775)
-texture = ExtResource("5_0danb")
+[node name="Button" type="TextureButton" parent="Carrot2"]
+offset_left = -164.0
+offset_top = -88.0
+offset_right = 282.0
+offset_bottom = 163.0
+scale = Vector2(0.728893, 0.728893)
+texture_normal = ExtResource("5_oewdp")
+texture_pressed = ExtResource("6_6axbd")
+texture_hover = ExtResource("7_oxbmr")
+texture_click_mask = ExtResource("8_cahu0")
+ignore_texture_size = true
+stretch_mode = 4
 
-[node name="Ham2" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
-position = Vector2(1384, 455)
-texture = ExtResource("7_3rodr")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carrot2"]
+scale = Vector2(1.1131, 0.190818)
+shape = SubResource("CircleShape2D_rcusd")
 
-[node name="Ham3" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
-position = Vector2(1374, 722)
-texture = ExtResource("7_3rodr")
+[node name="Carrot3" type="RigidBody2D" parent="." groups=["carrots", "ingredients"]]
+position = Vector2(1359, 184)
+rotation = 3.36716
+collision_mask = 2
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+contact_monitor = true
+script = ExtResource("9_nqxk6")
 
-[node name="Ham4" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
-position = Vector2(279, 477)
-texture = ExtResource("7_3rodr")
+[node name="Button" type="TextureButton" parent="Carrot3"]
+offset_left = -140.144
+offset_top = -80.8064
+offset_right = 305.856
+offset_bottom = 170.194
+scale = Vector2(0.60465, 0.60465)
+texture_normal = ExtResource("5_oewdp")
+texture_pressed = ExtResource("6_6axbd")
+texture_hover = ExtResource("7_oxbmr")
+texture_click_mask = ExtResource("8_cahu0")
+ignore_texture_size = true
+stretch_mode = 4
+flip_v = true
 
-[node name="Cheese1" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
-position = Vector2(1028, 323)
-texture = ExtResource("7_apk8s")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carrot3"]
+scale = Vector2(0.928434, 0.159161)
+shape = SubResource("CircleShape2D_rcusd")
 
-[node name="Cheese2" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
-position = Vector2(1791, 489)
-texture = ExtResource("8_gnceg")
+[node name="Peas" type="RigidBody2D" parent="." groups=["ingredients", "peas"]]
+position = Vector2(348, 209)
+rotation = 0.235987
+collision_mask = 2
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+contact_monitor = true
+script = ExtResource("9_nqxk6")
 
-[node name="Cheese3" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
-position = Vector2(276, 894)
-texture = ExtResource("9_y0ral")
+[node name="Button" type="TextureButton" parent="Peas"]
+offset_left = -135.398
+offset_top = -182.399
+offset_right = 310.602
+offset_bottom = 68.6011
+scale = Vector2(1.58873, 1.41817)
+texture_normal = ExtResource("11_0k253")
+texture_pressed = ExtResource("10_dvo2e")
+texture_hover = ExtResource("11_avgs8")
+texture_click_mask = ExtResource("12_xfoct")
+ignore_texture_size = true
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
 
-[node name="Onion1" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
-position = Vector2(727, 186)
-texture = ExtResource("10_7r1yh")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Peas"]
+scale = Vector2(12.9161, 17.7437)
+shape = SubResource("CircleShape2D_iw35t")
 
-[node name="Onion2" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
-position = Vector2(1527, 247)
-texture = ExtResource("10_7r1yh")
+[node name="Bacon1" type="RigidBody2D" parent="." groups=["bacon", "ingredients"]]
+position = Vector2(757, 283)
+rotation = -0.686091
+collision_mask = 2
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+contact_monitor = true
+script = ExtResource("9_nqxk6")
 
-[node name="PeaBag" parent="." groups=["ingredients"] instance=ExtResource("4_js1qu")]
-position = Vector2(608, 875)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("11_0k253")
+[node name="Button" type="TextureButton" parent="Bacon1"]
+offset_left = -90.0
+offset_top = -123.0
+offset_right = 87.0
+offset_bottom = 143.0
+scale = Vector2(1.03037, 0.919749)
+texture_normal = ExtResource("13_y4n0q")
+texture_pressed = ExtResource("14_xed6p")
+texture_hover = ExtResource("15_lojo1")
+texture_click_mask = ExtResource("16_iueia")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bacon1"]
+scale = Vector2(3.41241, 12.4391)
+shape = SubResource("CircleShape2D_iw35t")
+
+[node name="Bacon2" type="RigidBody2D" parent="." groups=["bacon", "ingredients"]]
+position = Vector2(1750, 362)
+rotation = 0.362409
+collision_mask = 2
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+contact_monitor = true
+script = ExtResource("9_nqxk6")
+
+[node name="Button" type="TextureButton" parent="Bacon2"]
+offset_left = -115.0
+offset_top = -151.0
+offset_right = 62.0
+offset_bottom = 115.0
+scale = Vector2(1.30163, 1.16189)
+texture_normal = ExtResource("13_aoyft")
+texture_pressed = ExtResource("18_rnw4i")
+texture_hover = ExtResource("19_o8b2v")
+texture_click_mask = ExtResource("20_vjmlv")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bacon2"]
+scale = Vector2(4, 14.581)
+shape = SubResource("CircleShape2D_iw35t")
+
+[node name="Bacon3" type="RigidBody2D" parent="." groups=["bacon", "ingredients"]]
+position = Vector2(587, 883)
+rotation = 0.978494
+collision_mask = 2
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+contact_monitor = true
+script = ExtResource("9_nqxk6")
+
+[node name="Button" type="TextureButton" parent="Bacon3"]
+offset_left = -115.0
+offset_top = -151.0
+offset_right = 62.0
+offset_bottom = 115.0
+scale = Vector2(1.30163, 1.16189)
+texture_normal = ExtResource("21_qejjl")
+texture_pressed = ExtResource("22_glbao")
+texture_hover = ExtResource("23_t1sgg")
+texture_click_mask = ExtResource("24_w2fyj")
+ignore_texture_size = true
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bacon3"]
+scale = Vector2(4, 14.581)
+shape = SubResource("CircleShape2D_iw35t")
+
+[node name="Cheese" type="RigidBody2D" parent="." groups=["ingredients"]]
+position = Vector2(911, 662)
+rotation = 0.289345
+collision_mask = 2
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+contact_monitor = true
+script = ExtResource("9_nqxk6")
+
+[node name="Button" type="TextureButton" parent="Cheese"]
+offset_left = -148.102
+offset_top = -125.98
+offset_right = 28.8984
+offset_bottom = 140.02
+scale = Vector2(1.5438, 1.37806)
+texture_normal = ExtResource("25_i7bv4")
+texture_pressed = ExtResource("26_ylotb")
+texture_hover = ExtResource("27_tdvmw")
+texture_click_mask = ExtResource("28_b2ae3")
+ignore_texture_size = true
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cheese"]
+scale = Vector2(5.41314, 4.05985)
+shape = SubResource("CircleShape2D_ivjej")
+
+[node name="Dressing" type="RigidBody2D" parent="." groups=["ingredients"]]
+position = Vector2(1334, 438)
+rotation = 0.289345
+collision_mask = 2
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+contact_monitor = true
+script = ExtResource("9_nqxk6")
+
+[node name="Button" type="TextureButton" parent="Dressing"]
+offset_left = -105.85
+offset_top = -131.254
+offset_right = 71.1498
+offset_bottom = 134.746
+scale = Vector2(1.15301, 1.02923)
+texture_normal = ExtResource("29_1cm3f")
+texture_pressed = ExtResource("30_qltko")
+texture_hover = ExtResource("31_wdkuw")
+texture_click_mask = ExtResource("32_0w2br")
+ignore_texture_size = true
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dressing"]
+scale = Vector2(1.84135, 5.26709)
+shape = SubResource("CircleShape2D_ivjej")
+
+[node name="Steak" type="RigidBody2D" parent="." groups=["ingredients"]]
+position = Vector2(1129, 901)
+rotation = 0.289345
+collision_mask = 2
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+contact_monitor = true
+script = ExtResource("9_nqxk6")
+
+[node name="Button" type="TextureButton" parent="Steak"]
+offset_left = -113.466
+offset_top = -198.893
+offset_right = 63.5342
+offset_bottom = 67.1066
+rotation = 0.342656
+scale = Vector2(1.98603, 1.77282)
+texture_normal = ExtResource("33_v7f7j")
+texture_pressed = ExtResource("34_vabft")
+texture_hover = ExtResource("35_0tigd")
+texture_click_mask = ExtResource("36_odm80")
+ignore_texture_size = true
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Steak"]
+position = Vector2(0.49024, -5.3628)
+rotation = -0.30774
+scale = Vector2(6.32895, 3.49943)
+shape = SubResource("CircleShape2D_ob3ng")
+
+[node name="Potato" type="RigidBody2D" parent="." groups=["ingredients"]]
+position = Vector2(1003, 197)
+rotation = 0.289345
+collision_mask = 2
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+contact_monitor = true
+script = ExtResource("9_nqxk6")
+
+[node name="Button" type="TextureButton" parent="Potato"]
+offset_left = -65.4716
+offset_top = -156.839
+offset_right = 111.528
+offset_bottom = 109.161
+rotation = 0.342656
+scale = Vector2(1.31617, 1.35757)
+texture_normal = ExtResource("37_jjg77")
+texture_pressed = ExtResource("38_qsbdo")
+texture_hover = ExtResource("39_shluj")
+texture_click_mask = ExtResource("40_3mfdr")
+ignore_texture_size = true
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Potato"]
+position = Vector2(0.49024, -5.3628)
+rotation = -1.34159
+scale = Vector2(3.79766, 2.79338)
+shape = SubResource("CircleShape2D_ob3ng")
+
+[node name="Butter" type="RigidBody2D" parent="." groups=["ingredients"]]
+position = Vector2(204, 549)
+rotation = -0.572544
+collision_mask = 2
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+contact_monitor = true
+script = ExtResource("9_nqxk6")
+
+[node name="Button" type="TextureButton" parent="Butter"]
+offset_left = -65.4716
+offset_top = -156.839
+offset_right = 111.528
+offset_bottom = 109.161
+rotation = 0.342656
+scale = Vector2(1.31617, 1.35757)
+texture_normal = ExtResource("41_edoje")
+texture_pressed = ExtResource("42_6nsar")
+texture_hover = ExtResource("43_ais7e")
+texture_click_mask = ExtResource("44_pp3c6")
+ignore_texture_size = true
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Butter"]
+position = Vector2(0.49024, -5.3628)
+rotation = -1.34159
+scale = Vector2(4.08006, 2.33417)
+shape = SubResource("CircleShape2D_ob3ng")
+
+[node name="Garlic" type="RigidBody2D" parent="." groups=["ingredients"]]
+position = Vector2(1614, 170)
+rotation = -0.572544
+collision_mask = 2
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+contact_monitor = true
+script = ExtResource("9_nqxk6")
+
+[node name="Button" type="TextureButton" parent="Garlic"]
+offset_left = -44.0931
+offset_top = -106.943
+offset_right = 132.907
+offset_bottom = 159.057
+rotation = 0.342656
+scale = Vector2(0.841554, 0.868026)
+texture_normal = ExtResource("45_r338q")
+texture_pressed = ExtResource("46_nawrd")
+texture_hover = ExtResource("47_rjsbi")
+texture_click_mask = ExtResource("48_ij13x")
+ignore_texture_size = true
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic"]
+position = Vector2(0.49024, -5.3628)
+rotation = -0.955141
+scale = Vector2(4.181, 4.97797)
+shape = SubResource("CircleShape2D_wkmwy")
+
+[node name="Onion" type="RigidBody2D" parent="." groups=["ingredients"]]
+position = Vector2(513, 739)
+rotation = -0.572544
+collision_mask = 2
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+contact_monitor = true
+script = ExtResource("9_nqxk6")
+
+[node name="Button" type="TextureButton" parent="Onion"]
+offset_left = 23.9587
+offset_top = -136.843
+offset_right = 200.959
+offset_bottom = 129.157
+rotation = 0.909522
+scale = Vector2(0.999803, 1.03125)
+texture_normal = ExtResource("10_7r1yh")
+texture_pressed = ExtResource("50_ufmdy")
+texture_hover = ExtResource("51_u5g3b")
+texture_click_mask = ExtResource("52_2ntwe")
+ignore_texture_size = true
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Onion"]
+position = Vector2(2.78021, -8.91554)
+rotation = -0.456404
+scale = Vector2(5.43636, 5.30703)
+shape = SubResource("CircleShape2D_v8fbb")
+
+[node name="SteakSauce" type="RigidBody2D" parent="." groups=["ingredients"]]
+position = Vector2(626, 446)
+rotation = -1.12051
+collision_mask = 2
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+contact_monitor = true
+script = ExtResource("9_nqxk6")
+
+[node name="Button" type="TextureButton" parent="SteakSauce"]
+offset_left = 52.6122
+offset_top = -222.029
+offset_right = 229.612
+offset_bottom = 43.9709
+rotation = 0.835319
+scale = Vector2(1.38419, 1.42773)
+texture_normal = ExtResource("53_21q5q")
+texture_pressed = ExtResource("54_otxpy")
+texture_hover = ExtResource("55_4qe3m")
+texture_click_mask = ExtResource("56_bb3pn")
+ignore_texture_size = true
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SteakSauce"]
+position = Vector2(5.05636, -10.2193)
+rotation = -0.764082
+scale = Vector2(4.95025, 1.76236)
+shape = SubResource("CircleShape2D_eklmv")
 
 [node name="NextButton" type="Button" parent="."]
 offset_left = 885.0
@@ -103,21 +554,60 @@ theme_override_font_sizes/font_size = 50
 text = "Next"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 1685.0
-offset_top = 166.0
-offset_right = 1905.0
-offset_bottom = 280.0
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1674.0
+offset_top = 15.0
+offset_right = 1896.0
+offset_bottom = 424.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 10
+size_flags_vertical = 2
 
 [node name="ingredient_label1" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-text = "Peas (0/1)"
+text = "Label (0/1)"
 horizontal_alignment = 2
 
 [node name="ingredient_label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-text = "Ham (0/1)"
+text = "Label (0/1)"
+horizontal_alignment = 2
+
+[node name="ingredient_label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Label (0/1)"
+horizontal_alignment = 2
+
+[node name="ingredient_label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Label (0/1)"
+horizontal_alignment = 2
+
+[node name="ingredient_label5" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Label (0/1)"
+horizontal_alignment = 2
+
+[node name="ingredient_label6" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Label (0/1)"
+horizontal_alignment = 2
+
+[node name="ingredient_label7" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Label (0/1)"
 horizontal_alignment = 2
 
 [node name="TextureButton" type="TextureButton" parent="."]
@@ -131,6 +621,7 @@ texture_normal = ExtResource("5_0danb")
 texture_click_mask = ExtResource("12_xg31g")
 
 [node name="ScoreTextbox" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(975, 530)
 scale = Vector2(0.565, 0.565)
 texture = ExtResource("13_ty1ql")
@@ -168,6 +659,7 @@ theme_override_font_sizes/font_size = 30
 text = "Press \"Next\" to continue"
 
 [node name="InstructionsTextbox" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(975, 530)
 scale = Vector2(0.565, 0.565)
 texture = ExtResource("13_ty1ql")
@@ -233,7 +725,79 @@ theme_override_fonts/font = ExtResource("14_ru7wo")
 theme_override_font_sizes/font_size = 70
 text = "Score: 100"
 
+[node name="TopBoundary" type="Area2D" parent="."]
+position = Vector2(725, -53)
+scale = Vector2(0.3, 0.3)
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopBoundary"]
+position = Vector2(770, 103.333)
+shape = SubResource("RectangleShape2D_vw0ky")
+
+[node name="BottomBoundary" type="Area2D" parent="."]
+position = Vector2(725, -53)
+scale = Vector2(0.3, 0.3)
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBoundary"]
+position = Vector2(786.667, 3816.67)
+shape = SubResource("RectangleShape2D_vw0ky")
+
+[node name="LeftBoundary" type="Area2D" parent="."]
+position = Vector2(725, -53)
+scale = Vector2(0.3, 0.3)
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftBoundary"]
+position = Vector2(-2470, 2006.67)
+shape = SubResource("RectangleShape2D_0sd4u")
+
+[node name="RightBoundary" type="Area2D" parent="."]
+position = Vector2(725, -53)
+scale = Vector2(0.3, 0.3)
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightBoundary"]
+position = Vector2(4026.67, 1993.33)
+shape = SubResource("RectangleShape2D_0sd4u")
+
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="area_entered" from="Basket" to="." method="_on_basket_area_entered"]
+[connection signal="body_entered" from="Basket" to="." method="_on_basket_body_entered"]
+[connection signal="body_exited" from="Basket" to="." method="_on_basket_body_exited"]
+[connection signal="button_down" from="Carrot1/Button" to="." method="_on_carrot_1_button_down"]
+[connection signal="button_up" from="Carrot1/Button" to="." method="_on_carrot_1_button_up"]
+[connection signal="button_down" from="Carrot2/Button" to="." method="_on_carrot_2_button_down"]
+[connection signal="button_up" from="Carrot2/Button" to="." method="_on_carrot_2_button_up"]
+[connection signal="button_down" from="Carrot3/Button" to="." method="_on_carrot_3_button_down"]
+[connection signal="button_up" from="Carrot3/Button" to="." method="_on_carrot_3_button_up"]
+[connection signal="button_down" from="Peas/Button" to="." method="_on_peas_button_down"]
+[connection signal="button_up" from="Peas/Button" to="." method="_on_peas_button_up"]
+[connection signal="button_down" from="Bacon1/Button" to="." method="_on_bacon_1_button_down"]
+[connection signal="button_up" from="Bacon1/Button" to="." method="_on_bacon_1_button_up"]
+[connection signal="button_down" from="Bacon2/Button" to="." method="_on_bacon_2_button_down"]
+[connection signal="button_up" from="Bacon2/Button" to="." method="_on_bacon_2_button_up"]
+[connection signal="button_down" from="Bacon3/Button" to="." method="_on_bacon_3_button_down"]
+[connection signal="button_up" from="Bacon3/Button" to="." method="_on_bacon_3_button_up"]
+[connection signal="button_down" from="Cheese/Button" to="." method="_on_cheese_button_down"]
+[connection signal="button_up" from="Cheese/Button" to="." method="_on_cheese_button_up"]
+[connection signal="button_down" from="Dressing/Button" to="." method="_on_dressing_button_down"]
+[connection signal="button_up" from="Dressing/Button" to="." method="_on_dressing_button_up"]
+[connection signal="button_down" from="Steak/Button" to="." method="_on_steak_button_down"]
+[connection signal="button_up" from="Steak/Button" to="." method="_on_steak_button_up"]
+[connection signal="button_down" from="Potato/Button" to="." method="_on_potato_button_down"]
+[connection signal="button_up" from="Potato/Button" to="." method="_on_potato_button_up"]
+[connection signal="button_down" from="Butter/Button" to="." method="_on_butter_button_down"]
+[connection signal="button_up" from="Butter/Button" to="." method="_on_butter_button_up"]
+[connection signal="button_down" from="Garlic/Button" to="." method="_on_garlic_button_down"]
+[connection signal="button_up" from="Garlic/Button" to="." method="_on_garlic_button_up"]
+[connection signal="button_down" from="Onion/Button" to="." method="_on_onion_button_down"]
+[connection signal="button_up" from="Onion/Button" to="." method="_on_onion_button_up"]
+[connection signal="button_down" from="SteakSauce/Button" to="." method="_on_sauce_button_down"]
+[connection signal="button_up" from="SteakSauce/Button" to="." method="_on_sauce_button_up"]
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="body_entered" from="TopBoundary" to="." method="_on_top_boundary_body_entered"]
+[connection signal="body_entered" from="TopBoundary" to="Carrot2" method="_on_top_boundary_body_entered"]
+[connection signal="body_entered" from="BottomBoundary" to="." method="_on_bottom_boundary_body_entered"]
+[connection signal="body_entered" from="LeftBoundary" to="." method="_on_left_boundary_body_entered"]
+[connection signal="body_entered" from="RightBoundary" to="." method="_on_right_boundary_body_entered"]

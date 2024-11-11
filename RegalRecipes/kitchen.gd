@@ -51,6 +51,7 @@ func _process(delta: float) -> void:
 	if PlayerVariables.pantry_completed:
 		$ChefText/GoToPantry.hide()
 		$ChefText/GoToCutting.show()
+		$ChefText/GoToCutting/CuttingArrow.play()
 		
 	if PlayerVariables.cutting_completed:
 		$ChefText/GoToCutting.hide()

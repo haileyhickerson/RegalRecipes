@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://x5g0r58cov7e"
+path="res://.godot/imported/UncookedBacon3_Mask.png-b74c4913b97a8a92be434b265a9e7bfe.res"
+
+[deps]
+
+source_file="res://art/UncookedBacon3_Mask.png"
+dest_files=["res://.godot/imported/UncookedBacon3_Mask.png-b74c4913b97a8a92be434b265a9e7bfe.res"]
+
+[params]
+
+create_from=0
+threshold=0.4

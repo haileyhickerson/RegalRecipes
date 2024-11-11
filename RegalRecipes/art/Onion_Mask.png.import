@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://drypgbcnykpja"
+path="res://.godot/imported/Onion_Mask.png-58056f3810eb3492ea73360d08c111a5.res"
+
+[deps]
+
+source_file="res://art/Onion_Mask.png"
+dest_files=["res://.godot/imported/Onion_Mask.png-58056f3810eb3492ea73360d08c111a5.res"]
+
+[params]
+
+create_from=0
+threshold=0.3

@@ -6,6 +6,20 @@ var starting_score = 100
 var dialogue_index = 0
 var instructions = ["Drag the correct ingredients into the basket!", "If you click the wrong ingredient, you lose points!"]
 
+var bacon_count = 0
+var peas_count = 0
+var cheese_count = 0
+var dressing_count = 0
+var carrot_count = 0
+var steak_count = 0
+var garlic_count = 0
+var onion_count = 0
+var potato_count = 0
+var butter_count = 0
+var sauce_count = 0
+
+var mouse_offset = Vector3.ZERO;
+
 func _ready() -> void:
 	if $ScoreTextbox != null:
 		$ScoreTextbox.hide()
@@ -36,49 +50,58 @@ func _input(event):
 			$InstructionsTextbox/ExampleHam.hide()
 			$InstructionsTextbox/ExamplePea.hide()
 			show_next_dialogue()
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed:
-		# Loop through all ingredients to check which one was clicked
-			for ingredient in ingredient_list:
-				if ingredient.get_rect().has_point(ingredient.to_local(event.position)):
-					print("Clicked on: " + ingredient.name) # Debugging: print the clicked ingredient's name
-					# You can now handle the click logic here (e.g., start dragging)
-					if ingredient.name in correct_ingredients:
-						print("yes!")
-						selected_ingredients.append(ingredient.name)
-						ingredient.speed = 0
-						print(ingredient.name)
-						update_progress(ingredient.name)
-						if len(selected_ingredients) == 2:
-							$ScoreTextbox/Score.text = str(starting_score) + " points! Great job!"
-							$ScoreTextbox.show()
-							$NextButton.show()
-							PlayerVariables.pantry_completed = true
-							PlayerVariables.pantry_score = starting_score
-					else:
-						print("No!")
-						starting_score -= 10
-						if starting_score < 0:
-							starting_score = 0
-					update_score()
+			
 
+func _process(delta: float) -> void:
+	
+	# updates position of whichever ingredient is currently being dragged
+	for ingredient in ingredient_list:
+		if ingredient.dragging:
+			ingredient.global_position = get_global_mouse_position() + mouse_offset
+			
+
+# updates score
 func update_score():
 	if $ScoreDisplay.text != null:
 		$ScoreDisplay.text = "Score: " + str(starting_score)
 
+# sets display
 func set_display():
-	if get_node("VBoxContainer") != null:
-		get_node("VBoxContainer/ingredient_label1").text = correct_ingredients[0] + ": 0/1"
-		get_node("VBoxContainer/ingredient_label2").text = correct_ingredients[1] + ": 0/1"
+	if $VBoxContainer != null and PlayerVariables.curr_recipe == 0:
+		# "Peas", "Bacon", "Cheese", "Dressing"
+		$VBoxContainer/ingredient_label1.text = "Bacon: " + str(bacon_count) + "/3"
+		$VBoxContainer/ingredient_label2.text = "Peas: " + str(peas_count) + "/1"
+		$VBoxContainer/ingredient_label3.text = "Cheese: " + str(cheese_count) + "/1"
+		$VBoxContainer/ingredient_label4.text = "Salad Dressing: " + str(dressing_count) + "/1"
+		$VBoxContainer/ingredient_label5.text = ""
+		$VBoxContainer/ingredient_label6.text = ""
+		$VBoxContainer/ingredient_label7.text = ""
+		
+		if bacon_count == 3 and peas_count == 1 and cheese_count == 1 and dressing_count == 1:
+			$ScoreTextbox/Score.text = str(starting_score) + " points! Great job!"
+			$ScoreTextbox.show()
+			$NextButton.show()
+			PlayerVariables.pantry_completed = true
+			PlayerVariables.pantry_score = starting_score
+			
+	if $VBoxContainer != null and PlayerVariables.curr_recipe == 1:
+		# "Carrots", "Steak", "Garlic", "Onion", "Potato", "Butter", "Steak Sauce"
+		$VBoxContainer/ingredient_label1.text = "Carrots: " + str(carrot_count) + "/3"
+		$VBoxContainer/ingredient_label2.text = "Steak: " + str(steak_count) + "/1"
+		$VBoxContainer/ingredient_label3.text = "Garlic: " + str(garlic_count) + "/1"
+		$VBoxContainer/ingredient_label4.text = "Onion: " + str(onion_count) + "/1"
+		$VBoxContainer/ingredient_label5.text = "Potato: " + str(potato_count) + "/1"
+		$VBoxContainer/ingredient_label6.text = "Butter: " + str(butter_count) + "/1"
+		$VBoxContainer/ingredient_label7.text = "Steak Sauce: " + str(sauce_count) + "/1"
+			
+		
+		if carrot_count == 3 and steak_count == 1 and garlic_count == 1 and onion_count == 1 and potato_count == 1 and butter_count == 1 and sauce_count == 1:
+			$ScoreTextbox/Score.text = str(starting_score) + " points! Great job!"
+			$ScoreTextbox.show()
+			$NextButton.show()
+			PlayerVariables.pantry_completed = true
+			PlayerVariables.pantry_score = starting_score
 	
-func update_progress(ingredient_name: String):
-	if get_node("VBoxContainer") != null:
-		if get_node("VBoxContainer/ingredient_label1").text == ingredient_name + ": 0/1":
-			get_node("VBoxContainer/ingredient_label1").text = ingredient_name.capitalize() + ": 1/1"
-			get_node("VBoxContainer/ingredient_label1").modulate = Color(0, 1, 0)
-		else:
-			get_node("VBoxContainer/ingredient_label2").text = ingredient_name.capitalize() + ": 1/1"
-			get_node("VBoxContainer/ingredient_label2").modulate = Color(0, 1, 0)
 
 func _on_back_button_pressed():
 	get_tree().change_scene_to_file("res://kitchen.tscn")
@@ -86,3 +109,354 @@ func _on_back_button_pressed():
 
 func _on_next_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://kitchen.tscn") # Replace with function body.
+	
+# when ingredient is placed in basket
+func _on_basket_body_entered(body: RigidBody2D) -> void:
+	body.over_basket = true
+
+
+func _on_basket_body_exited(body: Node2D) -> void:
+	body.over_basket = false
+		
+# bounce at top of screen
+func _on_top_boundary_body_entered(body: Node2D) -> void:
+	body.move_speed.y *= -1
+	body.set_velocity()
+
+# bounce at bottom of screen
+func _on_bottom_boundary_body_entered(body: Node2D) -> void:
+	body.move_speed.y *= -1
+	body.set_velocity()
+
+# bounce at left of screen
+func _on_left_boundary_body_entered(body: Node2D) -> void:
+	body.move_speed.x *= -1
+	body.set_velocity()
+
+# bounce at right of screen
+func _on_right_boundary_body_entered(body: Node2D) -> void:
+	body.move_speed.x *= -1
+	body.set_velocity()
+	
+
+
+# when carrot 1 is pressed
+func _on_carrot_1_button_down() -> void:
+	$Carrot1.dragging = true
+	mouse_offset = $Carrot1.global_position - get_global_mouse_position()
+	if $Carrot1.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score()
+
+# when carrot 1 is released
+func _on_carrot_1_button_up() -> void:
+	$Carrot1.dragging = false
+	if $Carrot1.over_basket and $Carrot1.name in correct_ingredients:
+		$Carrot1.move_speed = Vector2.ZERO
+		$Carrot1.set_velocity()
+		$Carrot1.in_basket = true
+		carrot_count += 1
+		set_display()
+		if carrot_count == 3:
+			$VBoxContainer/ingredient_label1.modulate = Color(0, 1, 0)
+	
+# when carrot 2 is pressed
+func _on_carrot_2_button_down() -> void:
+	$Carrot2.dragging = true
+	mouse_offset = $Carrot2.global_position - get_global_mouse_position()
+	if $Carrot2.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score()
+	
+# when carrot 2 is released
+func _on_carrot_2_button_up() -> void:
+	$Carrot2.dragging = false
+	if $Carrot2.over_basket and $Carrot2.name in correct_ingredients:
+		$Carrot2.move_speed = Vector2.ZERO
+		$Carrot2.set_velocity()
+		$Carrot2.in_basket = true
+		carrot_count += 1
+		set_display()
+		if carrot_count == 3:
+			$VBoxContainer/ingredient_label1.modulate = Color(0, 1, 0)
+
+# when carrot 3 is pressed
+func _on_carrot_3_button_down() -> void:
+	$Carrot3.dragging = true
+	mouse_offset = $Carrot3.global_position - get_global_mouse_position()
+	if $Carrot3.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score()
+
+# when carrot 3 is released
+func _on_carrot_3_button_up() -> void:
+	$Carrot3.dragging = false
+	if $Carrot3.over_basket and $Carrot3.name in correct_ingredients:
+		$Carrot3.move_speed = Vector2.ZERO
+		$Carrot3.set_velocity()
+		$Carrot3.in_basket = true
+		carrot_count += 1
+		set_display()
+		if carrot_count == 3:
+			$VBoxContainer/ingredient_label1.modulate = Color(0, 1, 0)
+
+# when peas are pressed
+func _on_peas_button_down() -> void:
+	$Peas.dragging = true
+	mouse_offset = $Peas.global_position - get_global_mouse_position()
+	if $Peas.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score()
+
+# when peas are released
+func _on_peas_button_up() -> void:
+	$Peas.dragging = false
+	if $Peas.over_basket and $Peas.name in correct_ingredients:
+		$Peas.move_speed = Vector2.ZERO
+		$Peas.set_velocity()
+		$Peas.in_basket = true
+		peas_count += 1
+		set_display()
+		$VBoxContainer/ingredient_label2.modulate = Color(0, 1, 0)
+
+
+func _on_bacon_1_button_down() -> void:
+	$Bacon1.dragging = true
+	mouse_offset = $Bacon1.global_position - get_global_mouse_position()
+	if $Bacon1.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score()
+
+
+func _on_bacon_1_button_up() -> void:
+	$Bacon1.dragging = false
+	if $Bacon1.over_basket and $Bacon1.name in correct_ingredients:
+		$Bacon1.move_speed = Vector2.ZERO
+		$Bacon1.set_velocity()
+		$Bacon1.in_basket = true
+		bacon_count += 1
+		set_display()
+		if bacon_count == 3:
+			$VBoxContainer/ingredient_label1.modulate = Color(0, 1, 0)
+
+
+func _on_bacon_2_button_down() -> void:
+	$Bacon2.dragging = true
+	mouse_offset = $Bacon2.global_position - get_global_mouse_position()
+	if $Bacon2.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score()
+
+
+func _on_bacon_2_button_up() -> void:
+	$Bacon2.dragging = false
+	if $Bacon2.over_basket and $Bacon2.name in correct_ingredients:
+		$Bacon2.move_speed = Vector2.ZERO
+		$Bacon2.set_velocity()
+		$Bacon2.in_basket = true
+		bacon_count += 1
+		set_display()
+		if bacon_count == 3:
+			$VBoxContainer/ingredient_label1.modulate = Color(0, 1, 0)
+
+
+func _on_bacon_3_button_down() -> void:
+	$Bacon3.dragging = true
+	mouse_offset = $Bacon3.global_position - get_global_mouse_position()
+	if $Bacon3.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score()
+
+
+func _on_bacon_3_button_up() -> void:
+	$Bacon3.dragging = false
+	if $Bacon3.over_basket and $Bacon3.name in correct_ingredients:
+		$Bacon3.move_speed = Vector2.ZERO
+		$Bacon3.set_velocity()
+		$Bacon3.in_basket = true
+		bacon_count += 1
+		set_display()
+		if bacon_count == 3:
+			$VBoxContainer/ingredient_label1.modulate = Color(0, 1, 0)
+
+
+func _on_cheese_button_down() -> void:
+	$Cheese.dragging = true
+	mouse_offset = $Cheese.global_position - get_global_mouse_position()
+	if $Cheese.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score()
+
+
+func _on_cheese_button_up() -> void:
+	$Cheese.dragging = false
+	if $Cheese.over_basket and $Cheese.name in correct_ingredients:
+		$Cheese.move_speed = Vector2.ZERO
+		$Cheese.set_velocity()
+		$Cheese.in_basket = true
+		cheese_count += 1
+		set_display()
+		$VBoxContainer/ingredient_label3.modulate = Color(0, 1, 0)
+
+	
+func _on_dressing_button_down() -> void:
+	$Dressing.dragging = true
+	mouse_offset = $Dressing.global_position - get_global_mouse_position()
+	if $Dressing.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score()
+
+
+func _on_dressing_button_up() -> void:
+	$Dressing.dragging = false
+	if $Dressing.over_basket and $Dressing.name in correct_ingredients:
+		$Dressing.move_speed = Vector2.ZERO
+		$Dressing.set_velocity()
+		$Dressing.in_basket = true
+		dressing_count += 1
+		set_display()
+		$VBoxContainer/ingredient_label4.modulate = Color(0, 1, 0)
+
+
+func _on_steak_button_down() -> void:
+	$Steak.dragging = true
+	mouse_offset = $Steak.global_position - get_global_mouse_position()
+	if $Steak.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score()
+
+
+func _on_steak_button_up() -> void:
+	$Steak.dragging = false
+	if $Steak.over_basket and $Steak.name in correct_ingredients:
+		$Steak.move_speed = Vector2.ZERO
+		$Steak.set_velocity()
+		$Steak.in_basket = true
+		steak_count += 1
+		set_display()
+		$VBoxContainer/ingredient_label2.modulate = Color(0, 1, 0)
+
+
+func _on_potato_button_down() -> void:
+	$Potato.dragging = true
+	mouse_offset = $Potato.global_position - get_global_mouse_position()
+	if $Potato.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score()
+
+
+func _on_potato_button_up() -> void:
+	$Potato.dragging = false
+	if $Potato.over_basket and $Potato.name in correct_ingredients:
+		$Potato.move_speed = Vector2.ZERO
+		$Potato.set_velocity()
+		$Potato.in_basket = true
+		potato_count += 1
+		set_display()
+		$VBoxContainer/ingredient_label5.modulate = Color(0, 1, 0)
+
+
+func _on_butter_button_down() -> void:
+	$Butter.dragging = true
+	mouse_offset = $Butter.global_position - get_global_mouse_position()
+	if $Butter.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score()
+
+
+func _on_butter_button_up() -> void:
+	$Butter.dragging = false
+	if $Butter.over_basket and $Butter.name in correct_ingredients:
+		$Butter.move_speed = Vector2.ZERO
+		$Butter.set_velocity()
+		$Butter.in_basket = true
+		butter_count += 1
+		set_display()
+		$VBoxContainer/ingredient_label6.modulate = Color(0, 1, 0)
+	
+
+func _on_garlic_button_down() -> void:
+	$Garlic.dragging = true
+	mouse_offset = $Garlic.global_position - get_global_mouse_position()
+	if $Garlic.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score()
+
+
+func _on_garlic_button_up() -> void:
+	$Garlic.dragging = false
+	if $Garlic.over_basket and $Garlic.name in correct_ingredients:
+		$Garlic.move_speed = Vector2.ZERO
+		$Garlic.set_velocity()
+		$Garlic.in_basket = true
+		garlic_count += 1
+		set_display()
+		$VBoxContainer/ingredient_label3.modulate = Color(0, 1, 0)
+
+
+func _on_onion_button_down() -> void:
+	$Onion.dragging = true
+	mouse_offset = $Onion.global_position - get_global_mouse_position()
+	if $Onion.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score()
+
+
+func _on_onion_button_up() -> void:
+	$Onion.dragging = false
+	if $Onion.over_basket and $Onion.name in correct_ingredients:
+		$Onion.move_speed = Vector2.ZERO
+		$Onion.set_velocity()
+		$Onion.in_basket = true
+		onion_count += 1
+		set_display()
+		$VBoxContainer/ingredient_label4.modulate = Color(0, 1, 0)
+
+
+func _on_sauce_button_down() -> void:
+	$SteakSauce.dragging = true
+	mouse_offset = $SteakSauce.global_position - get_global_mouse_position()
+	if $SteakSauce.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score()
+
+
+func _on_sauce_button_up() -> void:
+	$SteakSauce.dragging = false
+	if $SteakSauce.over_basket and $SteakSauce.name in correct_ingredients:
+		$SteakSauce.move_speed = Vector2.ZERO
+		$SteakSauce.set_velocity()
+		$SteakSauce.in_basket = true
+		sauce_count += 1
+		set_display()
+		$VBoxContainer/ingredient_label7.modulate = Color(0, 1, 0)

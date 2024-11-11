@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bb8ewjh1yb0p2"
+path="res://.godot/imported/SteakSauce_Mask.png-aa3984716558fdbea152496b982fe452.res"
+
+[deps]
+
+source_file="res://art/SteakSauce_Mask.png"
+dest_files=["res://.godot/imported/SteakSauce_Mask.png-aa3984716558fdbea152496b982fe452.res"]
+
+[params]
+
+create_from=0
+threshold=0.3

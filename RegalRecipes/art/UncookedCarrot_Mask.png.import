@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://b3o1v15ufosw1"
+path="res://.godot/imported/UncookedCarrot_Mask.png-4ae8d7dae7c01c019d2f7f8288b3de8a.res"
+
+[deps]
+
+source_file="res://art/UncookedCarrot_Mask.png"
+dest_files=["res://.godot/imported/UncookedCarrot_Mask.png-4ae8d7dae7c01c019d2f7f8288b3de8a.res"]
+
+[params]
+
+create_from=0
+threshold=0.22
