@@ -54,6 +54,7 @@ func _input(event):
 	
 		if total_cuts==3:
 			PlayerVariables.cutting_completed = true
+			PlayerVariables.cutting_score = score
 			
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			update_score_display()
