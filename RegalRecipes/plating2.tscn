@@ -30,22 +30,22 @@
 [ext_resource type="Texture2D" uid="uid://62217bqvvk7l" path="res://art/ButterspoonHead.png" id="40_ixw7m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7l5m4"]
-radius = 34.6811
+radius = 105.677
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ck5dp"]
-radius = 37.1426
+radius = 51.4294
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s0vrs"]
-size = Vector2(24.1352, 129.064)
+size = Vector2(24.1352, 165.229)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hkgn"]
-size = Vector2(147.338, 34.4383)
+size = Vector2(197.234, 34.4383)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81ynu"]
-size = Vector2(24.5584, 147.393)
+size = Vector2(25.7354, 194.098)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7eebt"]
-radius = 51.0098
+radius = 68.2642
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_li8jf"]
 radius = 160.0
@@ -97,7 +97,7 @@ position = Vector2(289, 780)
 scale = Vector2(0.594445, 0.594445)
 texture = ExtResource("5_v35ml")
 
-[node name="Steak" type="Area2D" parent="PlateContainer/BluePlate" groups=["peas", "plating_ingredients"]]
+[node name="Steak" type="Area2D" parent="PlateContainer/BluePlate" groups=["plating_ingredients", "steak"]]
 position = Vector2(-37.0093, -57.1963)
 scale = Vector2(0.988113, 0.988113)
 metadata/_edit_group_ = true
@@ -126,7 +126,7 @@ position = Vector2(1590, 840)
 scale = Vector2(0.4625, 0.4625)
 texture = ExtResource("10_eli03")
 
-[node name="Potato" type="Area2D" parent="PlateContainer/PurplePlate" groups=["cheese", "plating_ingredients"]]
+[node name="Potato" type="Area2D" parent="PlateContainer/PurplePlate" groups=["plating_ingredients", "potato"]]
 position = Vector2(144.865, -1401.08)
 rotation = 0.301921
 scale = Vector2(0.576529, 0.576529)
@@ -157,7 +157,7 @@ position = Vector2(1765, 444)
 scale = Vector2(0.277778, 0.277778)
 texture = ExtResource("10_i23mp")
 
-[node name="Butter1" type="Area2D" parent="PlateContainer/GreenPlate" groups=["cheese", "plating_ingredients"]]
+[node name="Butter1" type="Area2D" parent="PlateContainer/GreenPlate" groups=["butter", "plating_ingredients"]]
 position = Vector2(244.8, -136.8)
 scale = Vector2(1.10998, 1.10998)
 metadata/_edit_group_ = true
@@ -181,7 +181,7 @@ position = Vector2(-123.245, -6.48669)
 shape = SubResource("CircleShape2D_ck5dp")
 debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
 
-[node name="Butter2" type="Area2D" parent="PlateContainer/GreenPlate" groups=["cheese", "plating_ingredients"]]
+[node name="Butter2" type="Area2D" parent="PlateContainer/GreenPlate" groups=["butter", "plating_ingredients"]]
 position = Vector2(-270.001, 392.4)
 scale = Vector2(1.14483, 1.14483)
 
@@ -211,7 +211,7 @@ position = Vector2(1489.19, 210.187)
 scale = Vector2(0.388542, 0.388542)
 texture = ExtResource("23_h5xfd")
 
-[node name="Carrot1" type="Area2D" parent="PlateContainer/PinkPlate" groups=["bacon", "plating_ingredients"]]
+[node name="Carrot1" type="Area2D" parent="PlateContainer/PinkPlate" groups=["carrot", "plating_ingredients"]]
 position = Vector2(99.8927, 43.2709)
 rotation = 1.98049
 scale = Vector2(1.09932, 1.09932)
@@ -233,13 +233,13 @@ flip_v = true
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/PinkPlate/Carrot1"]
-position = Vector2(-39.517, 285.166)
+position = Vector2(-4.21698, 293.026)
 rotation = 1.78987
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_s0vrs")
 debug_color = Color(0, 0.870752, 0.339255, 0.42)
 
-[node name="Carrot2" type="Area2D" parent="PlateContainer/PinkPlate" groups=["bacon", "plating_ingredients"]]
+[node name="Carrot2" type="Area2D" parent="PlateContainer/PinkPlate" groups=["carrot", "plating_ingredients"]]
 position = Vector2(115.335, -116.3)
 rotation = 2.2043
 scale = Vector2(1.28885, 1.19035)
@@ -261,13 +261,13 @@ flip_v = true
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/PinkPlate/Carrot2"]
-position = Vector2(45.2198, 33.7885)
-rotation = 3.25729
+position = Vector2(85.4797, 38.4675)
+rotation = -3.0259
 scale = Vector2(1.62462, 1.62462)
 shape = SubResource("RectangleShape2D_0hkgn")
 debug_color = Color(0, 0.870752, 0.339255, 0.42)
 
-[node name="Carrot3" type="Area2D" parent="PlateContainer/PinkPlate" groups=["bacon", "plating_ingredients"]]
+[node name="Carrot3" type="Area2D" parent="PlateContainer/PinkPlate" groups=["carrot", "plating_ingredients"]]
 position = Vector2(-100.858, 282.627)
 rotation = 1.77146
 scale = Vector2(0.96395, 0.950629)
@@ -289,7 +289,7 @@ flip_v = true
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/PinkPlate/Carrot3"]
-position = Vector2(-212.641, -177.168)
+position = Vector2(-177.564, -159.361)
 rotation = 2.16205
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_81ynu")
@@ -335,7 +335,7 @@ debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
 [node name="CarrotTarget1" type="Area2D" parent="TargetSpots"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/CarrotTarget1"]
-position = Vector2(1092, 436)
+position = Vector2(1089.85, 439.169)
 rotation = 0.595728
 shape = SubResource("RectangleShape2D_81ynu")
 debug_color = Color(0, 0.870588, 0.341176, 0.419608)
@@ -359,6 +359,7 @@ shape = SubResource("RectangleShape2D_s0vrs")
 debug_color = Color(0, 0.870588, 0.341176, 0.419608)
 
 [node name="TextBox" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(960, 540)
 scale = Vector2(0.564815, 0.564815)
 texture = ExtResource("37_gfi2s")
@@ -392,6 +393,7 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="ScoreTextBox" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(960, 540)
 scale = Vector2(0.564815, 0.564815)
 texture = ExtResource("37_gfi2s")
@@ -452,34 +454,32 @@ texture = ExtResource("40_ixw7m")
 [connection signal="pressed" from="HintButton" to="." method="_on_hint_button_pressed"]
 [connection signal="pressed" from="Taste Test Button" to="." method="_on_taste_test_button_pressed"]
 [connection signal="input_event" from="PlateContainer/BluePlate/Steak" to="PlateContainer/BluePlate/Steak" method="_on_input_event"]
-[connection signal="button_down" from="PlateContainer/BluePlate/Steak/SteakButton" to="." method="_on_pea_button_button_down"]
-[connection signal="button_up" from="PlateContainer/BluePlate/Steak/SteakButton" to="." method="_on_pea_button_button_up"]
-[connection signal="button_down" from="PlateContainer/PurplePlate/Potato/PotatoButton" to="." method="_on_cheese_3_button_button_down"]
-[connection signal="button_up" from="PlateContainer/PurplePlate/Potato/PotatoButton" to="." method="_on_cheese_3_button_button_up"]
-[connection signal="button_down" from="PlateContainer/GreenPlate/Butter1/Butter1Button" to="." method="_on_cheese_1_button_button_down"]
-[connection signal="button_up" from="PlateContainer/GreenPlate/Butter1/Butter1Button" to="." method="_on_cheese_1_button_button_up"]
-[connection signal="button_down" from="PlateContainer/GreenPlate/Butter2/Butter2Button" to="." method="_on_cheese_2_button_button_down"]
-[connection signal="button_up" from="PlateContainer/GreenPlate/Butter2/Butter2Button" to="." method="_on_cheese_2_button_button_up"]
-[connection signal="button_down" from="PlateContainer/PinkPlate/Carrot1/Carrot1Button" to="." method="_on_bacon_1_button_button_down"]
-[connection signal="button_up" from="PlateContainer/PinkPlate/Carrot1/Carrot1Button" to="." method="_on_bacon_1_button_button_up"]
-[connection signal="button_down" from="PlateContainer/PinkPlate/Carrot2/Carrot2Button" to="." method="_on_bacon_2_button_button_down"]
-[connection signal="button_up" from="PlateContainer/PinkPlate/Carrot2/Carrot2Button" to="." method="_on_bacon_2_button_button_up"]
-[connection signal="button_down" from="PlateContainer/PinkPlate/Carrot3/Carrot3Button" to="." method="_on_bacon_2_button_button_down"]
-[connection signal="button_up" from="PlateContainer/PinkPlate/Carrot3/Carrot3Button" to="." method="_on_bacon_2_button_button_up"]
+[connection signal="button_down" from="PlateContainer/BluePlate/Steak/SteakButton" to="." method="_on_steak_button_down"]
+[connection signal="button_up" from="PlateContainer/BluePlate/Steak/SteakButton" to="." method="_on_steak_button_up"]
+[connection signal="button_down" from="PlateContainer/PurplePlate/Potato/PotatoButton" to="." method="_on_potato_button_down"]
+[connection signal="button_up" from="PlateContainer/PurplePlate/Potato/PotatoButton" to="." method="_on_potato_button_up"]
+[connection signal="button_down" from="PlateContainer/GreenPlate/Butter1/Butter1Button" to="." method="_on_butter_1_button_down"]
+[connection signal="button_up" from="PlateContainer/GreenPlate/Butter1/Butter1Button" to="." method="_on_butter_1_button_up"]
+[connection signal="button_down" from="PlateContainer/GreenPlate/Butter2/Butter2Button" to="." method="_on_butter_2_button_down"]
+[connection signal="button_up" from="PlateContainer/GreenPlate/Butter2/Butter2Button" to="." method="_on_butter_2_button_up"]
+[connection signal="button_down" from="PlateContainer/PinkPlate/Carrot1/Carrot1Button" to="." method="_on_carrot_1_button_down"]
+[connection signal="button_up" from="PlateContainer/PinkPlate/Carrot1/Carrot1Button" to="." method="_on_carrot_1_button_up"]
+[connection signal="button_down" from="PlateContainer/PinkPlate/Carrot2/Carrot2Button" to="." method="_on_carrot_2_button_down"]
+[connection signal="button_up" from="PlateContainer/PinkPlate/Carrot2/Carrot2Button" to="." method="_on_carrot_2_button_up"]
+[connection signal="button_down" from="PlateContainer/PinkPlate/Carrot3/Carrot3Button" to="." method="_on_carrot_3_button_down"]
+[connection signal="button_up" from="PlateContainer/PinkPlate/Carrot3/Carrot3Button" to="." method="_on_carrot_3_button_up"]
 [connection signal="timeout" from="Timer1" to="." method="_on_timer_1_timeout"]
-[connection signal="area_entered" from="TargetSpots/SteakTarget" to="." method="_on_pea_target_area_entered"]
-[connection signal="area_exited" from="TargetSpots/SteakTarget" to="." method="_on_pea_target_area_exited"]
-[connection signal="area_entered" from="TargetSpots/PotatoTarget" to="." method="_on_cheese_target_1_area_entered"]
-[connection signal="area_exited" from="TargetSpots/PotatoTarget" to="." method="_on_cheese_target_1_area_exited"]
-[connection signal="area_entered" from="TargetSpots/ButterTarget1" to="." method="_on_cheese_target_2_area_entered"]
-[connection signal="area_exited" from="TargetSpots/ButterTarget1" to="." method="_on_cheese_target_2_area_exited"]
-[connection signal="area_entered" from="TargetSpots/ButterTarget2" to="." method="_on_cheese_target_3_area_entered"]
-[connection signal="area_exited" from="TargetSpots/ButterTarget2" to="." method="_on_cheese_target_3_area_exited"]
-[connection signal="area_entered" from="TargetSpots/CarrotTarget1" to="." method="_on_bacon_target_1_area_entered"]
-[connection signal="area_exited" from="TargetSpots/CarrotTarget1" to="." method="_on_bacon_target_1_area_exited"]
-[connection signal="area_entered" from="TargetSpots/CarrotTarget2" to="." method="_on_bacon_target_2_area_entered"]
-[connection signal="area_exited" from="TargetSpots/CarrotTarget2" to="." method="_on_bacon_target_2_area_exited"]
-[connection signal="area_entered" from="TargetSpots/CarrotTarget3" to="." method="_on_bacon_target_3_area_entered"]
-[connection signal="area_exited" from="TargetSpots/CarrotTarget3" to="." method="_on_bacon_target_3_area_exited"]
+[connection signal="area_entered" from="TargetSpots/SteakTarget" to="." method="_on_steak_target_area_entered"]
+[connection signal="area_exited" from="TargetSpots/SteakTarget" to="." method="_on_steak_target_area_exited"]
+[connection signal="area_entered" from="TargetSpots/PotatoTarget" to="." method="_on_potato_target_area_entered"]
+[connection signal="area_exited" from="TargetSpots/PotatoTarget" to="." method="_on_potato_target_area_exited"]
+[connection signal="area_entered" from="TargetSpots/ButterTarget1" to="." method="_on_butter_target_1_area_entered"]
+[connection signal="area_exited" from="TargetSpots/ButterTarget1" to="." method="_on_butter_target_1_area_exited"]
+[connection signal="area_entered" from="TargetSpots/CarrotTarget1" to="." method="_on_carrot_target_1_area_entered"]
+[connection signal="area_exited" from="TargetSpots/CarrotTarget1" to="." method="_on_carrot_target_1_area_exited"]
+[connection signal="area_entered" from="TargetSpots/CarrotTarget2" to="." method="_on_carrot_target_2_area_entered"]
+[connection signal="area_exited" from="TargetSpots/CarrotTarget2" to="." method="_on_carrot_target_2_area_exited"]
+[connection signal="area_entered" from="TargetSpots/CarrotTarget3" to="." method="_on_carrot_target_3_area_entered"]
+[connection signal="area_exited" from="TargetSpots/CarrotTarget3" to="." method="_on_carrot_target_3_area_exited"]
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
 [connection signal="timeout" from="HintTimer" to="." method="_on_hint_timer_timeout"]
