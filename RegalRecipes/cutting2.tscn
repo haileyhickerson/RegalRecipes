@@ -62,7 +62,6 @@ width = 5.0
 default_color = Color(0, 0, 0, 1)
 
 [node name="Knife" type="Area2D" parent="."]
-visible = false
 position = Vector2(785, 598)
 scale = Vector2(1.02648, 1.19303)
 script = ExtResource("4_l7mgb")
@@ -100,7 +99,6 @@ offset_right = 371.0
 offset_bottom = 105.0
 
 [node name="TextBox" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(960, 540)
 scale = Vector2(0.564815, 0.564815)
 texture = ExtResource("7_3o1xc")
