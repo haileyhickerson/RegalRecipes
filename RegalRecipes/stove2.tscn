@@ -1,18 +1,28 @@
-[gd_scene load_steps=18 format=3 uid="uid://oaoi60miqi1f"]
+[gd_scene load_steps=29 format=3 uid="uid://oaoi60miqi1f"]
 
 [ext_resource type="Script" path="res://stove2.gd" id="1_5to2y"]
 [ext_resource type="Texture2D" uid="uid://c860lwsyjoy1s" path="res://art/Stovetop.png" id="2_n7tsq"]
 [ext_resource type="Texture2D" uid="uid://va34mugwsatg" path="res://art/pan.png" id="3_ctse6"]
 [ext_resource type="Texture2D" uid="uid://cfrufedn7v213" path="res://art/BaconFrame1.png" id="4_m0afe"]
+[ext_resource type="Texture2D" uid="uid://xntbptriyv7n" path="res://art/SteakFrames/1.png" id="4_mq7hk"]
 [ext_resource type="Texture2D" uid="uid://dj31n0uk5tir0" path="res://art/BaconFrame2.png" id="5_dv1y0"]
+[ext_resource type="Texture2D" uid="uid://buv1tvmdu55mg" path="res://art/SteakFrames/2.png" id="5_naokc"]
+[ext_resource type="Texture2D" uid="uid://ghktda5nakqq" path="res://art/SteakFrames/3.png" id="6_7cilp"]
 [ext_resource type="Texture2D" uid="uid://bjschdfxi3vf7" path="res://art/BaconFrame3.png" id="6_q547u"]
 [ext_resource type="Texture2D" uid="uid://cp5ioqnp4xfpi" path="res://art/BaconFrame4.png" id="7_5rayo"]
+[ext_resource type="Texture2D" uid="uid://cjgsfie4k0ali" path="res://art/SteakFrames/4.png" id="7_e58hk"]
 [ext_resource type="Texture2D" uid="uid://b8oh2f8sv105p" path="res://art/BaconFrame5.png" id="8_fbr37"]
+[ext_resource type="Texture2D" uid="uid://cgg87ydvjj08x" path="res://art/SteakFrames/5.png" id="8_nm4ci"]
+[ext_resource type="Texture2D" uid="uid://7jyxyau4dr1v" path="res://art/SteakFrames/6.png" id="9_o7wue"]
 [ext_resource type="Texture2D" uid="uid://4ddvwylw5rmo" path="res://art/BaconFrame6.png" id="9_oyybo"]
 [ext_resource type="Texture2D" uid="uid://b3diuhm1wjhtq" path="res://art/BaconFrame7.png" id="10_jlapy"]
+[ext_resource type="Texture2D" uid="uid://b0b2m4kceo187" path="res://art/SteakFrames/7.png" id="10_kgo3n"]
+[ext_resource type="Texture2D" uid="uid://cxtqjfkouggat" path="res://art/SteakFrames/8.png" id="11_tpqx4"]
 [ext_resource type="Texture2D" uid="uid://dr6ufyql5fgqb" path="res://art/Knob.png" id="11_ywvel"]
+[ext_resource type="Texture2D" uid="uid://bmby0vc5g2fgs" path="res://art/SteakFrames/9.png" id="12_g5fh8"]
 [ext_resource type="Script" path="res://stove_knob.gd" id="12_ln1ep"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="13_aaepm"]
+[ext_resource type="Texture2D" uid="uid://g0842a1sr2b0" path="res://art/SteakFrames/10.png" id="13_vfxsx"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="14_1supp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0k282"]
@@ -28,6 +38,44 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ip8xg"]
 size = Vector2(229.73, 720.507)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lsx52"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mq7hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_naokc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7cilp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_e58hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nm4ci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_o7wue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kgo3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tpqx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_g5fh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vfxsx")
+}],
+"loop": true,
+"name": &"cooked",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pggyy"]
 animations = [{
@@ -87,6 +135,12 @@ position = Vector2(2622.97, 1758.67)
 shape = SubResource("RectangleShape2D_ip8xg")
 
 [node name="Bacon" type="Area2D" parent="."]
+
+[node name="SteakAnimation" type="AnimatedSprite2D" parent="Bacon"]
+position = Vector2(967, 335)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_lsx52")
+animation = &"cooked"
 
 [node name="BaconAnimation" type="AnimatedSprite2D" parent="Bacon"]
 position = Vector2(967, 335)

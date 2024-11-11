@@ -79,10 +79,15 @@ func _process(delta: float) -> void:
 			get_tree().change_scene_to_file("res://cutting.tscn") 
 		if PlayerVariables.curr_recipe == 1:
 			get_tree().change_scene_to_file("res://cutting2.tscn")
+			
+			
 	if Input.is_action_pressed("action") and in_mixing and PlayerVariables.pantry_completed and PlayerVariables.cutting_completed:
 		$MixingArea/MixingIcon.play("press")
-		get_tree().change_scene_to_file("res://mixing.tscn") 
-		
+		if PlayerVariables.curr_recipe == 0:
+			get_tree().change_scene_to_file("res://mixing.tscn") 
+		if PlayerVariables.curr_recipe == 1:
+			get_tree().change_scene_to_file("res://mixing2.tscn") 
+			
 	if Input.is_action_pressed("action") and in_stove and PlayerVariables.pantry_completed and PlayerVariables.cutting_completed and PlayerVariables.mixing_completed:
 		$StoveArea/StoveIcon.play("press")
 		get_tree().change_scene_to_file("res://stove.tscn") 
@@ -95,7 +100,7 @@ func _process(delta: float) -> void:
 			get_tree().change_scene_to_file("res://plating2.tscn")
 
 func _on_pantry_area_entered(area: Area2D) -> void:
-	if area.is_in_group("player"):
+	if area.is_in_group("player") and not PlayerVariables.pantry_completed:
 		$PantryArea/PantryText.show()
 		$PantryArea/PantryIcon.play("hover")
 		in_pantry = true
@@ -105,7 +110,7 @@ func _on_pantry_area_exited(area: Area2D) -> void:
 		$PantryArea/PantryIcon.play("normal")
 		in_pantry = false
 func _on_cutting_area_area_entered(area: Area2D) -> void:
-	if area.is_in_group("player") and PlayerVariables.pantry_completed:
+	if area.is_in_group("player") and PlayerVariables.pantry_completed  and not PlayerVariables.cutting_completed:
 		$CuttingArea/CuttingText.show()
 		$CuttingArea/CuttingIcon.play("hover")
 		in_cutting = true 
@@ -115,7 +120,7 @@ func _on_cutting_area_area_exited(area: Area2D) -> void:
 		$CuttingArea/CuttingIcon.play("normal")
 		in_cutting = false
 func _on_stove_area_area_entered(area: Area2D) -> void:
-	if area.is_in_group("player") and PlayerVariables.pantry_completed and PlayerVariables.cutting_completed and PlayerVariables.mixing_completed:
+	if area.is_in_group("player") and PlayerVariables.pantry_completed and PlayerVariables.cutting_completed and PlayerVariables.mixing_completed  and not PlayerVariables.stove_completed:
 		$StoveArea/StoveText.show()
 		$StoveArea/StoveIcon.play("hover")
 		in_stove = true
@@ -125,7 +130,7 @@ func _on_stove_area_area_exited(area: Area2D) -> void:
 		$StoveArea/StoveIcon.play("normal")
 		in_stove = false
 func _on_mixing_area_area_entered(area: Area2D) -> void:
-	if area.is_in_group("player") and PlayerVariables.pantry_completed and PlayerVariables.cutting_completed:
+	if area.is_in_group("player") and PlayerVariables.pantry_completed and PlayerVariables.cutting_completed  and not PlayerVariables.mixing_completed:
 		$MixingArea/MixingText.show()
 		$MixingArea/MixingIcon.play("hover")
 		in_mixing = true
@@ -135,7 +140,7 @@ func _on_mixing_area_area_exited(area: Area2D) -> void:
 		$MixingArea/MixingIcon.play("normal")
 		in_mixing = false
 func _on_plating_area_area_entered(area: Area2D) -> void:
-	if area.is_in_group("player") and PlayerVariables.pantry_completed and PlayerVariables.cutting_completed and PlayerVariables.mixing_completed and PlayerVariables.stove_completed:
+	if area.is_in_group("player") and PlayerVariables.pantry_completed and PlayerVariables.cutting_completed and PlayerVariables.mixing_completed and PlayerVariables.stove_completed and not PlayerVariables.plating_completed:
 		$PlatingArea/PlatingText.show()
 		$PlatingArea/PlatingIcon.play("hover")
 		in_plating = true
