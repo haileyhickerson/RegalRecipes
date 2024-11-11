@@ -21,6 +21,8 @@ var mixing_score = 0
 var stove_score = 0
 var plating_score = 0
 
+var final_score = 0
+
 var chef_selected
 
 # Called when the node enters the scene tree for the first time.
@@ -30,4 +32,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	final_score = pantry_score + cutting_score + mixing_score + stove_score + plating_score

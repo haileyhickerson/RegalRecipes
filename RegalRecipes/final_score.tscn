@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://bwk2ntxh5l3vg"]
 
 [ext_resource type="Script" path="res://final_score.gd" id="1_xacvp"]
-[ext_resource type="FontFile" uid="uid://dorvoffquppln" path="res://fonts/Hand of King.ttf" id="2_1ayek"]
 [ext_resource type="Texture2D" uid="uid://tvtfi67ekcg8" path="res://art/ScoreBoard.png" id="2_x2ms4"]
+[ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="3_7sc57"]
 
 [node name="Final Score" type="Node2D"]
 script = ExtResource("1_xacvp")
@@ -12,23 +12,201 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_x2ms4")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 265.0
-offset_top = 445.0
-offset_right = 1725.0
-offset_bottom = 860.0
+[node name="Title" type="Label" parent="."]
+offset_left = 728.0
+offset_top = 275.0
+offset_right = 1231.0
+offset_bottom = 418.0
 scale = Vector2(0.99668, 1)
 theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
 theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
 theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
-theme_override_constants/outline_size = 19
-theme_override_constants/shadow_outline_size = 25
-theme_override_fonts/font = ExtResource("2_1ayek")
-theme_override_font_sizes/font_size = 100
-text = "This is where your
-final score breakdown
-will be shown"
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("3_7sc57")
+theme_override_font_sizes/font_size = 86
+text = "Final Score"
 horizontal_alignment = 1
+
+[node name="IngredientSelection" type="Label" parent="."]
+offset_left = 572.0
+offset_top = 420.0
+offset_right = 1075.0
+offset_bottom = 489.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("3_7sc57")
+theme_override_font_sizes/font_size = 50
+text = "Ingredient Selection:"
+horizontal_alignment = 2
+
+[node name="PantryScore" type="Label" parent="IngredientSelection"]
+offset_left = 580.0
+offset_right = 702.0
+offset_bottom = 69.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("3_7sc57")
+theme_override_font_sizes/font_size = 50
+text = "000"
+
+[node name="Chopping" type="Label" parent="."]
+offset_left = 572.0
+offset_top = 490.0
+offset_right = 1075.0
+offset_bottom = 559.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("3_7sc57")
+theme_override_font_sizes/font_size = 50
+text = "Chopping:"
+horizontal_alignment = 2
+
+[node name="CuttingScore" type="Label" parent="Chopping"]
+offset_left = 580.0
+offset_right = 702.0
+offset_bottom = 69.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("3_7sc57")
+theme_override_font_sizes/font_size = 50
+text = "000"
+
+[node name="Mixing" type="Label" parent="."]
+offset_left = 572.0
+offset_top = 560.0
+offset_right = 1075.0
+offset_bottom = 629.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("3_7sc57")
+theme_override_font_sizes/font_size = 50
+text = "Mixing:"
+horizontal_alignment = 2
+
+[node name="MixingScore" type="Label" parent="Mixing"]
+offset_left = 580.0
+offset_right = 702.0
+offset_bottom = 69.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("3_7sc57")
+theme_override_font_sizes/font_size = 50
+text = "000"
+
+[node name="Cooking" type="Label" parent="."]
+offset_left = 572.0
+offset_top = 630.0
+offset_right = 1075.0
+offset_bottom = 699.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("3_7sc57")
+theme_override_font_sizes/font_size = 50
+text = "Cooking:"
+horizontal_alignment = 2
+
+[node name="CookingScore" type="Label" parent="Cooking"]
+offset_left = 580.0
+offset_right = 702.0
+offset_bottom = 69.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("3_7sc57")
+theme_override_font_sizes/font_size = 50
+text = "000"
+
+[node name="Plating" type="Label" parent="."]
+offset_left = 572.0
+offset_top = 700.0
+offset_right = 1075.0
+offset_bottom = 769.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("3_7sc57")
+theme_override_font_sizes/font_size = 50
+text = "Plating:"
+horizontal_alignment = 2
+
+[node name="PlatingScore" type="Label" parent="Plating"]
+offset_left = 580.0
+offset_right = 702.0
+offset_bottom = 69.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("3_7sc57")
+theme_override_font_sizes/font_size = 50
+text = "000"
+
+[node name="Total" type="Label" parent="."]
+offset_left = 572.0
+offset_top = 800.0
+offset_right = 1075.0
+offset_bottom = 890.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("3_7sc57")
+theme_override_font_sizes/font_size = 65
+text = "Total Score:"
+horizontal_alignment = 2
+
+[node name="TotalScore" type="Label" parent="Total"]
+offset_left = 580.0
+offset_right = 702.0
+offset_bottom = 90.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("3_7sc57")
+theme_override_font_sizes/font_size = 65
+text = "000"
 
 [node name="Back Button" type="Button" parent="."]
 offset_left = 52.0
