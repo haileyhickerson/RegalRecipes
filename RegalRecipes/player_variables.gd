@@ -4,7 +4,7 @@ var location
 
 var first_move = false
 var intro_completed = false
-var recipe1_completed = true
+var recipe1_completed = true #SET TO TRUE FOR DEBUGGING
 var recipe2_completed = false
 var curr_recipe = 0
 var correct_ingredients = [["Bacon1", "Bacon2", "Bacon3", "Peas", "Cheese", "Dressing"], ["Carrot1", "Carrot2", "Carrot3", "Steak", "Garlic", "Onion", "Potato", "Butter", "SteakSauce"], ["Recipe3Ingredients"]]
