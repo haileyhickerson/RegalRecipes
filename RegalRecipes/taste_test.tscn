@@ -1,33 +1,100 @@
-[gd_scene load_steps=4 format=3 uid="uid://chyl17eul2opw"]
+[gd_scene load_steps=7 format=3 uid="uid://chyl17eul2opw"]
 
 [ext_resource type="Script" path="res://taste_test.gd" id="1_k0ye4"]
-[ext_resource type="FontFile" uid="uid://dorvoffquppln" path="res://fonts/Hand of King.ttf" id="2_y3bqx"]
-[ext_resource type="Texture2D" uid="uid://xv734cohretp" path="res://art/tasteTestConcept.png" id="2_ychkd"]
+[ext_resource type="Texture2D" uid="uid://unhihlkjqmxl" path="res://art/HappyKing.png" id="2_sxch4"]
+[ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="3_2vj1n"]
+[ext_resource type="Texture2D" uid="uid://qkevufmcicqi" path="res://art/MidKing.png" id="3_ro54v"]
+[ext_resource type="Texture2D" uid="uid://2gi5nic1n7id" path="res://art/AngryKing.png" id="4_qccq3"]
+[ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="4_x2kis"]
 
 [node name="Taste Test" type="Node2D"]
 script = ExtResource("1_k0ye4")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="HappyKing" type="TextureRect" parent="."]
+visible = false
 offset_left = 4.0
 offset_right = 44.0
 offset_bottom = 40.0
-texture = ExtResource("2_ychkd")
+texture = ExtResource("2_sxch4")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 202.0
-offset_top = 76.0
-offset_right = 1798.0
-offset_bottom = 491.0
+[node name="TextBox" type="Sprite2D" parent="HappyKing"]
+position = Vector2(980, 795)
+scale = Vector2(0.579745, 0.490741)
+texture = ExtResource("3_2vj1n")
+
+[node name="Label" type="Label" parent="HappyKing"]
+offset_left = 582.0
+offset_top = 704.0
+offset_right = 1397.0
+offset_bottom = 876.0
 scale = Vector2(0.99668, 1)
 theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
 theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
 theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
-theme_override_constants/outline_size = 19
-theme_override_constants/shadow_outline_size = 25
-theme_override_fonts/font = ExtResource("2_y3bqx")
-theme_override_font_sizes/font_size = 100
-text = "This is where the royals will taste your
-meal & give it a rating"
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("4_x2kis")
+theme_override_font_sizes/font_size = 60
+text = "Wow! King Figglebottom is 
+quite impressed with your skills!"
+horizontal_alignment = 1
+
+[node name="MidKing" type="TextureRect" parent="."]
+visible = false
+offset_left = 4.0
+offset_right = 44.0
+offset_bottom = 40.0
+texture = ExtResource("3_ro54v")
+
+[node name="TextBox" type="Sprite2D" parent="MidKing"]
+position = Vector2(980, 795)
+scale = Vector2(0.579745, 0.490741)
+texture = ExtResource("3_2vj1n")
+
+[node name="Label" type="Label" parent="MidKing"]
+offset_left = 582.0
+offset_top = 704.0
+offset_right = 1397.0
+offset_bottom = 876.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("4_x2kis")
+theme_override_font_sizes/font_size = 60
+text = "King Figglebottom is not
+impressed with your skills."
+horizontal_alignment = 1
+
+[node name="AngryKing" type="TextureRect" parent="."]
+visible = false
+offset_left = 4.0
+offset_right = 44.0
+offset_bottom = 40.0
+texture = ExtResource("4_qccq3")
+
+[node name="TextBox" type="Sprite2D" parent="AngryKing"]
+position = Vector2(980, 795)
+scale = Vector2(0.579745, 0.490741)
+texture = ExtResource("3_2vj1n")
+
+[node name="Label" type="Label" parent="AngryKing"]
+offset_left = 582.0
+offset_top = 704.0
+offset_right = 1397.0
+offset_bottom = 876.0
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("4_x2kis")
+theme_override_font_sizes/font_size = 55
+text = "King Figglebottom is 
+APPALLED by your lack of skills!"
 horizontal_alignment = 1
 
 [node name="Back Button" type="Button" parent="."]

@@ -453,6 +453,7 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Instructions2" type="Label" parent="TextBox"]
+visible = false
 offset_left = -722.36
 offset_top = -115.082
 offset_right = 771.64
@@ -473,6 +474,7 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_gfxvl")
 
 [node name="ScoreBox" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(960, 540)
 scale = Vector2(0.564815, 0.564815)
 texture = ExtResource("27_ofais")
