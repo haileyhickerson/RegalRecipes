@@ -39,34 +39,43 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("move_up") or Input.is_action_pressed("move_down") or Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right"):
 		PlayerVariables.first_move = true
 	
-	if not PlayerVariables.first_move:
+	if PlayerVariables.curr_recipe != 0:
+		$ChefText.hide()
+		$FancyCircle.hide()
+		$ButterspoonHead.hide()
+		
+	if not PlayerVariables.first_move and PlayerVariables.curr_recipe == 0:
 		$ChefText/MoveText.show()
 		
 	if PlayerVariables.first_move:
-		await get_tree().create_timer(.5).timeout 
-		$ChefText/MoveText.hide()
-		$ChefText/GoToPantry.show()
-		$ChefText/GoToPantry/PantryArrow.play()
+		if PlayerVariables.curr_recipe == 0:
+			$ChefText/MoveText.hide()
+			$ChefText/GoToPantry.show()
+			$ChefText/GoToPantry/PantryArrow.play()
 		
 	if PlayerVariables.pantry_completed:
-		$ChefText/GoToPantry.hide()
-		$ChefText/GoToCutting.show()
-		$ChefText/GoToCutting/CuttingArrow.play()
+		if PlayerVariables.curr_recipe == 0:
+			$ChefText/GoToPantry.hide()
+			$ChefText/GoToCutting.show()
+			$ChefText/GoToCutting/CuttingArrow.play()
 		
 	if PlayerVariables.cutting_completed:
-		$ChefText/GoToCutting.hide()
-		$ChefText/GoToMixing.show()
-		$ChefText/GoToMixing/MixingArrow.play()
+		if PlayerVariables.curr_recipe == 0:
+			$ChefText/GoToCutting.hide()
+			$ChefText/GoToMixing.show()
+			$ChefText/GoToMixing/MixingArrow.play()
 		
 	if PlayerVariables.mixing_completed:
-		$ChefText/GoToMixing.hide()
-		$ChefText/GoToStove.show()
-		$ChefText/GoToStove/StoveArrow.play()
+		if PlayerVariables.curr_recipe == 0:
+			$ChefText/GoToMixing.hide()
+			$ChefText/GoToStove.show()
+			$ChefText/GoToStove/StoveArrow.play()
 		
 	if PlayerVariables.stove_completed:
-		$ChefText/GoToStove.hide()
-		$ChefText/GoToPlating.show()
-		$ChefText/GoToPlating/PlatingArrow.play()
+		if PlayerVariables.curr_recipe == 0:
+			$ChefText/GoToStove.hide()
+			$ChefText/GoToPlating.show()
+			$ChefText/GoToPlating/PlatingArrow.play()
 		
 		
 	if Input.is_action_pressed("action") and in_pantry:
@@ -90,13 +99,16 @@ func _process(delta: float) -> void:
 			
 	if Input.is_action_pressed("action") and in_stove and PlayerVariables.pantry_completed and PlayerVariables.cutting_completed and PlayerVariables.mixing_completed:
 		$StoveArea/StoveIcon.play("press")
-		get_tree().change_scene_to_file("res://stove.tscn") 
+		if PlayerVariables.curr_recipe == 0:
+			get_tree().change_scene_to_file("res://stove.tscn") 
+		if PlayerVariables.curr_recipe == 1:
+			get_tree().change_scene_to_file("res://stove2.tscn") 
 		
 	if Input.is_action_pressed("action") and in_plating and PlayerVariables.pantry_completed and PlayerVariables.cutting_completed and PlayerVariables.mixing_completed and PlayerVariables.stove_completed:
 		$PlatingArea/PlatingIcon.play("press")
 		if PlayerVariables.curr_recipe == 0:
 			get_tree().change_scene_to_file("res://plating.tscn") 
-		if PlayerVariables.curr_recipe == 2:
+		if PlayerVariables.curr_recipe == 1:
 			get_tree().change_scene_to_file("res://plating2.tscn")
 
 func _on_pantry_area_entered(area: Area2D) -> void:

@@ -45,6 +45,7 @@ text = "Ingredient Selection:"
 horizontal_alignment = 2
 
 [node name="PantryScore" type="Label" parent="IngredientSelection"]
+layout_mode = 0
 offset_left = 580.0
 offset_right = 702.0
 offset_bottom = 69.0
@@ -75,6 +76,7 @@ text = "Chopping:"
 horizontal_alignment = 2
 
 [node name="CuttingScore" type="Label" parent="Chopping"]
+layout_mode = 0
 offset_left = 580.0
 offset_right = 702.0
 offset_bottom = 69.0
@@ -105,6 +107,7 @@ text = "Mixing:"
 horizontal_alignment = 2
 
 [node name="MixingScore" type="Label" parent="Mixing"]
+layout_mode = 0
 offset_left = 580.0
 offset_right = 702.0
 offset_bottom = 69.0
@@ -135,6 +138,7 @@ text = "Cooking:"
 horizontal_alignment = 2
 
 [node name="CookingScore" type="Label" parent="Cooking"]
+layout_mode = 0
 offset_left = 580.0
 offset_right = 702.0
 offset_bottom = 69.0
@@ -165,6 +169,7 @@ text = "Plating:"
 horizontal_alignment = 2
 
 [node name="PlatingScore" type="Label" parent="Plating"]
+layout_mode = 0
 offset_left = 580.0
 offset_right = 702.0
 offset_bottom = 69.0
@@ -195,6 +200,7 @@ text = "Total Score:"
 horizontal_alignment = 2
 
 [node name="TotalScore" type="Label" parent="Total"]
+layout_mode = 0
 offset_left = 580.0
 offset_right = 702.0
 offset_bottom = 90.0

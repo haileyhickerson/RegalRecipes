@@ -54,6 +54,7 @@ func _input(event):
 	
 		if total_cuts==3:
 			PlayerVariables.cutting_completed = true
+			PlayerVariables.cutting_score = score
 			
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			update_score_display()
@@ -100,9 +101,9 @@ func update_score_display():
 	else:
 		print("error")
 		
-#func play_cutting_sound():
-	#$Knife/AudioStreamPlayer2D.play()
-	#Cutting_Timer.start()
+func play_cutting_sound():
+	$Knife/AudioStreamPlayer2D.play()
+	Cutting_Timer.start()
 
 func _on_back_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://kitchen.tscn") # Replace with function body.

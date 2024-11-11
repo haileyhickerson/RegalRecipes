@@ -11,7 +11,7 @@ var flipped = false
 var temp_score
 var flip_score
 var cook_score
-@onready var meat_animated_sprite = $Bacon/BaconAnimation
+@onready var meat_animated_sprite = $Steak/SteakAnimation
 var dialogue_index = 0
 var instructions = ["Click on the knob at the right temperature.", "Once the bar reaches 50%, click the PAN HANDLE to flip the meat!", "Make sure the meat isn't undercooked or overcooked!"]
 
@@ -20,6 +20,7 @@ func _ready() -> void:
 	$NextButton.hide()
 	$ScoreTextBox.hide()
 	$TextBox/KnobExample.show()
+	$Steak/SteakAnimation.play("uncooked")
 	show_next_dialogue()
 
 func show_next_dialogue():
@@ -50,7 +51,7 @@ func on_pan_click():
 	if flip_allowed:
 		print("Meat flipped!")
 		flip_allowed = false
-		meat_animated_sprite.play("cooked")
+		meat_animated_sprite.play("flip")
 		print($StoveKnob.rotation)
 		$CookingBar.value = 60
 		$FlipText.hide()
