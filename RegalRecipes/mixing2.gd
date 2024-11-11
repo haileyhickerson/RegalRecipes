@@ -40,7 +40,7 @@ func _ready() -> void:
 					$Arrow5, $Arrow6, $Arrow7, $Arrow8,]
 	$NextButton.hide()
 	$StartButton.hide()
-	$Peas.play("idle")
+	$SteakSauce.play("idle")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -108,7 +108,7 @@ func _on_start_button_pressed() -> void:
 
 
 func _on_marker_button_pressed() -> void:
-	$Peas.play("mix")
+	$SteakSauce.play("mix")
 	if current_marker_index != 7:
 		current_arrow.hide()
 		current_marker_index += 1
@@ -119,7 +119,7 @@ func _on_marker_button_pressed() -> void:
 		
 func station_complete():
 	station_completed = true
-	$Peas.play("mixed")
+	$SteakSauce.play("mixed")
 	$OutsideOfCircle.hide()
 	$NextButton.show()
 

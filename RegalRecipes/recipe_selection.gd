@@ -15,16 +15,27 @@ func _process(delta: float) -> void:
 func _on_recipe_1_button_pressed() -> void:
 	# Updates which recipe is selected, 0th indexing
 	PlayerVariables.curr_recipe = 0
+	PlayerVariables.pantry_completed = false
+	PlayerVariables.cutting_completed = false
+	PlayerVariables.mixing_completed = false
+	PlayerVariables.stove_completed = false
+	PlayerVariables.plating_completed = false
 	if PlayerVariables.intro_completed != true:
 		get_tree().change_scene_to_file("res://intro.tscn")
 	else:
 		get_tree().change_scene_to_file("res://kitchen.tscn")
+		
 
 # Recipe 2
 func _on_recipe_2_button_pressed() -> void:
 	# If score achieved on recipe 1, allow recipe 2 to be clicked
 	if PlayerVariables.recipe1_completed:
 		PlayerVariables.curr_recipe = 1
+		PlayerVariables.pantry_completed = false
+		PlayerVariables.cutting_completed = false
+		PlayerVariables.mixing_completed = false
+		PlayerVariables.stove_completed = false
+		PlayerVariables.plating_completed = false
 		get_tree().change_scene_to_file("res://kitchen.tscn")
 # Recipe 3
 func _on_recipe_3_button_pressed() -> void:
