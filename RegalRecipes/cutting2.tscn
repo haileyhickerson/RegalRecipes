@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dh7a77tjt2pm2"]
+[gd_scene load_steps=12 format=3 uid="uid://dh7a77tjt2pm2"]
 
 [ext_resource type="Script" path="res://cutting2.gd" id="1_6rne2"]
 [ext_resource type="Texture2D" uid="uid://b7paioai6w1g5" path="res://art/CuttingBoard.png" id="2_uxtnr"]
 [ext_resource type="Texture2D" uid="uid://daebuaiv8fa5s" path="res://art/Full_Carrot.png" id="3_662m0"]
+[ext_resource type="Texture2D" uid="uid://65vsgg3p4ejk" path="res://art/Onion.png" id="3_d18fm"]
 [ext_resource type="Script" path="res://knife.gd" id="4_l7mgb"]
 [ext_resource type="Texture2D" uid="uid://b1fq84if3d2ys" path="res://art/Knife.png" id="5_hfwbs"]
 [ext_resource type="AudioStream" uid="uid://by3lauvagb334" path="res://music&sounds/533435__microtubule__carrots-slicing.wav" id="6_tnh2f"]
@@ -39,6 +40,12 @@ offset_right = 1711.0
 offset_bottom = 803.0
 theme_override_font_sizes/font_size = 50
 text = "Next"
+
+[node name="Onion" type="Sprite2D" parent="."]
+position = Vector2(1006, 561)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_d18fm")
 
 [node name="FullCarrot" type="Sprite2D" parent="."]
 position = Vector2(958, 573)
@@ -97,6 +104,7 @@ offset_left = 37.0
 offset_top = 11.0
 offset_right = 371.0
 offset_bottom = 105.0
+text = "Score: "
 
 [node name="TextBox" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
@@ -131,5 +139,5 @@ text = "Press \"Space\" to continue"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[connection signal="pressed" from="NextButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="timeout" from="Knife/Cutting_Timer" to="." method="_on_cutting_timer_timeout"]

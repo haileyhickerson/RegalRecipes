@@ -110,7 +110,7 @@ func _on_steak_button_down() -> void:
 # check if peas have been released
 func _on_steak_button_up() -> void:
 	steak_dragging = false;
-
+	$PlopSound.play()
 
 # check if potato is currently being pressed down
 func _on_potato_button_down() -> void:
@@ -120,7 +120,8 @@ func _on_potato_button_down() -> void:
 # check if potato has been released
 func _on_potato_button_up() -> void:
 	potato_dragging = false;
-
+	$PlopSound.play()
+	
 # check if butter1 is currently being pressed down
 func _on_butter_1_button_down() -> void:
 	butter1_dragging = true;
@@ -129,7 +130,8 @@ func _on_butter_1_button_down() -> void:
 # check if butter1 has been released
 func _on_butter_1_button_up() -> void:
 	butter1_dragging = false;
-
+	$PlopSound.play()
+	
 # check if butter2 has been released
 func _on_butter_2_button_down() -> void:
 	butter2_dragging = true;
@@ -138,6 +140,7 @@ func _on_butter_2_button_down() -> void:
 # check if butter2 has been released
 func _on_butter_2_button_up() -> void:
 	butter2_dragging = false;
+	$PlopSound.play()
 	
 func _on_carrot_1_button_down() -> void:
 	carrot1_dragging = true;
@@ -146,7 +149,7 @@ func _on_carrot_1_button_down() -> void:
 
 func _on_carrot_1_button_up() -> void:
 	carrot1_dragging = false;
-
+	$PlopSound.play()
 
 func _on_carrot_2_button_down() -> void:
 	carrot2_dragging = true;
@@ -155,6 +158,7 @@ func _on_carrot_2_button_down() -> void:
 
 func _on_carrot_2_button_up() -> void:
 	carrot2_dragging = false;
+	$PlopSound.play()
 
 func _on_carrot_3_button_down() -> void:
 	carrot3_dragging = true;
@@ -163,7 +167,7 @@ func _on_carrot_3_button_down() -> void:
 
 func _on_carrot_3_button_up() -> void:
 	carrot3_dragging = false;
-	
+	$PlopSound.play()
 
 
 # checks when center of peas has entered pea target area

@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://cvr2aoqdlckoa"]
+[gd_scene load_steps=49 format=3 uid="uid://cvr2aoqdlckoa"]
 
 [ext_resource type="Script" path="res://plating.gd" id="1_w55mi"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_efjw4"]
@@ -38,6 +38,7 @@
 [ext_resource type="BitMap" uid="uid://8ub7j5bf2sxj" path="res://art/Cheese3_Mask.png" id="27_sgidx"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="37_wvajo"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="38_7o3ny"]
+[ext_resource type="AudioStream" uid="uid://djomc6da7lwrx" path="res://music&sounds/Plop.wav" id="41_r153b"]
 [ext_resource type="Texture2D" uid="uid://clopys7kwhryi" path="res://art/FancyCircle (1).png" id="42_ny8xw"]
 [ext_resource type="Texture2D" uid="uid://62217bqvvk7l" path="res://art/ButterspoonHead.png" id="43_gp3ct"]
 
@@ -428,6 +429,10 @@ autowrap_mode = 3
 position = Vector2(348, 131)
 scale = Vector2(0.187037, 0.187037)
 texture = ExtResource("43_gp3ct")
+
+[node name="PlopSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("41_r153b")
+volume_db = 1.333
 
 [connection signal="pressed" from="HintButton" to="." method="_on_hint_button_pressed"]
 [connection signal="pressed" from="Taste Test Button" to="." method="_on_taste_test_button_pressed"]

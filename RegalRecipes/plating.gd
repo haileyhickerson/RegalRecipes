@@ -116,6 +116,7 @@ func _on_pea_button_button_down() -> void:
 # check if peas have been released
 func _on_pea_button_button_up() -> void:
 	peas_dragging = false;
+	$PlopSound.play()
 
 
 # check if cheese 1 is currently being pressed down
@@ -126,6 +127,7 @@ func _on_cheese_1_button_button_down() -> void:
 # check if cheese 1 has been released
 func _on_cheese_1_button_button_up() -> void:
 	cheese1_dragging = false;
+	$PlopSound.play()
 
 # check if cheese 2 is currently being pressed down
 func _on_cheese_2_button_button_down() -> void:
@@ -135,16 +137,16 @@ func _on_cheese_2_button_button_down() -> void:
 # check if cheese 2 has been released
 func _on_cheese_2_button_button_up() -> void:
 	cheese2_dragging = false;
-
+	$PlopSound.play()
 # check if cheese 3 has been released
 func _on_cheese_3_button_button_down() -> void:
 	cheese3_dragging = true;
 	mouse_offset = $BowlsContainer/PinkBowl/Cheese3.global_position - get_global_mouse_position()
-
+	
 # check if cheese 3 has been released
 func _on_cheese_3_button_button_up() -> void:
 	cheese3_dragging = false;
-	
+	$PlopSound.play()
 func _on_bacon_1_button_button_down() -> void:
 	bacon1_dragging = true;
 	mouse_offset = $BowlsContainer/YellowPlate/Bacon1.global_position - get_global_mouse_position()
@@ -152,7 +154,7 @@ func _on_bacon_1_button_button_down() -> void:
 
 func _on_bacon_1_button_button_up() -> void:
 	bacon1_dragging = false;
-
+	$PlopSound.play()
 
 func _on_bacon_2_button_button_down() -> void:
 	bacon2_dragging = true;
@@ -161,7 +163,8 @@ func _on_bacon_2_button_button_down() -> void:
 
 func _on_bacon_2_button_button_up() -> void:
 	bacon2_dragging = false;
-
+	$PlopSound.play()
+	
 func _on_bacon_3_button_button_down() -> void:
 	bacon3_dragging = true;
 	mouse_offset = $BowlsContainer/YellowPlate/Bacon3.global_position - get_global_mouse_position()
@@ -169,7 +172,7 @@ func _on_bacon_3_button_button_down() -> void:
 
 func _on_bacon_3_button_button_up() -> void:
 	bacon3_dragging = false;
-	
+	$PlopSound.play()
 
 
 # checks when center of peas has entered pea target area

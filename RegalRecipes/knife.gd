@@ -6,9 +6,9 @@ extends Area2D
 # Knife dimensions
 #var margin_of_error = 10  # How close knife needs to be to make a cut
 
-func _input(event):
-	if event.is_action_pressed("action") or event is InputEventMouseButton and event.pressed:
-		emit_signal("attempt_cut")
+#func _input(event):
+	#if event.is_action_pressed("action") or event is InputEventMouseButton and event.pressed:
+		#emit_signal("attempt_cut")
 
 
 func _process(delta):

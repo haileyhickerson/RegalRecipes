@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://fnpxcxl4dqgq"]
+[gd_scene load_steps=37 format=3 uid="uid://fnpxcxl4dqgq"]
 
 [ext_resource type="Script" path="res://plating2.gd" id="1_58mmm"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_ehwaa"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://bhwndpgya3aox" path="res://art/Potato_Click.png" id="26_uf3y3"]
 [ext_resource type="Texture2D" uid="uid://3gi2mc7h4sa1" path="res://art/Potato_Hover.png" id="27_ho7w8"]
 [ext_resource type="BitMap" uid="uid://xri70cf7kml5" path="res://art/Potato_Mask.png" id="28_iwemn"]
+[ext_resource type="AudioStream" uid="uid://djomc6da7lwrx" path="res://music&sounds/Plop.wav" id="29_258y0"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="37_gfi2s"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="38_104ty"]
 [ext_resource type="Texture2D" uid="uid://clopys7kwhryi" path="res://art/FancyCircle (1).png" id="39_vfia2"]
@@ -450,6 +451,10 @@ autowrap_mode = 3
 position = Vector2(348, 131)
 scale = Vector2(0.187037, 0.187037)
 texture = ExtResource("40_ixw7m")
+
+[node name="PlopSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("29_258y0")
+volume_db = 1.333
 
 [connection signal="pressed" from="HintButton" to="." method="_on_hint_button_pressed"]
 [connection signal="pressed" from="Taste Test Button" to="." method="_on_taste_test_button_pressed"]
