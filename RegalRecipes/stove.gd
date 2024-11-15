@@ -51,7 +51,6 @@ func on_pan_click():
 		print("Meat flipped!")
 		flip_allowed = false
 		meat_animated_sprite.play("cooked")
-		print($StoveKnob.rotation)
 		$CookingBar.value = 60
 		$FlipText.hide()
 	else:
@@ -86,20 +85,24 @@ func end_cooking():
 	set_process(false)
 
 	# Score logic
-	var score = calculate_score(correct_temp, !undercooked, !overcooked)
+	var score = calculate_score(!undercooked, !overcooked)
 	print("Final Score:", score)
-	$ScoreTextBox/Score.text = str(score) + " points. Nice job!"
+	if undercooked:
+		$ScoreTextBox/Instructions.text = "You undercooked the meat! You scored:"
+		$ScoreTextBox/Score.text = str(score) + " points. Do better!"
+	elif overcooked:
+		$ScoreTextBox/Instructions.text = "You overcooked the meat! You scored:"
+		$ScoreTextBox/Score.text = str(score) + " points. Try again!"
+	else:
+		$ScoreTextBox/Score.text = str(score) + " points. Nice job!"
 	$ScoreTextBox.show()
 	PlayerVariables.stove_completed = true
 	PlayerVariables.stove_score = score
 	$NextButton.show()
 
-func calculate_score(temp_correct: bool, flip_correct: bool, perfect_cook: bool) -> int:
+func calculate_score(flip_correct: bool, perfect_cook: bool) -> int:
 	var stove_knob = $StoveKnob
-	if stove_knob.final_temperature():
-		temp_score = 50
-	else:
-		temp_score = 0
+	temp_score = stove_knob.get_score()
 	if flip_correct:
 		flip_score = 25
 	else:

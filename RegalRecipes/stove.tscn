@@ -171,7 +171,7 @@ theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("10_efodi")
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 65
 text = "\"Well done! You cooked the meat and scored:\""
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -184,7 +184,7 @@ offset_bottom = 58.062
 theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
 theme_override_fonts/font = ExtResource("10_efodi")
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 
 [node name="ContinueText" type="Label" parent="ScoreTextBox"]
@@ -194,7 +194,7 @@ offset_right = 261.142
 offset_bottom = 297.478
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_efodi")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 45
 text = "Press \"Next\" to continue"
 horizontal_alignment = 1
 

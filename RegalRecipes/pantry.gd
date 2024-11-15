@@ -17,6 +17,12 @@ var onion_count = 0
 var potato_count = 0
 var butter_count = 0
 var sauce_count = 0
+var raspberry_count = 0
+var eggs_count = 0
+var cakemix_count = 0
+var water_count = 0
+var jam_count = 0
+var cream_count = 0
 
 var mouse_offset = Vector3.ZERO;
 
@@ -67,41 +73,55 @@ func update_score():
 
 # sets display
 func set_display():
-	if $VBoxContainer != null and PlayerVariables.curr_recipe == 0:
-		# "Peas", "Bacon", "Cheese", "Dressing"
-		$VBoxContainer/ingredient_label1.text = "Bacon: " + str(bacon_count) + "/3"
-		$VBoxContainer/ingredient_label2.text = "Peas: " + str(peas_count) + "/1"
-		$VBoxContainer/ingredient_label3.text = "Cheese: " + str(cheese_count) + "/1"
-		$VBoxContainer/ingredient_label4.text = "Salad Dressing: " + str(dressing_count) + "/1"
-		$VBoxContainer/ingredient_label5.text = ""
-		$VBoxContainer/ingredient_label6.text = ""
-		$VBoxContainer/ingredient_label7.text = ""
-		
-		if bacon_count == 3 and peas_count == 1 and cheese_count == 1 and dressing_count == 1:
-			$ScoreTextbox/Score.text = str(starting_score) + " points! Great job!"
-			$ScoreTextbox.show()
-			$NextButton.show()
-			PlayerVariables.pantry_completed = true
-			PlayerVariables.pantry_score = starting_score
+	if $VBoxContainer != null:
+		if PlayerVariables.curr_recipe == 0:
+			# "Peas", "Bacon", "Cheese", "Dressing"
+			$VBoxContainer/ingredient_label1.text = "Bacon: " + str(bacon_count) + "/3"
+			$VBoxContainer/ingredient_label2.text = "Peas: " + str(peas_count) + "/1"
+			$VBoxContainer/ingredient_label3.text = "Cheese: " + str(cheese_count) + "/1"
+			$VBoxContainer/ingredient_label4.text = "Salad Dressing: " + str(dressing_count) + "/1"
+			$VBoxContainer/ingredient_label5.text = ""
+			$VBoxContainer/ingredient_label6.text = ""
+			$VBoxContainer/ingredient_label7.text = ""
 			
-	if $VBoxContainer != null and PlayerVariables.curr_recipe == 1:
-		# "Carrots", "Steak", "Garlic", "Onion", "Potato", "Butter", "Steak Sauce"
-		$VBoxContainer/ingredient_label1.text = "Carrots: " + str(carrot_count) + "/3"
-		$VBoxContainer/ingredient_label2.text = "Steak: " + str(steak_count) + "/1"
-		$VBoxContainer/ingredient_label3.text = "Garlic: " + str(garlic_count) + "/1"
-		$VBoxContainer/ingredient_label4.text = "Onion: " + str(onion_count) + "/1"
-		$VBoxContainer/ingredient_label5.text = "Potato: " + str(potato_count) + "/1"
-		$VBoxContainer/ingredient_label6.text = "Butter: " + str(butter_count) + "/1"
-		$VBoxContainer/ingredient_label7.text = "Steak Sauce: " + str(sauce_count) + "/1"
+			if bacon_count == 3 and peas_count == 1 and cheese_count == 1 and dressing_count == 1:
+				$ScoreTextbox/Score.text = str(starting_score) + " points! Great job!"
+				$ScoreTextbox.show()
+				$NextButton.show()
+				PlayerVariables.pantry_completed = true
+				PlayerVariables.pantry_score = starting_score
+				
+		elif PlayerVariables.curr_recipe == 1:
+			# "Carrots", "Steak", "Garlic", "Onion", "Potato", "Butter", "Steak Sauce"
+			$VBoxContainer/ingredient_label1.text = "Carrots: " + str(carrot_count) + "/3"
+			$VBoxContainer/ingredient_label2.text = "Steak: " + str(steak_count) + "/1"
+			$VBoxContainer/ingredient_label3.text = "Garlic: " + str(garlic_count) + "/1"
+			$VBoxContainer/ingredient_label4.text = "Onion: " + str(onion_count) + "/1"
+			$VBoxContainer/ingredient_label5.text = "Potato: " + str(potato_count) + "/1"
+			$VBoxContainer/ingredient_label6.text = "Butter: " + str(butter_count) + "/1"
+			$VBoxContainer/ingredient_label7.text = "Steak Sauce: " + str(sauce_count) + "/1"
 			
-		
-		if carrot_count == 3 and steak_count == 1 and garlic_count == 1 and onion_count == 1 and potato_count == 1 and butter_count == 1 and sauce_count == 1:
-			$ScoreTextbox/Score.text = str(starting_score) + " points! Great job!"
-			$ScoreTextbox.show()
-			$NextButton.show()
-			PlayerVariables.pantry_completed = true
-			PlayerVariables.pantry_score = starting_score
-	
+			if carrot_count == 3 and steak_count == 1 and garlic_count == 1 and onion_count == 1 and potato_count == 1 and butter_count == 1 and sauce_count == 1:
+				$ScoreTextbox/Score.text = str(starting_score) + " points! Great job!"
+				$ScoreTextbox.show()
+				$NextButton.show()
+				PlayerVariables.pantry_completed = true
+				PlayerVariables.pantry_score = starting_score
+		else: # recipe 3
+			$VBoxContainer/ingredient_label1.text = "Raspberries: " + str(raspberry_count) + "/3"
+			$VBoxContainer/ingredient_label2.text = "Eggs: " + str(eggs_count) + "/2"
+			$VBoxContainer/ingredient_label3.text = "Cake Mix: " + str(cakemix_count) + "/1"
+			$VBoxContainer/ingredient_label4.text = "Butter: " + str(butter_count) + "/1"
+			$VBoxContainer/ingredient_label5.text = "Water: " + str(water_count) + "/1"
+			$VBoxContainer/ingredient_label6.text = "Raspberry Jam: " + str(jam_count) + "/1"
+			$VBoxContainer/ingredient_label7.text = "Whipped Cream: " + str(cream_count) + "/1"
+			
+			if raspberry_count == 3 and eggs_count == 2 and cakemix_count == 1 and butter_count == 1 and water_count == 1 and raspberry_count == 1 and cream_count == 1:
+				$ScoreTextbox/Score.text = str(starting_score) + " points! Great job!"
+				$ScoreTextbox.show()
+				$NextButton.show()
+				PlayerVariables.pantry_completed = true
+				PlayerVariables.pantry_score = starting_score
 
 func _on_back_button_pressed():
 	get_tree().change_scene_to_file("res://kitchen.tscn")

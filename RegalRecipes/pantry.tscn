@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://bhyucviieqbhs"]
+[gd_scene load_steps=73 format=3 uid="uid://bhyucviieqbhs"]
 
 [ext_resource type="Script" path="res://pantry.gd" id="1_xewv2"]
 [ext_resource type="Texture2D" uid="uid://ckbq14kxwn8jm" path="res://art/EmptryPantry.png" id="2_1174c"]
@@ -61,6 +61,7 @@
 [ext_resource type="Texture2D" uid="uid://uytogkj1b67g" path="res://art/SteakSauce_Click.png" id="54_otxpy"]
 [ext_resource type="Texture2D" uid="uid://dbc7wjsy37w6k" path="res://art/SteakSauce_Hover.png" id="55_4qe3m"]
 [ext_resource type="BitMap" uid="uid://bb8ewjh1yb0p2" path="res://art/SteakSauce_Mask.png" id="56_bb3pn"]
+[ext_resource type="Texture2D" uid="uid://dank662vladc" path="res://art/raspberry holder.png" id="57_pq13p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rcusd"]
 radius = 156.32
@@ -81,6 +82,10 @@ radius = 15.2197
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eklmv"]
 radius = 35.5596
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mt2m4"]
+radius = 70.2466
+height = 175.523
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vw0ky"]
 size = Vector2(6426.67, 141.667)
@@ -545,6 +550,34 @@ rotation = -0.764082
 scale = Vector2(4.95025, 1.76236)
 shape = SubResource("CircleShape2D_eklmv")
 
+[node name="Raspberries" type="RigidBody2D" parent="." groups=["ingredients"]]
+script = ExtResource("9_nqxk6")
+
+[node name="TextureButton" type="TextureButton" parent="Raspberries"]
+offset_left = 795.0
+offset_top = 293.0
+offset_right = 3795.0
+offset_bottom = 3293.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("57_pq13p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Raspberries"]
+position = Vector2(894, 475)
+rotation = 0.568977
+shape = SubResource("CapsuleShape2D_mt2m4")
+
+[node name="Egg1" type="RigidBody2D" parent="."]
+
+[node name="Egg2" type="RigidBody2D" parent="."]
+
+[node name="CakeMix" type="RigidBody2D" parent="."]
+
+[node name="Water" type="RigidBody2D" parent="."]
+
+[node name="RaspberryJam" type="RigidBody2D" parent="."]
+
+[node name="WhippedCream" type="RigidBody2D" parent="."]
+
 [node name="NextButton" type="Button" parent="."]
 offset_left = 885.0
 offset_top = 903.0
@@ -645,17 +678,17 @@ offset_bottom = 58.062
 theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
 theme_override_fonts/font = ExtResource("14_ru7wo")
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="ScoreTextbox"]
-offset_left = -153.982
-offset_top = 253.097
-offset_right = 158.018
-offset_bottom = 295.097
+offset_left = -237.168
+offset_top = 251.327
+offset_right = 231.832
+offset_bottom = 314.327
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("14_ru7wo")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 45
 text = "Press \"Next\" to continue"
 
 [node name="InstructionsTextbox" type="Sprite2D" parent="."]
@@ -683,7 +716,7 @@ offset_bottom = 58.062
 theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
 theme_override_fonts/font = ExtResource("14_ru7wo")
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="InstructionsTextbox"]
