@@ -4,7 +4,7 @@ extends Sprite2D
 # Target rotation for the correct temperature (e.g., 90 degrees)
 var target_rotation = 90
 # Speed of rotation in degrees per second
-var rotation_speed = 200
+var rotation_speed = 250
 # Track if the temperature was set correctly
 var temp_score
 

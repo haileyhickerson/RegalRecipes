@@ -108,15 +108,15 @@ func set_display():
 				PlayerVariables.pantry_completed = true
 				PlayerVariables.pantry_score = starting_score
 		else: # recipe 3
-			$VBoxContainer/ingredient_label1.text = "Raspberries: " + str(raspberry_count) + "/3"
+			$VBoxContainer/ingredient_label1.text = "Raspberries: " + str(raspberry_count) + "/1"
 			$VBoxContainer/ingredient_label2.text = "Eggs: " + str(eggs_count) + "/2"
 			$VBoxContainer/ingredient_label3.text = "Cake Mix: " + str(cakemix_count) + "/1"
-			$VBoxContainer/ingredient_label4.text = "Butter: " + str(butter_count) + "/1"
-			$VBoxContainer/ingredient_label5.text = "Water: " + str(water_count) + "/1"
-			$VBoxContainer/ingredient_label6.text = "Raspberry Jam: " + str(jam_count) + "/1"
+			$VBoxContainer/ingredient_label4.text = "Water: " + str(water_count) + "/1"
+			$VBoxContainer/ingredient_label5.text = "Raspberry Jam: " + str(jam_count) + "/1"
+			$VBoxContainer/ingredient_label6.text = "Butter: " + str(butter_count) + "/1"
 			$VBoxContainer/ingredient_label7.text = "Whipped Cream: " + str(cream_count) + "/1"
 			
-			if raspberry_count == 3 and eggs_count == 2 and cakemix_count == 1 and butter_count == 1 and water_count == 1 and raspberry_count == 1 and cream_count == 1:
+			if raspberry_count == 1 and eggs_count == 2 and cakemix_count == 1 and butter_count == 1 and water_count == 1 and jam_count == 1 and cream_count == 1:
 				$ScoreTextbox/Score.text = str(starting_score) + " points! Great job!"
 				$ScoreTextbox.show()
 				$NextButton.show()
@@ -480,3 +480,153 @@ func _on_sauce_button_up() -> void:
 		sauce_count += 1
 		set_display()
 		$VBoxContainer/ingredient_label7.modulate = Color(0, 1, 0)
+
+
+func _on_raspberry_button_down() -> void:
+	$Raspberries.dragging = true
+	mouse_offset = $Raspberries.global_position - get_global_mouse_position()
+	if $Raspberries.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score()
+
+
+func _on_raspberry_button_up() -> void:
+	$Raspberries.dragging = false
+	if $Raspberries.over_basket and $Raspberries.name in correct_ingredients:
+		$Raspberries.move_speed = Vector2.ZERO
+		$Raspberries.set_velocity()
+		$Raspberries.in_basket = true
+		raspberry_count += 1
+		set_display()
+		$VBoxContainer/ingredient_label1.modulate = Color(0, 1, 0) # Replace with function body.
+
+
+
+func _on_egg_1_button_down() -> void:
+	$Egg1.dragging = true
+	mouse_offset = $Egg1.global_position - get_global_mouse_position()
+	if $Egg1.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score() # Replace with function body.
+
+
+func _on_egg_1_button_up() -> void:
+	$Egg1.dragging = false
+	if $Egg1.over_basket and $Egg1.name in correct_ingredients:
+		$Egg1.move_speed = Vector2.ZERO
+		$Egg1.set_velocity()
+		$Egg1.in_basket = true
+		eggs_count += 1
+		set_display()
+		if eggs_count == 2:
+			$VBoxContainer/ingredient_label2.modulate = Color(0, 1, 0) # Replace with function body.
+
+
+func _on_egg_2_button_down() -> void:
+	$Egg2.dragging = true
+	mouse_offset = $Egg2.global_position - get_global_mouse_position()
+	if $Egg2.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score() # Replace with function body.
+
+
+func _on_egg_2_button_up() -> void:
+	$Egg2.dragging = false
+	if $Egg2.over_basket and $Egg2.name in correct_ingredients:
+		$Egg2.move_speed = Vector2.ZERO
+		$Egg2.set_velocity()
+		$Egg2.in_basket = true
+		eggs_count += 1
+		set_display()
+		if eggs_count == 2:
+			$VBoxContainer/ingredient_label2.modulate = Color(0, 1, 0) # Replace with function body.
+
+
+func _on_cake_mix_button_down() -> void:
+	$CakeMix.dragging = true
+	mouse_offset = $CakeMix.global_position - get_global_mouse_position()
+	if $CakeMix.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score() # Replace with function body.
+
+
+func _on_cake_mix_button_up() -> void:
+	$CakeMix.dragging = false
+	if $CakeMix.over_basket and $CakeMix.name in correct_ingredients:
+		$CakeMix.move_speed = Vector2.ZERO
+		$CakeMix.set_velocity()
+		$CakeMix.in_basket = true
+		cakemix_count += 1
+		set_display()
+		$VBoxContainer/ingredient_label3.modulate = Color(0, 1, 0) # Replace with function body.
+
+
+func _on_water_button_down() -> void:
+	$Water.dragging = true
+	mouse_offset = $Water.global_position - get_global_mouse_position()
+	if $Water.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score() # Replace with function body.
+
+
+func _on_water_button_up() -> void:
+	$Water.dragging = false
+	if $Water.over_basket and $Water.name in correct_ingredients:
+		$Water.move_speed = Vector2.ZERO
+		$Water.set_velocity()
+		$Water.in_basket = true
+		water_count += 1
+		set_display()
+		$VBoxContainer/ingredient_label4.modulate = Color(0, 1, 0) # Replace with function body.
+
+
+func _on_raspberry_jam_button_down() -> void:
+	$RaspberryJam.dragging = true
+	mouse_offset = $RaspberryJam.global_position - get_global_mouse_position()
+	if $RaspberryJam.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score() # Replace with function body.
+
+
+func _on_raspberry_jam_button_up() -> void:
+	$RaspberryJam.dragging = false
+	if $RaspberryJam.over_basket and $RaspberryJam.name in correct_ingredients:
+		$RaspberryJam.move_speed = Vector2.ZERO
+		$RaspberryJam.set_velocity()
+		$RaspberryJam.in_basket = true
+		jam_count += 1
+		set_display()
+		$VBoxContainer/ingredient_label5.modulate = Color(0, 1, 0) # Replace with function body.
+
+
+func _on_whipped_cream_button_down() -> void:
+	$WhippedCream.dragging = true
+	mouse_offset = $WhippedCream.global_position - get_global_mouse_position()
+	if $WhippedCream.name not in correct_ingredients:
+		starting_score -= 10
+		if starting_score < 0:
+			starting_score = 0
+		update_score() # Replace with function body.
+
+
+func _on_whipped_cream_button_up() -> void:
+	$WhippedCream.dragging = false
+	if $WhippedCream.over_basket and $WhippedCream.name in correct_ingredients:
+		$WhippedCream.move_speed = Vector2.ZERO
+		$WhippedCream.set_velocity()
+		$WhippedCream.in_basket = true
+		cream_count += 1
+		set_display()
+		$VBoxContainer/ingredient_label7.modulate = Color(0, 1, 0) # Replace with function body.
