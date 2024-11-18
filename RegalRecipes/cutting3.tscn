@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://cutting.gd" id="1_0e7lu"]
 [ext_resource type="Texture2D" uid="uid://b7paioai6w1g5" path="res://art/CuttingBoard.png" id="2_jmn5s"]
-[ext_resource type="Texture2D" uid="uid://dank662vladc" path="res://art/raspberry holder.png" id="3_ve1si"]
+[ext_resource type="Texture2D" uid="uid://cscsovlk3pmg0" path="res://art/Raspberry.png" id="3_kyse7"]
 [ext_resource type="Script" path="res://knife.gd" id="4_dvws3"]
 [ext_resource type="Texture2D" uid="uid://b1fq84if3d2ys" path="res://art/Knife.png" id="5_dy8jo"]
 [ext_resource type="AudioStream" uid="uid://by3lauvagb334" path="res://music&sounds/533435__microtubule__carrots-slicing.wav" id="6_7u4jh"]
@@ -45,22 +45,22 @@ theme_override_font_sizes/font_size = 50
 text = "Next"
 
 [node name="Rasberry1" type="Sprite2D" parent="."]
-position = Vector2(628, 607)
-rotation = 0.621337
-scale = Vector2(0.09, 0.09)
-texture = ExtResource("3_ve1si")
+position = Vector2(639, 606)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_kyse7")
 
 [node name="Rasberry2" type="Sprite2D" parent="."]
-position = Vector2(937, 615)
-rotation = 0.621337
-scale = Vector2(0.09, 0.09)
-texture = ExtResource("3_ve1si")
+position = Vector2(950, 606)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_kyse7")
 
 [node name="Rasberry3" type="Sprite2D" parent="."]
-position = Vector2(1219, 614)
-rotation = 0.621337
-scale = Vector2(0.09, 0.09)
-texture = ExtResource("3_ve1si")
+position = Vector2(1240, 606)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_kyse7")
 
 [node name="Cut1" type="Line2D" parent="."]
 points = PackedVector2Array(938, 428, 938, 798)
