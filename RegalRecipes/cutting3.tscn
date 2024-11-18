@@ -108,6 +108,7 @@ offset_right = 1251.0
 offset_bottom = 153.0
 
 [node name="Score_Label" type="Label" parent="Score"]
+layout_mode = 0
 offset_left = 37.0
 offset_top = 11.0
 offset_right = 371.0

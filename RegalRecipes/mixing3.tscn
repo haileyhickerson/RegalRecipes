@@ -1,0 +1,664 @@
+[gd_scene load_steps=50 format=3 uid="uid://bei6v6vhdcxg4"]
+
+[ext_resource type="Script" path="res://mixing3.gd" id="1_ut4b4"]
+[ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_mvjck"]
+[ext_resource type="Texture2D" uid="uid://b18m0772uijl1" path="res://art/BlueBowl.png" id="3_fte8l"]
+[ext_resource type="Texture2D" uid="uid://2kdq4gi7o2wa" path="res://art/SquareOutline (3).png" id="4_02ix3"]
+[ext_resource type="Texture2D" uid="uid://cxmwjp86fnw6b" path="res://art/CakeMix1.png" id="5_10jcs"]
+[ext_resource type="Texture2D" uid="uid://bt5awn4htkuio" path="res://art/CakeMix2.png" id="6_8105g"]
+[ext_resource type="Texture2D" uid="uid://bpovfro1ix3p1" path="res://art/CakeMix3.png" id="7_vsvmi"]
+[ext_resource type="Texture2D" uid="uid://c5tool2lr8tw2" path="res://art/CakeMix4.png" id="8_8pomy"]
+[ext_resource type="Texture2D" uid="uid://dxkrv8n27twtd" path="res://art/CakeMix5.png" id="9_pwchd"]
+[ext_resource type="Texture2D" uid="uid://0341exio6yvh" path="res://art/CakeMix6.png" id="10_33jtl"]
+[ext_resource type="Texture2D" uid="uid://d3npmu4f4eoja" path="res://art/CakeMix7.png" id="11_df56m"]
+[ext_resource type="Texture2D" uid="uid://cglhg7py64efo" path="res://art/CakeMix8.png" id="12_s2g0b"]
+[ext_resource type="Texture2D" uid="uid://c8u4rwgqhe2d2" path="res://art/CakeBatterMixed.png" id="13_hrj2u"]
+[ext_resource type="Texture2D" uid="uid://bgfo0dp7pow5o" path="res://art/CakeEggIntro1.png" id="14_yud1o"]
+[ext_resource type="Texture2D" uid="uid://biykeij3s6yhb" path="res://art/CakeEggIntro2.png" id="15_87lql"]
+[ext_resource type="Texture2D" uid="uid://dmf5aasbt4g5p" path="res://art/CakeEggIntro3.png" id="16_lryi4"]
+[ext_resource type="Texture2D" uid="uid://nqlv7cvlibi3" path="res://art/CakeEggIntro4.png" id="17_mb0v2"]
+[ext_resource type="Texture2D" uid="uid://kch6ugb7ybcb" path="res://art/CakeEggIntro5.png" id="18_jyasb"]
+[ext_resource type="Texture2D" uid="uid://desuswer47a7m" path="res://art/EggBatter1.png" id="19_7dx5p"]
+[ext_resource type="Texture2D" uid="uid://8oxa28jc4g5s" path="res://art/EggBatter2.png" id="20_0rdoi"]
+[ext_resource type="Texture2D" uid="uid://dvqpgrhmyq044" path="res://art/EggBatter3.png" id="21_ny5y1"]
+[ext_resource type="Texture2D" uid="uid://bulucbnf2dqew" path="res://art/EggBatter4.png" id="22_t3qoh"]
+[ext_resource type="Texture2D" uid="uid://dwdt1kw83fcbj" path="res://art/EggBatter5.png" id="23_dbowx"]
+[ext_resource type="Texture2D" uid="uid://b51gp5b3n8wrs" path="res://art/EggBatter6.png" id="24_u52cc"]
+[ext_resource type="Texture2D" uid="uid://dgg5fw5nwwns2" path="res://art/EggBatter7.png" id="25_58xbo"]
+[ext_resource type="Texture2D" uid="uid://cy0syqhf2i81q" path="res://art/EggBatter8.png" id="26_52uoo"]
+[ext_resource type="Texture2D" uid="uid://br41scewf82aw" path="res://art/EggBatter9.png" id="27_hfqds"]
+[ext_resource type="Texture2D" uid="uid://da1epa7pv1ayf" path="res://art/EggBatter10.png" id="28_hcyoa"]
+[ext_resource type="Texture2D" uid="uid://bhvi4yvmv1jek" path="res://art/EggBatterFinal.png" id="29_o2hpe"]
+[ext_resource type="Texture2D" uid="uid://cjcpi4m5np1fv" path="res://art/play.png" id="34_7otlb"]
+[ext_resource type="Texture2D" uid="uid://dxugxbw6gpt0n" path="res://art/play_hover.png" id="35_ve7po"]
+[ext_resource type="BitMap" uid="uid://kdtfcv3g1m5w" path="res://art/play_pressed.png" id="36_tyl5j"]
+[ext_resource type="Texture2D" uid="uid://bggxy023qjunk" path="res://art/dot.png" id="37_gh0hy"]
+[ext_resource type="Texture2D" uid="uid://bqsuix2nuppwa" path="res://art/dot_press.png" id="38_5susa"]
+[ext_resource type="Texture2D" uid="uid://csx4mhfl5y8g6" path="res://art/dot_hover.png" id="39_1fuer"]
+[ext_resource type="BitMap" uid="uid://m4vjlqcojn4q" path="res://art/dot_clickmask.png" id="40_fo04l"]
+[ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="41_qw07c"]
+[ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="42_5y1vm"]
+[ext_resource type="Texture2D" uid="uid://4ku7r1pae5c" path="res://art/ArrowFrames/1.png" id="43_ukh0i"]
+[ext_resource type="Texture2D" uid="uid://bi7ai5wq7luin" path="res://art/ArrowFrames/2.png" id="44_hu4rc"]
+[ext_resource type="Texture2D" uid="uid://4sm7eplfenyi" path="res://art/ArrowFrames/3.png" id="45_355cs"]
+[ext_resource type="Texture2D" uid="uid://bovgkx1fg1n1p" path="res://art/ArrowFrames/4.png" id="46_3juqx"]
+[ext_resource type="Texture2D" uid="uid://byskijp7yp1gl" path="res://art/ArrowFrames/5.png" id="47_namxf"]
+[ext_resource type="Texture2D" uid="uid://cadne302r2unw" path="res://art/ArrowFrames/6.png" id="48_p14aa"]
+[ext_resource type="Texture2D" uid="uid://crxasd4ld3lyk" path="res://art/ArrowFrames/7.png" id="49_4l500"]
+[ext_resource type="Texture2D" uid="uid://20x43rtvmljf" path="res://art/ArrowFrames/8.png" id="50_4ebvx"]
+[ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="51_wwgkh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vysqn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_10jcs")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_10jcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8105g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vsvmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8pomy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pwchd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_33jtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_df56m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_s2g0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_10jcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8105g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vsvmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8pomy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pwchd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_33jtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_df56m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_s2g0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_10jcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8105g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vsvmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8pomy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pwchd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_33jtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_df56m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_s2g0b")
+}],
+"loop": false,
+"name": &"mix",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_10jcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8105g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vsvmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8pomy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pwchd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_33jtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_df56m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_s2g0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_10jcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8105g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vsvmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8pomy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pwchd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_33jtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_df56m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_s2g0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_10jcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8105g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vsvmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8pomy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pwchd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_33jtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_df56m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_s2g0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hrj2u")
+}],
+"loop": false,
+"name": &"mixed",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_yud1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_87lql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_lryi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_mb0v2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_jyasb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7dx5p")
+}],
+"loop": false,
+"name": &"steak_enter",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_7dx5p")
+}],
+"loop": true,
+"name": &"steak_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_7dx5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0rdoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ny5y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_t3qoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_dbowx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_u52cc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_58xbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_52uoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hfqds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_hcyoa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7dx5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0rdoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ny5y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_t3qoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_dbowx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_u52cc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_58xbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_52uoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hfqds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_hcyoa")
+}],
+"loop": false,
+"name": &"steak_mix",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_7dx5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0rdoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ny5y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_t3qoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_dbowx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_u52cc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_58xbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_52uoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hfqds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_hcyoa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7dx5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0rdoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ny5y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_t3qoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_dbowx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_u52cc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_58xbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_52uoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hfqds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_hcyoa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_o2hpe")
+}],
+"loop": false,
+"name": &"steak_mixed",
+"speed": 25.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gfxvl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_ukh0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_hu4rc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_355cs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_3juqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_namxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_p14aa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_4l500")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_4ebvx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Mixing3" type="Node2D"]
+script = ExtResource("1_ut4b4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_mvjck")
+
+[node name="BackButton" type="Button" parent="."]
+offset_left = 52.0
+offset_top = 31.0
+offset_right = 232.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[node name="BlueBowl" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.849537, 0.832322)
+texture = ExtResource("3_fte8l")
+
+[node name="MixingSquare" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.99, 0.99)
+texture = ExtResource("4_02ix3")
+
+[node name="SteakSauce" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_vysqn")
+animation = &"steak_mixed"
+
+[node name="Marker1" type="Marker2D" parent="."]
+position = Vector2(1377, 80)
+
+[node name="Marker2" type="Marker2D" parent="."]
+position = Vector2(1408, 500)
+
+[node name="Marker3" type="Marker2D" parent="."]
+position = Vector2(1383, 951)
+
+[node name="Marker4" type="Marker2D" parent="."]
+position = Vector2(942, 987)
+
+[node name="Marker5" type="Marker2D" parent="."]
+position = Vector2(486, 939)
+
+[node name="Marker6" type="Marker2D" parent="."]
+position = Vector2(468, 510)
+
+[node name="Marker7" type="Marker2D" parent="."]
+position = Vector2(494, 82)
+
+[node name="Marker8" type="Marker2D" parent="."]
+position = Vector2(934, 45)
+
+[node name="StartButton" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 936.0
+offset_top = 46.0
+offset_right = 986.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.859154, 0.859154)
+pivot_offset = Vector2(-0.06, 0)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("34_7otlb")
+texture_hover = ExtResource("35_ve7po")
+texture_click_mask = ExtResource("36_tyl5j")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarkerButton" type="TextureButton" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("37_gh0hy")
+texture_pressed = ExtResource("38_5susa")
+texture_hover = ExtResource("39_1fuer")
+texture_click_mask = ExtResource("40_fo04l")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextBox" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.564815, 0.564815)
+texture = ExtResource("41_qw07c")
+
+[node name="PressSpace" type="Label" parent="TextBox"]
+offset_left = -720.59
+offset_top = 249.639
+offset_right = 773.41
+offset_bottom = 754.639
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("42_5y1vm")
+theme_override_font_sizes/font_size = 50
+text = "Press \"Space\" to continue"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Instructions" type="Label" parent="TextBox"]
+offset_left = -701.115
+offset_top = -84.9836
+offset_right = 792.885
+offset_bottom = 420.016
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("42_5y1vm")
+theme_override_font_sizes/font_size = 100
+text = "Time to make the cake batter!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Instructions2" type="Label" parent="TextBox"]
+visible = false
+offset_left = -734.754
+offset_top = -111.541
+offset_right = 759.246
+offset_bottom = 393.459
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("42_5y1vm")
+theme_override_font_sizes/font_size = 75
+text = "To mix the batter, click each dot as it appears along the yellow shape."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Instructions3" type="Label" parent="TextBox"]
+visible = false
+offset_left = -722.36
+offset_top = -115.082
+offset_right = 771.64
+offset_bottom = 389.918
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("42_5y1vm")
+theme_override_font_sizes/font_size = 75
+text = "DON'T let your mouse go outside of the yellow, or you will have to restart!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ArrowStart" type="AnimatedSprite2D" parent="TextBox/Instructions3"]
+position = Vector2(713.508, -541.77)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_gfxvl")
+
+[node name="SteakText" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1663, 272)
+scale = Vector2(0.291239, 0.291239)
+texture = ExtResource("41_qw07c")
+
+[node name="Instructions" type="Label" parent="SteakText"]
+offset_left = -714.191
+offset_top = -157.946
+offset_right = 779.809
+offset_bottom = 347.054
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("42_5y1vm")
+theme_override_font_sizes/font_size = 110
+text = "Great! Now mix the 
+eggs into the batter!!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="OutsideOfSquare" type="Area2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="LeftSide" type="CollisionPolygon2D" parent="OutsideOfSquare"]
+rotation = 3.14159
+polygon = PackedVector2Array(0, -545, 2, -507, 46, -505, 118, -509, 405, -504, 454, -478, 488, -442, 504, -398, 506, -326, 507, -55, 508, 88, 506, 134, 505, 355, 506, 393, 496, 423, 475, 461, 440, 489, 403, 503, 278, 506, 104, 504, 27, 506, 1, 507, 2, 558, 986, 552, 988, -564)
+
+[node name="RightSide" type="CollisionPolygon2D" parent="OutsideOfSquare"]
+polygon = PackedVector2Array(0, -545, 2, -507, 46, -505, 118, -509, 405, -504, 454, -478, 488, -442, 504, -398, 506, -326, 507, -55, 508, 88, 506, 134, 505, 355, 506, 393, 496, 423, 475, 461, 440, 489, 403, 503, 278, 506, 104, 504, 27, 506, 1, 507, 2, 558, 986, 552, 988, -564)
+
+[node name="InnerSquare" type="CollisionPolygon2D" parent="OutsideOfSquare"]
+visible = false
+scale = Vector2(0.97, 0.97)
+polygon = PackedVector2Array(-348.454, -452.577, 372.165, -450.515, 404, -445, 431, -424, 445, -397, 451, -369, 451, 386, 434, 423, 405.155, 444.33, 379.381, 450.516, -384.536, 449.485, -410, 441, -435, 421, -450, 385, -452, -380, -442, -412, -416, -437, -387, -450)
+disabled = true
+
+[node name="NextButton" type="Button" parent="."]
+offset_left = 1679.0
+offset_top = 906.0
+offset_right = 1873.0
+offset_bottom = 1020.0
+theme_override_font_sizes/font_size = 50
+text = "Next"
+
+[node name="Plate" type="Sprite2D" parent="."]
+position = Vector2(210, 551)
+scale = Vector2(0.199537, 0.199537)
+texture = ExtResource("51_wwgkh")
+
+[node name="Timer" type="Label" parent="."]
+offset_left = 142.0
+offset_top = 497.0
+offset_right = 282.0
+offset_bottom = 607.0
+theme_override_colors/font_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("42_5y1vm")
+theme_override_font_sizes/font_size = 80
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(0.564815, 0.564815)
+texture = ExtResource("41_qw07c")
+
+[node name="FinalScore" type="Label" parent="ScoreBox"]
+offset_left = -743.606
+offset_top = -61.9672
+offset_right = 750.394
+offset_bottom = 443.033
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("42_5y1vm")
+theme_override_font_sizes/font_size = 75
+text = "b
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarkerButton" to="." method="_on_marker_button_pressed"]
+[connection signal="mouse_entered" from="OutsideOfSquare" to="." method="_on_outside_of_circle_mouse_entered"]
+[connection signal="mouse_exited" from="OutsideOfSquare" to="." method="_on_outside_of_circle_mouse_exited"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
