@@ -31,8 +31,9 @@ func _process(delta: float) -> void:
 	
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
+		total_cuts += 1
 		if total_cuts < 4:
-			total_cuts += 1
+			print(total_cuts)
 			##use marker2d position for knife
 			var knife_position_x= $Knife/KnifeTip.global_position.x
 			print("knife:",knife_position_x)
@@ -55,8 +56,6 @@ func _input(event):
 			
 		
 		if total_cuts ==4:
-			PlayerVariables.cutting_completed = true
-			
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			$NextButton.show()
 		#else:
@@ -84,7 +83,6 @@ func calculate_score(knife_position_x):
 		print("no points to calculate")
 		return 0
 	var closest_distance= point_distances.min()
-	var points_cut= total_possible_points/5
 	var points= int((100 -closest_distance)/3)
 	if score<=0:
 		score=0
@@ -109,7 +107,8 @@ func update_score_display():
 	#Cutting_Timer.start()
 
 func _on_next_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://kitchen.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://kitchen.tscn")
+	PlayerVariables.cutting_completed = true
 
 
 func _on_cutting_timer_timeout() -> void:

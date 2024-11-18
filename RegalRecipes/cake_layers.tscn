@@ -1,0 +1,145 @@
+[gd_scene load_steps=10 format=3 uid="uid://ce1hxiu7vhgmu"]
+
+[ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="1_jdp80"]
+[ext_resource type="Script" path="res://cake_layers.gd" id="1_xnitr"]
+[ext_resource type="Script" path="res://sponge_layers.gd" id="2_hojnh"]
+[ext_resource type="Texture2D" uid="uid://ckbq14kxwn8jm" path="res://art/EmptryPantry.png" id="3_g67k5"]
+[ext_resource type="Texture2D" uid="uid://cg45wie54ddns" path="res://art/cakelayer holder.png" id="5_f1bau"]
+[ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="6_cwio6"]
+[ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="7_wla1r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdoem"]
+size = Vector2(432, 162)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bwmt"]
+size = Vector2(228, 51)
+
+[node name="CakeLayers" type="Node2D"]
+script = ExtResource("1_xnitr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_jdp80")
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(960, 769)
+points = PackedVector2Array(0, -500, 0, 315)
+
+[node name="SpongeLayer1" type="Area2D" parent="."]
+position = Vector2(960, 931)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("2_hojnh")
+metadata/_edit_group_ = true
+
+[node name="Layer1" type="TextureButton" parent="SpongeLayer1"]
+texture_filter = 1
+offset_left = -1010.0
+offset_top = -244.0
+offset_right = 3970.0
+offset_bottom = 836.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("3_g67k5")
+stretch_mode = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpongeLayer1"]
+shape = SubResource("RectangleShape2D_cdoem")
+
+[node name="RasberryFilling" type="Area2D" parent="."]
+position = Vector2(960, 769)
+script = ExtResource("2_hojnh")
+
+[node name="Layer2" type="TextureButton" parent="RasberryFilling"]
+offset_left = -506.0
+offset_top = -45.0
+offset_right = 495.0
+offset_bottom = 39.0
+texture_normal = ExtResource("5_f1bau")
+stretch_mode = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RasberryFilling"]
+position = Vector2(2, -0.5)
+shape = SubResource("RectangleShape2D_1bwmt")
+
+[node name="SpongeLayer2" type="Area2D" parent="."]
+position = Vector2(960, 631)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("2_hojnh")
+metadata/_edit_group_ = true
+
+[node name="Layer3" type="TextureButton" parent="SpongeLayer2"]
+texture_filter = 1
+offset_left = -1010.0
+offset_top = -244.0
+offset_right = 3970.0
+offset_bottom = 836.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("3_g67k5")
+stretch_mode = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpongeLayer2"]
+shape = SubResource("RectangleShape2D_cdoem")
+
+[node name="Frosting" type="Area2D" parent="."]
+position = Vector2(960, 474)
+script = ExtResource("2_hojnh")
+metadata/_edit_group_ = true
+
+[node name="Layer4" type="TextureButton" parent="Frosting"]
+offset_left = -505.0
+offset_top = -50.0
+offset_right = 496.0
+offset_bottom = 34.0
+texture_normal = ExtResource("5_f1bau")
+stretch_mode = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frosting"]
+position = Vector2(-1, -2)
+shape = SubResource("RectangleShape2D_1bwmt")
+
+[node name="Score" type="Label" parent="."]
+offset_left = 912.0
+offset_top = 105.0
+offset_right = 973.0
+offset_bottom = 150.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("6_cwio6")
+theme_override_font_sizes/font_size = 41
+
+[node name="TextBox" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.564815, 0.564815)
+texture = ExtResource("7_wla1r")
+
+[node name="Instructions" type="Label" parent="TextBox"]
+offset_left = -729.443
+offset_top = -141.64
+offset_right = 764.557
+offset_bottom = 363.36
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_cwio6")
+theme_override_font_sizes/font_size = 75
+text = "Click on the layer to stack the cake! Make sure its on the plate!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PressSpace" type="Label" parent="TextBox"]
+offset_left = -720.59
+offset_top = 242.557
+offset_right = 773.41
+offset_bottom = 747.557
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_cwio6")
+theme_override_font_sizes/font_size = 50
+text = "Press \"Space\" to continue"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="button_up" from="SpongeLayer1/Layer1" to="." method="_on_layer_1_button_up"]
+[connection signal="button_up" from="RasberryFilling/Layer2" to="." method="_on_layer_2_button_up"]
+[connection signal="button_up" from="SpongeLayer2/Layer3" to="." method="_on_layer_3_button_up"]
+[connection signal="button_up" from="Frosting/Layer4" to="." method="_on_layer_4_button_up"]
