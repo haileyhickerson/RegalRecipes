@@ -117,11 +117,11 @@ func calculate_score(flip_correct: bool, perfect_cook: bool) -> int:
 	if flip_correct:
 		flip_score = 25
 	else:
-		flip_score = 0
+		flip_score = 10
 	if perfect_cook:
 		cook_score = 25
 	else:
-		cook_score = 0
+		cook_score = 10
 	return temp_score + flip_score + cook_score
 
 func _on_back_button_pressed() -> void:

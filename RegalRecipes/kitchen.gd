@@ -54,6 +54,8 @@ func _process(delta: float) -> void:
 		if PlayerVariables.curr_recipe == 0:
 			$ChefText/MoveText.hide()
 			$ChefText/GoToPantry.show()
+		else:
+			$ChefText.hide()
 			
 		
 	if PlayerVariables.pantry_completed:

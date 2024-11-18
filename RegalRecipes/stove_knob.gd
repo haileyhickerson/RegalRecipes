@@ -2,7 +2,7 @@ extends Sprite2D
 
 @export var stove_script: Node
 # Target rotation for the correct temperature (e.g., 90 degrees)
-var target_rotation = 0
+var target_rotation = 90
 # Speed of rotation in degrees per second
 var rotation_speed = 250
 # Track if the temperature was set correctly
@@ -27,7 +27,7 @@ func check_temperature():
 	print(abs(current_rotation))
 	
 	if temp_difference <= 10:
-		temp_score = 25
+		temp_score = 50
 	elif temp_difference <= 20:
 		temp_score = 30
 	elif temp_difference <= 30:
