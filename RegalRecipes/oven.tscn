@@ -1,0 +1,206 @@
+[gd_scene load_steps=21 format=3 uid="uid://5g7a36gtyd07"]
+
+[ext_resource type="Script" path="res://oven.gd" id="1_21c1x"]
+[ext_resource type="Texture2D" uid="uid://do0a4sku5kv4x" path="res://art/OvenOpen.png" id="1_lkc8v"]
+[ext_resource type="Texture2D" uid="uid://bf0x3psb3ake4" path="res://art/OvenKnob1.png" id="2_juhxu"]
+[ext_resource type="Script" path="res://knob_1.gd" id="3_uhcjj"]
+[ext_resource type="Texture2D" uid="uid://bffolr2uisqqn" path="res://art/OvenKnob2.png" id="4_id047"]
+[ext_resource type="Texture2D" uid="uid://dilaxluor1ffj" path="res://art/OvenKnob3.png" id="5_5o8vk"]
+[ext_resource type="Script" path="res://knob_2.gd" id="5_ymkpn"]
+[ext_resource type="Texture2D" uid="uid://cbkrb7pb0kwon" path="res://art/OvenKnob4.png" id="6_wrr35"]
+[ext_resource type="Script" path="res://knob_3.gd" id="7_nowlv"]
+[ext_resource type="Script" path="res://knob_4.gd" id="9_3blf5"]
+[ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="11_v3dkf"]
+[ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="12_7dbfu"]
+[ext_resource type="Texture2D" uid="uid://clopys7kwhryi" path="res://art/FancyCircle (1).png" id="13_6xa1o"]
+[ext_resource type="Texture2D" uid="uid://c472vwqf8sf1l" path="res://knobs_holder.png" id="13_8qmov"]
+[ext_resource type="Texture2D" uid="uid://62217bqvvk7l" path="res://art/ButterspoonHead.png" id="14_tpmjj"]
+[ext_resource type="Texture2D" uid="uid://dcb4xe3n4sg0t" path="res://oventray_frames/oventray.png" id="16_1khjs"]
+[ext_resource type="Texture2D" uid="uid://015whwo6assm" path="res://oventray_frames/oventray copy.png" id="17_cnhme"]
+[ext_resource type="Texture2D" uid="uid://b1iourll4q4of" path="res://oventray_frames/oventray copy 2.png" id="18_gyt3u"]
+[ext_resource type="Texture2D" uid="uid://dcommtkedcjkh" path="res://oventray_frames/oventray copy 3.png" id="19_4a2k2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6gdxl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_1khjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cnhme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_gyt3u")
+}, {
+"duration": 100.0,
+"texture": ExtResource("19_4a2k2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="oven" type="Node2D"]
+script = ExtResource("1_21c1x")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_lkc8v")
+
+[node name="knob1" type="Sprite2D" parent="." node_paths=PackedStringArray("oven_script")]
+position = Vector2(487, 173)
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("2_juhxu")
+script = ExtResource("3_uhcjj")
+oven_script = NodePath("..")
+
+[node name="knob2" type="Sprite2D" parent="." node_paths=PackedStringArray("oven_script")]
+position = Vector2(805, 173)
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("4_id047")
+script = ExtResource("5_ymkpn")
+oven_script = NodePath("..")
+
+[node name="knob3" type="Sprite2D" parent="." node_paths=PackedStringArray("oven_script")]
+position = Vector2(1106, 173)
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("5_5o8vk")
+script = ExtResource("7_nowlv")
+oven_script = NodePath("..")
+
+[node name="knob4" type="Sprite2D" parent="." node_paths=PackedStringArray("oven_script")]
+position = Vector2(1418, 173)
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("6_wrr35")
+script = ExtResource("9_3blf5")
+oven_script = NodePath("..")
+
+[node name="TextBox" type="Sprite2D" parent="."]
+position = Vector2(955, 473)
+scale = Vector2(0.565, 0.565)
+texture = ExtResource("11_v3dkf")
+
+[node name="Instructions" type="Label" parent="TextBox"]
+offset_left = -725.664
+offset_top = -192.92
+offset_right = 732.336
+offset_bottom = 347.08
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("12_7dbfu")
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="KnobExamples" type="Sprite2D" parent="TextBox"]
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("13_8qmov")
+
+[node name="Label" type="Label" parent="TextBox"]
+offset_left = -231.858
+offset_top = 242.478
+offset_right = 261.142
+offset_bottom = 297.478
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7dbfu")
+theme_override_font_sizes/font_size = 30
+text = "Press \"Space\" to continue"
+horizontal_alignment = 1
+
+[node name="FancyCircle" type="Sprite2D" parent="."]
+position = Vector2(1802.61, 614.944)
+scale = Vector2(0.234465, 0.234465)
+texture = ExtResource("13_6xa1o")
+
+[node name="ChefText" type="Sprite2D" parent="."]
+position = Vector2(1569.96, 553.23)
+scale = Vector2(0.24487, 0.24487)
+texture = ExtResource("11_v3dkf")
+
+[node name="Text" type="Label" parent="ChefText"]
+offset_left = -694.714
+offset_top = -175.163
+offset_right = 718.286
+offset_bottom = 185.837
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("12_7dbfu")
+theme_override_font_sizes/font_size = 121
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ButterspoonHead" type="Sprite2D" parent="."]
+position = Vector2(1798.22, 600.555)
+scale = Vector2(0.187037, 0.187037)
+texture = ExtResource("14_tpmjj")
+
+[node name="ScoreTextBox" type="Sprite2D" parent="."]
+position = Vector2(955, 473)
+scale = Vector2(0.565, 0.565)
+texture = ExtResource("11_v3dkf")
+
+[node name="Instructions" type="Label" parent="ScoreTextBox"]
+offset_left = -725.664
+offset_top = -192.92
+offset_right = 732.336
+offset_bottom = 347.08
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("12_7dbfu")
+theme_override_font_sizes/font_size = 65
+text = "\"Nicely done! You set up the oven and scored:\""
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Score" type="Label" parent="ScoreTextBox"]
+offset_left = -647.788
+offset_top = -38.938
+offset_right = 626.212
+offset_bottom = 58.062
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_fonts/font = ExtResource("12_7dbfu")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+
+[node name="ContinueText" type="Label" parent="ScoreTextBox"]
+offset_left = -231.858
+offset_top = 242.478
+offset_right = 261.142
+offset_bottom = 297.478
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7dbfu")
+theme_override_font_sizes/font_size = 45
+text = "Press \"Next\" to continue"
+horizontal_alignment = 1
+
+[node name="ScoreDisplay" type="Label" parent="."]
+offset_left = 46.0
+offset_top = 109.0
+offset_right = 338.0
+offset_bottom = 206.0
+theme_override_fonts/font = ExtResource("12_7dbfu")
+theme_override_font_sizes/font_size = 70
+text = "Score: 100"
+
+[node name="NextButton" type="Button" parent="."]
+offset_left = 1385.0
+offset_top = 875.0
+offset_right = 1579.0
+offset_bottom = 989.0
+theme_override_font_sizes/font_size = 50
+text = "Next"
+
+[node name="OvenTrayholder" type="Area2D" parent="."]
+
+[node name="OvenTray" type="AnimatedSprite2D" parent="OvenTrayholder"]
+position = Vector2(1302, 983)
+scale = Vector2(1.845, 1.845)
+sprite_frames = SubResource("SpriteFrames_6gdxl")
+
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

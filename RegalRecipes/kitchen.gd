@@ -113,9 +113,12 @@ func _process(delta: float) -> void:
 			get_tree().change_scene_to_file("res://mixing2.tscn") 
 			
 	if Input.is_action_pressed("action") and in_stove and PlayerVariables.pantry_completed and PlayerVariables.cutting_completed and PlayerVariables.mixing_completed:
-		$StoveArea/StoveIcon.play("press")
-		get_tree().change_scene_to_file("res://stove.tscn") 
-		
+		if PlayerVariables.curr_recipe <= 1:
+			$StoveArea/StoveIcon.play("press")
+			get_tree().change_scene_to_file("res://stove.tscn") 
+		else:
+			$StoveArea/StoveIcon.play("press")
+			get_tree().change_scene_to_file("res://oven.tscn") 
 	if Input.is_action_pressed("action") and in_plating and PlayerVariables.pantry_completed and PlayerVariables.cutting_completed and PlayerVariables.mixing_completed and PlayerVariables.stove_completed:
 		$PlatingArea/PlatingIcon.play("press")
 		if PlayerVariables.curr_recipe == 0:
