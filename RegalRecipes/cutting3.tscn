@@ -1,0 +1,151 @@
+[gd_scene load_steps=11 format=3 uid="uid://dv34yj5qcvyyp"]
+
+[ext_resource type="Script" path="res://cutting.gd" id="1_0e7lu"]
+[ext_resource type="Texture2D" uid="uid://b7paioai6w1g5" path="res://art/CuttingBoard.png" id="2_jmn5s"]
+[ext_resource type="Texture2D" uid="uid://dank662vladc" path="res://art/raspberry holder.png" id="3_ve1si"]
+[ext_resource type="Script" path="res://knife.gd" id="4_dvws3"]
+[ext_resource type="Texture2D" uid="uid://b1fq84if3d2ys" path="res://art/Knife.png" id="5_dy8jo"]
+[ext_resource type="AudioStream" uid="uid://by3lauvagb334" path="res://music&sounds/533435__microtubule__carrots-slicing.wav" id="6_7u4jh"]
+[ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="7_ngh2w"]
+[ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="8_u3ydl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0hlai"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_dy8jo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8gqb"]
+size = Vector2(25.3293, 344.501)
+
+[node name="Cutting" type="Node2D" node_paths=PackedStringArray("Cut1", "Cut2", "Cut3", "Score_Label")]
+script = ExtResource("1_0e7lu")
+Cut1 = NodePath("Cut1")
+Cut2 = NodePath("Cut2")
+Cut3 = NodePath("Cut3")
+Score_Label = NodePath("Score/Score_Label")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1923.0
+offset_bottom = 1085.0
+texture = ExtResource("2_jmn5s")
+metadata/_edit_lock_ = true
+
+[node name="NextButton" type="Button" parent="."]
+offset_left = 1531.0
+offset_top = 698.0
+offset_right = 1711.0
+offset_bottom = 803.0
+theme_override_font_sizes/font_size = 50
+text = "Next"
+
+[node name="Rasberry1" type="Sprite2D" parent="."]
+position = Vector2(628, 607)
+rotation = 0.621337
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("3_ve1si")
+
+[node name="Rasberry2" type="Sprite2D" parent="."]
+position = Vector2(937, 615)
+rotation = 0.621337
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("3_ve1si")
+
+[node name="Rasberry3" type="Sprite2D" parent="."]
+position = Vector2(1219, 614)
+rotation = 0.621337
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("3_ve1si")
+
+[node name="Cut1" type="Line2D" parent="."]
+points = PackedVector2Array(938, 428, 938, 798)
+width = 5.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Cut2" type="Line2D" parent="."]
+points = PackedVector2Array(626, 433, 626, 798)
+width = 5.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Cut3" type="Line2D" parent="."]
+points = PackedVector2Array(1229, 442, 1229, 787)
+width = 5.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Knife" type="Area2D" parent="."]
+position = Vector2(785, 718)
+scale = Vector2(1.02648, 1.19303)
+script = ExtResource("4_dvws3")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Knife"]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_0hlai")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Knife"]
+position = Vector2(2.92261, -8.80112)
+shape = SubResource("RectangleShape2D_y8gqb")
+
+[node name="KnifeTip" type="Marker2D" parent="Knife"]
+position = Vector2(1.94838, -98.9078)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Knife"]
+stream = ExtResource("6_7u4jh")
+volume_db = 24.0
+
+[node name="Cutting_Timer" type="Timer" parent="Knife"]
+one_shot = true
+
+[node name="Score" type="Panel" parent="."]
+offset_left = 849.0
+offset_top = 31.0
+offset_right = 1251.0
+offset_bottom = 153.0
+
+[node name="Score_Label" type="Label" parent="Score"]
+offset_left = 37.0
+offset_top = 11.0
+offset_right = 371.0
+offset_bottom = 105.0
+
+[node name="TextBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(0.564815, 0.564815)
+texture = ExtResource("7_ngh2w")
+
+[node name="Instructions" type="Label" parent="TextBox"]
+offset_left = -729.443
+offset_top = -141.64
+offset_right = 764.557
+offset_bottom = 363.36
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("8_u3ydl")
+theme_override_font_sizes/font_size = 75
+text = "Click when the knife aligns the cut lines!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PressSpace" type="Label" parent="TextBox"]
+offset_left = -720.59
+offset_top = 242.557
+offset_right = 773.41
+offset_bottom = 747.557
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("8_u3ydl")
+theme_override_font_sizes/font_size = 50
+text = "Press \"Space\" to continue"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="NextButton" to="." method="_on_back_button_pressed"]
+[connection signal="timeout" from="Knife/Cutting_Timer" to="." method="_on_cutting_timer_timeout"]

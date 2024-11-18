@@ -1,6 +1,6 @@
 extends Area2D
 @export var direction = 1 
-@export var speed = 300
+@export var speed = 450
 # Reference to the cutting script
 @onready var cutting_script = get_parent()
 # Knife dimensions
