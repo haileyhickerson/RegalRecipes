@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dk4slvm6j1w16"
+path="res://.godot/imported/WhippedCream_Mask.png-9300d5fed98f078ba98d1d439981cda3.res"
+
+[deps]
+
+source_file="res://art/WhippedCream_Mask.png"
+dest_files=["res://.godot/imported/WhippedCream_Mask.png-9300d5fed98f078ba98d1d439981cda3.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

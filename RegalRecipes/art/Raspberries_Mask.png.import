@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://8n640bkbg2ie"
+path="res://.godot/imported/Raspberries_Mask.png-3a742766391cec2593e429c306ad2b24.res"
+
+[deps]
+
+source_file="res://art/Raspberries_Mask.png"
+dest_files=["res://.godot/imported/Raspberries_Mask.png-3a742766391cec2593e429c306ad2b24.res"]
+
+[params]
+
+create_from=0
+threshold=0.4

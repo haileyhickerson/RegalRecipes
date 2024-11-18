@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=3 uid="uid://bhyucviieqbhs"]
+[gd_scene load_steps=101 format=3 uid="uid://bhyucviieqbhs"]
 
 [ext_resource type="Script" path="res://pantry.gd" id="1_xewv2"]
 [ext_resource type="Texture2D" uid="uid://ckbq14kxwn8jm" path="res://art/EmptryPantry.png" id="2_1174c"]
@@ -61,10 +61,29 @@
 [ext_resource type="Texture2D" uid="uid://uytogkj1b67g" path="res://art/SteakSauce_Click.png" id="54_otxpy"]
 [ext_resource type="Texture2D" uid="uid://dbc7wjsy37w6k" path="res://art/SteakSauce_Hover.png" id="55_4qe3m"]
 [ext_resource type="BitMap" uid="uid://bb8ewjh1yb0p2" path="res://art/SteakSauce_Mask.png" id="56_bb3pn"]
-[ext_resource type="Texture2D" uid="uid://dank662vladc" path="res://art/raspberry holder.png" id="57_pq13p"]
-[ext_resource type="Texture2D" uid="uid://bmii56x87of8q" path="res://art/egg holder.png" id="58_tqyrh"]
-[ext_resource type="Texture2D" uid="uid://qc683f1hosb4" path="res://art/ButterSlice.png" id="59_yw72a"]
-[ext_resource type="Texture2D" uid="uid://b18m0772uijl1" path="res://art/BlueBowl.png" id="60_vndux"]
+[ext_resource type="Texture2D" uid="uid://bsktadnbef12c" path="res://art/Raspberries.png" id="57_uo1ym"]
+[ext_resource type="Texture2D" uid="uid://bwl1gqj8nbn0y" path="res://art/Raspberries_Press.png" id="58_i6drt"]
+[ext_resource type="Texture2D" uid="uid://bsq5ify3ybase" path="res://art/Egg.png" id="58_ovw7m"]
+[ext_resource type="Texture2D" uid="uid://bqa3dntdnaxu8" path="res://art/Raspberries_Hover.png" id="59_gv1yc"]
+[ext_resource type="Texture2D" uid="uid://dqwx3jbm2fmi" path="res://art/Egg_Click.png" id="59_va03i"]
+[ext_resource type="Texture2D" uid="uid://csjgvh8drhyuy" path="res://art/Egg_Hover.png" id="60_6l2xm"]
+[ext_resource type="BitMap" uid="uid://8n640bkbg2ie" path="res://art/Raspberries_Mask.png" id="60_vht4s"]
+[ext_resource type="BitMap" uid="uid://cnt57ovojf2dk" path="res://art/Egg_Mask.png" id="61_08vwa"]
+[ext_resource type="Texture2D" uid="uid://8wtd7nx5nbxu" path="res://art/CakeMix.png" id="65_47m2e"]
+[ext_resource type="Texture2D" uid="uid://3i3xg0bdsc6t" path="res://art/CakeMix_Click.png" id="66_ejq6u"]
+[ext_resource type="Texture2D" uid="uid://c3mjf87ihgq4n" path="res://art/CakeMix_Hover.png" id="67_he3ho"]
+[ext_resource type="Texture2D" uid="uid://cg2h85wlfto7k" path="res://art/Water.png" id="68_m12ur"]
+[ext_resource type="Texture2D" uid="uid://b1vcnnl8iwfw6" path="res://art/Water_Click.png" id="69_mim82"]
+[ext_resource type="Texture2D" uid="uid://ceibih2uxa0b8" path="res://art/Water_Hover.png" id="70_hx084"]
+[ext_resource type="BitMap" uid="uid://bqlo1t8qfr14p" path="res://art/Water_Mask.png" id="71_j0uky"]
+[ext_resource type="Texture2D" uid="uid://b8xph566knfrv" path="res://art/Jam.png" id="72_3i013"]
+[ext_resource type="Texture2D" uid="uid://c5dtn8o44ru4n" path="res://art/Jam_Click.png" id="73_yu6yq"]
+[ext_resource type="Texture2D" uid="uid://dgsfm6tclmuj" path="res://art/Jam_Hover.png" id="74_g3au4"]
+[ext_resource type="BitMap" uid="uid://maxl6h8vvtj0" path="res://art/Jam_Mask.png" id="75_s34lk"]
+[ext_resource type="Texture2D" uid="uid://b427lttw300u0" path="res://art/WhippedCream.png" id="76_hqbd2"]
+[ext_resource type="Texture2D" uid="uid://o6264idrmy2e" path="res://art/WhippedCream_Click.png" id="77_6dgh8"]
+[ext_resource type="Texture2D" uid="uid://riqc1587ggxe" path="res://art/WhippedCream_Hover.png" id="78_p6s7j"]
+[ext_resource type="BitMap" uid="uid://dk4slvm6j1w16" path="res://art/WhippedCream_Mask.png" id="79_orkrr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rcusd"]
 radius = 156.32
@@ -87,8 +106,8 @@ radius = 15.2197
 radius = 35.5596
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mt2m4"]
-radius = 70.2466
-height = 175.523
+radius = 86.3646
+height = 240.327
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7dcmg"]
 radius = 89.0
@@ -99,14 +118,14 @@ radius = 96.028
 height = 212.387
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lye4l"]
-size = Vector2(165.879, 136.982)
+size = Vector2(292.571, 182.951)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_511v4"]
-radius = 108.042
+radius = 90.0056
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bpvg5"]
-radius = 37.0
-height = 204.0
+radius = 79.3094
+height = 242.29
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j48ue"]
 radius = 31.0
@@ -142,7 +161,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="Carrot1" type="RigidBody2D" parent="." groups=["carrots", "ingredients"]]
-position = Vector2(1083, 558)
+position = Vector2(1119, 604)
 rotation = 1.08766
 collision_mask = 2
 mass = 0.001
@@ -232,7 +251,7 @@ scale = Vector2(0.928434, 0.159161)
 shape = SubResource("CircleShape2D_rcusd")
 
 [node name="Peas" type="RigidBody2D" parent="." groups=["ingredients", "peas"]]
-position = Vector2(348, 209)
+position = Vector2(403, 166)
 rotation = 0.235987
 collision_mask = 2
 mass = 0.001
@@ -260,7 +279,7 @@ scale = Vector2(12.9161, 17.7437)
 shape = SubResource("CircleShape2D_iw35t")
 
 [node name="Bacon1" type="RigidBody2D" parent="." groups=["bacon", "ingredients"]]
-position = Vector2(757, 283)
+position = Vector2(747, 159)
 rotation = -0.686091
 collision_mask = 2
 mass = 0.001
@@ -314,7 +333,7 @@ scale = Vector2(4, 14.581)
 shape = SubResource("CircleShape2D_iw35t")
 
 [node name="Bacon3" type="RigidBody2D" parent="." groups=["bacon", "ingredients"]]
-position = Vector2(587, 883)
+position = Vector2(279, 961)
 rotation = 0.978494
 collision_mask = 2
 mass = 0.001
@@ -398,7 +417,7 @@ scale = Vector2(1.84135, 5.26709)
 shape = SubResource("CircleShape2D_ivjej")
 
 [node name="Steak" type="RigidBody2D" parent="." groups=["ingredients"]]
-position = Vector2(1129, 901)
+position = Vector2(1102, 931)
 rotation = 0.289345
 collision_mask = 2
 mass = 0.001
@@ -555,7 +574,7 @@ scale = Vector2(5.43636, 5.30703)
 shape = SubResource("CircleShape2D_v8fbb")
 
 [node name="SteakSauce" type="RigidBody2D" parent="." groups=["ingredients"]]
-position = Vector2(626, 446)
+position = Vector2(645, 489)
 rotation = -1.12051
 collision_mask = 2
 mass = 0.001
@@ -586,6 +605,7 @@ scale = Vector2(4.95025, 1.76236)
 shape = SubResource("CircleShape2D_eklmv")
 
 [node name="Raspberries" type="RigidBody2D" parent="." groups=["ingredients"]]
+position = Vector2(851, 428)
 collision_mask = 2
 mass = 0.001
 gravity_scale = 0.0
@@ -594,19 +614,23 @@ contact_monitor = true
 script = ExtResource("9_nqxk6")
 
 [node name="Button" type="TextureButton" parent="Raspberries"]
-offset_left = 795.0
-offset_top = 293.0
-offset_right = 3795.0
-offset_bottom = 3293.0
-scale = Vector2(0.1, 0.1)
-texture_normal = ExtResource("57_pq13p")
+offset_left = -121.0
+offset_top = -101.0
+offset_right = 2499.0
+offset_bottom = 2519.0
+scale = Vector2(0.0865179, 0.0865179)
+texture_normal = ExtResource("57_uo1ym")
+texture_pressed = ExtResource("58_i6drt")
+texture_hover = ExtResource("59_gv1yc")
+texture_click_mask = ExtResource("60_vht4s")
+stretch_mode = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Raspberries"]
-position = Vector2(894, 475)
-rotation = 0.568977
+rotation = 1.65108
 shape = SubResource("CapsuleShape2D_mt2m4")
 
 [node name="Egg1" type="RigidBody2D" parent="." groups=["ingredients"]]
+position = Vector2(127, 125)
 collision_mask = 2
 mass = 0.001
 gravity_scale = 0.0
@@ -615,16 +639,23 @@ contact_monitor = true
 script = ExtResource("9_nqxk6")
 
 [node name="Button" type="TextureButton" parent="Egg1"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -151.0
+offset_top = -6.0
+offset_right = 929.0
+offset_bottom = 1074.0
+rotation = -0.724312
 scale = Vector2(0.2, 0.2)
-texture_normal = ExtResource("58_tqyrh")
+texture_normal = ExtResource("58_ovw7m")
+texture_pressed = ExtResource("59_va03i")
+texture_hover = ExtResource("60_6l2xm")
+texture_click_mask = ExtResource("61_08vwa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Egg1"]
-position = Vector2(117, 115)
+rotation = -0.750492
 shape = SubResource("CapsuleShape2D_7dcmg")
 
 [node name="Egg2" type="RigidBody2D" parent="." groups=["ingredients"]]
+position = Vector2(430, 466)
 collision_mask = 2
 mass = 0.001
 gravity_scale = 0.0
@@ -633,20 +664,24 @@ contact_monitor = true
 script = ExtResource("9_nqxk6")
 
 [node name="Button" type="TextureButton" parent="Egg2"]
-offset_left = 438.0
-offset_top = 316.0
-offset_right = 1638.0
-offset_bottom = 1516.0
+offset_left = -13.0
+offset_top = -149.0
+offset_right = 1187.0
+offset_bottom = 1051.0
 rotation = 0.706858
 scale = Vector2(0.2, 0.2)
-texture_normal = ExtResource("58_tqyrh")
+texture_normal = ExtResource("58_ovw7m")
+texture_pressed = ExtResource("59_va03i")
+texture_hover = ExtResource("60_6l2xm")
+texture_click_mask = ExtResource("61_08vwa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Egg2"]
-position = Vector2(457, 477)
 rotation = 0.774926
 shape = SubResource("CapsuleShape2D_u4e2c")
 
 [node name="CakeMix" type="RigidBody2D" parent="." groups=["ingredients"]]
+position = Vector2(733, 876)
+rotation = -0.251833
 collision_mask = 2
 mass = 0.001
 gravity_scale = 0.0
@@ -655,19 +690,24 @@ contact_monitor = true
 script = ExtResource("9_nqxk6")
 
 [node name="Button" type="TextureButton" parent="CakeMix"]
-offset_left = 42.0
-offset_top = 674.0
-offset_right = 1122.0
-offset_bottom = 1754.0
-scale = Vector2(0.2, 0.2)
-texture_normal = ExtResource("59_yw72a")
+offset_left = -149.0
+offset_top = -144.0
+offset_right = 931.0
+offset_bottom = 936.0
+scale = Vector2(0.274127, 0.274127)
+texture_normal = ExtResource("65_47m2e")
+texture_pressed = ExtResource("66_ejq6u")
+texture_hover = ExtResource("67_he3ho")
+stretch_mode = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CakeMix"]
-position = Vector2(152, 779)
-rotation = -0.98262
+position = Vector2(-2.5, 0.99999)
+rotation = -1.5569
 shape = SubResource("RectangleShape2D_lye4l")
 
 [node name="Water" type="RigidBody2D" parent="." groups=["ingredients"]]
+position = Vector2(1311, 714)
+rotation = -0.363877
 collision_mask = 2
 mass = 0.001
 gravity_scale = 0.0
@@ -676,18 +716,24 @@ contact_monitor = true
 script = ExtResource("9_nqxk6")
 
 [node name="Button" type="TextureButton" parent="Water"]
-offset_left = 1214.0
-offset_top = 582.0
-offset_right = 2294.0
-offset_bottom = 1662.0
-scale = Vector2(0.2, 0.2)
-texture_normal = ExtResource("60_vndux")
+offset_left = -119.761
+offset_top = -132.285
+offset_right = 960.239
+offset_bottom = 947.715
+scale = Vector2(0.242389, 0.242389)
+texture_normal = ExtResource("68_m12ur")
+texture_pressed = ExtResource("69_mim82")
+texture_hover = ExtResource("70_hx084")
+texture_click_mask = ExtResource("71_j0uky")
+stretch_mode = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Water"]
-position = Vector2(1327, 689)
+scale = Vector2(1.07382, 1.41488)
 shape = SubResource("CircleShape2D_511v4")
 
 [node name="RaspberryJam" type="RigidBody2D" parent="." groups=["ingredients"]]
+position = Vector2(1524, 473)
+rotation = -0.23977
 collision_mask = 2
 mass = 0.001
 gravity_scale = 0.0
@@ -698,18 +744,23 @@ max_contacts_reported = 1
 script = ExtResource("9_nqxk6")
 
 [node name="Button" type="TextureButton" parent="RaspberryJam"]
-offset_left = 1465.0
-offset_top = 364.0
-offset_right = 2894.0
-offset_bottom = 2364.0
-scale = Vector2(0.1, 0.1)
-texture_normal = ExtResource("53_21q5q")
+offset_left = -118.269
+offset_top = -168.919
+offset_right = 1310.73
+offset_bottom = 1831.08
+scale = Vector2(0.166272, 0.166272)
+texture_normal = ExtResource("72_3i013")
+texture_pressed = ExtResource("73_yu6yq")
+texture_hover = ExtResource("74_g3au4")
+texture_click_mask = ExtResource("75_s34lk")
+stretch_mode = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RaspberryJam"]
-position = Vector2(1537, 463)
 shape = SubResource("CapsuleShape2D_bpvg5")
 
 [node name="WhippedCream" type="RigidBody2D" parent="." groups=["ingredients"]]
+position = Vector2(1186, 338)
+rotation = -0.250308
 collision_mask = 2
 mass = 0.001
 gravity_scale = 0.0
@@ -718,15 +769,18 @@ contact_monitor = true
 script = ExtResource("9_nqxk6")
 
 [node name="Button" type="TextureButton" parent="WhippedCream"]
-offset_left = 1124.0
-offset_top = 246.0
-offset_right = 2553.0
-offset_bottom = 2246.0
-scale = Vector2(0.1, 0.1)
-texture_normal = ExtResource("29_1cm3f")
+offset_left = -121.0
+offset_top = -123.0
+offset_right = 1308.0
+offset_bottom = 1877.0
+scale = Vector2(0.221295, 0.221295)
+texture_normal = ExtResource("76_hqbd2")
+texture_pressed = ExtResource("77_6dgh8")
+texture_hover = ExtResource("78_p6s7j")
+texture_click_mask = ExtResource("79_orkrr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WhippedCream"]
-position = Vector2(1199, 348)
+scale = Vector2(1.9171, 1.12731)
 shape = SubResource("CapsuleShape2D_j48ue")
 
 [node name="NextButton" type="Button" parent="."]

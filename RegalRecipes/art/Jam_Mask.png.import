@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://maxl6h8vvtj0"
+path="res://.godot/imported/Jam_Mask.png-bca2e23d828158a18eaa954ead4983e3.res"
+
+[deps]
+
+source_file="res://art/Jam_Mask.png"
+dest_files=["res://.godot/imported/Jam_Mask.png-bca2e23d828158a18eaa954ead4983e3.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

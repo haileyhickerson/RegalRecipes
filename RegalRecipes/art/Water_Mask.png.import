@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bqlo1t8qfr14p"
+path="res://.godot/imported/Water_Mask.png-69adbadfc616dcca9cf892c83243d319.res"
+
+[deps]
+
+source_file="res://art/Water_Mask.png"
+dest_files=["res://.godot/imported/Water_Mask.png-69adbadfc616dcca9cf892c83243d319.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
