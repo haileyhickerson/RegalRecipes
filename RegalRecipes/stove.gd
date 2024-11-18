@@ -12,10 +12,16 @@ var temp_score
 var flip_score
 var cook_score
 @onready var meat_animated_sprite = $Bacon/BaconAnimation
+@onready var steak_animated_sprite = $Steak/SteakAnimation
 var dialogue_index = 0
 var instructions = ["Click on the knob at the right temperature.", "Once the bar reaches 50%, click the PAN HANDLE to flip the meat!", "Make sure the meat isn't undercooked or overcooked!"]
 
 func _ready() -> void:
+	if PlayerVariables.curr_recipe == 0:
+		$Steak.hide()
+	else:
+		$Bacon.hide()
+	$CookingSound.stop()
 	$FlipText.hide()
 	$NextButton.hide()
 	$ScoreTextBox.hide()
@@ -31,6 +37,9 @@ func show_next_dialogue():
 
 # Start cooking when the correct temperature is set
 func start_cooking():
+	$CookingSound.play()
+	if $CookingSound.playing:
+		print("pshh")
 	$CookingBar.visible = true
 	cooking_started = true
 	$CookingBar.value = 0  # Reset the progression bar
@@ -51,6 +60,7 @@ func on_pan_click():
 		print("Meat flipped!")
 		flip_allowed = false
 		meat_animated_sprite.play("cooked")
+		steak_animated_sprite.play("cooked")
 		$CookingBar.value = 60
 		$FlipText.hide()
 	else:
@@ -95,6 +105,7 @@ func end_cooking():
 		$ScoreTextBox/Score.text = str(score) + " points. Try again!"
 	else:
 		$ScoreTextBox/Score.text = str(score) + " points. Nice job!"
+	$CookingSound.stop()
 	$ScoreTextBox.show()
 	PlayerVariables.stove_completed = true
 	PlayerVariables.stove_score = score

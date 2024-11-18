@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://5g7a36gtyd07"]
+[gd_scene load_steps=22 format=3 uid="uid://5g7a36gtyd07"]
 
 [ext_resource type="Script" path="res://oven.gd" id="1_21c1x"]
 [ext_resource type="Texture2D" uid="uid://do0a4sku5kv4x" path="res://art/OvenOpen.png" id="1_lkc8v"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://015whwo6assm" path="res://oventray_frames/oventray copy.png" id="17_cnhme"]
 [ext_resource type="Texture2D" uid="uid://b1iourll4q4of" path="res://oventray_frames/oventray copy 2.png" id="18_gyt3u"]
 [ext_resource type="Texture2D" uid="uid://dcommtkedcjkh" path="res://oventray_frames/oventray copy 3.png" id="19_4a2k2"]
+[ext_resource type="AudioStream" uid="uid://bbmg4quw7sa7p" path="res://music&sounds/correct.mp3" id="20_76aei"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6gdxl"]
 animations = [{
@@ -202,5 +203,9 @@ text = "Next"
 position = Vector2(1302, 983)
 scale = Vector2(1.845, 1.845)
 sprite_frames = SubResource("SpriteFrames_6gdxl")
+
+[node name="CorrectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("20_76aei")
+volume_db = 4.894
 
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

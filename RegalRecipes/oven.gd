@@ -43,7 +43,9 @@ func butterspoon_good():
 		$knob3.knob3_completed = true
 	else:
 		$knob4.knob4_completed = true
+	$CorrectSound.play()
 	curr_knob += 1
+	
 
 func butterspoon_bad():
 	$FancyCircle.show()
