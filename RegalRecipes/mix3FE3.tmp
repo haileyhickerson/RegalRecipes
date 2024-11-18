@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://c4s3ews8gcl2"]
+[gd_scene load_steps=50 format=3 uid="uid://c4s3ews8gcl2"]
 
 [ext_resource type="Script" path="res://mixing2.gd" id="1_h51pr"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_qsd4i"]
@@ -19,17 +19,13 @@
 [ext_resource type="Texture2D" uid="uid://chri5b8exuarv" path="res://art/BeefSauce12.png" id="17_cvneu"]
 [ext_resource type="Texture2D" uid="uid://cjcpi4m5np1fv" path="res://art/play.png" id="18_0dqq6"]
 [ext_resource type="Texture2D" uid="uid://csc5jmpa3ah6f" path="res://art/BeefSauceMixed.png" id="18_4p08t"]
-[ext_resource type="Texture2D" uid="uid://bbpj2rf0h1ory" path="res://art/MixingSauceFrames/BeefEnter1.png" id="19_absyu"]
 [ext_resource type="Texture2D" uid="uid://dxugxbw6gpt0n" path="res://art/play_hover.png" id="19_g8p73"]
 [ext_resource type="Texture2D" uid="uid://d0fdlkatwt7lg" path="res://art/MixingSauceFrames/BeefSauced1.png" id="19_ts1df"]
 [ext_resource type="Texture2D" uid="uid://didjnxafvukix" path="res://art/MixingSauceFrames/BeefSauced2.png" id="20_4shks"]
 [ext_resource type="BitMap" uid="uid://kdtfcv3g1m5w" path="res://art/play_pressed.png" id="20_pgdks"]
-[ext_resource type="Texture2D" uid="uid://bu4xetwt4qmfb" path="res://art/MixingSauceFrames/BeefEnter2.png" id="20_rd5c2"]
-[ext_resource type="Texture2D" uid="uid://ckkmesvh6a8ga" path="res://art/MixingSauceFrames/BeefEnter3.png" id="21_2v81d"]
 [ext_resource type="Texture2D" uid="uid://bggxy023qjunk" path="res://art/dot.png" id="21_l7t1j"]
 [ext_resource type="Texture2D" uid="uid://fbfnx8bslpip" path="res://art/MixingSauceFrames/BeefSauced3.png" id="21_wj3ha"]
 [ext_resource type="Texture2D" uid="uid://bqsuix2nuppwa" path="res://art/dot_press.png" id="22_l4jl1"]
-[ext_resource type="Texture2D" uid="uid://ctitldyxkloqa" path="res://art/MixingSauceFrames/BeefEnter4.png" id="22_lukuf"]
 [ext_resource type="Texture2D" uid="uid://c6m6j5xs1yw2q" path="res://art/MixingSauceFrames/BeefSauced4.png" id="22_op1xp"]
 [ext_resource type="Texture2D" uid="uid://csx4mhfl5y8g6" path="res://art/dot_hover.png" id="23_0txwv"]
 [ext_resource type="Texture2D" uid="uid://db1arrqc5dqdg" path="res://art/MixingSauceFrames/BeefSauced5.png" id="23_mt15v"]
@@ -221,26 +217,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("19_absyu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_rd5c2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_2v81d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_lukuf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_ts1df")
-}],
-"loop": false,
-"name": &"steak_enter",
-"speed": 20.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": ExtResource("19_ts1df")
 }],
 "loop": true,
@@ -277,111 +253,18 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("28_nrmqh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_ts1df")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_4shks")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_wj3ha")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_op1xp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_mt15v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_b5oqa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_vh1sl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_avo8q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_vesj8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_nrmqh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_ts1df")
 }],
-"loop": false,
+"loop": true,
 "name": &"steak_mix",
-"speed": 25.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("19_ts1df")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_4shks")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_wj3ha")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_op1xp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_mt15v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_b5oqa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_vh1sl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_avo8q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_vesj8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_nrmqh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_ts1df")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_4shks")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_wj3ha")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_op1xp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_mt15v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_b5oqa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_vh1sl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_avo8q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_vesj8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_nrmqh")
-}, {
-"duration": 1.0,
 "texture": ExtResource("29_fp8ev")
 }],
-"loop": false,
+"loop": true,
 "name": &"steak_mixed",
-"speed": 25.0
+"speed": 5.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gfxvl"]
@@ -446,9 +329,7 @@ texture = ExtResource("4_nt5n8")
 position = Vector2(960, 540)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_vysqn")
-animation = &"steak_enter"
-frame = 4
-frame_progress = 1.0
+animation = &"steak_mixed"
 
 [node name="Marker1" type="Marker2D" parent="."]
 position = Vector2(1377, 80)
@@ -509,96 +390,6 @@ texture_click_mask = ExtResource("24_c36uh")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextBox" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-scale = Vector2(0.564815, 0.564815)
-texture = ExtResource("27_ofais")
-
-[node name="PressSpace" type="Label" parent="TextBox"]
-offset_left = -720.59
-offset_top = 249.639
-offset_right = 773.41
-offset_bottom = 754.639
-theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("26_cslqq")
-theme_override_font_sizes/font_size = 50
-text = "Press \"Space\" to continue"
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="Instructions" type="Label" parent="TextBox"]
-offset_left = -701.115
-offset_top = -84.9836
-offset_right = 792.885
-offset_bottom = 420.016
-theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("26_cslqq")
-theme_override_font_sizes/font_size = 100
-text = "It's time to sauce our steak!"
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="Instructions2" type="Label" parent="TextBox"]
-visible = false
-offset_left = -734.754
-offset_top = -111.541
-offset_right = 759.246
-offset_bottom = 393.459
-theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("26_cslqq")
-theme_override_font_sizes/font_size = 75
-text = "To mix the sauce, click each dot as it appears along the yellow square."
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="Instructions3" type="Label" parent="TextBox"]
-visible = false
-offset_left = -722.36
-offset_top = -115.082
-offset_right = 771.64
-offset_bottom = 389.918
-theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("26_cslqq")
-theme_override_font_sizes/font_size = 75
-text = "DON'T let your mouse go outside of the square, or you will have to restart!"
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="ArrowStart" type="AnimatedSprite2D" parent="TextBox/Instructions3"]
-position = Vector2(713.508, -541.77)
-rotation = -1.5708
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_gfxvl")
-
-[node name="SteakText" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1663, 272)
-scale = Vector2(0.291239, 0.291239)
-texture = ExtResource("27_ofais")
-
-[node name="Instructions" type="Label" parent="SteakText"]
-offset_left = -714.191
-offset_top = -157.946
-offset_right = 779.809
-offset_bottom = 347.054
-theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("26_cslqq")
-theme_override_font_sizes/font_size = 110
-text = "Great! Now mix the 
-sauce into the steak!"
-horizontal_alignment = 1
-autowrap_mode = 3
-
 [node name="OutsideOfSquare" type="Area2D" parent="."]
 position = Vector2(960, 540)
 
@@ -610,10 +401,8 @@ polygon = PackedVector2Array(0, -545, 2, -507, 46, -505, 118, -509, 405, -504, 4
 polygon = PackedVector2Array(0, -545, 2, -507, 46, -505, 118, -509, 405, -504, 454, -478, 488, -442, 504, -398, 506, -326, 507, -55, 508, 88, 506, 134, 505, 355, 506, 393, 496, 423, 475, 461, 440, 489, 403, 503, 278, 506, 104, 504, 27, 506, 1, 507, 2, 558, 986, 552, 988, -564)
 
 [node name="InnerSquare" type="CollisionPolygon2D" parent="OutsideOfSquare"]
-visible = false
 scale = Vector2(0.97, 0.97)
 polygon = PackedVector2Array(-348.454, -452.577, 372.165, -450.515, 404, -445, 431, -424, 445, -397, 451, -369, 451, 386, 434, 423, 405.155, 444.33, 379.381, 450.516, -384.536, 449.485, -410, 441, -435, 421, -450, 385, -452, -380, -442, -412, -416, -437, -387, -450)
-disabled = true
 
 [node name="NextButton" type="Button" parent="."]
 offset_left = 1679.0
@@ -640,6 +429,62 @@ theme_override_font_sizes/font_size = 80
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TextBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(0.564815, 0.564815)
+texture = ExtResource("27_ofais")
+
+[node name="PressSpace" type="Label" parent="TextBox"]
+offset_left = -720.59
+offset_top = 249.639
+offset_right = 773.41
+offset_bottom = 754.639
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("26_cslqq")
+theme_override_font_sizes/font_size = 50
+text = "Press \"Space\" to continue"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Instructions" type="Label" parent="TextBox"]
+offset_left = -729.443
+offset_top = -161.115
+offset_right = 764.557
+offset_bottom = 343.885
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("26_cslqq")
+theme_override_font_sizes/font_size = 75
+text = "Mix the sauce by following the arrows
+and clicking the black dots as quickly as possible."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Instructions2" type="Label" parent="TextBox"]
+visible = false
+offset_left = -722.36
+offset_top = -115.082
+offset_right = 771.64
+offset_bottom = 389.918
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("26_cslqq")
+theme_override_font_sizes/font_size = 75
+text = "DON'T let your mouse go outside of the circle, or you will have to restart!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ArrowStart" type="AnimatedSprite2D" parent="TextBox/Instructions2"]
+position = Vector2(713.508, -541.77)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_gfxvl")
 
 [node name="ScoreBox" type="Sprite2D" parent="."]
 visible = false

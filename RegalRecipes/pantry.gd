@@ -1,6 +1,7 @@
 extends Node2D
 var ingredient_list
 var selected_ingredients = []
+var _overlapping = []
 var correct_ingredients = PlayerVariables.correct_ingredients[PlayerVariables.curr_recipe]
 var starting_score = 100
 var dialogue_index = 0
@@ -58,12 +59,16 @@ func _input(event):
 			show_next_dialogue()
 			
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	
 	# updates position of whichever ingredient is currently being dragged
 	for ingredient in ingredient_list:
 		if ingredient.dragging:
 			ingredient.global_position = get_global_mouse_position() + mouse_offset
+			if ingredient.global_position.x >= 1350 and ingredient.global_position.x <= 2000 and ingredient.global_position.y >= 650 and ingredient.global_position.y <= 1150:
+				ingredient.over_basket = true
+			else:
+				ingredient.over_basket = false
 			
 
 # updates score
@@ -131,12 +136,14 @@ func _on_next_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://kitchen.tscn") # Replace with function body.
 	
 # when ingredient is placed in basket
-func _on_basket_body_entered(body: RigidBody2D) -> void:
-	body.over_basket = true
-
-
-func _on_basket_body_exited(body: RigidBody2D) -> void:
-	body.over_basket = false
+#func _on_basket_body_entered(body: RigidBody2D) -> void:
+	#body.over_basket = true
+	##Sprint(str(body) + " is now over basket")
+#
+#
+#func _on_basket_body_exited(body: RigidBody2D) -> void:
+	#body.over_basket = false
+	##print(str(body) + " is not over basket")
 		
 # bounce at top of screen
 func _on_top_boundary_body_entered(body: Node2D) -> void:

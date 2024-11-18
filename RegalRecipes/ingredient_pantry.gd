@@ -32,13 +32,15 @@ func _ready():
 	# randomizes position once in basket
 	randomize_basket_pos()
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
+
 	# if placed and released in basket
 	if in_basket and not dragging:
 		# disables clicking it again
 		$Button.disabled = true
 		$CollisionShape2D.disabled = true
 		position = basket_pos
+	
 
 # randomizes speed vector
 func randomize_speed():
@@ -46,6 +48,7 @@ func randomize_speed():
 
 # sets velocity to move speed
 func set_velocity():
+	#print("velocity set to " + str(move_speed))
 	set_linear_velocity(move_speed)
 
 func randomize_basket_pos():
