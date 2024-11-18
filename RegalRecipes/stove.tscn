@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://qlvok073syxy"]
+[gd_scene load_steps=30 format=3 uid="uid://qlvok073syxy"]
 
 [ext_resource type="Script" path="res://stove.gd" id="1_iiek0"]
 [ext_resource type="Texture2D" uid="uid://c860lwsyjoy1s" path="res://art/Stovetop.png" id="2_4eufi"]
@@ -14,6 +14,17 @@
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="10_efodi"]
 [ext_resource type="Texture2D" uid="uid://b3diuhm1wjhtq" path="res://art/BaconFrame7.png" id="10_iwdbq"]
 [ext_resource type="Texture2D" uid="uid://dr6ufyql5fgqb" path="res://art/Knob.png" id="11_gam63"]
+[ext_resource type="Texture2D" uid="uid://xntbptriyv7n" path="res://art/SteakFrames/1.png" id="11_q30ey"]
+[ext_resource type="Texture2D" uid="uid://buv1tvmdu55mg" path="res://art/SteakFrames/2.png" id="12_yadh5"]
+[ext_resource type="Texture2D" uid="uid://ghktda5nakqq" path="res://art/SteakFrames/3.png" id="13_0ev6u"]
+[ext_resource type="Texture2D" uid="uid://cjgsfie4k0ali" path="res://art/SteakFrames/4.png" id="14_8b23k"]
+[ext_resource type="Texture2D" uid="uid://cgg87ydvjj08x" path="res://art/SteakFrames/5.png" id="15_un5ui"]
+[ext_resource type="Texture2D" uid="uid://b0b2m4kceo187" path="res://art/SteakFrames/7.png" id="16_48wc4"]
+[ext_resource type="Texture2D" uid="uid://7jyxyau4dr1v" path="res://art/SteakFrames/6.png" id="17_e1b65"]
+[ext_resource type="Texture2D" uid="uid://cxtqjfkouggat" path="res://art/SteakFrames/8.png" id="18_ote0j"]
+[ext_resource type="Texture2D" uid="uid://g0842a1sr2b0" path="res://art/SteakFrames/10.png" id="19_5xoot"]
+[ext_resource type="Texture2D" uid="uid://bmby0vc5g2fgs" path="res://art/SteakFrames/9.png" id="20_najkw"]
+[ext_resource type="AudioStream" uid="uid://bpyrrifw6eagr" path="res://music&sounds/meatcooking.wav" id="25_xjv4n"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0k282"]
 animations = [{
@@ -58,6 +69,50 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_mk8sb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_q30ey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yadh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_0ev6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_8b23k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_un5ui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_48wc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_e1b65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ote0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_5xoot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_najkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_5xoot")
+}, {
+"duration": 100.0,
+"texture": ExtResource("20_najkw")
+}],
+"loop": true,
+"name": &"cooked",
+"speed": 10.0
+}]
+
 [node name="Stove" type="Node2D"]
 script = ExtResource("1_iiek0")
 
@@ -92,6 +147,16 @@ shape = SubResource("RectangleShape2D_ip8xg")
 position = Vector2(967, 335)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_pggyy")
+animation = &"cooked"
+
+[node name="Steak" type="Area2D" parent="."]
+position = Vector2(0.00012207, 0.00012207)
+scale = Vector2(1, 1)
+
+[node name="SteakAnimation" type="AnimatedSprite2D" parent="Steak"]
+position = Vector2(962, 229)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_mk8sb")
 animation = &"cooked"
 
 [node name="StoveKnob" type="Sprite2D" parent="." node_paths=PackedStringArray("stove_script")]
@@ -206,6 +271,10 @@ offset_bottom = 332.0
 theme_override_fonts/font = ExtResource("10_efodi")
 theme_override_font_sizes/font_size = 90
 text = "FLIP!!!"
+
+[node name="CookingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("25_xjv4n")
+volume_db = 10.196
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="mouse_entered" from="Pan" to="." method="_on_pan_mouse_entered"]

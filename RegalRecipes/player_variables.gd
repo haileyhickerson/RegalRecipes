@@ -6,7 +6,7 @@ var first_move = false
 var intro_completed = false
 var recipe1_completed = true #SET TO TRUE FOR DEBUGGING
 var recipe2_completed = true #SET TO TRUE FOR DEBUGGING
-var curr_recipe = 0
+var curr_recipe = 1
 var correct_ingredients = [["Bacon1", "Bacon2", "Bacon3", "Peas", "Cheese", "Dressing"], ["Carrot1", "Carrot2", "Carrot3", "Steak", "Garlic", "Onion", "Potato", "Butter", "SteakSauce"], ["Raspberries", "Egg1", "Egg2", "Water", "Butter", "CakeMix", "RaspberryJam", "WhippedCream"]]
 
 var pantry_completed = false
