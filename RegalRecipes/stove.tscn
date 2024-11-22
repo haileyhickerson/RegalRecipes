@@ -151,7 +151,6 @@ animation = &"cooked"
 
 [node name="Steak" type="Area2D" parent="."]
 position = Vector2(0.00012207, 0.00012207)
-scale = Vector2(1, 1)
 
 [node name="SteakAnimation" type="AnimatedSprite2D" parent="Steak"]
 position = Vector2(962, 229)
