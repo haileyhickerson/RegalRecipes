@@ -13,10 +13,17 @@ func _ready():
 	
 func _on_back_button_pressed()-> void:
 	get_tree().change_scene_to_file("res://recipe_selection.tscn")
+	if PlayerVariables.curr_recipe == 0:
+		if PlayerVariables.final_score > 300:
+			PlayerVariables.recipe1_completed = true
 	
-	if PlayerVariables.final_score > 0:
-		PlayerVariables.recipe1_completed = true
+	elif PlayerVariables.curr_recipe == 1:
+		if PlayerVariables.final_score > 300:
+			PlayerVariables.recipe2_completed = true
 	
+	else:
+		if PlayerVariables.final_score > 300:
+			PlayerVariables.recipe3_completed = true
 	# Resets all variables
 	PlayerVariables.pantry_completed = false
 	PlayerVariables.cutting_completed = false

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cnev4f4clol13"
+path="res://.godot/imported/CakeLayer_Mask.png-f5818028d84d1e72537b9e0e185e33c9.res"
+
+[deps]
+
+source_file="res://art/CakeLayer_Mask.png"
+dest_files=["res://.godot/imported/CakeLayer_Mask.png-f5818028d84d1e72537b9e0e185e33c9.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,12 +1,22 @@
-[gd_scene load_steps=10 format=3 uid="uid://ce1hxiu7vhgmu"]
+[gd_scene load_steps=20 format=3 uid="uid://ce1hxiu7vhgmu"]
 
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="1_jdp80"]
 [ext_resource type="Script" path="res://cake_layers.gd" id="1_xnitr"]
 [ext_resource type="Script" path="res://sponge_layers.gd" id="2_hojnh"]
-[ext_resource type="Texture2D" uid="uid://ckbq14kxwn8jm" path="res://art/EmptryPantry.png" id="3_g67k5"]
-[ext_resource type="Texture2D" uid="uid://cg45wie54ddns" path="res://art/cakelayer holder.png" id="5_f1bau"]
+[ext_resource type="Texture2D" uid="uid://bfr6wuosll7lq" path="res://art/CakeLayer.png" id="4_djw5g"]
+[ext_resource type="Texture2D" uid="uid://oiobcrt2yych" path="res://art/CakeLayer_Click.png" id="5_0q5l8"]
+[ext_resource type="Texture2D" uid="uid://bymbqme831o70" path="res://art/CakeLayer_Hover.png" id="6_8vnqd"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="6_cwio6"]
+[ext_resource type="BitMap" uid="uid://cnev4f4clol13" path="res://art/CakeLayer_Mask.png" id="7_67ayh"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="7_wla1r"]
+[ext_resource type="Texture2D" uid="uid://bsdgedd7uxbpt" path="res://art/JamLayer.png" id="8_11d1r"]
+[ext_resource type="Texture2D" uid="uid://byhewjmnvy8s" path="res://art/JamLayer_Click.png" id="9_lxyvl"]
+[ext_resource type="BitMap" uid="uid://6tkksnujgcrd" path="res://art/JamLayer_Mask.png" id="9_y4u5v"]
+[ext_resource type="Texture2D" uid="uid://bt1ql8moto6v0" path="res://art/JamLayer_Hover.png" id="10_cfoa6"]
+[ext_resource type="Texture2D" uid="uid://d2eucllhk60ku" path="res://art/FrostingLayer.png" id="10_wuqjt"]
+[ext_resource type="Texture2D" uid="uid://c5kic33jg5tv3" path="res://art/FrostingLayer_Click.png" id="13_bfw5n"]
+[ext_resource type="Texture2D" uid="uid://crjxu466k8tor" path="res://art/FrostingLayer_Hover.png" id="14_va62b"]
+[ext_resource type="BitMap" uid="uid://hnbitxmnc1pk" path="res://art/FrostingLayer_Mask.png" id="15_x2tnq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cdoem"]
 size = Vector2(432, 162)
@@ -27,7 +37,7 @@ position = Vector2(960, 769)
 points = PackedVector2Array(0, -500, 0, 315)
 
 [node name="SpongeLayer1" type="Area2D" parent="."]
-position = Vector2(960, 931)
+position = Vector2(960, 847)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("2_hojnh")
 metadata/_edit_group_ = true
@@ -35,53 +45,70 @@ metadata/_edit_group_ = true
 [node name="Layer1" type="TextureButton" parent="SpongeLayer1"]
 texture_filter = 1
 offset_left = -1010.0
-offset_top = -244.0
+offset_top = -278.0
 offset_right = 3970.0
-offset_bottom = 836.0
-scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("3_g67k5")
+offset_bottom = 1457.0
+scale = Vector2(0.4, 0.320002)
+texture_normal = ExtResource("4_djw5g")
+texture_pressed = ExtResource("5_0q5l8")
+texture_hover = ExtResource("6_8vnqd")
+texture_click_mask = ExtResource("7_67ayh")
 stretch_mode = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpongeLayer1"]
 shape = SubResource("RectangleShape2D_cdoem")
 
-[node name="RasberryFilling" type="Area2D" parent="."]
-position = Vector2(960, 769)
-script = ExtResource("2_hojnh")
-
-[node name="Layer2" type="TextureButton" parent="RasberryFilling"]
-offset_left = -506.0
-offset_top = -45.0
-offset_right = 495.0
-offset_bottom = 39.0
-texture_normal = ExtResource("5_f1bau")
-stretch_mode = 6
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RasberryFilling"]
-position = Vector2(2, -0.5)
-shape = SubResource("RectangleShape2D_1bwmt")
-
 [node name="SpongeLayer2" type="Area2D" parent="."]
-position = Vector2(960, 631)
+position = Vector2(960, 677)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("2_hojnh")
 metadata/_edit_group_ = true
 
 [node name="Layer3" type="TextureButton" parent="SpongeLayer2"]
 texture_filter = 1
-offset_left = -1010.0
-offset_top = -244.0
-offset_right = 3970.0
-offset_bottom = 836.0
-scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("3_g67k5")
+offset_left = -1016.0
+offset_top = -438.0
+offset_right = 3964.0
+offset_bottom = 1232.0
+scale = Vector2(0.4, 0.24)
+texture_normal = ExtResource("4_djw5g")
+texture_pressed = ExtResource("5_0q5l8")
+texture_hover = ExtResource("6_8vnqd")
+texture_click_mask = ExtResource("7_67ayh")
+ignore_texture_size = true
 stretch_mode = 6
+flip_h = true
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpongeLayer2"]
+position = Vector2(0, -238)
 shape = SubResource("RectangleShape2D_cdoem")
 
+[node name="RasberryFilling" type="Area2D" parent="."]
+position = Vector2(960, 685)
+scale = Vector2(1, 0.72)
+script = ExtResource("2_hojnh")
+
+[node name="Layer2" type="TextureButton" parent="RasberryFilling"]
+offset_left = -506.0
+offset_top = -63.0
+offset_right = 479.0
+offset_bottom = 64.0
+texture_normal = ExtResource("8_11d1r")
+texture_pressed = ExtResource("9_lxyvl")
+texture_hover = ExtResource("10_cfoa6")
+texture_click_mask = ExtResource("9_y4u5v")
+ignore_texture_size = true
+stretch_mode = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RasberryFilling"]
+position = Vector2(2, -0.5)
+shape = SubResource("RectangleShape2D_1bwmt")
+
 [node name="Frosting" type="Area2D" parent="."]
-position = Vector2(960, 474)
+position = Vector2(954, 399)
+scale = Vector2(1, 1.12)
 script = ExtResource("2_hojnh")
 metadata/_edit_group_ = true
 
@@ -89,8 +116,12 @@ metadata/_edit_group_ = true
 offset_left = -505.0
 offset_top = -50.0
 offset_right = 496.0
-offset_bottom = 34.0
-texture_normal = ExtResource("5_f1bau")
+offset_bottom = 76.0
+texture_normal = ExtResource("10_wuqjt")
+texture_pressed = ExtResource("13_bfw5n")
+texture_hover = ExtResource("14_va62b")
+texture_click_mask = ExtResource("15_x2tnq")
+ignore_texture_size = true
 stretch_mode = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Frosting"]
@@ -107,6 +138,7 @@ theme_override_fonts/font = ExtResource("6_cwio6")
 theme_override_font_sizes/font_size = 41
 
 [node name="TextBox" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(960, 540)
 scale = Vector2(0.564815, 0.564815)
 texture = ExtResource("7_wla1r")
@@ -140,6 +172,6 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [connection signal="button_up" from="SpongeLayer1/Layer1" to="." method="_on_layer_1_button_up"]
-[connection signal="button_up" from="RasberryFilling/Layer2" to="." method="_on_layer_2_button_up"]
 [connection signal="button_up" from="SpongeLayer2/Layer3" to="." method="_on_layer_3_button_up"]
+[connection signal="button_up" from="RasberryFilling/Layer2" to="." method="_on_layer_2_button_up"]
 [connection signal="button_up" from="Frosting/Layer4" to="." method="_on_layer_4_button_up"]
