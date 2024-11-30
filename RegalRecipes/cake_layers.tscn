@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ce1hxiu7vhgmu"]
+[gd_scene load_steps=21 format=3 uid="uid://ce1hxiu7vhgmu"]
 
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="1_jdp80"]
 [ext_resource type="Script" path="res://cake_layers.gd" id="1_xnitr"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://c5kic33jg5tv3" path="res://art/FrostingLayer_Click.png" id="13_bfw5n"]
 [ext_resource type="Texture2D" uid="uid://crjxu466k8tor" path="res://art/FrostingLayer_Hover.png" id="14_va62b"]
 [ext_resource type="BitMap" uid="uid://hnbitxmnc1pk" path="res://art/FrostingLayer_Mask.png" id="15_x2tnq"]
+[ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="18_xku15"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cdoem"]
 size = Vector2(432, 162)
@@ -107,7 +108,7 @@ position = Vector2(2, -0.5)
 shape = SubResource("RectangleShape2D_1bwmt")
 
 [node name="Frosting" type="Area2D" parent="."]
-position = Vector2(954, 399)
+position = Vector2(960, 399)
 scale = Vector2(1, 1.12)
 script = ExtResource("2_hojnh")
 metadata/_edit_group_ = true
@@ -128,17 +129,7 @@ stretch_mode = 6
 position = Vector2(-1, -2)
 shape = SubResource("RectangleShape2D_1bwmt")
 
-[node name="Score" type="Label" parent="."]
-offset_left = 912.0
-offset_top = 105.0
-offset_right = 973.0
-offset_bottom = 150.0
-scale = Vector2(1.5, 1.5)
-theme_override_fonts/font = ExtResource("6_cwio6")
-theme_override_font_sizes/font_size = 41
-
 [node name="TextBox" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(960, 540)
 scale = Vector2(0.564815, 0.564815)
 texture = ExtResource("7_wla1r")
@@ -168,6 +159,57 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("6_cwio6")
 theme_override_font_sizes/font_size = 50
 text = "Press \"Space\" to continue"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Plate" type="Sprite2D" parent="."]
+position = Vector2(197, 201)
+scale = Vector2(0.199537, 0.199537)
+texture = ExtResource("18_xku15")
+
+[node name="Score" type="Label" parent="."]
+offset_left = 129.0
+offset_top = 144.0
+offset_right = 269.0
+offset_bottom = 254.0
+theme_override_colors/font_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_cwio6")
+theme_override_font_sizes/font_size = 80
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreTextBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(0.564815, 0.564815)
+texture = ExtResource("7_wla1r")
+
+[node name="Scoring" type="Label" parent="ScoreTextBox"]
+offset_left = -729.443
+offset_top = -141.64
+offset_right = 764.557
+offset_bottom = 363.36
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_cwio6")
+theme_override_font_sizes/font_size = 75
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PressSpace" type="Label" parent="ScoreTextBox"]
+offset_left = -720.59
+offset_top = 242.557
+offset_right = 773.41
+offset_bottom = 747.557
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_cwio6")
+theme_override_font_sizes/font_size = 50
+text = "Press \"Space\" to plate!"
 horizontal_alignment = 1
 autowrap_mode = 3
 

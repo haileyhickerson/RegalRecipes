@@ -1,0 +1,556 @@
+[gd_scene load_steps=29 format=3 uid="uid://bjx4w51stqrb2"]
+
+[ext_resource type="Script" path="res://plating2.gd" id="1_30qqh"]
+[ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_y1t0m"]
+[ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="3_a20ed"]
+[ext_resource type="Texture2D" uid="uid://cgd08r67rreap" path="res://art/Recipe2_Reference.png" id="4_3hkxr"]
+[ext_resource type="Texture2D" uid="uid://dkkg12vkaji6t" path="res://art/CakeTop.png" id="5_xtr6q"]
+[ext_resource type="Texture2D" uid="uid://bprcpf63o5abq" path="res://art/FancyPurplePlate.png" id="6_5pabi"]
+[ext_resource type="Texture2D" uid="uid://cscsovlk3pmg0" path="res://art/Raspberry.png" id="7_nc1nw"]
+[ext_resource type="Texture2D" uid="uid://buug3ffra2a6m" path="res://art/Raspberry_Click.png" id="8_vwfoc"]
+[ext_resource type="Texture2D" uid="uid://bhtyw8021gcv0" path="res://art/Raspberry_Hover.png" id="9_1auw3"]
+[ext_resource type="BitMap" uid="uid://com3rvwrxh3fk" path="res://art/CookedSteak_Mask.png" id="10_3smas"]
+[ext_resource type="Texture2D" uid="uid://p6snun843h8m" path="res://art/FancyBluePlate.png" id="11_ogs2g"]
+[ext_resource type="Texture2D" uid="uid://dwhtixlh0j0fo" path="res://art/WhippedTopping_Click.png" id="12_djibu"]
+[ext_resource type="Texture2D" uid="uid://16id2xth2snc" path="res://art/WhippedTopping_Hover.png" id="13_btagv"]
+[ext_resource type="Texture2D" uid="uid://cbifam7ydvpft" path="res://art/FancyGreenPlate.png" id="14_w3hq3"]
+[ext_resource type="Texture2D" uid="uid://c41nn5mrmj5ji" path="res://art/FancyPinkPlate.png" id="15_8l5ox"]
+[ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="16_qt58a"]
+[ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="17_2h7ki"]
+[ext_resource type="Texture2D" uid="uid://clopys7kwhryi" path="res://art/FancyCircle (1).png" id="18_hgplh"]
+[ext_resource type="Texture2D" uid="uid://62217bqvvk7l" path="res://art/ButterspoonHead.png" id="19_qwtc0"]
+[ext_resource type="AudioStream" uid="uid://djomc6da7lwrx" path="res://music&sounds/Plop.wav" id="20_hcp2f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7l5m4"]
+radius = 168.598
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gna3i"]
+radius = 378.652
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3m1fy"]
+radius = 377.035
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yrfse"]
+radius = 392.69
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0ngjj"]
+radius = 396.943
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3uhr8"]
+radius = 348.626
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7eebt"]
+radius = 41.1096
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_li8jf"]
+radius = 160.0
+height = 320.0
+
+[node name="Plating3" type="Node2D"]
+script = ExtResource("1_30qqh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_y1t0m")
+
+[node name="Plate" type="Sprite2D" parent="."]
+position = Vector2(966, 552)
+scale = Vector2(0.774074, 0.774074)
+texture = ExtResource("3_a20ed")
+
+[node name="HintButton" type="Button" parent="."]
+offset_left = 52.0
+offset_top = 31.0
+offset_right = 232.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 50
+text = "Hint"
+
+[node name="Taste Test Button" type="Button" parent="."]
+offset_left = 806.0
+offset_top = 883.0
+offset_right = 1178.0
+offset_bottom = 1002.0
+theme_override_font_sizes/font_size = 50
+text = "Serve the food!"
+
+[node name="HintReferencePic" type="Sprite2D" parent="."]
+position = Vector2(258, 230)
+scale = Vector2(0.403009, 0.37662)
+texture = ExtResource("4_3hkxr")
+
+[node name="CakeTop" type="Sprite2D" parent="."]
+position = Vector2(979, 549)
+scale = Vector2(0.691782, 0.674653)
+texture = ExtResource("5_xtr6q")
+
+[node name="ReferencePic" type="Sprite2D" parent="."]
+position = Vector2(967.5, 548.459)
+scale = Vector2(0.765741, 0.786952)
+
+[node name="PlateContainer" type="Node2D" parent="."]
+
+[node name="PurplePlate" type="Sprite2D" parent="PlateContainer"]
+position = Vector2(1590, 840)
+scale = Vector2(0.4625, 0.4625)
+texture = ExtResource("6_5pabi")
+
+[node name="Rasberry1" type="Area2D" parent="PlateContainer/PurplePlate" groups=["plating_ingredients", "rasberries"]]
+position = Vector2(-257.297, -112.432)
+scale = Vector2(0.385586, 0.385586)
+metadata/_edit_group_ = true
+
+[node name="Rasberry" type="TextureButton" parent="PlateContainer/PurplePlate/Rasberry1"]
+offset_left = -364.486
+offset_top = -252.336
+offset_right = 426.514
+offset_bottom = 538.664
+keep_pressed_outside = true
+texture_normal = ExtResource("7_nc1nw")
+texture_pressed = ExtResource("8_vwfoc")
+texture_hover = ExtResource("9_1auw3")
+texture_click_mask = ExtResource("10_3smas")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/PurplePlate/Rasberry1"]
+position = Vector2(22.43, 168.224)
+shape = SubResource("CircleShape2D_7l5m4")
+debug_color = Color(0.921569, 0, 0.160784, 0.607843)
+
+[node name="Rasberry4" type="Area2D" parent="PlateContainer/PurplePlate" groups=["plating_ingredients", "rasberries"]]
+position = Vector2(123.243, 123.243)
+rotation = -0.670206
+scale = Vector2(0.385586, 0.385586)
+metadata/_edit_group_ = true
+
+[node name="Rasberry" type="TextureButton" parent="PlateContainer/PurplePlate/Rasberry4"]
+offset_left = -364.486
+offset_top = -252.336
+offset_right = 426.514
+offset_bottom = 538.664
+keep_pressed_outside = true
+texture_normal = ExtResource("7_nc1nw")
+texture_pressed = ExtResource("8_vwfoc")
+texture_hover = ExtResource("9_1auw3")
+texture_click_mask = ExtResource("10_3smas")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/PurplePlate/Rasberry4"]
+position = Vector2(22.43, 168.224)
+shape = SubResource("CircleShape2D_7l5m4")
+debug_color = Color(0.921569, 0, 0.160784, 0.607843)
+
+[node name="Rasberry5" type="Area2D" parent="PlateContainer/PurplePlate" groups=["plating_ingredients", "rasberries"]]
+position = Vector2(-54.0541, -313.513)
+rotation = 0.502655
+scale = Vector2(0.385586, 0.385586)
+metadata/_edit_group_ = true
+
+[node name="Rasberry" type="TextureButton" parent="PlateContainer/PurplePlate/Rasberry5"]
+offset_left = -364.486
+offset_top = -252.336
+offset_right = 426.514
+offset_bottom = 538.664
+keep_pressed_outside = true
+texture_normal = ExtResource("7_nc1nw")
+texture_pressed = ExtResource("8_vwfoc")
+texture_hover = ExtResource("9_1auw3")
+texture_click_mask = ExtResource("10_3smas")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/PurplePlate/Rasberry5"]
+position = Vector2(22.43, 168.224)
+shape = SubResource("CircleShape2D_7l5m4")
+debug_color = Color(0.921569, 0, 0.160784, 0.607843)
+
+[node name="Rasberry3" type="Area2D" parent="PlateContainer/PurplePlate" groups=["plating_ingredients", "rasberries"]]
+position = Vector2(-166.487, 108.108)
+scale = Vector2(0.385586, 0.385586)
+metadata/_edit_group_ = true
+
+[node name="Rasberry" type="TextureButton" parent="PlateContainer/PurplePlate/Rasberry3"]
+offset_left = -364.486
+offset_top = -252.336
+offset_right = 426.514
+offset_bottom = 538.664
+keep_pressed_outside = true
+texture_normal = ExtResource("7_nc1nw")
+texture_pressed = ExtResource("8_vwfoc")
+texture_hover = ExtResource("9_1auw3")
+texture_click_mask = ExtResource("10_3smas")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/PurplePlate/Rasberry3"]
+position = Vector2(22.43, 168.224)
+shape = SubResource("CircleShape2D_7l5m4")
+debug_color = Color(0.921569, 0, 0.160784, 0.607843)
+
+[node name="Rasberry2" type="Area2D" parent="PlateContainer/PurplePlate" groups=["plating_ingredients", "rasberries"]]
+position = Vector2(160, -227.027)
+rotation = 0.335103
+scale = Vector2(0.385586, 0.385586)
+metadata/_edit_group_ = true
+
+[node name="Rasberry" type="TextureButton" parent="PlateContainer/PurplePlate/Rasberry2"]
+offset_left = -364.486
+offset_top = -252.336
+offset_right = 426.514
+offset_bottom = 538.664
+keep_pressed_outside = true
+texture_normal = ExtResource("7_nc1nw")
+texture_pressed = ExtResource("8_vwfoc")
+texture_hover = ExtResource("9_1auw3")
+texture_click_mask = ExtResource("10_3smas")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/PurplePlate/Rasberry2"]
+position = Vector2(22.43, 168.224)
+shape = SubResource("CircleShape2D_7l5m4")
+debug_color = Color(0.921569, 0, 0.160784, 0.607843)
+
+[node name="BluePlate" type="Sprite2D" parent="PlateContainer"]
+position = Vector2(289, 780)
+scale = Vector2(0.594445, 0.594445)
+texture = ExtResource("11_ogs2g")
+
+[node name="Whipped2" type="Area2D" parent="PlateContainer/BluePlate" groups=["swirls"]]
+position = Vector2(2188.6, 100.934)
+scale = Vector2(0.272313, 0.272313)
+
+[node name="Whipped" type="TextureButton" parent="PlateContainer/BluePlate/Whipped2"]
+offset_left = -9680.31
+offset_top = -1044.02
+offset_right = -8600.31
+offset_bottom = 35.9845
+texture_normal = ExtResource("12_djibu")
+texture_pressed = ExtResource("12_djibu")
+texture_hover = ExtResource("13_btagv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/BluePlate/Whipped2"]
+position = Vector2(-9149.04, -543.627)
+shape = SubResource("CircleShape2D_gna3i")
+
+[node name="Whipped1" type="Area2D" parent="PlateContainer/BluePlate" groups=["swirls"]]
+position = Vector2(2188.6, 100.934)
+scale = Vector2(0.272313, 0.272313)
+
+[node name="Whipped" type="TextureButton" parent="PlateContainer/BluePlate/Whipped1"]
+offset_left = -7827.03
+offset_top = -24.7104
+offset_right = -6747.03
+offset_bottom = 1055.29
+texture_normal = ExtResource("12_djibu")
+texture_pressed = ExtResource("12_djibu")
+texture_hover = ExtResource("13_btagv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/BluePlate/Whipped1"]
+position = Vector2(-7382.25, 481.855)
+shape = SubResource("CircleShape2D_3m1fy")
+
+[node name="Whipped3" type="Area2D" parent="PlateContainer/BluePlate" groups=["swirls"]]
+position = Vector2(2188.6, 100.934)
+scale = Vector2(0.272313, 0.272313)
+
+[node name="Whipped" type="TextureButton" parent="PlateContainer/BluePlate/Whipped3"]
+offset_left = -8673.36
+offset_top = -1859.46
+offset_right = -7593.36
+offset_bottom = -779.46
+texture_normal = ExtResource("12_djibu")
+texture_pressed = ExtResource("12_djibu")
+texture_hover = ExtResource("13_btagv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/BluePlate/Whipped3"]
+position = Vector2(-8154.45, -1334.36)
+shape = SubResource("CircleShape2D_yrfse")
+
+[node name="Whipped4" type="Area2D" parent="PlateContainer/BluePlate" groups=["swirls"]]
+position = Vector2(2188.6, 100.934)
+scale = Vector2(0.272313, 0.272313)
+
+[node name="Whipped" type="TextureButton" parent="PlateContainer/BluePlate/Whipped4"]
+offset_left = -7684.94
+offset_top = -1192.28
+offset_right = -6604.94
+offset_bottom = -112.278
+texture_normal = ExtResource("12_djibu")
+texture_pressed = ExtResource("12_djibu")
+texture_hover = ExtResource("13_btagv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/BluePlate/Whipped4"]
+position = Vector2(-7153.68, -654.824)
+shape = SubResource("CircleShape2D_0ngjj")
+
+[node name="Whipped5" type="Area2D" parent="PlateContainer/BluePlate" groups=["swirls"]]
+position = Vector2(2188.6, 100.934)
+scale = Vector2(0.272313, 0.272313)
+
+[node name="Whipped" type="TextureButton" parent="PlateContainer/BluePlate/Whipped5"]
+offset_left = -9155.21
+offset_top = 86.4865
+offset_right = -8075.21
+offset_bottom = 1166.49
+texture_normal = ExtResource("12_djibu")
+texture_pressed = ExtResource("12_djibu")
+texture_hover = ExtResource("13_btagv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/BluePlate/Whipped5"]
+position = Vector2(-8642.48, 549.808)
+shape = SubResource("CircleShape2D_3uhr8")
+
+[node name="GreenPlate" type="Sprite2D" parent="PlateContainer"]
+position = Vector2(1765, 444)
+scale = Vector2(0.277778, 0.277778)
+texture = ExtResource("14_w3hq3")
+
+[node name="PinkPlate" type="Sprite2D" parent="PlateContainer"]
+position = Vector2(1489.19, 210.187)
+scale = Vector2(0.388542, 0.388542)
+texture = ExtResource("15_8l5ox")
+
+[node name="Timer1" type="Timer" parent="."]
+
+[node name="TargetSpots" type="Node2D" parent="."]
+
+[node name="BerryTarget1" type="Area2D" parent="TargetSpots"]
+position = Vector2(6, -26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BerryTarget1"]
+position = Vector2(889, 385)
+shape = SubResource("CircleShape2D_7eebt")
+debug_color = Color(0.921569, 0, 0.160784, 0.607843)
+
+[node name="BerryTarget5" type="Area2D" parent="TargetSpots"]
+position = Vector2(6, -26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BerryTarget5"]
+position = Vector2(1137, 723)
+shape = SubResource("CircleShape2D_7eebt")
+debug_color = Color(0.921569, 0, 0.160784, 0.607843)
+
+[node name="BerryTarget4" type="Area2D" parent="TargetSpots"]
+position = Vector2(6, -26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BerryTarget4"]
+position = Vector2(1137, 453)
+shape = SubResource("CircleShape2D_7eebt")
+debug_color = Color(0.921569, 0, 0.160784, 0.607843)
+
+[node name="BerryTarget3" type="Area2D" parent="TargetSpots"]
+position = Vector2(6, -26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BerryTarget3"]
+position = Vector2(893, 761)
+shape = SubResource("CircleShape2D_7eebt")
+debug_color = Color(0.921569, 0, 0.160784, 0.607843)
+
+[node name="BerryTarget2" type="Area2D" parent="TargetSpots"]
+position = Vector2(6, -26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BerryTarget2"]
+position = Vector2(758, 576)
+shape = SubResource("CircleShape2D_7eebt")
+debug_color = Color(0.921569, 0, 0.160784, 0.607843)
+
+[node name="WhippedTarget1" type="Area2D" parent="TargetSpots"]
+position = Vector2(959, 703)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/WhippedTarget1"]
+position = Vector2(78, 70)
+scale = Vector2(0.35, 0.35)
+shape = SubResource("CapsuleShape2D_li8jf")
+debug_color = Color(0.0991462, 0.0976386, 1, 0.627451)
+
+[node name="WhippedTarget2" type="Area2D" parent="TargetSpots"]
+position = Vector2(959, 703)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/WhippedTarget2"]
+position = Vector2(-160, -262)
+scale = Vector2(0.35, 0.35)
+shape = SubResource("CapsuleShape2D_li8jf")
+debug_color = Color(0.0991462, 0.0976386, 1, 0.627451)
+
+[node name="WhippedTarget3" type="Area2D" parent="TargetSpots"]
+position = Vector2(855, 385)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/WhippedTarget3"]
+position = Vector2(-64, 280)
+scale = Vector2(0.35, 0.35)
+shape = SubResource("CapsuleShape2D_li8jf")
+debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
+
+[node name="WhippedTarget4" type="Area2D" parent="TargetSpots"]
+position = Vector2(855, 385)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/WhippedTarget4"]
+position = Vector2(332, 196)
+scale = Vector2(0.35, 0.35)
+shape = SubResource("CapsuleShape2D_li8jf")
+debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
+
+[node name="WhippedTarget5" type="Area2D" parent="TargetSpots"]
+position = Vector2(855, 385)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/WhippedTarget5"]
+position = Vector2(182, -32)
+scale = Vector2(0.35, 0.35)
+shape = SubResource("CapsuleShape2D_li8jf")
+debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
+
+[node name="TextBox" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.564815, 0.564815)
+texture = ExtResource("16_qt58a")
+
+[node name="Instructions" type="Label" parent="TextBox"]
+offset_left = -729.443
+offset_top = -141.64
+offset_right = 764.557
+offset_bottom = 363.36
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("17_2h7ki")
+theme_override_font_sizes/font_size = 75
+text = "Place the ingredients following the reference guide. The more precise the better! "
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PressSpace" type="Label" parent="TextBox"]
+offset_left = -720.59
+offset_top = 242.557
+offset_right = 773.41
+offset_bottom = 747.557
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("17_2h7ki")
+theme_override_font_sizes/font_size = 50
+text = "Press \"Space\" to continue"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ScoreTextBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(0.564815, 0.564815)
+texture = ExtResource("16_qt58a")
+
+[node name="Scoring" type="Label" parent="ScoreTextBox"]
+offset_left = -729.443
+offset_top = -141.64
+offset_right = 764.557
+offset_bottom = 363.36
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("17_2h7ki")
+theme_override_font_sizes/font_size = 75
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ContinueButton" type="Button" parent="."]
+offset_left = 806.0
+offset_top = 883.0
+offset_right = 1178.0
+offset_bottom = 1002.0
+theme_override_font_sizes/font_size = 50
+text = "Continue!"
+
+[node name="HintTimer" type="Timer" parent="."]
+
+[node name="FancyCircle" type="Sprite2D" parent="."]
+position = Vector2(356, 133)
+scale = Vector2(0.234465, 0.234465)
+texture = ExtResource("18_hgplh")
+
+[node name="HintText" type="Sprite2D" parent="."]
+position = Vector2(159, 274)
+scale = Vector2(0.189699, 0.184259)
+texture = ExtResource("16_qt58a")
+metadata/_edit_group_ = true
+
+[node name="HintLabel" type="Label" parent="HintText"]
+offset_left = -729.443
+offset_top = -141.64
+offset_right = 764.557
+offset_bottom = 363.36
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("17_2h7ki")
+theme_override_font_sizes/font_size = 92
+text = "Can't remember? Take another look. However points will be deducted."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ButterspoonHead" type="Sprite2D" parent="."]
+position = Vector2(348, 131)
+scale = Vector2(0.187037, 0.187037)
+texture = ExtResource("19_qwtc0")
+
+[node name="PlopSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("20_hcp2f")
+volume_db = 1.333
+
+[connection signal="pressed" from="HintButton" to="." method="_on_hint_button_pressed"]
+[connection signal="pressed" from="Taste Test Button" to="." method="_on_taste_test_button_pressed"]
+[connection signal="input_event" from="PlateContainer/PurplePlate/Rasberry1" to="PlateContainer/PurplePlate/Rasberry1" method="_on_input_event"]
+[connection signal="button_down" from="PlateContainer/PurplePlate/Rasberry1/Rasberry" to="." method="_on_rasberry1_button_down"]
+[connection signal="button_up" from="PlateContainer/PurplePlate/Rasberry1/Rasberry" to="." method="_on_rasberry1_button_up"]
+[connection signal="input_event" from="PlateContainer/PurplePlate/Rasberry4" to="PlateContainer/PurplePlate/Rasberry4" method="_on_input_event"]
+[connection signal="button_down" from="PlateContainer/PurplePlate/Rasberry4/Rasberry" to="." method="_on_rasberry4_button_down"]
+[connection signal="button_up" from="PlateContainer/PurplePlate/Rasberry4/Rasberry" to="." method="_on_rasberry4_button_up"]
+[connection signal="input_event" from="PlateContainer/PurplePlate/Rasberry5" to="PlateContainer/PurplePlate/Rasberry5" method="_on_input_event"]
+[connection signal="button_down" from="PlateContainer/PurplePlate/Rasberry5/Rasberry" to="." method="_on_rasberry5_button_down"]
+[connection signal="button_up" from="PlateContainer/PurplePlate/Rasberry5/Rasberry" to="." method="_on_rasberry5_button_up"]
+[connection signal="input_event" from="PlateContainer/PurplePlate/Rasberry3" to="PlateContainer/PurplePlate/Rasberry3" method="_on_input_event"]
+[connection signal="button_down" from="PlateContainer/PurplePlate/Rasberry3/Rasberry" to="." method="_on_rasberry3_button_down"]
+[connection signal="button_up" from="PlateContainer/PurplePlate/Rasberry3/Rasberry" to="." method="_on_rasberry3_button_up"]
+[connection signal="input_event" from="PlateContainer/PurplePlate/Rasberry2" to="PlateContainer/PurplePlate/Rasberry2" method="_on_input_event"]
+[connection signal="button_down" from="PlateContainer/PurplePlate/Rasberry2/Rasberry" to="." method="_on_rasberry2_button_down"]
+[connection signal="button_up" from="PlateContainer/PurplePlate/Rasberry2/Rasberry" to="." method="_on_rasberry2_button_up"]
+[connection signal="button_down" from="PlateContainer/BluePlate/Whipped2/Whipped" to="." method="_on_whipped2_button_down"]
+[connection signal="button_up" from="PlateContainer/BluePlate/Whipped2/Whipped" to="." method="_on_whipped2_button_up"]
+[connection signal="button_down" from="PlateContainer/BluePlate/Whipped1/Whipped" to="." method="_on_whipped1_button_down"]
+[connection signal="button_up" from="PlateContainer/BluePlate/Whipped1/Whipped" to="." method="_on_whipped1_button_up"]
+[connection signal="button_down" from="PlateContainer/BluePlate/Whipped3/Whipped" to="." method="_on_whipped3_button_down"]
+[connection signal="button_up" from="PlateContainer/BluePlate/Whipped3/Whipped" to="." method="_on_whipped3_button_up"]
+[connection signal="button_down" from="PlateContainer/BluePlate/Whipped4/Whipped" to="." method="_on_whipped4_button_down"]
+[connection signal="button_up" from="PlateContainer/BluePlate/Whipped4/Whipped" to="." method="_on_whipped4_button_up"]
+[connection signal="button_down" from="PlateContainer/BluePlate/Whipped5/Whipped" to="." method="_on_whipped5_button_down"]
+[connection signal="button_up" from="PlateContainer/BluePlate/Whipped5/Whipped" to="." method="_on_whipped5_button_up"]
+[connection signal="timeout" from="Timer1" to="." method="_on_timer_1_timeout"]
+[connection signal="area_entered" from="TargetSpots/BerryTarget1" to="." method="_on_berry1_target_area_entered"]
+[connection signal="area_exited" from="TargetSpots/BerryTarget1" to="." method="_on_berry1_target_area_exited"]
+[connection signal="area_entered" from="TargetSpots/BerryTarget5" to="." method="_on_berry5_target_area_entered"]
+[connection signal="area_exited" from="TargetSpots/BerryTarget5" to="." method="_on_berry5_target_area_exited"]
+[connection signal="area_entered" from="TargetSpots/BerryTarget4" to="." method="_on_berry4_target_area_entered"]
+[connection signal="area_exited" from="TargetSpots/BerryTarget4" to="." method="_on_berry4_target_area_exited"]
+[connection signal="area_entered" from="TargetSpots/BerryTarget3" to="." method="_on_berry3_target_area_entered"]
+[connection signal="area_exited" from="TargetSpots/BerryTarget3" to="." method="_on_berry3_target_area_exited"]
+[connection signal="area_entered" from="TargetSpots/BerryTarget2" to="." method="_on_berry2_target_area_entered"]
+[connection signal="area_exited" from="TargetSpots/BerryTarget2" to="." method="_on_berry2_target_area_exited"]
+[connection signal="area_entered" from="TargetSpots/WhippedTarget1" to="." method="_on_whipped_target_1_area_entered"]
+[connection signal="area_exited" from="TargetSpots/WhippedTarget1" to="." method="_on_whipped_target_1_area_exited"]
+[connection signal="area_entered" from="TargetSpots/WhippedTarget2" to="." method="_on_whipped_target_2_area_entered"]
+[connection signal="area_exited" from="TargetSpots/WhippedTarget2" to="." method="_on_whipped_target_2_area_exited"]
+[connection signal="area_entered" from="TargetSpots/WhippedTarget3" to="." method="_on_whipped_target_3_area_entered"]
+[connection signal="area_exited" from="TargetSpots/WhippedTarget3" to="." method="_on_whipped_target_3_area_exited"]
+[connection signal="area_entered" from="TargetSpots/WhippedTarget4" to="." method="_on_whipped_target_4_area_entered"]
+[connection signal="area_exited" from="TargetSpots/WhippedTarget4" to="." method="_on_whipped_target_4_area_exited"]
+[connection signal="area_entered" from="TargetSpots/WhippedTarget5" to="." method="_on_whipped_target_5_area_entered"]
+[connection signal="area_exited" from="TargetSpots/WhippedTarget5" to="." method="_on_whipped_target_5_area_exited"]
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="timeout" from="HintTimer" to="." method="_on_hint_timer_timeout"]

@@ -31,7 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://62217bqvvk7l" path="res://art/ButterspoonHead.png" id="40_ixw7m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7l5m4"]
-radius = 105.677
+radius = 168.598
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ck5dp"]
 radius = 51.4294
@@ -46,7 +46,7 @@ size = Vector2(197.234, 34.4383)
 size = Vector2(25.7354, 194.098)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7eebt"]
-radius = 68.2642
+radius = 41.1096
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_li8jf"]
 radius = 160.0
