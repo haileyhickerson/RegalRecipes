@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bjx4w51stqrb2"]
+[gd_scene load_steps=27 format=3 uid="uid://bjx4w51stqrb2"]
 
 [ext_resource type="Script" path="res://plating2.gd" id="1_30qqh"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_y1t0m"]
@@ -13,8 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://p6snun843h8m" path="res://art/FancyBluePlate.png" id="11_ogs2g"]
 [ext_resource type="Texture2D" uid="uid://dwhtixlh0j0fo" path="res://art/WhippedTopping_Click.png" id="12_djibu"]
 [ext_resource type="Texture2D" uid="uid://16id2xth2snc" path="res://art/WhippedTopping_Hover.png" id="13_btagv"]
-[ext_resource type="Texture2D" uid="uid://cbifam7ydvpft" path="res://art/FancyGreenPlate.png" id="14_w3hq3"]
-[ext_resource type="Texture2D" uid="uid://c41nn5mrmj5ji" path="res://art/FancyPinkPlate.png" id="15_8l5ox"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="16_qt58a"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="17_2h7ki"]
 [ext_resource type="Texture2D" uid="uid://clopys7kwhryi" path="res://art/FancyCircle (1).png" id="18_hgplh"]
@@ -308,16 +306,6 @@ texture_hover = ExtResource("13_btagv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/BluePlate/Whipped5"]
 position = Vector2(-8642.48, 549.808)
 shape = SubResource("CircleShape2D_3uhr8")
-
-[node name="GreenPlate" type="Sprite2D" parent="PlateContainer"]
-position = Vector2(1765, 444)
-scale = Vector2(0.277778, 0.277778)
-texture = ExtResource("14_w3hq3")
-
-[node name="PinkPlate" type="Sprite2D" parent="PlateContainer"]
-position = Vector2(1489.19, 210.187)
-scale = Vector2(0.388542, 0.388542)
-texture = ExtResource("15_8l5ox")
 
 [node name="Timer1" type="Timer" parent="."]
 

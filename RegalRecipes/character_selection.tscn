@@ -1,16 +1,40 @@
-[gd_scene load_steps=12 format=3 uid="uid://bcm04qs33pvj"]
+[gd_scene load_steps=36 format=3 uid="uid://bcm04qs33pvj"]
 
 [ext_resource type="Script" path="res://character_selection.gd" id="1_bgcax"]
 [ext_resource type="Texture2D" uid="uid://bqyh7yvc1ulws" path="res://art/TitleBGConcept.png" id="1_f37jl"]
-[ext_resource type="Texture2D" uid="uid://xhxuwr74u4i3" path="res://art/Chef1Full.png" id="2_72ynp"]
 [ext_resource type="FontFile" uid="uid://dorvoffquppln" path="res://fonts/Hand of King.ttf" id="2_fmmx4"]
-[ext_resource type="Texture2D" uid="uid://hdj06jpn5nwm" path="res://art/Chef1FullClick.png" id="3_4nh8n"]
-[ext_resource type="Texture2D" uid="uid://bxphpj1e8luuu" path="res://art/Chef1FullHover.png" id="4_a21he"]
+[ext_resource type="Texture2D" uid="uid://615q7fig3fhy" path="res://art/Chefs/Chef1.png" id="4_im0c1"]
+[ext_resource type="Texture2D" uid="uid://dygl48ewyluax" path="res://art/Chefs/Chef1_Click.png" id="5_qwedp"]
 [ext_resource type="Texture2D" uid="uid://ddf5fqdrdwlcg" path="res://art/Chef2Full.png" id="5_tofo2"]
 [ext_resource type="Texture2D" uid="uid://bvv5v54558q6j" path="res://art/Chef2FullClick.png" id="6_c3jv8"]
-[ext_resource type="BitMap" uid="uid://e73djcjpuqbq" path="res://art/Chef1FullMask.png" id="7_6wwio"]
+[ext_resource type="Texture2D" uid="uid://baa0jxwkqv8nc" path="res://art/Chefs/Chef1_Hover.png" id="6_kwc6t"]
+[ext_resource type="BitMap" uid="uid://bm2wsdqt0cac4" path="res://art/Chefs/Chef1_Mask.png" id="7_5ovmv"]
 [ext_resource type="Texture2D" uid="uid://5pbn7et5cu3s" path="res://art/Chef2FullHover.png" id="7_fjwq6"]
 [ext_resource type="BitMap" uid="uid://bwiys3geh3uel" path="res://art/Chef2FullMask.png" id="11_t85n8"]
+[ext_resource type="Texture2D" uid="uid://cpxvml2y32vvi" path="res://art/Chefs/Chef3.png" id="12_v8f6c"]
+[ext_resource type="Texture2D" uid="uid://be2vy2078jpal" path="res://art/Chefs/Chef3_Click.png" id="13_wcifv"]
+[ext_resource type="Texture2D" uid="uid://d15dxao2du3dl" path="res://art/Chefs/Chef3_Hover.png" id="14_cu3aa"]
+[ext_resource type="BitMap" uid="uid://cr34sm87bfl34" path="res://art/Chefs/Chef3_Mask.png" id="15_2ti3u"]
+[ext_resource type="Texture2D" uid="uid://b6362tq5dvm0w" path="res://art/Chefs/Chef4.png" id="16_je85y"]
+[ext_resource type="Texture2D" uid="uid://bpv2vla7q2x71" path="res://art/Chefs/Chef4_Click.png" id="17_84avg"]
+[ext_resource type="Texture2D" uid="uid://kl2mf6f3fjoa" path="res://art/Chefs/Chef4_Hover.png" id="18_oujds"]
+[ext_resource type="BitMap" uid="uid://dl25j7ui6crv" path="res://art/Chefs/Chef4_Mask.png" id="19_j2lx0"]
+[ext_resource type="Texture2D" uid="uid://clgjr814mdoig" path="res://art/Chefs/FemaleChef1.png" id="20_16405"]
+[ext_resource type="Texture2D" uid="uid://bi0psb2mi2r74" path="res://art/Chefs/FemaleChef1_Mask.png" id="21_0uwa1"]
+[ext_resource type="Texture2D" uid="uid://blqby8dqmai1b" path="res://art/Chefs/FemaleChef1_Hover.png" id="22_5oubf"]
+[ext_resource type="BitMap" uid="uid://dvnowrkw6oi2e" path="res://art/Chefs/FemaleChef1_Click.png" id="23_wcaqp"]
+[ext_resource type="Texture2D" uid="uid://co7yurpj73k12" path="res://art/Chefs/FemaleChef2.png" id="24_jc8y5"]
+[ext_resource type="Texture2D" uid="uid://guoivq0xwj73" path="res://art/Chefs/FemaleChef2_Click.png" id="25_dxt75"]
+[ext_resource type="Texture2D" uid="uid://jtsxhewmaayh" path="res://art/Chefs/FemaleChef2_Hover.png" id="26_1ttma"]
+[ext_resource type="BitMap" uid="uid://76nsqj4cg6eh" path="res://art/Chefs/FemaleChef2_Mask.png" id="27_qxabb"]
+[ext_resource type="Texture2D" uid="uid://cya8vq05vo71w" path="res://art/Chefs/FemaleChef3.png" id="28_lgmpm"]
+[ext_resource type="Texture2D" uid="uid://b0ix5wna6ilqc" path="res://art/Chefs/FemaleChef3_Hover.png" id="29_jsuuv"]
+[ext_resource type="Texture2D" uid="uid://dmnxlc6ni052b" path="res://art/Chefs/FemaleChef3_Click.png" id="29_mix7k"]
+[ext_resource type="BitMap" uid="uid://0m34t2gywe6w" path="res://art/Chefs/FemaleChef3_Mask.png" id="30_ixo40"]
+[ext_resource type="Texture2D" uid="uid://76xayc16fexb" path="res://art/Chefs/FemaleChef4.png" id="31_s3bke"]
+[ext_resource type="Texture2D" uid="uid://dtu3f7bwbu5rq" path="res://art/Chefs/FemaleChef4_Click.png" id="32_r6bce"]
+[ext_resource type="Texture2D" uid="uid://b025t5qq2jgfh" path="res://art/Chefs/FemaleChef4_Hover.png" id="33_ifsm7"]
+[ext_resource type="BitMap" uid="uid://bbo5gwfl0qtbu" path="res://art/Chefs/FemaleChef4_Mask.png" id="34_wmwic"]
 
 [node name="Character_Selection" type="Node2D"]
 script = ExtResource("1_bgcax")
@@ -37,22 +61,22 @@ text = "Select a Character!"
 horizontal_alignment = 1
 
 [node name="Chef1" type="TextureButton" parent="."]
-offset_left = 444.0
-offset_top = 219.0
-offset_right = 1098.0
-offset_bottom = 1378.0
-texture_normal = ExtResource("2_72ynp")
-texture_pressed = ExtResource("3_4nh8n")
-texture_hover = ExtResource("4_a21he")
-texture_click_mask = ExtResource("7_6wwio")
+offset_left = -291.0
+offset_top = 206.0
+offset_right = 574.0
+offset_bottom = 1493.0
+texture_normal = ExtResource("4_im0c1")
+texture_pressed = ExtResource("5_qwedp")
+texture_hover = ExtResource("6_kwc6t")
+texture_click_mask = ExtResource("7_5ovmv")
 ignore_texture_size = true
 stretch_mode = 4
 
 [node name="Chef2" type="TextureButton" parent="."]
-offset_left = 828.0
-offset_top = 207.0
-offset_right = 1698.0
-offset_bottom = 1397.0
+offset_left = 262.0
+offset_top = 192.0
+offset_right = 1084.0
+offset_bottom = 1409.0
 texture_normal = ExtResource("5_tofo2")
 texture_pressed = ExtResource("6_c3jv8")
 texture_hover = ExtResource("7_fjwq6")
@@ -60,5 +84,83 @@ texture_click_mask = ExtResource("11_t85n8")
 ignore_texture_size = true
 stretch_mode = 4
 
+[node name="Chef3" type="TextureButton" parent="."]
+offset_left = 576.0
+offset_top = 200.0
+offset_right = 1503.0
+offset_bottom = 1446.0
+texture_normal = ExtResource("12_v8f6c")
+texture_pressed = ExtResource("13_wcifv")
+texture_hover = ExtResource("14_cu3aa")
+texture_click_mask = ExtResource("15_2ti3u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Chef4" type="TextureButton" parent="."]
+offset_left = 1054.0
+offset_top = 208.0
+offset_right = 1981.0
+offset_bottom = 1454.0
+texture_normal = ExtResource("16_je85y")
+texture_pressed = ExtResource("17_84avg")
+texture_hover = ExtResource("18_oujds")
+texture_click_mask = ExtResource("19_j2lx0")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="FemaleChef1" type="TextureButton" parent="."]
+offset_left = 346.0
+offset_top = 304.0
+offset_right = 1273.0
+offset_bottom = 1550.0
+texture_normal = ExtResource("20_16405")
+texture_pressed = ExtResource("21_0uwa1")
+texture_hover = ExtResource("22_5oubf")
+texture_click_mask = ExtResource("23_wcaqp")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="FemaleChef2" type="TextureButton" parent="."]
+offset_left = 807.0
+offset_top = 316.0
+offset_right = 1734.0
+offset_bottom = 1562.0
+texture_normal = ExtResource("24_jc8y5")
+texture_pressed = ExtResource("25_dxt75")
+texture_hover = ExtResource("26_1ttma")
+texture_click_mask = ExtResource("27_qxabb")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="FemaleChef3" type="TextureButton" parent="."]
+offset_left = 1285.0
+offset_top = 293.0
+offset_right = 2212.0
+offset_bottom = 1539.0
+texture_normal = ExtResource("28_lgmpm")
+texture_pressed = ExtResource("29_mix7k")
+texture_hover = ExtResource("29_jsuuv")
+texture_click_mask = ExtResource("30_ixo40")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="FemaleChef4" type="TextureButton" parent="."]
+offset_left = -93.0
+offset_top = 313.0
+offset_right = 834.0
+offset_bottom = 1559.0
+texture_normal = ExtResource("31_s3bke")
+texture_pressed = ExtResource("32_r6bce")
+texture_hover = ExtResource("33_ifsm7")
+texture_click_mask = ExtResource("34_wmwic")
+ignore_texture_size = true
+stretch_mode = 5
+
 [connection signal="pressed" from="Chef1" to="." method="_on_chef_1_pressed"]
 [connection signal="pressed" from="Chef2" to="." method="_on_chef_2_pressed"]
+[connection signal="pressed" from="Chef3" to="." method="_on_chef_3_pressed"]
+[connection signal="pressed" from="Chef4" to="." method="_on_chef_4_pressed"]
+[connection signal="pressed" from="FemaleChef1" to="." method="_on_female_chef_1_pressed"]
+[connection signal="pressed" from="FemaleChef2" to="." method="_on_female_chef_2_pressed"]
+[connection signal="pressed" from="FemaleChef3" to="." method="_on_female_chef_3_pressed"]
+[connection signal="pressed" from="FemaleChef4" to="." method="_on_female_chef_4_pressed"]

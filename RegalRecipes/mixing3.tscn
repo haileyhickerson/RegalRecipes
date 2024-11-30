@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://mixing3.gd" id="1_ut4b4"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_mvjck"]
 [ext_resource type="Texture2D" uid="uid://b18m0772uijl1" path="res://art/BlueBowl.png" id="3_fte8l"]
-[ext_resource type="Texture2D" uid="uid://2kdq4gi7o2wa" path="res://art/SquareOutline (3).png" id="4_02ix3"]
 [ext_resource type="Texture2D" uid="uid://cxmwjp86fnw6b" path="res://art/CakeMix1.png" id="5_10jcs"]
 [ext_resource type="Texture2D" uid="uid://bt5awn4htkuio" path="res://art/CakeMix2.png" id="6_8105g"]
 [ext_resource type="Texture2D" uid="uid://bpovfro1ix3p1" path="res://art/CakeMix3.png" id="7_vsvmi"]
@@ -28,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://cy0syqhf2i81q" path="res://art/EggBatter8.png" id="26_52uoo"]
 [ext_resource type="Texture2D" uid="uid://br41scewf82aw" path="res://art/EggBatter9.png" id="27_hfqds"]
 [ext_resource type="Texture2D" uid="uid://da1epa7pv1ayf" path="res://art/EggBatter10.png" id="28_hcyoa"]
+[ext_resource type="Texture2D" uid="uid://c3rut507inwt8" path="res://art/SquiggleOutline.png" id="29_i4c7m"]
 [ext_resource type="Texture2D" uid="uid://bhvi4yvmv1jek" path="res://art/EggBatterFinal.png" id="29_o2hpe"]
 [ext_resource type="Texture2D" uid="uid://cjcpi4m5np1fv" path="res://art/play.png" id="34_7otlb"]
 [ext_resource type="Texture2D" uid="uid://dxugxbw6gpt0n" path="res://art/play_hover.png" id="35_ve7po"]
@@ -433,37 +433,37 @@ position = Vector2(960, 540)
 scale = Vector2(0.849537, 0.832322)
 texture = ExtResource("3_fte8l")
 
-[node name="MixingSquare" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-scale = Vector2(0.99, 0.99)
-texture = ExtResource("4_02ix3")
-
 [node name="SteakSauce" type="AnimatedSprite2D" parent="."]
 position = Vector2(960, 540)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_vysqn")
 animation = &"steak_mixed"
 
+[node name="MixingSquare" type="Sprite2D" parent="."]
+position = Vector2(1002.5, 543.2)
+scale = Vector2(1.26944, 0.995926)
+texture = ExtResource("29_i4c7m")
+
 [node name="Marker1" type="Marker2D" parent="."]
-position = Vector2(1377, 80)
+position = Vector2(1175, 190)
 
 [node name="Marker2" type="Marker2D" parent="."]
-position = Vector2(1408, 500)
+position = Vector2(1577, 480)
 
 [node name="Marker3" type="Marker2D" parent="."]
-position = Vector2(1383, 951)
+position = Vector2(1322, 762)
 
 [node name="Marker4" type="Marker2D" parent="."]
-position = Vector2(942, 987)
+position = Vector2(855, 862)
 
 [node name="Marker5" type="Marker2D" parent="."]
-position = Vector2(486, 939)
+position = Vector2(395, 840)
 
 [node name="Marker6" type="Marker2D" parent="."]
-position = Vector2(468, 510)
+position = Vector2(469, 459)
 
 [node name="Marker7" type="Marker2D" parent="."]
-position = Vector2(494, 82)
+position = Vector2(445, 101)
 
 [node name="Marker8" type="Marker2D" parent="."]
 position = Vector2(934, 45)
@@ -598,15 +598,14 @@ position = Vector2(960, 540)
 
 [node name="LeftSide" type="CollisionPolygon2D" parent="OutsideOfSquare"]
 rotation = 3.14159
-polygon = PackedVector2Array(0, -545, 2, -507, 46, -505, 118, -509, 405, -504, 454, -478, 488, -442, 504, -398, 506, -326, 507, -55, 508, 88, 506, 134, 505, 355, 506, 393, 496, 423, 475, 461, 440, 489, 403, 503, 278, 506, 104, 504, 27, 506, 1, 507, 2, 558, 986, 552, 988, -564)
+polygon = PackedVector2Array(0, -545, 0.00115967, -459, 48.0011, -417, 95.001, -379, 118.001, -362, 145.001, -347, 169.001, -337, 201.001, -330, 233.001, -329.999, 262.001, -331.999, 295.001, -341.999, 338.001, -356.999, 381.001, -371.999, 412.001, -380.999, 432.001, -383.999, 456.001, -385.999, 478.001, -385.999, 497.001, -381.999, 532.001, -369.999, 558.001, -354.999, 577.001, -336.999, 595.001, -309.998, 602.001, -294.998, 607.001, -280.998, 610.001, -246.998, 609.001, -222.998, 600, -190.998, 590, -164.998, 578, -137.999, 529, -52.9987, 512, -18.9987, 504, 6.00128, 498, 34.0013, 496, 59.0013, 497, 78.0013, 503, 106.001, 510, 132.001, 518, 156.001, 531, 177.001, 566.999, 240.001, 585.999, 286.001, 592.999, 321.002, 592.999, 337.002, 587.999, 363.001, 582.999, 380.001, 574.999, 394.001, 556.999, 416.001, 528.999, 442.001, 494.999, 460.001, 467.999, 472.001, 432.999, 482.001, 388.999, 489.001, 342.999, 492.001, 276.999, 492.001, 209.999, 490.001, 146.999, 488, 103.999, 489, 80.9988, 491, 51.9988, 495, 26.9988, 499, -3.00128, 507, -3.0014, 561, 986, 552, 988, -564)
 
 [node name="RightSide" type="CollisionPolygon2D" parent="OutsideOfSquare"]
-polygon = PackedVector2Array(0, -545, 2, -507, 46, -505, 118, -509, 405, -504, 454, -478, 488, -442, 504, -398, 506, -326, 507, -55, 508, 88, 506, 134, 505, 355, 506, 393, 496, 423, 475, 461, 440, 489, 403, 503, 278, 506, 104, 504, 27, 506, 1, 507, 2, 558, 986, 552, 988, -564)
+polygon = PackedVector2Array(0, -545, 2, -507, 63, -524, 129, -535, 187, -530, 230, -512, 257, -485, 267, -458, 268, -437, 260, -390, 258, -366, 265, -341, 283, -316, 317, -294, 354, -279, 416, -263, 512, -241, 556, -226, 595, -205, 638, -173, 669, -136, 691, -97, 703, -51, 708, -22, 709, 1, 703, 56, 689, 108, 662, 148, 618, 174, 581, 187, 512, 206, 474, 217, 450, 227, 429, 241, 416, 256, 405, 274, 397, 299, 392, 322, 388, 353, 381, 403, 372, 431, 360, 454, 343, 476, 315, 497, 278, 514, 230, 526, 179, 529, 133, 522, 92, 511, 35, 486, 0, 459, 1, 507, 2, 558, 986, 552, 988, -564)
 
 [node name="InnerSquare" type="CollisionPolygon2D" parent="OutsideOfSquare"]
-visible = false
 scale = Vector2(0.97, 0.97)
-polygon = PackedVector2Array(-348.454, -452.577, 372.165, -450.515, 404, -445, 431, -424, 445, -397, 451, -369, 451, 386, 434, 423, 405.155, 444.33, 379.381, 450.516, -384.536, 449.485, -410, 441, -435, 421, -450, 385, -452, -380, -442, -412, -416, -437, -387, -450)
+polygon = PackedVector2Array(-345.361, -436.082, -278.351, -438.144, -156.701, -431.959, -70.1031, -434.021, 11.3402, -452.577, 75.2577, -471.134, 118.557, -476.289, 151.546, -475.258, 183.505, -465.979, 209.278, -448.454, 217.526, -423.711, 218.557, -400, 209.278, -352.577, 214.433, -322.68, 228.866, -293.814, 252.577, -271.134, 291.753, -249.485, 347.423, -227.835, 435.052, -210.309, 489.691, -196.907, 528.866, -179.381, 564.948, -152.577, 590.722, -122.68, 608.247, -89.6907, 618.557, -61.8557, 626.804, -21.6495, 624.742, 29.8969, 615.464, 72.165, 606.186, 100, 586.598, 124.742, 554.639, 142.268, 486.598, 161.856, 426.804, 178.351, 390.722, 196.907, 369.072, 212.371, 355.67, 230.928, 342.268, 257.732, 334.021, 297.938, 326.804, 356.701, 319.588, 383.505, 309.278, 405.155, 291.753, 426.804, 264.948, 445.361, 236.083, 458.763, 189.691, 465.979, 154.639, 464.948, 126.804, 458.763, 103.093, 452.577, 72.1649, 440.206, 46.3917, 427.835, 1.03088, 390.722, -53.6083, 344.33, -79.3815, 325.773, -107.216, 308.247, -131.959, 296.907, -164.948, 285.567, -193.814, 281.443, -218.557, 281.443, -254.639, 286.598, -313.402, 304.124, -360.825, 322.68, -392.784, 328.866, -416.495, 332.99, -438.144, 331.959, -460.825, 328.866, -487.629, 317.526, -507.217, 303.093, -525.773, 282.474, -535.052, 260.825, -540.206, 242.268, -541.237, 226.804, -538.144, 203.093, -530.928, 173.196, -516.495, 138.144, -484.536, 83.5052, -461.856, 41.2371, -447.423, 8.24744, -439.175, -23.7113, -435.052, -58.7629, -437.113, -83.5052, -441.237, -110.309, -451.546, -144.33, -465.979, -176.289, -496.907, -230.928, -517.526, -275.258, -522.68, -303.093, -522.68, -324.742, -515.464, -352.577, -495.876, -378.351, -471.134, -398.969, -446.392, -411.34, -419.588, -421.649, -386.598, -429.897)
 disabled = true
 
 [node name="NextButton" type="Button" parent="."]

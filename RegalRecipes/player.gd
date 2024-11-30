@@ -10,6 +10,18 @@ func _ready() -> void:
 		$AnimatedSprite2D.animation = "chef1"
 	if PlayerVariables.chef_selected == 2:
 		$AnimatedSprite2D.animation = "chef2"
+	if PlayerVariables.chef_selected == 3:
+		$AnimatedSprite2D.animation = "chef3"
+	if PlayerVariables.chef_selected == 4:
+		$AnimatedSprite2D.animation = "chef4"
+	if PlayerVariables.chef_selected == 5:
+		$AnimatedSprite2D.animation = "chef5"
+	if PlayerVariables.chef_selected == 6:
+		$AnimatedSprite2D.animation = "chef6"
+	if PlayerVariables.chef_selected == 7:
+		$AnimatedSprite2D.animation = "chef7"
+	if PlayerVariables.chef_selected == 8:
+		$AnimatedSprite2D.animation = "chef8"
 
 func _process(delta: float) -> void:
 	var velocity = Vector2.ZERO 

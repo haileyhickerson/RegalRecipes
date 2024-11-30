@@ -400,14 +400,9 @@ text = "Continue!"
 
 [node name="HintTimer" type="Timer" parent="."]
 
-[node name="FancyCircle" type="Sprite2D" parent="."]
-position = Vector2(356, 133)
-scale = Vector2(0.234465, 0.234465)
-texture = ExtResource("42_ny8xw")
-
 [node name="HintText" type="Sprite2D" parent="."]
-position = Vector2(159, 274)
-scale = Vector2(0.189699, 0.184259)
+position = Vector2(205, 320)
+scale = Vector2(0.237839, 0.231018)
 texture = ExtResource("37_wvajo")
 metadata/_edit_group_ = true
 
@@ -420,14 +415,20 @@ theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("38_7o3ny")
-theme_override_font_sizes/font_size = 75
-text = "Can't remember? Take another look. However points will be deducted."
+theme_override_font_sizes/font_size = 100
+text = "Can't remember? Take another look-- but points will be deducted!"
 horizontal_alignment = 1
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="FancyCircle" type="Sprite2D" parent="."]
+position = Vector2(365.611, 153.611)
+scale = Vector2(0.234465, 0.234465)
+texture = ExtResource("42_ny8xw")
 
 [node name="ButterspoonHead" type="Sprite2D" parent="."]
-position = Vector2(348, 131)
-scale = Vector2(0.187037, 0.187037)
+position = Vector2(361.611, 154.41)
+scale = Vector2(0.125962, 0.125962)
 texture = ExtResource("43_gp3ct")
 
 [node name="PlopSound" type="AudioStreamPlayer2D" parent="."]

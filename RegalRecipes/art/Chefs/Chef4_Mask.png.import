@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dl25j7ui6crv"
+path="res://.godot/imported/Chef4_Mask.png-0d5fbc1138975851506b7d2d636f244a.res"
+
+[deps]
+
+source_file="res://art/Chefs/Chef4_Mask.png"
+dest_files=["res://.godot/imported/Chef4_Mask.png-0d5fbc1138975851506b7d2d636f244a.res"]
+
+[params]
+
+create_from=0
+threshold=0.35

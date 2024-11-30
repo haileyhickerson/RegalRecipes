@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dvnowrkw6oi2e"
+path="res://.godot/imported/FemaleChef1_Click.png-727b5ee4946dbb0e6c00d12787e3de31.res"
+
+[deps]
+
+source_file="res://art/Chefs/FemaleChef1_Click.png"
+dest_files=["res://.godot/imported/FemaleChef1_Click.png-727b5ee4946dbb0e6c00d12787e3de31.res"]
+
+[params]
+
+create_from=0
+threshold=0.37

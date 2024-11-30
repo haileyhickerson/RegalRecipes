@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://76nsqj4cg6eh"
+path="res://.godot/imported/FemaleChef2_Mask.png-a5443ee99cd4261ab8f9a3dfee2122d2.res"
+
+[deps]
+
+source_file="res://art/Chefs/FemaleChef2_Mask.png"
+dest_files=["res://.godot/imported/FemaleChef2_Mask.png-a5443ee99cd4261ab8f9a3dfee2122d2.res"]
+
+[params]
+
+create_from=0
+threshold=0.4

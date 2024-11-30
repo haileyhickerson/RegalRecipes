@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://1l3xhks67ylh"]
+[gd_scene load_steps=62 format=3 uid="uid://1l3xhks67ylh"]
 
 [ext_resource type="Script" path="res://kitchen.gd" id="1_yn30c"]
 [ext_resource type="Texture2D" uid="uid://cdxkwv6ddgfwv" path="res://art/TileFloor.png" id="2_rbyka"]
@@ -9,10 +9,8 @@
 [ext_resource type="AudioStream" uid="uid://cbvuee0iilek4" path="res://music&sounds/footsteps.wav" id="5_1fu2m"]
 [ext_resource type="Texture2D" uid="uid://bclxihli2x64f" path="res://art/CuttingIconHover.png" id="5_7kiax"]
 [ext_resource type="Texture2D" uid="uid://bfimm21ebg0kc" path="res://art/StoveIcon.png" id="5_28m7m"]
-[ext_resource type="Texture2D" uid="uid://dpy33elb8np4b" path="res://art/Chef1Head.png" id="5_a2pkm"]
 [ext_resource type="Texture2D" uid="uid://httkp4j4autg" path="res://art/StoveIconHover.png" id="5_ac52r"]
 [ext_resource type="Texture2D" uid="uid://sl26yik0i50i" path="res://art/CuttingIcon.png" id="5_rijq2"]
-[ext_resource type="Texture2D" uid="uid://cv50xmngw6bsk" path="res://art/Chef1Head2.png" id="6_72jo1"]
 [ext_resource type="Texture2D" uid="uid://b811eivn165p4" path="res://art/PantryIconPressed.png" id="6_x1k46"]
 [ext_resource type="Texture2D" uid="uid://dmsccgi64qkut" path="res://art/Chef2Head.png" id="6_yoocp"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="7_hrdey"]
@@ -26,16 +24,30 @@
 [ext_resource type="Texture2D" uid="uid://c8i4j4swg5hix" path="res://art/PlatingIcon.png" id="12_7di3w"]
 [ext_resource type="Texture2D" uid="uid://bmsxp1gx2xnji" path="res://art/MixingIconPress.png" id="12_h7llt"]
 [ext_resource type="Texture2D" uid="uid://cuhoyxngu4vr1" path="res://art/PlatingIconPress.png" id="13_025dv"]
+[ext_resource type="Texture2D" uid="uid://dhedov5yulodk" path="res://art/Chefs/Chef1Head1.png" id="22_gfa2e"]
+[ext_resource type="Texture2D" uid="uid://d16k42ild50jb" path="res://art/Chefs/Chef1Head2.png" id="23_1tx8i"]
+[ext_resource type="Texture2D" uid="uid://6k5poqdrat8a" path="res://art/Chefs/Chef3Head1.png" id="26_qmrxk"]
+[ext_resource type="Texture2D" uid="uid://cjm6nvdysby80" path="res://art/Chefs/Chef3Head2.png" id="27_6ylhp"]
 [ext_resource type="Texture2D" uid="uid://4ku7r1pae5c" path="res://art/ArrowFrames/1.png" id="27_smsw7"]
 [ext_resource type="Texture2D" uid="uid://bi7ai5wq7luin" path="res://art/ArrowFrames/2.png" id="28_spthw"]
+[ext_resource type="Texture2D" uid="uid://b3v5utdl6sq5g" path="res://art/Chefs/Chef4Head1.png" id="28_xkqf2"]
 [ext_resource type="Texture2D" uid="uid://4sm7eplfenyi" path="res://art/ArrowFrames/3.png" id="29_qn5f2"]
+[ext_resource type="Texture2D" uid="uid://bglc8y6a33l6v" path="res://art/Chefs/Chef4Head2.png" id="29_yipgp"]
 [ext_resource type="Texture2D" uid="uid://bovgkx1fg1n1p" path="res://art/ArrowFrames/4.png" id="30_4wxq4"]
+[ext_resource type="Texture2D" uid="uid://b556gxd6kjpnu" path="res://art/Chefs/FemaleChef1Head1.png" id="30_w7ukr"]
+[ext_resource type="Texture2D" uid="uid://c5odkgqn7prk5" path="res://art/Chefs/FemaleChef1Head2.png" id="31_nifko"]
 [ext_resource type="Texture2D" uid="uid://byskijp7yp1gl" path="res://art/ArrowFrames/5.png" id="31_o2jxi"]
+[ext_resource type="Texture2D" uid="uid://ci52x3xqicw2x" path="res://art/Chefs/FemaleChef2Head1.png" id="32_hbmbn"]
 [ext_resource type="Texture2D" uid="uid://cadne302r2unw" path="res://art/ArrowFrames/6.png" id="32_wv8kl"]
+[ext_resource type="Texture2D" uid="uid://bgcs6l73l8pk" path="res://art/Chefs/FemaleChef2Head2.png" id="33_d8gia"]
 [ext_resource type="Texture2D" uid="uid://crxasd4ld3lyk" path="res://art/ArrowFrames/7.png" id="33_whd8b"]
+[ext_resource type="Texture2D" uid="uid://b6xkv8765n61t" path="res://art/Chefs/FemaleChef3Head1 (2).png" id="34_c6ied"]
 [ext_resource type="Texture2D" uid="uid://20x43rtvmljf" path="res://art/ArrowFrames/8.png" id="34_fcjti"]
 [ext_resource type="Texture2D" uid="uid://clopys7kwhryi" path="res://art/FancyCircle (1).png" id="35_oolft"]
+[ext_resource type="Texture2D" uid="uid://c1ew0ta6weu3o" path="res://art/Chefs/FemaleChef3Head1.png" id="35_tbb5d"]
+[ext_resource type="Texture2D" uid="uid://by5xhqgu433a7" path="res://art/Chefs/FemaleChef4Head1.png" id="36_68ejd"]
 [ext_resource type="Texture2D" uid="uid://62217bqvvk7l" path="res://art/ButterspoonHead.png" id="36_ooni6"]
+[ext_resource type="Texture2D" uid="uid://bjof6smuyhwkg" path="res://art/Chefs/FemaleChef4Head2.png" id="37_yogkc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l5u2r"]
 animations = [{
@@ -191,10 +203,10 @@ size = Vector2(601.193, 251.909)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_a2pkm")
+"texture": ExtResource("22_gfa2e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_72jo1")
+"texture": ExtResource("23_1tx8i")
 }],
 "loop": true,
 "name": &"chef1",
@@ -209,6 +221,72 @@ animations = [{
 }],
 "loop": true,
 "name": &"chef2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_qmrxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_6ylhp")
+}],
+"loop": true,
+"name": &"chef3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_xkqf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_yipgp")
+}],
+"loop": true,
+"name": &"chef4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_w7ukr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_nifko")
+}],
+"loop": true,
+"name": &"chef5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_hbmbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_d8gia")
+}],
+"loop": true,
+"name": &"chef6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_c6ied")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_tbb5d")
+}],
+"loop": true,
+"name": &"chef7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_68ejd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_yogkc")
+}],
+"loop": true,
+"name": &"chef8",
 "speed": 5.0
 }]
 
@@ -443,8 +521,7 @@ script = ExtResource("3_bb6cy")
 position = Vector2(-11, 1)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_wr4ou")
-animation = &"chef1"
-frame_progress = 0.503277
+animation = &"chef8"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-11, 0)
@@ -603,8 +680,8 @@ scale = Vector2(0.234465, 0.234465)
 texture = ExtResource("35_oolft")
 
 [node name="ButterspoonHead" type="Sprite2D" parent="."]
-position = Vector2(1798.22, 600.555)
-scale = Vector2(0.187037, 0.187037)
+position = Vector2(1793, 614)
+scale = Vector2(0.125031, 0.125031)
 texture = ExtResource("36_ooni6")
 
 [connection signal="area_entered" from="PantryArea" to="." method="_on_pantry_area_entered"]
