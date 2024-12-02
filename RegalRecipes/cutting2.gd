@@ -4,11 +4,14 @@ extends Node2D
 # Array of ideal points along line at which cuts should be made
 var ideal_cut_points = []
 # Score variable
-var score = 0
+var score = 100
 var total_possible_points = 100
 var total_cuts = 0
 var cut_threshold = 30
+var max_score = 100
+var deduction_cut= 10
 var first_space_pressed
+var lines =[]
 
 # Ready function
 func _ready() -> void:
@@ -16,10 +19,11 @@ func _ready() -> void:
 	$Onion.visible=false
 	for child in get_children():
 		if child is Line2D:
-			var points = child.points
-			for point in points:
-				ideal_cut_points.append(point.x)
-			print(ideal_cut_points)
+			lines.append(child)
+			# Get the position of point 0
+			var point_0_position = child.get_point_position(0)
+			# Append the x-coordinate of point 0 to ideal_cut_points
+			ideal_cut_points.append(point_0_position.x)
 				
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("action"):
@@ -31,43 +35,51 @@ func _process(delta: float) -> void:
 	
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
-		total_cuts += 1
-		if total_cuts < 4:
-			print(total_cuts)
-			##use marker2d position for knife
-			var knife_position_x= $Knife/KnifeTip.global_position.x
-			print("knife:",knife_position_x)
-			if check_cut(knife_position_x):
-				var points_gained= calculate_score(knife_position_x)
-				score += points_gained
+		if first_space_pressed== true:
+			if total_cuts < 4:
+				total_cuts += 1
+				print(total_cuts)
+				##use marker2d position for knife
+				var knife_position_x= $Knife/KnifeTip.global_position.x
+				print("knife:",knife_position_x)
+				if check_cut(knife_position_x):
+					var points_loss= calculate_deduction(knife_position_x)
+					print("cut is made", points_loss)
+					$ChopSound.play()
+				else:
+					$ErrorSound.play()
+					print("no cut is made")
+					score-= deduction_cut
 				update_score_display()
-				print("cut is made, score: ", score)
-			else:
-				update_score_display()
-				print("no cut is made, score: ", score)
+				score= max(score,0)
+				print("current score: ", score)
 				
-				
-	
-		if total_cuts==3:
-			$FullCarrot.visible= false
-			$Onion.visible= true
-			$Cut1.visible= false
-			$Cut2.visible= false
-			
 		
-		if total_cuts ==4:
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			$NextButton.show()
+			if total_cuts==3:
+				$FullCarrot.visible= false
+				$Onion.visible= true
+				$Cut1.visible= false
+				$Cut2.visible= false
+				$Cut3.visible= true
+				update_score_display()
+				score= max(score,0)
+				
+			
+			if total_cuts ==4:
+				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+				$NextButton.show()
 		#else:
 			#get_tree().change_scene_to_file("res://kitchen.tscn")
 
 func check_cut(knife_position_x):
 	var cut_made = false
-	for cut_point in ideal_cut_points:
-		#print("cutx:",cut_point)
+	for i in range(1,len(ideal_cut_points)):
+		var cut_point= ideal_cut_points[i]
+	#for cut_point in ideal_cut_points:
+		print("cutx:",cut_point)
 		if abs(knife_position_x - cut_point) <= cut_threshold:
 			print("Successful cut at position:", knife_position_x,"and cut point", cut_point)
-			#play_cutting_sound()
+			lines[i].hide()
 			cut_made= true
 			break
 		else:
@@ -75,22 +87,15 @@ func check_cut(knife_position_x):
 	return cut_made
 		
 
-func calculate_score(knife_position_x):
-	var point_distances =[]
+func calculate_deduction(knife_position_x):
+	var closest_distance = INF
 	for cut_x in ideal_cut_points:
-		point_distances.append(check_cut_accuracy(knife_position_x, cut_x))
-	if point_distances.size()==0:
-		print("no points to calculate")
-		return 0
-	var closest_distance= point_distances.min()
-	var points= int((100 -closest_distance)/3)
-	if score<=0:
-		score=0
+		var distance_from_cut = abs(knife_position_x- cut_x)
+		if distance_from_cut < closest_distance:
+			closest_distance = distance_from_cut
 		
-	return points
-	
-func check_cut_accuracy(knife_position_x, cut_x):
-	return abs(knife_position_x - cut_x)
+	var score_deduct= int(deduction_cut*(closest_distance/cut_threshold))
+	return min(score_deduct, deduction_cut)
 
 func show_next_button():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -99,8 +104,7 @@ func show_next_button():
  
 ## win points and update display
 func update_score_display():
-	$Score/Score_Label.text= "Score: "+ str(score) + " / " + str(total_possible_points)
-
+	$Score_Label.text= str(score) 
 		
 #func play_cutting_sound():
 	#$Knife/AudioStreamPlayer2D.play()

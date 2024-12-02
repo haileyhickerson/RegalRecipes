@@ -17,8 +17,10 @@ var total_cuts = 0
 var score = max_score
 var cut_threshold = 30
 var first_space_pressed
+
 # Ready function
 func _ready() -> void:
+	var NextButton= get_node("Cutting3/NextButton")
 	$NextButton.hide()
 
 	for child in get_children():
@@ -106,9 +108,6 @@ func update_score_display():
 		$Score_Label.text= str(score)
 		print("error")
 		
-#func play_cutting_sound():
-	#$Knife/AudioStreamPlayer2D.play()
-	#Cutting_Timer.start()
 
 func _on_back_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://kitchen.tscn") # Replace with function body.

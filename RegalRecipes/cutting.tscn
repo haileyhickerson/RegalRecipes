@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dipjhwol3m5ha"]
+[gd_scene load_steps=14 format=3 uid="uid://dipjhwol3m5ha"]
 
 [ext_resource type="Script" path="res://cutting.gd" id="1_wpq0h"]
 [ext_resource type="Texture2D" uid="uid://b7paioai6w1g5" path="res://art/CuttingBoard.png" id="2_dxffu"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://b1fq84if3d2ys" path="res://art/Knife.png" id="5_ttaix"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="7_dnh06"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="8_n50o3"]
+[ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="9_l0egp"]
+[ext_resource type="AudioStream" uid="uid://c130kk5w6p27c" path="res://music&sounds/error.wav" id="10_mjvgs"]
+[ext_resource type="AudioStream" uid="uid://c26aa08an6ydu" path="res://music&sounds/chop2.wav" id="11_nidy6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0hlai"]
 animations = [{
@@ -23,12 +26,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y8gqb"]
 size = Vector2(25.3293, 344.501)
 
-[node name="Cutting" type="Node2D" node_paths=PackedStringArray("Cut1", "Cut2", "Cut3", "Score_Label")]
+[node name="Cutting" type="Node2D" node_paths=PackedStringArray("Cut1", "Cut2", "Cut3")]
 script = ExtResource("1_wpq0h")
 Cut1 = NodePath("Cut1")
 Cut2 = NodePath("Cut2")
 Cut3 = NodePath("Cut3")
-Score_Label = NodePath("Score/Score_Label")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1923.0
@@ -50,7 +52,7 @@ scale = Vector2(0.870833, 0.671296)
 texture = ExtResource("3_qctmb")
 
 [node name="Cut1" type="Line2D" parent="."]
-points = PackedVector2Array(938, 311, 938, 874)
+points = PackedVector2Array(938, 347, 938, 874)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 
@@ -88,19 +90,6 @@ volume_db = 24.0
 [node name="Cutting_Timer" type="Timer" parent="Knife"]
 one_shot = true
 
-[node name="Score" type="Panel" parent="."]
-offset_left = 849.0
-offset_top = 31.0
-offset_right = 1251.0
-offset_bottom = 153.0
-
-[node name="Score_Label" type="Label" parent="Score"]
-layout_mode = 0
-offset_left = 37.0
-offset_top = 11.0
-offset_right = 371.0
-offset_bottom = 105.0
-
 [node name="TextBox" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
 scale = Vector2(0.564815, 0.564815)
@@ -133,6 +122,32 @@ theme_override_font_sizes/font_size = 50
 text = "Press \"Space\" to continue"
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="Plate" type="Sprite2D" parent="."]
+position = Vector2(180, 577)
+scale = Vector2(0.199537, 0.199537)
+texture = ExtResource("9_l0egp")
+
+[node name="Score_Label" type="Label" parent="."]
+offset_left = 106.0
+offset_top = 523.0
+offset_right = 246.0
+offset_bottom = 633.0
+theme_override_colors/font_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_n50o3")
+theme_override_font_sizes/font_size = 80
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ErrorSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(106, 523)
+stream = ExtResource("10_mjvgs")
+
+[node name="ChopSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_nidy6")
+pitch_scale = 1.5
 
 [connection signal="pressed" from="NextButton" to="." method="_on_back_button_pressed"]
 [connection signal="timeout" from="Knife/Cutting_Timer" to="." method="_on_cutting_timer_timeout"]
