@@ -864,7 +864,6 @@ texture_normal = ExtResource("5_0danb")
 texture_click_mask = ExtResource("12_xg31g")
 
 [node name="ScoreTextbox" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(975, 530)
 scale = Vector2(0.565, 0.565)
 texture = ExtResource("13_ty1ql")
@@ -913,8 +912,9 @@ offset_right = 722.655
 offset_bottom = -103.0
 theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("14_ru7wo")
-theme_override_font_sizes/font_size = 63
+theme_override_font_sizes/font_size = 50
 text = "bbbb"
 horizontal_alignment = 1
 
@@ -930,13 +930,15 @@ theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="InstructionsTextbox"]
-offset_left = -153.982
-offset_top = 253.097
-offset_right = 158.018
-offset_bottom = 295.097
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = -249.558
+offset_top = 256.637
+offset_right = 292.442
+offset_bottom = 325.637
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("14_ru7wo")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 50
 text = "Press \"Space\" to continue"
 
 [node name="Recipe1Pics" type="Node2D" parent="InstructionsTextbox"]

@@ -104,9 +104,11 @@ offset_left = -231.858
 offset_top = 242.478
 offset_right = 261.142
 offset_bottom = 297.478
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("12_7dbfu")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 50
 text = "Press \"Space\" to continue"
 horizontal_alignment = 1
 
@@ -174,9 +176,11 @@ offset_left = -231.858
 offset_top = 242.478
 offset_right = 261.142
 offset_bottom = 297.478
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("12_7dbfu")
-theme_override_font_sizes/font_size = 45
+theme_override_font_sizes/font_size = 50
 text = "Press \"Next\" to continue"
 horizontal_alignment = 1
 

@@ -114,6 +114,7 @@ func update_score_display():
 func _on_next_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://kitchen.tscn")
 	PlayerVariables.cutting_completed = true
+	PlayerVariables.cutting_score = score
 
 
 func _on_cutting_timer_timeout() -> void:

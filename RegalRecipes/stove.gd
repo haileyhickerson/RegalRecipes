@@ -30,6 +30,8 @@ func _ready() -> void:
 	$FlipText.hide()
 	$NextButton.hide()
 	$ScoreTextBox.hide()
+	$StoveArrow.hide()
+	$StoveArrow2.hide()
 	$TextBox/KnobExample.show()
 	show_next_dialogue()
 
@@ -68,6 +70,8 @@ func on_pan_click():
 		steak_animated_sprite.play("cooked")
 		$CookingBar.value = 60
 		$FlipText.hide()
+		$StoveArrow.hide()
+		$StoveArrow2.hide()
 	else:
 		print("Too early! Meat is undercooked.")
 		undercooked = true
@@ -81,11 +85,15 @@ func _process(delta):
 
 		# Flip allowed around 50% of the bar (adjust as needed)
 		if $CookingBar.value >= 50 and $CookingBar.value <= 60:
+			$StoveArrow.show()
+			$StoveArrow2.show()
 			flip_allowed = true
-			$FlipText.show()
+			#$FlipText.show()
 
 		# Check if flip point has passed without action
 		elif $CookingBar.value > 60 and flip_allowed:
+			$StoveArrow.hide()
+			$StoveArrow2.hide()
 			overcooked = true
 			end_cooking()
 
