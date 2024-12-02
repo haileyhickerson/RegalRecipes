@@ -24,9 +24,9 @@ func _ready() -> void:
 	for child in get_children():
 		if child is Line2D:
 			lines.append(child)
-			# Get the position of point 0
+			# get the position of point 0
 			var point_0_position = child.get_point_position(0)
-			# Append the x-coordinate of point 0 to ideal_cut_points
+			# append the x-coordinate of point 0 to ideal_cut_points
 			ideal_cut_points.append(point_0_position.x)
 				
 func _process(delta: float) -> void:
@@ -105,10 +105,7 @@ func update_score_display():
 	if $Score_Label!= null:
 		$Score_Label.text= str(score)
 		print("error")
-		
-#func play_cutting_sound():
-	#$Knife/AudioStreamPlayer2D.play()
-	#Cutting_Timer.start()
+
 
 func _on_back_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://kitchen.tscn") # Replace with function body.

@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://dv34yj5qcvyyp"]
 
-[ext_resource type="Script" path="res://cutting.gd" id="1_0e7lu"]
+[ext_resource type="Script" path="res://cutting3.gd" id="1_a0v7n"]
 [ext_resource type="Texture2D" uid="uid://b7paioai6w1g5" path="res://art/CuttingBoard.png" id="2_jmn5s"]
 [ext_resource type="Texture2D" uid="uid://cscsovlk3pmg0" path="res://art/Raspberry.png" id="3_kyse7"]
 [ext_resource type="Script" path="res://knife.gd" id="4_dvws3"]
@@ -49,8 +49,7 @@ var first_space_pressed
 
 # Ready function
 func _ready() -> void:
-	var NextButton= get_node(\"Cutting3/NextButton\")
-	$NextButton.hide()
+	#$NextButton.hide()
 
 	for child in get_children():
 		if child is Line2D:
@@ -146,11 +145,14 @@ func _on_cutting_timer_timeout() -> void:
 	$Knife/AudioStreamPlayer2D.stop()
 "
 
-[node name="Cutting3" type="Node2D" node_paths=PackedStringArray("Cut1", "Cut2", "Cut3")]
-script = ExtResource("1_0e7lu")
+[node name="Cutting3" type="Node2D" node_paths=PackedStringArray("Cut1", "Cut2", "Cut3", "knife", "KnifeTip", "Cutting_Timer")]
+script = ExtResource("1_a0v7n")
 Cut1 = NodePath("Cut1")
 Cut2 = NodePath("Cut2")
 Cut3 = NodePath("Cut3")
+knife = NodePath("Knife")
+KnifeTip = NodePath("Knife/KnifeTip")
+Cutting_Timer = NodePath("Knife/Cutting_Timer")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1923.0

@@ -20,7 +20,6 @@ var first_space_pressed
 
 # Ready function
 func _ready() -> void:
-	var NextButton= get_node("Cutting3/NextButton")
 	$NextButton.hide()
 
 	for child in get_children():
