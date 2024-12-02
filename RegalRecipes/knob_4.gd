@@ -34,9 +34,9 @@ func check_temperature():
 	# Check if the current rotation is within the target range
 	var current_rotation = rotation_degrees
 	var temp_difference = 360 - current_rotation
-	print(current_rotation, temp_difference)
+	#print(current_rotation, temp_difference)
 	
-	if current_rotation <= 40 or temp_difference <= 40:
+	if current_rotation <= 45 or temp_difference <= 45:
 		oven_script.butterspoon_good()
 	else:
 		oven_script.butterspoon_bad()

@@ -8,18 +8,23 @@ var undercooked = false
 var overcooked = false
 var is_mouse_over = false
 var flipped = false
+var final_score
 var temp_score
 var flip_score
 var cook_score
 @onready var meat_animated_sprite = $Bacon/BaconAnimation
 @onready var steak_animated_sprite = $Steak/SteakAnimation
 var dialogue_index = 0
-var instructions = ["Click on the knob at the right temperature.", "Once the bar reaches 50%, click the PAN HANDLE to flip the meat!", "Make sure the meat isn't undercooked or overcooked!"]
+var instructions = []
+var recipe1 = ["Click on the knob at the right temperature.", "Once the bar reaches 50%, click the PAN HANDLE to flip the meat!", "Make sure the meat isn't undercooked or overcooked!"]
+var recipe2 = ["Let's cook the steak!"]
 
 func _ready() -> void:
 	if PlayerVariables.curr_recipe == 0:
+		instructions = recipe1
 		$Steak.hide()
 	else:
+		instructions = recipe2
 		$Bacon.hide()
 	$CookingSound.stop()
 	$FlipText.hide()
@@ -95,20 +100,18 @@ func end_cooking():
 	set_process(false)
 
 	# Score logic
-	var score = calculate_score(!undercooked, !overcooked)
-	print("Final Score:", score)
+	final_score = calculate_score(!undercooked, !overcooked)
+	print("Final Score:", final_score)
 	if undercooked:
 		$ScoreTextBox/Instructions.text = "You undercooked the meat! You scored:"
-		$ScoreTextBox/Score.text = str(score) + " points. Do better!"
+		$ScoreTextBox/Score.text = str(final_score) + " points. Do better!"
 	elif overcooked:
 		$ScoreTextBox/Instructions.text = "You overcooked the meat! You scored:"
-		$ScoreTextBox/Score.text = str(score) + " points. Try again!"
+		$ScoreTextBox/Score.text = str(final_score) + " points. Try again!"
 	else:
-		$ScoreTextBox/Score.text = str(score) + " points. Nice job!"
+		$ScoreTextBox/Score.text = str(final_score) + " points. Nice job!"
 	$CookingSound.stop()
 	$ScoreTextBox.show()
-	PlayerVariables.stove_completed = true
-	PlayerVariables.stove_score = score
 	$NextButton.show()
 
 func calculate_score(flip_correct: bool, perfect_cook: bool) -> int:
@@ -134,4 +137,10 @@ func _on_pan_mouse_exited() -> void:
 	is_mouse_over = false # Replace with function body.
 
 func _on_next_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://kitchen.tscn") # Replace with function body.
+	PlayerVariables.stove_completed = true
+	PlayerVariables.stove_score = final_score
+	print(PlayerVariables.stove_score)
+	if PlayerVariables.curr_recipe == 1:
+		get_tree().change_scene_to_file("res://oven.tscn")
+	else:
+		get_tree().change_scene_to_file("res://kitchen.tscn")
