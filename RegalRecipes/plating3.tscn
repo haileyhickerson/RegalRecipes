@@ -1,32 +1,32 @@
 [gd_scene load_steps=27 format=3 uid="uid://bjx4w51stqrb2"]
 
-[ext_resource type="Script" path="res://plating2.gd" id="1_30qqh"]
+[ext_resource type="Script" path="res://plating3.gd" id="1_p2pmb"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_y1t0m"]
 [ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="3_a20ed"]
-[ext_resource type="Texture2D" uid="uid://cgd08r67rreap" path="res://art/Recipe2_Reference.png" id="4_3hkxr"]
+[ext_resource type="Texture2D" uid="uid://dj6nfgrcoddt8" path="res://art/CakeReference.png" id="4_wjesx"]
 [ext_resource type="Texture2D" uid="uid://dkkg12vkaji6t" path="res://art/CakeTop.png" id="5_xtr6q"]
 [ext_resource type="Texture2D" uid="uid://bprcpf63o5abq" path="res://art/FancyPurplePlate.png" id="6_5pabi"]
 [ext_resource type="Texture2D" uid="uid://cscsovlk3pmg0" path="res://art/Raspberry.png" id="7_nc1nw"]
 [ext_resource type="Texture2D" uid="uid://buug3ffra2a6m" path="res://art/Raspberry_Click.png" id="8_vwfoc"]
 [ext_resource type="Texture2D" uid="uid://bhtyw8021gcv0" path="res://art/Raspberry_Hover.png" id="9_1auw3"]
-[ext_resource type="BitMap" uid="uid://com3rvwrxh3fk" path="res://art/CookedSteak_Mask.png" id="10_3smas"]
+[ext_resource type="BitMap" uid="uid://bds40r17v5kp1" path="res://art/Raspberry_Mask.png" id="10_vc6dx"]
 [ext_resource type="Texture2D" uid="uid://p6snun843h8m" path="res://art/FancyBluePlate.png" id="11_ogs2g"]
 [ext_resource type="Texture2D" uid="uid://dwhtixlh0j0fo" path="res://art/WhippedTopping_Click.png" id="12_djibu"]
+[ext_resource type="Texture2D" uid="uid://dw21fqjwubhpv" path="res://art/WhippedTopping.png" id="12_pplcs"]
 [ext_resource type="Texture2D" uid="uid://16id2xth2snc" path="res://art/WhippedTopping_Hover.png" id="13_btagv"]
+[ext_resource type="BitMap" uid="uid://b21xco814bej1" path="res://art/WhippedTopping_Mask.png" id="15_t2cnu"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="16_qt58a"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="17_2h7ki"]
-[ext_resource type="Texture2D" uid="uid://clopys7kwhryi" path="res://art/FancyCircle (1).png" id="18_hgplh"]
-[ext_resource type="Texture2D" uid="uid://62217bqvvk7l" path="res://art/ButterspoonHead.png" id="19_qwtc0"]
 [ext_resource type="AudioStream" uid="uid://djomc6da7lwrx" path="res://music&sounds/Plop.wav" id="20_hcp2f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7l5m4"]
 radius = 168.598
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_gna3i"]
-radius = 378.652
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_3m1fy"]
 radius = 377.035
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gna3i"]
+radius = 378.652
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yrfse"]
 radius = 392.69
@@ -45,7 +45,7 @@ radius = 160.0
 height = 320.0
 
 [node name="Plating3" type="Node2D"]
-script = ExtResource("1_30qqh")
+script = ExtResource("1_p2pmb")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
@@ -75,17 +75,19 @@ text = "Serve the food!"
 
 [node name="HintReferencePic" type="Sprite2D" parent="."]
 position = Vector2(258, 230)
-scale = Vector2(0.403009, 0.37662)
-texture = ExtResource("4_3hkxr")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_wjesx")
 
 [node name="CakeTop" type="Sprite2D" parent="."]
-position = Vector2(979, 549)
-scale = Vector2(0.691782, 0.674653)
+position = Vector2(978, 548)
+scale = Vector2(0.691, 0.69)
 texture = ExtResource("5_xtr6q")
 
 [node name="ReferencePic" type="Sprite2D" parent="."]
-position = Vector2(967.5, 548.459)
-scale = Vector2(0.765741, 0.786952)
+visible = false
+position = Vector2(966, 552)
+scale = Vector2(0.774, 0.774)
+texture = ExtResource("4_wjesx")
 
 [node name="PlateContainer" type="Node2D" parent="."]
 
@@ -95,33 +97,33 @@ scale = Vector2(0.4625, 0.4625)
 texture = ExtResource("6_5pabi")
 
 [node name="Rasberry1" type="Area2D" parent="PlateContainer/PurplePlate" groups=["plating_ingredients", "rasberries"]]
-position = Vector2(-257.297, -112.432)
-scale = Vector2(0.385586, 0.385586)
+position = Vector2(-86.4865, -211.892)
+rotation = 2.70526
+scale = Vector2(0.34, 0.34)
 metadata/_edit_group_ = true
 
 [node name="Rasberry" type="TextureButton" parent="PlateContainer/PurplePlate/Rasberry1"]
-offset_left = -364.486
-offset_top = -252.336
-offset_right = 426.514
-offset_bottom = 538.664
+offset_left = -405.058
+offset_top = -455.518
+offset_right = 385.942
+offset_bottom = 335.482
 keep_pressed_outside = true
 texture_normal = ExtResource("7_nc1nw")
 texture_pressed = ExtResource("8_vwfoc")
 texture_hover = ExtResource("9_1auw3")
-texture_click_mask = ExtResource("10_3smas")
+texture_click_mask = ExtResource("10_vc6dx")
 ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/PurplePlate/Rasberry1"]
-position = Vector2(22.43, 168.224)
 shape = SubResource("CircleShape2D_7l5m4")
 debug_color = Color(0.921569, 0, 0.160784, 0.607843)
 
 [node name="Rasberry4" type="Area2D" parent="PlateContainer/PurplePlate" groups=["plating_ingredients", "rasberries"]]
-position = Vector2(123.243, 123.243)
-rotation = -0.670206
-scale = Vector2(0.385586, 0.385586)
+position = Vector2(116.757, 47.5675)
+rotation = -0.964525
+scale = Vector2(0.34, 0.34)
 metadata/_edit_group_ = true
 
 [node name="Rasberry" type="TextureButton" parent="PlateContainer/PurplePlate/Rasberry4"]
@@ -133,7 +135,7 @@ keep_pressed_outside = true
 texture_normal = ExtResource("7_nc1nw")
 texture_pressed = ExtResource("8_vwfoc")
 texture_hover = ExtResource("9_1auw3")
-texture_click_mask = ExtResource("10_3smas")
+texture_click_mask = ExtResource("10_vc6dx")
 ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
@@ -144,9 +146,9 @@ shape = SubResource("CircleShape2D_7l5m4")
 debug_color = Color(0.921569, 0, 0.160784, 0.607843)
 
 [node name="Rasberry5" type="Area2D" parent="PlateContainer/PurplePlate" groups=["plating_ingredients", "rasberries"]]
-position = Vector2(-54.0541, -313.513)
-rotation = 0.502655
-scale = Vector2(0.385586, 0.385586)
+position = Vector2(-140.54, -32.4324)
+rotation = 1.53967
+scale = Vector2(0.34, 0.34)
 metadata/_edit_group_ = true
 
 [node name="Rasberry" type="TextureButton" parent="PlateContainer/PurplePlate/Rasberry5"]
@@ -158,7 +160,7 @@ keep_pressed_outside = true
 texture_normal = ExtResource("7_nc1nw")
 texture_pressed = ExtResource("8_vwfoc")
 texture_hover = ExtResource("9_1auw3")
-texture_click_mask = ExtResource("10_3smas")
+texture_click_mask = ExtResource("10_vc6dx")
 ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
@@ -169,8 +171,9 @@ shape = SubResource("CircleShape2D_7l5m4")
 debug_color = Color(0.921569, 0, 0.160784, 0.607843)
 
 [node name="Rasberry3" type="Area2D" parent="PlateContainer/PurplePlate" groups=["plating_ingredients", "rasberries"]]
-position = Vector2(-166.487, 108.108)
-scale = Vector2(0.385586, 0.385586)
+position = Vector2(103.784, -121.081)
+rotation = -2.08087
+scale = Vector2(0.34, 0.34)
 metadata/_edit_group_ = true
 
 [node name="Rasberry" type="TextureButton" parent="PlateContainer/PurplePlate/Rasberry3"]
@@ -182,7 +185,7 @@ keep_pressed_outside = true
 texture_normal = ExtResource("7_nc1nw")
 texture_pressed = ExtResource("8_vwfoc")
 texture_hover = ExtResource("9_1auw3")
-texture_click_mask = ExtResource("10_3smas")
+texture_click_mask = ExtResource("10_vc6dx")
 ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
@@ -193,9 +196,9 @@ shape = SubResource("CircleShape2D_7l5m4")
 debug_color = Color(0.921569, 0, 0.160784, 0.607843)
 
 [node name="Rasberry2" type="Area2D" parent="PlateContainer/PurplePlate" groups=["plating_ingredients", "rasberries"]]
-position = Vector2(160, -227.027)
+position = Vector2(-32.4325, 101.622)
 rotation = 0.335103
-scale = Vector2(0.385586, 0.385586)
+scale = Vector2(0.34, 0.34)
 metadata/_edit_group_ = true
 
 [node name="Rasberry" type="TextureButton" parent="PlateContainer/PurplePlate/Rasberry2"]
@@ -207,7 +210,7 @@ keep_pressed_outside = true
 texture_normal = ExtResource("7_nc1nw")
 texture_pressed = ExtResource("8_vwfoc")
 texture_hover = ExtResource("9_1auw3")
-texture_click_mask = ExtResource("10_3smas")
+texture_click_mask = ExtResource("10_vc6dx")
 ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
@@ -222,89 +225,90 @@ position = Vector2(289, 780)
 scale = Vector2(0.594445, 0.594445)
 texture = ExtResource("11_ogs2g")
 
-[node name="Whipped2" type="Area2D" parent="PlateContainer/BluePlate" groups=["swirls"]]
-position = Vector2(2188.6, 100.934)
-scale = Vector2(0.272313, 0.272313)
-
-[node name="Whipped" type="TextureButton" parent="PlateContainer/BluePlate/Whipped2"]
-offset_left = -9680.31
-offset_top = -1044.02
-offset_right = -8600.31
-offset_bottom = 35.9845
-texture_normal = ExtResource("12_djibu")
-texture_pressed = ExtResource("12_djibu")
-texture_hover = ExtResource("13_btagv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/BluePlate/Whipped2"]
-position = Vector2(-9149.04, -543.627)
-shape = SubResource("CircleShape2D_gna3i")
-
 [node name="Whipped1" type="Area2D" parent="PlateContainer/BluePlate" groups=["swirls"]]
-position = Vector2(2188.6, 100.934)
-scale = Vector2(0.272313, 0.272313)
+position = Vector2(50.4672, 205.233)
+scale = Vector2(0.22, 0.22)
 
 [node name="Whipped" type="TextureButton" parent="PlateContainer/BluePlate/Whipped1"]
-offset_left = -7827.03
-offset_top = -24.7104
-offset_right = -6747.03
-offset_bottom = 1055.29
-texture_normal = ExtResource("12_djibu")
+offset_left = -527.612
+offset_top = -512.319
+offset_right = 552.388
+offset_bottom = 567.681
+texture_normal = ExtResource("12_pplcs")
 texture_pressed = ExtResource("12_djibu")
 texture_hover = ExtResource("13_btagv")
+texture_click_mask = ExtResource("15_t2cnu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/BluePlate/Whipped1"]
-position = Vector2(-7382.25, 481.855)
 shape = SubResource("CircleShape2D_3m1fy")
 
-[node name="Whipped3" type="Area2D" parent="PlateContainer/BluePlate" groups=["swirls"]]
-position = Vector2(2188.6, 100.934)
-scale = Vector2(0.272313, 0.272313)
+[node name="Whipped2" type="Area2D" parent="PlateContainer/BluePlate" groups=["swirls"]]
+position = Vector2(84.1122, -198.505)
+scale = Vector2(0.22, 0.22)
 
-[node name="Whipped" type="TextureButton" parent="PlateContainer/BluePlate/Whipped3"]
-offset_left = -8673.36
-offset_top = -1859.46
-offset_right = -7593.36
-offset_bottom = -779.46
-texture_normal = ExtResource("12_djibu")
+[node name="Whipped" type="TextureButton" parent="PlateContainer/BluePlate/Whipped2"]
+offset_left = -512.319
+offset_top = -542.905
+offset_right = 567.681
+offset_bottom = 537.099
+texture_normal = ExtResource("12_pplcs")
 texture_pressed = ExtResource("12_djibu")
 texture_hover = ExtResource("13_btagv")
+texture_click_mask = ExtResource("15_t2cnu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/BluePlate/Whipped2"]
+shape = SubResource("CircleShape2D_gna3i")
+
+[node name="Whipped3" type="Area2D" parent="PlateContainer/BluePlate" groups=["swirls"]]
+position = Vector2(211.962, 6.72894)
+scale = Vector2(0.22, 0.22)
+
+[node name="Whipped" type="TextureButton" parent="PlateContainer/BluePlate/Whipped3"]
+offset_left = -527.612
+offset_top = -504.672
+offset_right = 552.388
+offset_bottom = 575.328
+texture_normal = ExtResource("12_pplcs")
+texture_pressed = ExtResource("12_djibu")
+texture_hover = ExtResource("13_btagv")
+texture_click_mask = ExtResource("15_t2cnu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/BluePlate/Whipped3"]
-position = Vector2(-8154.45, -1334.36)
 shape = SubResource("CircleShape2D_yrfse")
 
 [node name="Whipped4" type="Area2D" parent="PlateContainer/BluePlate" groups=["swirls"]]
-position = Vector2(2188.6, 100.934)
-scale = Vector2(0.272313, 0.272313)
+position = Vector2(-203.551, 89.1588)
+scale = Vector2(0.22, 0.22)
 
 [node name="Whipped" type="TextureButton" parent="PlateContainer/BluePlate/Whipped4"]
-offset_left = -7684.94
-offset_top = -1192.28
-offset_right = -6604.94
-offset_bottom = -112.278
-texture_normal = ExtResource("12_djibu")
+offset_left = -550.552
+offset_top = -565.845
+offset_right = 529.448
+offset_bottom = 514.157
+texture_normal = ExtResource("12_pplcs")
 texture_pressed = ExtResource("12_djibu")
 texture_hover = ExtResource("13_btagv")
+texture_click_mask = ExtResource("15_t2cnu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/BluePlate/Whipped4"]
-position = Vector2(-7153.68, -654.824)
 shape = SubResource("CircleShape2D_0ngjj")
 
 [node name="Whipped5" type="Area2D" parent="PlateContainer/BluePlate" groups=["swirls"]]
-position = Vector2(2188.6, 100.934)
-scale = Vector2(0.272313, 0.272313)
+position = Vector2(-161.495, -161.495)
+scale = Vector2(0.22, 0.22)
 
 [node name="Whipped" type="TextureButton" parent="PlateContainer/BluePlate/Whipped5"]
-offset_left = -9155.21
-offset_top = 86.4865
-offset_right = -8075.21
-offset_bottom = 1166.49
-texture_normal = ExtResource("12_djibu")
+offset_left = -524.859
+offset_top = -484.486
+offset_right = 555.141
+offset_bottom = 595.518
+texture_normal = ExtResource("12_pplcs")
 texture_pressed = ExtResource("12_djibu")
 texture_hover = ExtResource("13_btagv")
+texture_click_mask = ExtResource("15_t2cnu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlateContainer/BluePlate/Whipped5"]
-position = Vector2(-8642.48, 549.808)
+position = Vector2(20.1869, 47.1028)
 shape = SubResource("CircleShape2D_3uhr8")
 
 [node name="Timer1" type="Timer" parent="."]
@@ -312,91 +316,87 @@ shape = SubResource("CircleShape2D_3uhr8")
 [node name="TargetSpots" type="Node2D" parent="."]
 
 [node name="BerryTarget1" type="Area2D" parent="TargetSpots"]
-position = Vector2(6, -26)
+position = Vector2(911, 343)
+scale = Vector2(0.8, 0.8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BerryTarget1"]
-position = Vector2(889, 385)
 shape = SubResource("CircleShape2D_7eebt")
 debug_color = Color(0.921569, 0, 0.160784, 0.607843)
 
 [node name="BerryTarget5" type="Area2D" parent="TargetSpots"]
-position = Vector2(6, -26)
+position = Vector2(752, 541)
+scale = Vector2(0.8, 0.8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BerryTarget5"]
-position = Vector2(1137, 723)
 shape = SubResource("CircleShape2D_7eebt")
 debug_color = Color(0.921569, 0, 0.160784, 0.607843)
 
 [node name="BerryTarget4" type="Area2D" parent="TargetSpots"]
-position = Vector2(6, -26)
+position = Vector2(889, 736)
+scale = Vector2(0.8, 0.8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BerryTarget4"]
-position = Vector2(1137, 453)
 shape = SubResource("CircleShape2D_7eebt")
 debug_color = Color(0.921569, 0, 0.160784, 0.607843)
 
 [node name="BerryTarget3" type="Area2D" parent="TargetSpots"]
-position = Vector2(6, -26)
+position = Vector2(1141, 697)
+scale = Vector2(0.8, 0.8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BerryTarget3"]
-position = Vector2(893, 761)
 shape = SubResource("CircleShape2D_7eebt")
 debug_color = Color(0.921569, 0, 0.160784, 0.607843)
 
 [node name="BerryTarget2" type="Area2D" parent="TargetSpots"]
-position = Vector2(6, -26)
+position = Vector2(1156, 432)
+scale = Vector2(0.8, 0.8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BerryTarget2"]
-position = Vector2(758, 576)
 shape = SubResource("CircleShape2D_7eebt")
 debug_color = Color(0.921569, 0, 0.160784, 0.607843)
 
 [node name="WhippedTarget1" type="Area2D" parent="TargetSpots"]
-position = Vector2(959, 703)
+position = Vector2(804, 424)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/WhippedTarget1"]
-position = Vector2(78, 70)
-scale = Vector2(0.35, 0.35)
+scale = Vector2(0.25, 0.25)
 shape = SubResource("CapsuleShape2D_li8jf")
 debug_color = Color(0.0991462, 0.0976386, 1, 0.627451)
 
 [node name="WhippedTarget2" type="Area2D" parent="TargetSpots"]
-position = Vector2(959, 703)
+position = Vector2(1040, 348)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/WhippedTarget2"]
-position = Vector2(-160, -262)
-scale = Vector2(0.35, 0.35)
+scale = Vector2(0.25, 0.25)
 shape = SubResource("CapsuleShape2D_li8jf")
 debug_color = Color(0.0991462, 0.0976386, 1, 0.627451)
 
 [node name="WhippedTarget3" type="Area2D" parent="TargetSpots"]
-position = Vector2(855, 385)
+position = Vector2(1190, 570)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/WhippedTarget3"]
-position = Vector2(-64, 280)
-scale = Vector2(0.35, 0.35)
+scale = Vector2(0.25, 0.25)
 shape = SubResource("CapsuleShape2D_li8jf")
 debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
 
 [node name="WhippedTarget4" type="Area2D" parent="TargetSpots"]
-position = Vector2(855, 385)
+position = Vector2(1022, 753)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/WhippedTarget4"]
-position = Vector2(332, 196)
-scale = Vector2(0.35, 0.35)
+scale = Vector2(0.25, 0.25)
 shape = SubResource("CapsuleShape2D_li8jf")
 debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
 
 [node name="WhippedTarget5" type="Area2D" parent="TargetSpots"]
-position = Vector2(855, 385)
+position = Vector2(785, 661)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/WhippedTarget5"]
-position = Vector2(182, -32)
-scale = Vector2(0.35, 0.35)
+scale = Vector2(0.25, 0.25)
 shape = SubResource("CapsuleShape2D_li8jf")
 debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
 
 [node name="TextBox" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(960, 540)
 scale = Vector2(0.564815, 0.564815)
 texture = ExtResource("16_qt58a")
@@ -458,36 +458,6 @@ text = "Continue!"
 
 [node name="HintTimer" type="Timer" parent="."]
 
-[node name="FancyCircle" type="Sprite2D" parent="."]
-position = Vector2(356, 133)
-scale = Vector2(0.234465, 0.234465)
-texture = ExtResource("18_hgplh")
-
-[node name="HintText" type="Sprite2D" parent="."]
-position = Vector2(159, 274)
-scale = Vector2(0.189699, 0.184259)
-texture = ExtResource("16_qt58a")
-metadata/_edit_group_ = true
-
-[node name="HintLabel" type="Label" parent="HintText"]
-offset_left = -729.443
-offset_top = -141.64
-offset_right = 764.557
-offset_bottom = 363.36
-theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("17_2h7ki")
-theme_override_font_sizes/font_size = 92
-text = "Can't remember? Take another look. However points will be deducted."
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="ButterspoonHead" type="Sprite2D" parent="."]
-position = Vector2(348, 131)
-scale = Vector2(0.187037, 0.187037)
-texture = ExtResource("19_qwtc0")
-
 [node name="PlopSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("20_hcp2f")
 volume_db = 1.333
@@ -509,10 +479,10 @@ volume_db = 1.333
 [connection signal="input_event" from="PlateContainer/PurplePlate/Rasberry2" to="PlateContainer/PurplePlate/Rasberry2" method="_on_input_event"]
 [connection signal="button_down" from="PlateContainer/PurplePlate/Rasberry2/Rasberry" to="." method="_on_rasberry2_button_down"]
 [connection signal="button_up" from="PlateContainer/PurplePlate/Rasberry2/Rasberry" to="." method="_on_rasberry2_button_up"]
-[connection signal="button_down" from="PlateContainer/BluePlate/Whipped2/Whipped" to="." method="_on_whipped2_button_down"]
-[connection signal="button_up" from="PlateContainer/BluePlate/Whipped2/Whipped" to="." method="_on_whipped2_button_up"]
 [connection signal="button_down" from="PlateContainer/BluePlate/Whipped1/Whipped" to="." method="_on_whipped1_button_down"]
 [connection signal="button_up" from="PlateContainer/BluePlate/Whipped1/Whipped" to="." method="_on_whipped1_button_up"]
+[connection signal="button_down" from="PlateContainer/BluePlate/Whipped2/Whipped" to="." method="_on_whipped2_button_down"]
+[connection signal="button_up" from="PlateContainer/BluePlate/Whipped2/Whipped" to="." method="_on_whipped2_button_up"]
 [connection signal="button_down" from="PlateContainer/BluePlate/Whipped3/Whipped" to="." method="_on_whipped3_button_down"]
 [connection signal="button_up" from="PlateContainer/BluePlate/Whipped3/Whipped" to="." method="_on_whipped3_button_up"]
 [connection signal="button_down" from="PlateContainer/BluePlate/Whipped4/Whipped" to="." method="_on_whipped4_button_down"]

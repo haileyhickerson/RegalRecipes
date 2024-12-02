@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bds40r17v5kp1"
+path="res://.godot/imported/Raspberry_Mask.png-d56b95841e53d05f2d042656ac556909.res"
+
+[deps]
+
+source_file="res://art/Raspberry_Mask.png"
+dest_files=["res://.godot/imported/Raspberry_Mask.png-d56b95841e53d05f2d042656ac556909.res"]
+
+[params]
+
+create_from=0
+threshold=0.25

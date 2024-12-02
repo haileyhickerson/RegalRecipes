@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://b21xco814bej1"
+path="res://.godot/imported/WhippedTopping_Mask.png-d230dc144ffaa9ac19ef9542a520ea49.res"
+
+[deps]
+
+source_file="res://art/WhippedTopping_Mask.png"
+dest_files=["res://.godot/imported/WhippedTopping_Mask.png-d230dc144ffaa9ac19ef9542a520ea49.res"]
+
+[params]
+
+create_from=0
+threshold=0.35

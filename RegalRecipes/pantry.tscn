@@ -898,7 +898,6 @@ theme_override_font_sizes/font_size = 45
 text = "Press \"Next\" to continue"
 
 [node name="InstructionsTextbox" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(975, 530)
 scale = Vector2(0.565, 0.565)
 texture = ExtResource("13_ty1ql")
@@ -912,6 +911,7 @@ theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
 theme_override_fonts/font = ExtResource("14_ru7wo")
 theme_override_font_sizes/font_size = 63
+text = "bbbb"
 horizontal_alignment = 1
 
 [node name="Score" type="Label" parent="InstructionsTextbox"]
@@ -935,25 +935,153 @@ theme_override_fonts/font = ExtResource("14_ru7wo")
 theme_override_font_sizes/font_size = 30
 text = "Press \"Space\" to continue"
 
-[node name="ExamplePea" type="Sprite2D" parent="InstructionsTextbox"]
-position = Vector2(-162.832, 70.7965)
-scale = Vector2(0.13, 0.13)
+[node name="Recipe1Pics" type="Node2D" parent="InstructionsTextbox"]
+position = Vector2(-1.76991, 37.1681)
+scale = Vector2(0.8, 0.8)
+
+[node name="ExampleBacon" type="Sprite2D" parent="InstructionsTextbox/Recipe1Pics"]
+position = Vector2(-402.111, -66.9698)
+rotation = 0.267544
+scale = Vector2(0.118593, 0.118593)
+texture = ExtResource("13_y4n0q")
+
+[node name="ExampleBacon2" type="Sprite2D" parent="InstructionsTextbox/Recipe1Pics"]
+position = Vector2(-501.226, 10.9063)
+rotation = -0.363177
+scale = Vector2(0.12915, 0.12915)
+texture = ExtResource("13_aoyft")
+
+[node name="ExampleBacon3" type="Sprite2D" parent="InstructionsTextbox/Recipe1Pics"]
+position = Vector2(-352.76, 71.3231)
+rotation = 0.373233
+scale = Vector2(0.119916, 0.119916)
+texture = ExtResource("21_qejjl")
+
+[node name="ExamplePea" type="Sprite2D" parent="InstructionsTextbox/Recipe1Pics"]
+position = Vector2(-130.531, -8.84961)
+scale = Vector2(0.161768, 0.161768)
 texture = ExtResource("11_0k253")
 
-[node name="ExampleHam" type="Sprite2D" parent="InstructionsTextbox"]
-position = Vector2(153.982, 74.3363)
-scale = Vector2(0.16, 0.16)
-texture = ExtResource("5_0danb")
+[node name="ExampleCheese" type="Sprite2D" parent="InstructionsTextbox/Recipe1Pics"]
+position = Vector2(143.805, 26.5486)
+rotation = 0.0011329
+scale = Vector2(0.240921, 0.240921)
+texture = ExtResource("25_i7bv4")
 
-[node name="ExampleOnion" type="Sprite2D" parent="InstructionsTextbox"]
-position = Vector2(-231.858, 69.0265)
+[node name="ExampleDressing" type="Sprite2D" parent="InstructionsTextbox/Recipe1Pics"]
+position = Vector2(380.531, -26.5487)
+scale = Vector2(0.144178, 0.144178)
+texture = ExtResource("29_1cm3f")
+
+[node name="Recipe2Pics" type="Node2D" parent="InstructionsTextbox"]
+scale = Vector2(0.839147, 0.839147)
+
+[node name="ExampleCarrot" type="Sprite2D" parent="InstructionsTextbox/Recipe2Pics"]
+position = Vector2(-729.952, 81.4588)
+rotation = 0.954262
+scale = Vector2(0.157599, 0.157599)
+texture = ExtResource("15_8npqf")
+
+[node name="ExampleCarrot2" type="Sprite2D" parent="InstructionsTextbox/Recipe2Pics"]
+position = Vector2(-628.711, -11.3451)
+rotation = 1.4709
+scale = Vector2(0.192671, 0.192671)
+texture = ExtResource("15_8npqf")
+flip_v = true
+
+[node name="ExampleCarrot3" type="Sprite2D" parent="InstructionsTextbox/Recipe2Pics"]
+position = Vector2(-538.016, 129.97)
+rotation = 1.96475
+scale = Vector2(0.163413, 0.163413)
+texture = ExtResource("15_8npqf")
+flip_h = true
+
+[node name="ExampleSteak" type="Sprite2D" parent="InstructionsTextbox/Recipe2Pics"]
+position = Vector2(-377.719, -0.799227)
+rotation = 3.46589
+scale = Vector2(0.233212, 0.233212)
+texture = ExtResource("33_v7f7j")
+flip_v = true
+
+[node name="ExampleGarlic" type="Sprite2D" parent="InstructionsTextbox/Recipe2Pics"]
+position = Vector2(-179.456, 123.642)
+rotation = 0.0789394
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("45_r338q")
+
+[node name="ExampleOnion" type="Sprite2D" parent="InstructionsTextbox/Recipe2Pics"]
+position = Vector2(-2.28509, 11.8559)
+rotation = -0.268917
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("10_7r1yh")
 
-[node name="ExampleCarrot" type="Sprite2D" parent="InstructionsTextbox"]
-position = Vector2(176.991, 77.8761)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("15_8npqf")
+[node name="ExamplePotato" type="Sprite2D" parent="InstructionsTextbox/Recipe2Pics"]
+position = Vector2(250.816, 87.7863)
+rotation = -0.295087
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("37_jjg77")
+
+[node name="ExampleButter" type="Sprite2D" parent="InstructionsTextbox/Recipe2Pics"]
+position = Vector2(465.953, 9.74673)
+rotation = 0.203683
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("41_edoje")
+
+[node name="ExampleSteakSauce" type="Sprite2D" parent="InstructionsTextbox/Recipe2Pics"]
+position = Vector2(643.124, 64.5853)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("53_21q5q")
+
+[node name="Recipe3Pics" type="Node2D" parent="InstructionsTextbox"]
+scale = Vector2(0.888732, 0.888732)
+
+[node name="ExampleRaspberries" type="Sprite2D" parent="InstructionsTextbox/Recipe3Pics"]
+position = Vector2(-585.043, 97.5592)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("57_uo1ym")
+
+[node name="ExampleEgg1" type="Sprite2D" parent="InstructionsTextbox/Recipe3Pics"]
+position = Vector2(-434.193, -40.3591)
+rotation = -0.555938
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("58_ovw7m")
+flip_h = true
+
+[node name="ExampleEgg2" type="Sprite2D" parent="InstructionsTextbox/Recipe3Pics"]
+position = Vector2(-360.003, 113.491)
+rotation = 0.684568
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("58_ovw7m")
+
+[node name="ExampleCakeMix" type="Sprite2D" parent="InstructionsTextbox/Recipe3Pics"]
+position = Vector2(-162.844, 17.8991)
+rotation = -0.268069
+scale = Vector2(0.27, 0.27)
+texture = ExtResource("65_47m2e")
+
+[node name="ExampleWater" type="Sprite2D" parent="InstructionsTextbox/Recipe3Pics"]
+position = Vector2(90.0764, 65.6951)
+rotation = 0.157327
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("68_m12ur")
+
+[node name="ExampleJam" type="Sprite2D" parent="InstructionsTextbox/Recipe3Pics"]
+position = Vector2(285.244, 1.96708)
+rotation = -0.177073
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("72_3i013")
+
+[node name="ExampleButter" type="Sprite2D" parent="InstructionsTextbox/Recipe3Pics"]
+position = Vector2(448.547, 101.542)
+rotation = 0.265494
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("41_edoje")
+
+[node name="ExampleWhippedCream" type="Sprite2D" parent="InstructionsTextbox/Recipe3Pics"]
+position = Vector2(623.799, 21.8821)
+rotation = -0.182377
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("76_hqbd2")
 
 [node name="ScoreDisplay" type="Label" parent="."]
 offset_left = 865.0

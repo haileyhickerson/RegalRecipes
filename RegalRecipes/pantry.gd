@@ -35,11 +35,14 @@ func _ready() -> void:
 	ingredient_list = get_tree().get_nodes_in_group("ingredients")
 	if $InstructionsTextbox != null:
 		if PlayerVariables.curr_recipe == 0:
-			$InstructionsTextbox/ExampleOnion.hide()
-			$InstructionsTextbox/ExampleCarrot.hide()
+			$InstructionsTextbox/Recipe2Pics.hide()
+			$InstructionsTextbox/Recipe3Pics.hide()
 		elif PlayerVariables.curr_recipe == 1:
-			$InstructionsTextbox/ExampleHam.hide()
-			$InstructionsTextbox/ExamplePea.hide()
+			$InstructionsTextbox/Recipe1Pics.hide()
+			$InstructionsTextbox/Recipe3Pics.hide()
+		elif PlayerVariables.curr_recipe == 2:
+			$InstructionsTextbox/Recipe1Pics.hide()
+			$InstructionsTextbox/Recipe2Pics.hide()
 		set_display()
 	show_next_dialogue()
 
@@ -54,8 +57,7 @@ func show_next_dialogue():
 func _input(event):
 	if event.is_action_pressed("action"):
 		if $InstructionsTextbox != null:
-			$InstructionsTextbox/ExampleHam.hide()
-			$InstructionsTextbox/ExamplePea.hide()
+			$InstructionsTextbox/Recipe1Pics.hide()
 			show_next_dialogue()
 			
 

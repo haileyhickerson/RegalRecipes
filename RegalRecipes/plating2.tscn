@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://fnpxcxl4dqgq"]
+[gd_scene load_steps=35 format=3 uid="uid://fnpxcxl4dqgq"]
 
 [ext_resource type="Script" path="res://plating2.gd" id="1_58mmm"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_ehwaa"]
@@ -27,8 +27,6 @@
 [ext_resource type="AudioStream" uid="uid://djomc6da7lwrx" path="res://music&sounds/Plop.wav" id="29_258y0"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="37_gfi2s"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="38_104ty"]
-[ext_resource type="Texture2D" uid="uid://clopys7kwhryi" path="res://art/FancyCircle (1).png" id="39_vfia2"]
-[ext_resource type="Texture2D" uid="uid://62217bqvvk7l" path="res://art/ButterspoonHead.png" id="40_ixw7m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7l5m4"]
 radius = 168.598
@@ -83,7 +81,7 @@ text = "Serve the food!"
 
 [node name="HintReferencePic" type="Sprite2D" parent="."]
 position = Vector2(258, 230)
-scale = Vector2(0.403009, 0.37662)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("4_eqjxx")
 
 [node name="ReferencePic" type="Sprite2D" parent="."]
@@ -360,7 +358,6 @@ shape = SubResource("RectangleShape2D_s0vrs")
 debug_color = Color(0, 0.870588, 0.341176, 0.419608)
 
 [node name="TextBox" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(960, 540)
 scale = Vector2(0.564815, 0.564815)
 texture = ExtResource("37_gfi2s")
@@ -421,36 +418,6 @@ theme_override_font_sizes/font_size = 50
 text = "Continue!"
 
 [node name="HintTimer" type="Timer" parent="."]
-
-[node name="FancyCircle" type="Sprite2D" parent="."]
-position = Vector2(356, 133)
-scale = Vector2(0.234465, 0.234465)
-texture = ExtResource("39_vfia2")
-
-[node name="HintText" type="Sprite2D" parent="."]
-position = Vector2(159, 274)
-scale = Vector2(0.189699, 0.184259)
-texture = ExtResource("37_gfi2s")
-metadata/_edit_group_ = true
-
-[node name="HintLabel" type="Label" parent="HintText"]
-offset_left = -729.443
-offset_top = -141.64
-offset_right = 764.557
-offset_bottom = 363.36
-theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("38_104ty")
-theme_override_font_sizes/font_size = 92
-text = "Can't remember? Take another look. However points will be deducted."
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="ButterspoonHead" type="Sprite2D" parent="."]
-position = Vector2(348, 131)
-scale = Vector2(0.187037, 0.187037)
-texture = ExtResource("40_ixw7m")
 
 [node name="PlopSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("29_258y0")
