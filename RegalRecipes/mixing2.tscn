@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://c4s3ews8gcl2"]
+[gd_scene load_steps=55 format=3 uid="uid://c4s3ews8gcl2"]
 
 [ext_resource type="Script" path="res://mixing2.gd" id="1_h51pr"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_qsd4i"]
@@ -51,6 +51,7 @@
 [ext_resource type="Texture2D" uid="uid://cadne302r2unw" path="res://art/ArrowFrames/6.png" id="33_7np2a"]
 [ext_resource type="Texture2D" uid="uid://crxasd4ld3lyk" path="res://art/ArrowFrames/7.png" id="34_2julr"]
 [ext_resource type="Texture2D" uid="uid://20x43rtvmljf" path="res://art/ArrowFrames/8.png" id="35_ajeec"]
+[ext_resource type="AudioStream" uid="uid://bbfgos8fbp6rb" path="res://music&sounds/mix.mp3" id="51_5m56g"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vysqn"]
 animations = [{
@@ -577,6 +578,9 @@ position = Vector2(713.508, -541.77)
 rotation = -1.5708
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_gfxvl")
+
+[node name="MixSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("51_5m56g")
 
 [node name="SteakText" type="Sprite2D" parent="."]
 visible = false

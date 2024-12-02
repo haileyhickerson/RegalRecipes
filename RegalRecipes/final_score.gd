@@ -12,18 +12,20 @@ func _ready():
 	$Total/TotalScore.text = str(PlayerVariables.final_score) + " / 500"
 	
 func _on_back_button_pressed()-> void:
-	get_tree().change_scene_to_file("res://recipe_selection.tscn")
 	if PlayerVariables.curr_recipe == 0:
 		if PlayerVariables.final_score > 300:
 			PlayerVariables.recipe1_completed = true
+		get_tree().change_scene_to_file("res://recipe_selection.tscn")
 	
 	elif PlayerVariables.curr_recipe == 1:
 		if PlayerVariables.final_score > 300:
 			PlayerVariables.recipe2_completed = true
+		get_tree().change_scene_to_file("res://recipe_selection.tscn")
 	
 	else:
 		if PlayerVariables.final_score > 300:
 			PlayerVariables.recipe3_completed = true
+		get_tree().change_scene_to_file("res://thanks_for_playing.tscn")
 	# Resets all variables
 	PlayerVariables.pantry_completed = false
 	PlayerVariables.cutting_completed = false

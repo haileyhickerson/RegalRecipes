@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bsnrxooacbi6h"]
+[gd_scene load_steps=40 format=3 uid="uid://bsnrxooacbi6h"]
 
 [ext_resource type="Script" path="res://mixing.gd" id="1_gdquq"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_bn235"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://csx4mhfl5y8g6" path="res://art/dot_hover.png" id="17_2jnfb"]
 [ext_resource type="BitMap" uid="uid://m4vjlqcojn4q" path="res://art/dot_clickmask.png" id="18_b87we"]
 [ext_resource type="Texture2D" uid="uid://becchsg8p16r1" path="res://art/CurvedArrow.png" id="18_dwrdl"]
+[ext_resource type="AudioStream" uid="uid://bbfgos8fbp6rb" path="res://music&sounds/mix.mp3" id="18_v321l"]
 [ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="19_pv0pt"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="20_4p5ep"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="27_jemm5"]
@@ -324,6 +325,9 @@ position = Vector2(791, 94)
 rotation = -1.17585
 scale = Vector2(0.182995, 0.162549)
 texture = ExtResource("18_dwrdl")
+
+[node name="MixSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_v321l")
 
 [node name="StartButton" type="TextureButton" parent="."]
 visible = false

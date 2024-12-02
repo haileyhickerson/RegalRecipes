@@ -183,6 +183,7 @@ func _on_carrot_1_button_down() -> void:
 func _on_carrot_1_button_up() -> void:
 	$Carrot1.dragging = false
 	if $Carrot1.over_basket and $Carrot1.name in correct_ingredients:
+		$Plop.play()
 		$Carrot1.move_speed = Vector2.ZERO
 		$Carrot1.set_velocity()
 		$Carrot1.in_basket = true
@@ -205,6 +206,7 @@ func _on_carrot_2_button_down() -> void:
 func _on_carrot_2_button_up() -> void:
 	$Carrot2.dragging = false
 	if $Carrot2.over_basket and $Carrot2.name in correct_ingredients:
+		$Plop.play()
 		$Carrot2.move_speed = Vector2.ZERO
 		$Carrot2.set_velocity()
 		$Carrot2.in_basket = true
@@ -227,6 +229,7 @@ func _on_carrot_3_button_down() -> void:
 func _on_carrot_3_button_up() -> void:
 	$Carrot3.dragging = false
 	if $Carrot3.over_basket and $Carrot3.name in correct_ingredients:
+		$Plop.play()
 		$Carrot3.move_speed = Vector2.ZERO
 		$Carrot3.set_velocity()
 		$Carrot3.in_basket = true
@@ -249,6 +252,7 @@ func _on_peas_button_down() -> void:
 func _on_peas_button_up() -> void:
 	$Peas.dragging = false
 	if $Peas.over_basket and $Peas.name in correct_ingredients:
+		$Plop.play()
 		$Peas.move_speed = Vector2.ZERO
 		$Peas.set_velocity()
 		$Peas.in_basket = true
@@ -270,6 +274,7 @@ func _on_bacon_1_button_down() -> void:
 func _on_bacon_1_button_up() -> void:
 	$Bacon1.dragging = false
 	if $Bacon1.over_basket and $Bacon1.name in correct_ingredients:
+		$Plop.play()
 		$Bacon1.move_speed = Vector2.ZERO
 		$Bacon1.set_velocity()
 		$Bacon1.in_basket = true
@@ -292,6 +297,7 @@ func _on_bacon_2_button_down() -> void:
 func _on_bacon_2_button_up() -> void:
 	$Bacon2.dragging = false
 	if $Bacon2.over_basket and $Bacon2.name in correct_ingredients:
+		$Plop.play()
 		$Bacon2.move_speed = Vector2.ZERO
 		$Bacon2.set_velocity()
 		$Bacon2.in_basket = true
@@ -314,6 +320,7 @@ func _on_bacon_3_button_down() -> void:
 func _on_bacon_3_button_up() -> void:
 	$Bacon3.dragging = false
 	if $Bacon3.over_basket and $Bacon3.name in correct_ingredients:
+		$Plop.play()
 		$Bacon3.move_speed = Vector2.ZERO
 		$Bacon3.set_velocity()
 		$Bacon3.in_basket = true
@@ -336,6 +343,7 @@ func _on_cheese_button_down() -> void:
 func _on_cheese_button_up() -> void:
 	$Cheese.dragging = false
 	if $Cheese.over_basket and $Cheese.name in correct_ingredients:
+		$Plop.play()
 		$Cheese.move_speed = Vector2.ZERO
 		$Cheese.set_velocity()
 		$Cheese.in_basket = true
@@ -357,6 +365,7 @@ func _on_dressing_button_down() -> void:
 func _on_dressing_button_up() -> void:
 	$Dressing.dragging = false
 	if $Dressing.over_basket and $Dressing.name in correct_ingredients:
+		$Plop.play()
 		$Dressing.move_speed = Vector2.ZERO
 		$Dressing.set_velocity()
 		$Dressing.in_basket = true
@@ -378,6 +387,7 @@ func _on_steak_button_down() -> void:
 func _on_steak_button_up() -> void:
 	$Steak.dragging = false
 	if $Steak.over_basket and $Steak.name in correct_ingredients:
+		$Plop.play()
 		$Steak.move_speed = Vector2.ZERO
 		$Steak.set_velocity()
 		$Steak.in_basket = true
@@ -399,6 +409,7 @@ func _on_potato_button_down() -> void:
 func _on_potato_button_up() -> void:
 	$Potato.dragging = false
 	if $Potato.over_basket and $Potato.name in correct_ingredients:
+		$Plop.play()
 		$Potato.move_speed = Vector2.ZERO
 		$Potato.set_velocity()
 		$Potato.in_basket = true
@@ -420,6 +431,7 @@ func _on_butter_button_down() -> void:
 func _on_butter_button_up() -> void:
 	$Butter.dragging = false
 	if $Butter.over_basket and $Butter.name in correct_ingredients:
+		$Plop.play()
 		$Butter.move_speed = Vector2.ZERO
 		$Butter.set_velocity()
 		$Butter.in_basket = true
@@ -441,6 +453,7 @@ func _on_garlic_button_down() -> void:
 func _on_garlic_button_up() -> void:
 	$Garlic.dragging = false
 	if $Garlic.over_basket and $Garlic.name in correct_ingredients:
+		$Plop.play()
 		$Garlic.move_speed = Vector2.ZERO
 		$Garlic.set_velocity()
 		$Garlic.in_basket = true
@@ -462,6 +475,7 @@ func _on_onion_button_down() -> void:
 func _on_onion_button_up() -> void:
 	$Onion.dragging = false
 	if $Onion.over_basket and $Onion.name in correct_ingredients:
+		$Plop.play()
 		$Onion.move_speed = Vector2.ZERO
 		$Onion.set_velocity()
 		$Onion.in_basket = true
@@ -483,6 +497,7 @@ func _on_sauce_button_down() -> void:
 func _on_sauce_button_up() -> void:
 	$SteakSauce.dragging = false
 	if $SteakSauce.over_basket and $SteakSauce.name in correct_ingredients:
+		$Plop.play()
 		$SteakSauce.move_speed = Vector2.ZERO
 		$SteakSauce.set_velocity()
 		$SteakSauce.in_basket = true
@@ -504,6 +519,7 @@ func _on_raspberry_button_down() -> void:
 func _on_raspberry_button_up() -> void:
 	$Raspberries.dragging = false
 	if $Raspberries.over_basket and $Raspberries.name in correct_ingredients:
+		$Plop.play()
 		$Raspberries.move_speed = Vector2.ZERO
 		$Raspberries.set_velocity()
 		$Raspberries.in_basket = true
@@ -526,6 +542,7 @@ func _on_egg_1_button_down() -> void:
 func _on_egg_1_button_up() -> void:
 	$Egg1.dragging = false
 	if $Egg1.over_basket and $Egg1.name in correct_ingredients:
+		$Plop.play()
 		$Egg1.move_speed = Vector2.ZERO
 		$Egg1.set_velocity()
 		$Egg1.in_basket = true
@@ -548,6 +565,7 @@ func _on_egg_2_button_down() -> void:
 func _on_egg_2_button_up() -> void:
 	$Egg2.dragging = false
 	if $Egg2.over_basket and $Egg2.name in correct_ingredients:
+		$Plop.play()
 		$Egg2.move_speed = Vector2.ZERO
 		$Egg2.set_velocity()
 		$Egg2.in_basket = true
@@ -570,6 +588,7 @@ func _on_cake_mix_button_down() -> void:
 func _on_cake_mix_button_up() -> void:
 	$CakeMix.dragging = false
 	if $CakeMix.over_basket and $CakeMix.name in correct_ingredients:
+		$Plop.play()
 		$CakeMix.move_speed = Vector2.ZERO
 		$CakeMix.set_velocity()
 		$CakeMix.in_basket = true
@@ -591,6 +610,7 @@ func _on_water_button_down() -> void:
 func _on_water_button_up() -> void:
 	$Water.dragging = false
 	if $Water.over_basket and $Water.name in correct_ingredients:
+		$Plop.play()
 		$Water.move_speed = Vector2.ZERO
 		$Water.set_velocity()
 		$Water.in_basket = true
@@ -612,6 +632,7 @@ func _on_raspberry_jam_button_down() -> void:
 func _on_raspberry_jam_button_up() -> void:
 	$RaspberryJam.dragging = false
 	if $RaspberryJam.over_basket and $RaspberryJam.name in correct_ingredients:
+		$Plop.play()
 		$RaspberryJam.move_speed = Vector2.ZERO
 		$RaspberryJam.set_velocity()
 		$RaspberryJam.in_basket = true
@@ -633,6 +654,7 @@ func _on_whipped_cream_button_down() -> void:
 func _on_whipped_cream_button_up() -> void:
 	$WhippedCream.dragging = false
 	if $WhippedCream.over_basket and $WhippedCream.name in correct_ingredients:
+		$Plop.play()
 		$WhippedCream.move_speed = Vector2.ZERO
 		$WhippedCream.set_velocity()
 		$WhippedCream.in_basket = true

@@ -1,7 +1,8 @@
-[gd_scene load_steps=101 format=3 uid="uid://bhyucviieqbhs"]
+[gd_scene load_steps=102 format=3 uid="uid://bhyucviieqbhs"]
 
 [ext_resource type="Script" path="res://pantry.gd" id="1_xewv2"]
 [ext_resource type="Texture2D" uid="uid://ckbq14kxwn8jm" path="res://art/EmptryPantry.png" id="2_1174c"]
+[ext_resource type="AudioStream" uid="uid://djomc6da7lwrx" path="res://music&sounds/Plop.wav" id="3_g2rvo"]
 [ext_resource type="PackedScene" uid="uid://cp4wximgsmflu" path="res://basket.tscn" id="3_v2w7e"]
 [ext_resource type="Texture2D" uid="uid://b67hbohj0k0m1" path="res://art/meat.png" id="5_0danb"]
 [ext_resource type="Texture2D" uid="uid://drd6guywl6oru" path="res://art/UncookedCarrot.png" id="5_oewdp"]
@@ -144,6 +145,9 @@ script = ExtResource("1_xewv2")
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_1174c")
+
+[node name="Plop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_g2rvo")
 
 [node name="BackButton" type="Button" parent="."]
 offset_left = 52.0

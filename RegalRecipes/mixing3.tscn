@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://bei6v6vhdcxg4"]
+[gd_scene load_steps=51 format=3 uid="uid://bei6v6vhdcxg4"]
 
 [ext_resource type="Script" path="res://mixing3.gd" id="1_ut4b4"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_mvjck"]
@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://cjcpi4m5np1fv" path="res://art/play.png" id="34_7otlb"]
 [ext_resource type="Texture2D" uid="uid://dxugxbw6gpt0n" path="res://art/play_hover.png" id="35_ve7po"]
 [ext_resource type="BitMap" uid="uid://kdtfcv3g1m5w" path="res://art/play_pressed.png" id="36_tyl5j"]
+[ext_resource type="AudioStream" uid="uid://bbfgos8fbp6rb" path="res://music&sounds/mix.mp3" id="37_81vme"]
 [ext_resource type="Texture2D" uid="uid://bggxy023qjunk" path="res://art/dot.png" id="37_gh0hy"]
 [ext_resource type="Texture2D" uid="uid://bqsuix2nuppwa" path="res://art/dot_press.png" id="38_5susa"]
 [ext_resource type="Texture2D" uid="uid://csx4mhfl5y8g6" path="res://art/dot_hover.png" id="39_1fuer"]
@@ -502,6 +503,9 @@ texture_hover = ExtResource("39_1fuer")
 texture_click_mask = ExtResource("40_fo04l")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="MixSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("37_81vme")
 
 [node name="TextBox" type="Sprite2D" parent="."]
 position = Vector2(960, 540)

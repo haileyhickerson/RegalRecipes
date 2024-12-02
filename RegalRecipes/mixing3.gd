@@ -131,6 +131,7 @@ func _on_marker_button_pressed() -> void:
 	if !station_part1_completed:
 		if current_marker_index != 7:
 			$SteakSauce.play("mix")
+			$MixSound.play()
 			current_marker_index += 1
 			current_marker = marker_array[current_marker_index]
 		else:
@@ -139,6 +140,7 @@ func _on_marker_button_pressed() -> void:
 		$SteakText.hide()
 		if current_marker_index != 7:
 			$SteakSauce.play("steak_mix")
+			$MixSound.play()
 			current_marker_index += 1
 			current_marker = marker_array[current_marker_index]
 		else:

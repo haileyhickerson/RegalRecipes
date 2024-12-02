@@ -109,6 +109,7 @@ func _on_start_button_pressed() -> void:
 
 func _on_marker_button_pressed() -> void:
 	$Peas.play("mix")
+	$MixSound.play()
 	if current_marker_index != 7:
 		current_arrow.hide()
 		current_marker_index += 1

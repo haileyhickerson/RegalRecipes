@@ -102,7 +102,8 @@ func _on_taste_test_button_pressed()-> void:
 
 func _on_timer_1_timeout() -> void:
 	ReferencePic.visible= false
-	$"Taste Test Button".show()
+	if !PlayerVariables.plating_completed:
+		$"Taste Test Button".show()
 	$PlateContainer.visible= true
 	$HintButton.show()
 
