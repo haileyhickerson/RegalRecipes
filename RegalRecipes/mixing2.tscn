@@ -599,21 +599,19 @@ sauce into the steak!"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="OutsideOfSquare" type="Area2D" parent="."]
+[node name="OutsideOfCircle" type="Area2D" parent="."]
 position = Vector2(960, 540)
 
-[node name="LeftSide" type="CollisionPolygon2D" parent="OutsideOfSquare"]
+[node name="LeftSide" type="CollisionPolygon2D" parent="OutsideOfCircle"]
 rotation = 3.14159
 polygon = PackedVector2Array(0, -545, 2, -507, 46, -505, 118, -509, 405, -504, 454, -478, 488, -442, 504, -398, 506, -326, 507, -55, 508, 88, 506, 134, 505, 355, 506, 393, 496, 423, 475, 461, 440, 489, 403, 503, 278, 506, 104, 504, 27, 506, 1, 507, 2, 558, 986, 552, 988, -564)
 
-[node name="RightSide" type="CollisionPolygon2D" parent="OutsideOfSquare"]
+[node name="RightSide" type="CollisionPolygon2D" parent="OutsideOfCircle"]
 polygon = PackedVector2Array(0, -545, 2, -507, 46, -505, 118, -509, 405, -504, 454, -478, 488, -442, 504, -398, 506, -326, 507, -55, 508, 88, 506, 134, 505, 355, 506, 393, 496, 423, 475, 461, 440, 489, 403, 503, 278, 506, 104, 504, 27, 506, 1, 507, 2, 558, 986, 552, 988, -564)
 
-[node name="InnerSquare" type="CollisionPolygon2D" parent="OutsideOfSquare"]
-visible = false
+[node name="InnerSquare" type="CollisionPolygon2D" parent="OutsideOfCircle"]
 scale = Vector2(0.97, 0.97)
 polygon = PackedVector2Array(-348.454, -452.577, 372.165, -450.515, 404, -445, 431, -424, 445, -397, 451, -369, 451, 386, 434, 423, 405.155, 444.33, 379.381, 450.516, -384.536, 449.485, -410, 441, -435, 421, -450, 385, -452, -380, -442, -412, -416, -437, -387, -450)
-disabled = true
 
 [node name="NextButton" type="Button" parent="."]
 offset_left = 1679.0
@@ -665,6 +663,6 @@ autowrap_mode = 3
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MarkerButton" to="." method="_on_marker_button_pressed"]
-[connection signal="mouse_entered" from="OutsideOfSquare" to="." method="_on_outside_of_circle_mouse_entered"]
-[connection signal="mouse_exited" from="OutsideOfSquare" to="." method="_on_outside_of_circle_mouse_exited"]
+[connection signal="mouse_entered" from="OutsideOfCircle" to="." method="_on_outside_of_circle_mouse_entered"]
+[connection signal="mouse_exited" from="OutsideOfCircle" to="." method="_on_outside_of_circle_mouse_exited"]
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

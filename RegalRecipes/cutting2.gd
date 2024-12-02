@@ -4,14 +4,13 @@ extends Node2D
 # Array of ideal points along line at which cuts should be made
 var ideal_cut_points = []
 # Score variable
-var score = 100
-var total_possible_points = 100
-var total_cuts = 0
-var cut_threshold = 30
+var lines=[]
 var max_score = 100
 var deduction_cut= 10
+var total_cuts = 0
+var score = max_score
+var cut_threshold = 30
 var first_space_pressed
-var lines =[]
 
 # Ready function
 func _ready() -> void:
@@ -68,6 +67,8 @@ func _input(event):
 			if total_cuts ==4:
 				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 				$NextButton.show()
+				$ScoreBox/FinalScore.text = "Final Score: " + str(score) + "/100"
+				$ScoreBox.show()
 		#else:
 			#get_tree().change_scene_to_file("res://kitchen.tscn")
 

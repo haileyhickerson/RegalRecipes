@@ -1,11 +1,5 @@
 extends Node2D
 
-@export var Cut1: Line2D
-@export var Cut2: Line2D
-@export var Cut3: Line2D
-@export var knife: Area2D
-@export var KnifeTip: Marker2D
-@export var Cutting_Timer: Timer
 
 # Array of ideal points along line at which cuts should be made
 var ideal_cut_points = []
@@ -20,6 +14,8 @@ var first_space_pressed
 
 # Ready function
 func _ready() -> void:
+	first_space_pressed = false
+	total_cuts = 0
 	$NextButton.hide()
 
 	for child in get_children():
@@ -36,15 +32,15 @@ func _process(delta: float) -> void:
 			first_space_pressed = true
 			$TextBox.visible= false
 
-			
-func make_cut(cut_line):
-	print("making cut")
+
 	
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
 		if first_space_pressed== true:
 			if total_cuts < 3:
+				print("attempted cut!")
 				total_cuts += 1
+				print(total_cuts)
 				##use marker2d position for knife
 				var knife_position_x= $Knife/KnifeTip.global_position.x
 				print("knife:",knife_position_x)
@@ -98,7 +94,7 @@ func calculate_deduction(knife_position_x):
 
 func show_next_button():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	KnifeTip.hide()
+	$KnifeTip.hide()
 	$NextButton.show()
  
 ## win points and update display

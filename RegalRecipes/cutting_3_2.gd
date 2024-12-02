@@ -1,11 +1,5 @@
 extends Node2D
 
-@export var Cut1: Line2D
-@export var Cut2: Line2D
-@export var Cut3: Line2D
-@export var knife: Area2D
-@export var KnifeTip: Marker2D
-@export var Cutting_Timer: Timer
 
 # Array of ideal points along line at which cuts should be made
 var ideal_cut_points = []
@@ -17,6 +11,7 @@ var total_cuts = 0
 var score = max_score
 var cut_threshold = 30
 var first_space_pressed
+
 # Ready function
 func _ready() -> void:
 	$NextButton.hide()
@@ -24,9 +19,9 @@ func _ready() -> void:
 	for child in get_children():
 		if child is Line2D:
 			lines.append(child)
-			# get the position of point 0
+			# Get the position of point 0
 			var point_0_position = child.get_point_position(0)
-			# append the x-coordinate of point 0 to ideal_cut_points
+			# Append the x-coordinate of point 0 to ideal_cut_points
 			ideal_cut_points.append(point_0_position.x)
 				
 func _process(delta: float) -> void:
@@ -35,15 +30,14 @@ func _process(delta: float) -> void:
 			first_space_pressed = true
 			$TextBox.visible= false
 
-			
-func make_cut(cut_line):
-	print("making cut")
+		
 	
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
 		if first_space_pressed== true:
 			if total_cuts < 3:
 				total_cuts += 1
+				print(total_cuts)
 				##use marker2d position for knife
 				var knife_position_x= $Knife/KnifeTip.global_position.x
 				print("knife:",knife_position_x)
@@ -58,8 +52,9 @@ func _input(event):
 				update_score_display()
 				score= max(score,0)
 				print("current score: ", score)
+				
+		
 			if total_cuts==3:
-				PlayerVariables.cutting_completed = true
 				PlayerVariables.cutting_score = score
 				$ScoreBox/FinalScore.text = "Final Score: " + str(score) + "/100"
 				$ScoreBox.show()
@@ -95,22 +90,23 @@ func calculate_deduction(knife_position_x):
 		
 	var score_deduct= int(deduction_cut*(closest_distance/cut_threshold))
 	return min(score_deduct, deduction_cut)
-	
 
 func show_next_button():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	KnifeTip.hide()
+	$KnifeTip.hide()
 	$NextButton.show()
  
 ## win points and update display
 func update_score_display():
-	if $Score_Label!= null:
-		$Score_Label.text= str(score)
-		print("error")
+	$Score_Label.text= str(score) 
+		
+#func play_cutting_sound():
+	#$Knife/AudioStreamPlayer2D.play()
+	#Cutting_Timer.start()
 
-
-func _on_back_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://kitchen.tscn") # Replace with function body.
+func _on_next_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://kitchen.tscn")
+	PlayerVariables.cutting_completed = true
 
 
 func _on_cutting_timer_timeout() -> void:

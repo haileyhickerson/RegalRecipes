@@ -160,7 +160,7 @@ func station_complete():
 	$MarkerButton.hide()
 	$SteakSauce.play("steak_mixed")
 	await get_tree().create_timer(1.5).timeout
-	$OutsideOfSquare.hide()
+	$OutsideOfSCircle.hide()
 	$NextButton.show()
 
 

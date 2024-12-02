@@ -1,5 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://dipjhwol3m5ha"]
 
+[ext_resource type="Script" path="res://cutting.gd" id="1_afrxs"]
 [ext_resource type="Texture2D" uid="uid://b7paioai6w1g5" path="res://art/CuttingBoard.png" id="2_dxffu"]
 [ext_resource type="Texture2D" uid="uid://t4aivsex2etl" path="res://art/CheeseBlock.png" id="3_qctmb"]
 [ext_resource type="AudioStream" uid="uid://by3lauvagb334" path="res://music&sounds/533435__microtubule__carrots-slicing.wav" id="5_gvn0k"]
@@ -10,124 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="9_l0egp"]
 [ext_resource type="AudioStream" uid="uid://c130kk5w6p27c" path="res://music&sounds/error.wav" id="10_mjvgs"]
 [ext_resource type="AudioStream" uid="uid://c26aa08an6ydu" path="res://music&sounds/chop2.wav" id="11_nidy6"]
-
-[sub_resource type="GDScript" id="GDScript_nkjm2"]
-script/source = "extends Node2D
-
-@export var Cut1: Line2D
-@export var Cut2: Line2D
-@export var Cut3: Line2D
-@export var knife: Area2D
-@export var KnifeTip: Marker2D
-@export var Cutting_Timer: Timer
-
-# Array of ideal points along line at which cuts should be made
-var ideal_cut_points = []
-# Score variable
-var lines=[]
-var max_score = 100
-var deduction_cut= 10
-var total_cuts = 0
-var score = max_score
-var cut_threshold = 30
-var first_space_pressed
-# Ready function
-func _ready() -> void:
-	$NextButton.hide()
-
-	for child in get_children():
-		if child is Line2D:
-			lines.append(child)
-			# get the position of point 0
-			var point_0_position = child.get_point_position(0)
-			# append the x-coordinate of point 0 to ideal_cut_points
-			ideal_cut_points.append(point_0_position.x)
-				
-func _process(delta: float) -> void:
-	if Input.is_action_pressed(\"action\"):
-		if !first_space_pressed:
-			first_space_pressed = true
-			$TextBox.visible= false
-
-			
-func make_cut(cut_line):
-	print(\"making cut\")
-	
-func _input(event):
-	if event is InputEventMouseButton and event.pressed:
-		if first_space_pressed== true:
-			if total_cuts < 3:
-				total_cuts += 1
-				##use marker2d position for knife
-				var knife_position_x= $Knife/KnifeTip.global_position.x
-				print(\"knife:\",knife_position_x)
-				if check_cut(knife_position_x):
-					var points_loss= calculate_deduction(knife_position_x)
-					print(\"cut is made\", points_loss)
-					$ChopSound.play()
-				else:
-					$ErrorSound.play()
-					print(\"no cut is made\")
-					score-= deduction_cut
-				update_score_display()
-				score= max(score,0)
-				print(\"current score: \", score)
-			if total_cuts==3:
-				PlayerVariables.cutting_completed = true
-				PlayerVariables.cutting_score = score
-				
-				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-				update_score_display()
-				$NextButton.show()
-		#else:
-			#get_tree().change_scene_to_file(\"res://kitchen.tscn\")
-
-func check_cut(knife_position_x):
-	var cut_made = false
-	for i in range(1,len(ideal_cut_points)):
-		var cut_point= ideal_cut_points[i]
-	#for cut_point in ideal_cut_points:
-		print(\"cutx:\",cut_point)
-		if abs(knife_position_x - cut_point) <= cut_threshold:
-			print(\"Successful cut at position:\", knife_position_x,\"and cut point\", cut_point)
-			lines[i].hide()
-			cut_made= true
-			break
-		else:
-			print(\"no cut made, not close enough\",cut_point)
-	return cut_made
-		
-
-func calculate_deduction(knife_position_x):
-	var closest_distance = INF
-	for cut_x in ideal_cut_points:
-		var distance_from_cut = abs(knife_position_x- cut_x)
-		if distance_from_cut < closest_distance:
-			closest_distance = distance_from_cut
-		
-	var score_deduct= int(deduction_cut*(closest_distance/cut_threshold))
-	return min(score_deduct, deduction_cut)
-	
-
-func show_next_button():
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	KnifeTip.hide()
-	$NextButton.show()
- 
-## win points and update display
-func update_score_display():
-	if $Score_Label!= null:
-		$Score_Label.text= str(score)
-		print(\"error\")
-
-
-func _on_back_button_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://kitchen.tscn\") # Replace with function body.
-
-
-func _on_cutting_timer_timeout() -> void:
-	$Knife/AudioStreamPlayer2D.stop()
-"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0hlai"]
 animations = [{
@@ -143,11 +26,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y8gqb"]
 size = Vector2(25.3293, 344.501)
 
-[node name="Cutting" type="Node2D" node_paths=PackedStringArray("Cut1", "Cut2", "Cut3")]
-script = SubResource("GDScript_nkjm2")
-Cut1 = NodePath("Cut1")
-Cut2 = NodePath("Cut2")
-Cut3 = NodePath("Cut3")
+[node name="Cutting" type="Node2D"]
+position = Vector2(0, -1)
+script = ExtResource("1_afrxs")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1923.0
@@ -265,6 +146,27 @@ stream = ExtResource("10_mjvgs")
 [node name="ChopSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_nidy6")
 pitch_scale = 1.5
+
+[node name="ScoreBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(0.564815, 0.564815)
+texture = ExtResource("7_dnh06")
+
+[node name="FinalScore" type="Label" parent="ScoreBox"]
+offset_left = -743.606
+offset_top = -61.9672
+offset_right = 750.394
+offset_bottom = 443.033
+theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("8_n50o3")
+theme_override_font_sizes/font_size = 75
+text = "b
+"
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [connection signal="pressed" from="NextButton" to="." method="_on_back_button_pressed"]
 [connection signal="timeout" from="Knife/Cutting_Timer" to="." method="_on_cutting_timer_timeout"]
