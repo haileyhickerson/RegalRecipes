@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ce1hxiu7vhgmu"]
+[gd_scene load_steps=22 format=3 uid="uid://ce1hxiu7vhgmu"]
 
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="1_jdp80"]
 [ext_resource type="Script" path="res://cake_layers.gd" id="1_xnitr"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://crjxu466k8tor" path="res://art/FrostingLayer_Hover.png" id="14_va62b"]
 [ext_resource type="BitMap" uid="uid://hnbitxmnc1pk" path="res://art/FrostingLayer_Mask.png" id="15_x2tnq"]
 [ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="18_xku15"]
+[ext_resource type="AudioStream" uid="uid://djomc6da7lwrx" path="res://music&sounds/Plop.wav" id="19_8dn3v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cdoem"]
 size = Vector2(432, 162)
@@ -144,7 +145,7 @@ theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392,
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("6_cwio6")
 theme_override_font_sizes/font_size = 75
-text = "Click on the layer to stack the cake! Make sure its on the plate!"
+text = "Now, we must stack the layers of the cake! Carefully align each layer with the center of the plate."
 horizontal_alignment = 1
 autowrap_mode = 3
 
@@ -213,7 +214,14 @@ text = "Press \"Space\" to plate!"
 horizontal_alignment = 1
 autowrap_mode = 3
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="PlopSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_8dn3v")
+
 [connection signal="button_up" from="SpongeLayer1/Layer1" to="." method="_on_layer_1_button_up"]
 [connection signal="button_up" from="SpongeLayer2/Layer3" to="." method="_on_layer_3_button_up"]
 [connection signal="button_up" from="RasberryFilling/Layer2" to="." method="_on_layer_2_button_up"]
 [connection signal="button_up" from="Frosting/Layer4" to="." method="_on_layer_4_button_up"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

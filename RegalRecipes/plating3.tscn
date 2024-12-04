@@ -402,7 +402,7 @@ theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392,
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("17_2h7ki")
 theme_override_font_sizes/font_size = 75
-text = "Place the ingredients following the reference guide. The more precise the better! "
+text = "Carefully arrange the toppings to plate the sponge cake!"
 horizontal_alignment = 1
 autowrap_mode = 3
 
@@ -421,7 +421,6 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="ScoreTextBox" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(960, 540)
 scale = Vector2(0.564815, 0.564815)
 texture = ExtResource("16_qt58a")
@@ -440,7 +439,6 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Taste Test Button" type="Button" parent="."]
-visible = false
 offset_left = 806.0
 offset_top = 883.0
 offset_right = 1178.0
@@ -449,7 +447,6 @@ theme_override_font_sizes/font_size = 50
 text = "Continue"
 
 [node name="ContinueButton" type="Button" parent="."]
-visible = false
 offset_left = 806.0
 offset_top = 883.0
 offset_right = 1178.0
