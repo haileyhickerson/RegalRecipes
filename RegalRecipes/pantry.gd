@@ -5,7 +5,7 @@ var _overlapping = []
 var correct_ingredients = PlayerVariables.correct_ingredients[PlayerVariables.curr_recipe]
 var starting_score = 100
 var dialogue_index = 0
-var instructions = ["Drag the correct ingredients into the basket!", "If you click the wrong ingredient, you lose points!"]
+var instructions = ["Drag the correct ingredients into the basket!", "Don't click the wrong ingredients!"]
 
 var bacon_count = 0
 var peas_count = 0

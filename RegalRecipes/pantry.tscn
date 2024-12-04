@@ -906,10 +906,10 @@ scale = Vector2(0.565, 0.565)
 texture = ExtResource("13_ty1ql")
 
 [node name="InstructionText" type="Label" parent="InstructionsTextbox"]
-offset_left = -697.345
+offset_left = -697.0
 offset_top = -200.0
-offset_right = 722.655
-offset_bottom = -103.0
+offset_right = 723.0
+offset_bottom = 78.0
 theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
 theme_override_constants/outline_size = 5
@@ -917,6 +917,7 @@ theme_override_fonts/font = ExtResource("14_ru7wo")
 theme_override_font_sizes/font_size = 75
 text = "bbbb"
 horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="Score" type="Label" parent="InstructionsTextbox"]
 offset_left = -647.788
@@ -989,7 +990,7 @@ scale = Vector2(0.157599, 0.157599)
 texture = ExtResource("15_8npqf")
 
 [node name="ExampleCarrot2" type="Sprite2D" parent="InstructionsTextbox/Recipe2Pics"]
-position = Vector2(-628.711, -11.3451)
+position = Vector2(-628.711, 45.6074)
 rotation = 1.4709
 scale = Vector2(0.192671, 0.192671)
 texture = ExtResource("15_8npqf")

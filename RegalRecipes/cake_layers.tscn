@@ -34,6 +34,7 @@ offset_bottom = 1080.0
 texture = ExtResource("1_jdp80")
 
 [node name="Line2D" type="Line2D" parent="."]
+visible = false
 position = Vector2(960, 769)
 points = PackedVector2Array(0, -500, 0, 315)
 
