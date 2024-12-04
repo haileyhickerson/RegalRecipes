@@ -6,4 +6,4 @@
 stream = ExtResource("1_g2eos")
 volume_db = -9.37
 autoplay = true
-parameters/looping = false
+parameters/looping = true
