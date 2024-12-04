@@ -372,7 +372,7 @@ theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392,
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("38_104ty")
 theme_override_font_sizes/font_size = 75
-text = "Place the ingredients following the reference guide. The more precise the better! "
+text = "Plate the ingredients to complete the perfect steak dinner."
 horizontal_alignment = 1
 autowrap_mode = 3
 
