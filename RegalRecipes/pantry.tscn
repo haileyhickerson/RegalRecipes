@@ -149,14 +149,6 @@ texture = ExtResource("2_1174c")
 [node name="Plop" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_g2rvo")
 
-[node name="BackButton" type="Button" parent="."]
-offset_left = 52.0
-offset_top = 31.0
-offset_right = 232.0
-offset_bottom = 136.0
-theme_override_font_sizes/font_size = 50
-text = "Back"
-
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Basket" parent="." groups=["basket"] instance=ExtResource("3_v2w7e")]
@@ -914,7 +906,7 @@ theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("14_ru7wo")
-theme_override_font_sizes/font_size = 75
+theme_override_font_sizes/font_size = 70
 text = "bbbb"
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -1135,7 +1127,6 @@ collision_layer = 3
 position = Vector2(4026.67, 1993.33)
 shape = SubResource("RectangleShape2D_0sd4u")
 
-[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Basket" to="." method="_on_basket_body_entered"]
 [connection signal="body_exited" from="Basket" to="." method="_on_basket_body_exited"]
