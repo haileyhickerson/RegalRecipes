@@ -74,7 +74,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"cooked",
-"speed": 3.0
+"speed": 10.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mk8sb"]
@@ -191,6 +191,7 @@ position = Vector2(967, 335)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_pggyy")
 animation = &"cooked"
+frame_progress = 0.247465
 
 [node name="Steak" type="Area2D" parent="."]
 position = Vector2(0.00012207, 0.00012207)

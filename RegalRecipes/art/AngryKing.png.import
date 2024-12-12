@@ -3,20 +3,22 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2gi5nic1n7id"
-path="res://.godot/imported/AngryKing.png-ce221070c9f9b92a0832c0ded5b6483d.ctex"
+path.bptc="res://.godot/imported/AngryKing.png-ce221070c9f9b92a0832c0ded5b6483d.bptc.ctex"
+path.astc="res://.godot/imported/AngryKing.png-ce221070c9f9b92a0832c0ded5b6483d.astc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/AngryKing.png"
-dest_files=["res://.godot/imported/AngryKing.png-ce221070c9f9b92a0832c0ded5b6483d.ctex"]
+dest_files=["res://.godot/imported/AngryKing.png-ce221070c9f9b92a0832c0ded5b6483d.bptc.ctex", "res://.godot/imported/AngryKing.png-ce221070c9f9b92a0832c0ded5b6483d.astc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

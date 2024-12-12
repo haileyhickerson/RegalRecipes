@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://c37trk53n1urg"]
+[gd_scene load_steps=9 format=3 uid="uid://c37trk53n1urg"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_tbony"]
 [ext_resource type="Texture2D" uid="uid://bqyh7yvc1ulws" path="res://art/TitleBGConcept.png" id="2_y0t78"]
 [ext_resource type="Texture2D" uid="uid://brccfxrhh0qxv" path="res://art/TitleText.png" id="3_k67wy"]
 [ext_resource type="AudioStream" uid="uid://dm2t0amh1ug1i" path="res://music&sounds/ButtonPress.wav" id="4_lvspi"]
+[ext_resource type="Texture2D" uid="uid://cdrhktncvd2ld" path="res://art/RoyalsArt/HappyKing.png" id="5_hwvu0"]
+[ext_resource type="Texture2D" uid="uid://bn8g2x61r43n8" path="res://art/RoyalsArt/HappyPrincess.png" id="6_m43vr"]
+[ext_resource type="Texture2D" uid="uid://by2vw72dop24s" path="res://art/RoyalsArt/HappyQueen.png" id="7_0hkg8"]
+[ext_resource type="Texture2D" uid="uid://cpy41x7xyfvdo" path="res://art/RoyalsArt/HappyPrince.png" id="8_qywvb"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_tbony")
@@ -12,6 +16,35 @@ script = ExtResource("1_tbony")
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_y0t78")
+
+[node name="TitleText2" type="Sprite2D" parent="."]
+position = Vector2(962, 491)
+texture = ExtResource("3_k67wy")
+
+[node name="ButtonSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_lvspi")
+volume_db = 24.0
+
+[node name="HappyKing" type="Sprite2D" parent="."]
+position = Vector2(634, 845)
+scale = Vector2(0.455592, 0.455592)
+texture = ExtResource("5_hwvu0")
+
+[node name="HappyPrincess" type="Sprite2D" parent="."]
+position = Vector2(243, 834)
+scale = Vector2(0.279227, 0.279227)
+texture = ExtResource("6_m43vr")
+
+[node name="HappyQueen" type="Sprite2D" parent="."]
+position = Vector2(1301, 849)
+scale = Vector2(0.414558, 0.414558)
+texture = ExtResource("7_0hkg8")
+
+[node name="HappyPrince" type="Sprite2D" parent="."]
+position = Vector2(1650, 908)
+scale = Vector2(0.343765, 0.343765)
+texture = ExtResource("8_qywvb")
+flip_h = true
 
 [node name="StartButton" type="Button" parent="."]
 offset_left = 815.0
@@ -33,14 +66,6 @@ theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 60
 text = "Quit
 "
-
-[node name="TitleText2" type="Sprite2D" parent="."]
-position = Vector2(962, 491)
-texture = ExtResource("3_k67wy")
-
-[node name="ButtonSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_lvspi")
-volume_db = 24.0
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

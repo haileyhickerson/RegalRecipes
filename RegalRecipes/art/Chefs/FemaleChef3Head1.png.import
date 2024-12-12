@@ -3,20 +3,22 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1ew0ta6weu3o"
-path="res://.godot/imported/FemaleChef3Head1.png-cd6f9929ccea72e8b8879dbc39f0ecf3.ctex"
+path.bptc="res://.godot/imported/FemaleChef3Head1.png-cd6f9929ccea72e8b8879dbc39f0ecf3.bptc.ctex"
+path.astc="res://.godot/imported/FemaleChef3Head1.png-cd6f9929ccea72e8b8879dbc39f0ecf3.astc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/Chefs/FemaleChef3Head1.png"
-dest_files=["res://.godot/imported/FemaleChef3Head1.png-cd6f9929ccea72e8b8879dbc39f0ecf3.ctex"]
+dest_files=["res://.godot/imported/FemaleChef3Head1.png-cd6f9929ccea72e8b8879dbc39f0ecf3.bptc.ctex", "res://.godot/imported/FemaleChef3Head1.png-cd6f9929ccea72e8b8879dbc39f0ecf3.astc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

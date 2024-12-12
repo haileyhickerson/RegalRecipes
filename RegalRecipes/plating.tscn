@@ -3,17 +3,17 @@
 [ext_resource type="Script" path="res://plating.gd" id="1_w55mi"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_efjw4"]
 [ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="3_ew156"]
-[ext_resource type="Texture2D" uid="uid://binglwbf545x1" path="res://art/Peas.png" id="5_3jh3m"]
 [ext_resource type="Texture2D" uid="uid://b18m0772uijl1" path="res://art/BlueBowl.png" id="5_e5mgo"]
-[ext_resource type="Texture2D" uid="uid://trehlrsg5tl0" path="res://art/ReferencePic.png" id="5_ofxoc"]
+[ext_resource type="Texture2D" uid="uid://bubltm4ilqb3m" path="res://art/PeasReference.png" id="5_xm8gc"]
 [ext_resource type="Texture2D" uid="uid://c62e2e1i4yprm" path="res://art/YellowPlate.png" id="6_n6qvo"]
+[ext_resource type="Texture2D" uid="uid://larf2cqoy67s" path="res://art/peas_mixed_normal.png" id="7_3pu35"]
 [ext_resource type="Script" path="res://plating_ingredients.gd" id="7_xoyhb"]
-[ext_resource type="Texture2D" uid="uid://c4dp5tiodvt7i" path="res://art/Peas_Click.png" id="8_oeu68"]
+[ext_resource type="Texture2D" uid="uid://ciabrf07c8bcb" path="res://art/peas_mixed_click.png" id="8_17cmi"]
 [ext_resource type="Texture2D" uid="uid://cjf5u74cpopra" path="res://art/Cheese1.png" id="8_qvrqc"]
+[ext_resource type="Texture2D" uid="uid://dodgg2qxcnktu" path="res://art/peas_mixed_hover.png" id="9_dis7i"]
 [ext_resource type="Texture2D" uid="uid://clgcslohqk5j1" path="res://art/Cheese2.png" id="9_gqfg7"]
-[ext_resource type="Texture2D" uid="uid://c60bsg05jjrx1" path="res://art/Peas_Hover.png" id="9_x0ysl"]
+[ext_resource type="BitMap" uid="uid://cr25s5fbae5ku" path="res://art/peas_mixed_mask.png" id="10_glcul"]
 [ext_resource type="Texture2D" uid="uid://byp1abx3b0u5y" path="res://art/Cheese3.png" id="10_iuj5u"]
-[ext_resource type="BitMap" uid="uid://c7h528nnwpdw" path="res://art/Peas_Mask.png" id="10_tnwu8"]
 [ext_resource type="Texture2D" uid="uid://c4ycusavn61xp" path="res://art/PinkBowl.png" id="11_ubmik"]
 [ext_resource type="Texture2D" uid="uid://byirk4ntkiej2" path="res://art/Bacon1.png" id="12_w3eif"]
 [ext_resource type="Texture2D" uid="uid://urirejdrw4w5" path="res://art/Bacon2.png" id="13_b4shs"]
@@ -85,6 +85,12 @@ offset_bottom = 136.0
 theme_override_font_sizes/font_size = 50
 text = "Hint"
 
+[node name="ReferencePic" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(970.5, 547)
+scale = Vector2(0.388448, 0.387528)
+texture = ExtResource("5_xm8gc")
+
 [node name="Taste Test Button" type="Button" parent="."]
 offset_left = 806.0
 offset_top = 883.0
@@ -96,14 +102,8 @@ text = "Serve the food!"
 [node name="HintReferencePic" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(258, 230)
-scale = Vector2(0.403009, 0.37662)
-texture = ExtResource("5_ofxoc")
-
-[node name="ReferencePic" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(970, 587)
-scale = Vector2(0.835648, 0.858796)
-texture = ExtResource("5_ofxoc")
+scale = Vector2(0.189265, 0.189265)
+texture = ExtResource("5_xm8gc")
 
 [node name="BowlsContainer" type="Node2D" parent="."]
 
@@ -113,7 +113,8 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("5_e5mgo")
 
 [node name="Peas" type="Area2D" parent="BowlsContainer/BlueBowl" groups=["peas", "plating_ingredients"]]
-position = Vector2(3.33333, 13.3333)
+position = Vector2(3.33337, -10)
+scale = Vector2(1.03693, 1.03693)
 script = ExtResource("7_xoyhb")
 metadata/_edit_group_ = true
 
@@ -123,10 +124,10 @@ offset_top = -492.0
 offset_right = 492.0
 offset_bottom = 495.0
 keep_pressed_outside = true
-texture_normal = ExtResource("5_3jh3m")
-texture_pressed = ExtResource("8_oeu68")
-texture_hover = ExtResource("9_x0ysl")
-texture_click_mask = ExtResource("10_tnwu8")
+texture_normal = ExtResource("7_3pu35")
+texture_pressed = ExtResource("8_17cmi")
+texture_hover = ExtResource("9_dis7i")
+texture_click_mask = ExtResource("10_glcul")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -140,6 +141,7 @@ scale = Vector2(0.45, 0.45)
 texture = ExtResource("6_n6qvo")
 
 [node name="Bacon1" type="Area2D" parent="BowlsContainer/YellowPlate" groups=["bacon", "plating_ingredients"]]
+position = Vector2(-24.4445, -40)
 script = ExtResource("7_xoyhb")
 
 [node name="Bacon1Button" type="TextureButton" parent="BowlsContainer/YellowPlate/Bacon1"]
@@ -163,6 +165,7 @@ shape = SubResource("RectangleShape2D_s0vrs")
 debug_color = Color(0, 0.870752, 0.339255, 0.42)
 
 [node name="Bacon2" type="Area2D" parent="BowlsContainer/YellowPlate" groups=["bacon", "plating_ingredients"]]
+position = Vector2(-28.8889, 48.8889)
 script = ExtResource("7_xoyhb")
 
 [node name="Bacon2Button" type="TextureButton" parent="BowlsContainer/YellowPlate/Bacon2"]
@@ -186,6 +189,7 @@ shape = SubResource("RectangleShape2D_0hkgn")
 debug_color = Color(0, 0.870752, 0.339255, 0.42)
 
 [node name="Bacon3" type="Area2D" parent="BowlsContainer/YellowPlate" groups=["bacon", "plating_ingredients"]]
+position = Vector2(4.44446, 26.6667)
 script = ExtResource("7_xoyhb")
 
 [node name="Bacon3Button" type="TextureButton" parent="BowlsContainer/YellowPlate/Bacon3"]
@@ -214,6 +218,7 @@ scale = Vector2(0.35, 0.35)
 texture = ExtResource("11_ubmik")
 
 [node name="Cheese1" type="Area2D" parent="BowlsContainer/PinkBowl" groups=["cheese", "plating_ingredients"]]
+position = Vector2(-11.4285, -34.2856)
 script = ExtResource("7_xoyhb")
 metadata/_edit_group_ = true
 
@@ -236,6 +241,7 @@ shape = SubResource("CircleShape2D_ck5dp")
 debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
 
 [node name="Cheese2" type="Area2D" parent="BowlsContainer/PinkBowl" groups=["cheese", "plating_ingredients"]]
+position = Vector2(57.1429, 14.2858)
 script = ExtResource("7_xoyhb")
 
 [node name="Cheese2Button" type="TextureButton" parent="BowlsContainer/PinkBowl/Cheese2"]
@@ -257,6 +263,7 @@ shape = SubResource("CircleShape2D_ck5dp")
 debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
 
 [node name="Cheese3" type="Area2D" parent="BowlsContainer/PinkBowl" groups=["cheese", "plating_ingredients"]]
+position = Vector2(-20.0001, 40.0002)
 script = ExtResource("7_xoyhb")
 
 [node name="Cheese3Button" type="TextureButton" parent="BowlsContainer/PinkBowl/Cheese3"]
@@ -291,7 +298,7 @@ shape = SubResource("CircleShape2D_7eebt")
 debug_color = Color(0.921569, 0, 0.160784, 0.607843)
 
 [node name="CheeseTarget1" type="Area2D" parent="TargetSpots"]
-position = Vector2(788, 430)
+position = Vector2(800, 440)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/CheeseTarget1"]
 scale = Vector2(0.35, 0.35)
@@ -299,7 +306,7 @@ shape = SubResource("CapsuleShape2D_li8jf")
 debug_color = Color(0.0991462, 0.0976386, 1, 0.627451)
 
 [node name="CheeseTarget2" type="Area2D" parent="TargetSpots"]
-position = Vector2(1114, 477)
+position = Vector2(1116, 469)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/CheeseTarget2"]
 position = Vector2(-1, 1)
@@ -308,7 +315,7 @@ shape = SubResource("CapsuleShape2D_li8jf")
 debug_color = Color(0.0980392, 0.0980392, 1, 0.627451)
 
 [node name="CheeseTarget3" type="Area2D" parent="TargetSpots"]
-position = Vector2(926, 722)
+position = Vector2(937, 716)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/CheeseTarget3"]
 scale = Vector2(0.35, 0.35)
@@ -324,6 +331,7 @@ shape = SubResource("RectangleShape2D_81ynu")
 debug_color = Color(0, 0.870588, 0.341176, 0.419608)
 
 [node name="BaconTarget2" type="Area2D" parent="TargetSpots"]
+position = Vector2(7, -26)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSpots/BaconTarget2"]
 position = Vector2(1128.08, 675.409)

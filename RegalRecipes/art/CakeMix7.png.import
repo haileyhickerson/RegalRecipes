@@ -3,20 +3,22 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3npmu4f4eoja"
-path="res://.godot/imported/CakeMix7.png-620c4bc634ac3d83c9397fba20d190b8.ctex"
+path.bptc="res://.godot/imported/CakeMix7.png-620c4bc634ac3d83c9397fba20d190b8.bptc.ctex"
+path.astc="res://.godot/imported/CakeMix7.png-620c4bc634ac3d83c9397fba20d190b8.astc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/CakeMix7.png"
-dest_files=["res://.godot/imported/CakeMix7.png-620c4bc634ac3d83c9397fba20d190b8.ctex"]
+dest_files=["res://.godot/imported/CakeMix7.png-620c4bc634ac3d83c9397fba20d190b8.bptc.ctex", "res://.godot/imported/CakeMix7.png-620c4bc634ac3d83c9397fba20d190b8.astc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

@@ -3,20 +3,22 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c54pq66ot3c7o"
-path="res://.godot/imported/ButterSlice_Click.png-134c3c15814e79a368d5b939edfd32a4.ctex"
+path.bptc="res://.godot/imported/ButterSlice_Click.png-134c3c15814e79a368d5b939edfd32a4.bptc.ctex"
+path.astc="res://.godot/imported/ButterSlice_Click.png-134c3c15814e79a368d5b939edfd32a4.astc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/ButterSlice_Click.png"
-dest_files=["res://.godot/imported/ButterSlice_Click.png-134c3c15814e79a368d5b939edfd32a4.ctex"]
+dest_files=["res://.godot/imported/ButterSlice_Click.png-134c3c15814e79a368d5b939edfd32a4.bptc.ctex", "res://.godot/imported/ButterSlice_Click.png-134c3c15814e79a368d5b939edfd32a4.astc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

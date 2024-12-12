@@ -3,20 +3,22 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bulucbnf2dqew"
-path="res://.godot/imported/EggBatter4.png-2f85d86bf4c1a6a7d5609bc6f76a535c.ctex"
+path.bptc="res://.godot/imported/EggBatter4.png-2f85d86bf4c1a6a7d5609bc6f76a535c.bptc.ctex"
+path.astc="res://.godot/imported/EggBatter4.png-2f85d86bf4c1a6a7d5609bc6f76a535c.astc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/EggBatter4.png"
-dest_files=["res://.godot/imported/EggBatter4.png-2f85d86bf4c1a6a7d5609bc6f76a535c.ctex"]
+dest_files=["res://.godot/imported/EggBatter4.png-2f85d86bf4c1a6a7d5609bc6f76a535c.bptc.ctex", "res://.godot/imported/EggBatter4.png-2f85d86bf4c1a6a7d5609bc6f76a535c.astc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

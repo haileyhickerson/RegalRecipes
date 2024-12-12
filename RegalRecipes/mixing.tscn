@@ -246,13 +246,19 @@ texture = ExtResource("3_qxghy")
 position = Vector2(960, 540)
 texture = ExtResource("5_08ida")
 
+[node name="MixingCircle(2)2" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("5_08ida")
+
+[node name="MixingCircle(2)3" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("5_08ida")
+
 [node name="Peas" type="AnimatedSprite2D" parent="."]
 position = Vector2(960, 540)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_vysqn")
 animation = &"mixed"
-frame = 21
-frame_progress = 1.0
 
 [node name="Marker1" type="Marker2D" parent="."]
 position = Vector2(1270, 170)

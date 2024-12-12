@@ -1,33 +1,44 @@
-[gd_scene load_steps=7 format=3 uid="uid://chyl17eul2opw"]
+[gd_scene load_steps=17 format=3 uid="uid://chyl17eul2opw"]
 
 [ext_resource type="Script" path="res://taste_test.gd" id="1_k0ye4"]
-[ext_resource type="Texture2D" uid="uid://unhihlkjqmxl" path="res://art/HappyKing.png" id="2_sxch4"]
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="3_2vj1n"]
-[ext_resource type="Texture2D" uid="uid://qkevufmcicqi" path="res://art/MidKing.png" id="3_ro54v"]
-[ext_resource type="Texture2D" uid="uid://2gi5nic1n7id" path="res://art/AngryKing.png" id="4_qccq3"]
+[ext_resource type="Texture2D" uid="uid://ctqajorwlbayr" path="res://art/RoyalsArt/HappyRoyals.png" id="4_elm8o"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="4_x2kis"]
+[ext_resource type="Texture2D" uid="uid://b4tebaoshhpm8" path="res://art/RoyalsArt/MidRoyals.png" id="5_6bvsk"]
+[ext_resource type="Texture2D" uid="uid://d13yvc8vxoc3c" path="res://art/RoyalsArt/AngryRoyals.png" id="6_0pcyt"]
+[ext_resource type="Texture2D" uid="uid://ldclq7sas4d8" path="res://art/RoyalsArt/TastingRoyals.png" id="7_2qs17"]
+[ext_resource type="Texture2D" uid="uid://c0en4ff5vqanf" path="res://art/RoyalsArt/PeaBowl.png" id="8_agqqh"]
+[ext_resource type="Texture2D" uid="uid://cjf5u74cpopra" path="res://art/Cheese1.png" id="9_cvj41"]
+[ext_resource type="Texture2D" uid="uid://byirk4ntkiej2" path="res://art/Bacon1.png" id="10_ioje1"]
+[ext_resource type="Texture2D" uid="uid://urirejdrw4w5" path="res://art/Bacon2.png" id="11_s4yye"]
+[ext_resource type="Texture2D" uid="uid://cnn7n3sd7xt8c" path="res://art/Bacon3.png" id="12_7c81x"]
+[ext_resource type="Texture2D" uid="uid://cvwtnwtenb6mp" path="res://art/SteakPlate.png" id="13_8jktp"]
+[ext_resource type="Texture2D" uid="uid://drd6guywl6oru" path="res://art/UncookedCarrot.png" id="14_s46a4"]
+[ext_resource type="Texture2D" uid="uid://b1arja734r8pv" path="res://art/Potato.png" id="15_bgddg"]
+[ext_resource type="Texture2D" uid="uid://dxvl0jto6vyjm" path="res://art/CakePlate.png" id="16_iqod3"]
 
 [node name="Taste Test" type="Node2D"]
 script = ExtResource("1_k0ye4")
 
-[node name="HappyKing" type="TextureRect" parent="."]
-visible = false
-offset_left = 4.0
-offset_right = 44.0
-offset_bottom = 40.0
-texture = ExtResource("2_sxch4")
+[node name="Tasting" type="TextureRect" parent="."]
+offset_left = -95.0
+offset_top = -54.0
+offset_right = 2025.0
+offset_bottom = 2066.0
+texture = ExtResource("7_2qs17")
+expand_mode = 1
+stretch_mode = 4
 
-[node name="TextBox" type="Sprite2D" parent="HappyKing"]
-position = Vector2(980, 795)
-scale = Vector2(0.579745, 0.490741)
+[node name="TextBox" type="Sprite2D" parent="Tasting"]
+position = Vector2(1046.75, 276.75)
+scale = Vector2(0.588281, 0.397685)
 texture = ExtResource("3_2vj1n")
 
-[node name="Label" type="Label" parent="HappyKing"]
-layout_mode = 0
-offset_left = 582.0
-offset_top = 704.0
-offset_right = 1397.0
-offset_bottom = 876.0
+[node name="Label" type="Label" parent="Tasting"]
+offset_left = 642.75
+offset_top = 198.75
+offset_right = 1457.75
+offset_bottom = 370.75
 scale = Vector2(0.99668, 1)
 theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
 theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
@@ -35,29 +46,63 @@ theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1
 theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 10
 theme_override_fonts/font = ExtResource("4_x2kis")
-theme_override_font_sizes/font_size = 60
-text = "Wow! King Figglebottom is 
+theme_override_font_sizes/font_size = 52
+text = "The Figglebottoms
+are now tasting your dish..."
+horizontal_alignment = 1
+
+[node name="HappyKing" type="TextureRect" parent="."]
+visible = false
+offset_left = -95.0
+offset_top = -54.0
+offset_right = 2025.0
+offset_bottom = 2066.0
+texture = ExtResource("4_elm8o")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextBox" type="Sprite2D" parent="HappyKing"]
+position = Vector2(1046.75, 276.75)
+scale = Vector2(0.588281, 0.397685)
+texture = ExtResource("3_2vj1n")
+
+[node name="Label" type="Label" parent="HappyKing"]
+offset_left = 642.75
+offset_top = 198.75
+offset_right = 1457.75
+offset_bottom = 370.75
+scale = Vector2(0.99668, 1)
+theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
+theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
+theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("4_x2kis")
+theme_override_font_sizes/font_size = 52
+text = "Wow! The Figglebottoms are
 quite impressed with your skills!"
 horizontal_alignment = 1
 
 [node name="MidKing" type="TextureRect" parent="."]
 visible = false
-offset_left = 4.0
-offset_right = 44.0
-offset_bottom = 40.0
-texture = ExtResource("3_ro54v")
+offset_left = -95.0
+offset_top = -54.0
+offset_right = 2025.0
+offset_bottom = 2066.0
+texture = ExtResource("5_6bvsk")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="TextBox" type="Sprite2D" parent="MidKing"]
-position = Vector2(980, 795)
-scale = Vector2(0.579745, 0.490741)
+position = Vector2(1046.75, 276.75)
+scale = Vector2(0.588281, 0.397685)
 texture = ExtResource("3_2vj1n")
 
 [node name="Label" type="Label" parent="MidKing"]
-layout_mode = 0
-offset_left = 582.0
-offset_top = 704.0
-offset_right = 1397.0
-offset_bottom = 876.0
+offset_left = 642.75
+offset_top = 198.75
+offset_right = 1457.75
+offset_bottom = 370.75
 scale = Vector2(0.99668, 1)
 theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
 theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
@@ -65,29 +110,31 @@ theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1
 theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 10
 theme_override_fonts/font = ExtResource("4_x2kis")
-theme_override_font_sizes/font_size = 60
-text = "King Figglebottom is not
-impressed with your skills."
+theme_override_font_sizes/font_size = 52
+text = "The Figglebottoms are not
+very impressed with your skills."
 horizontal_alignment = 1
 
 [node name="AngryKing" type="TextureRect" parent="."]
 visible = false
-offset_left = 4.0
-offset_right = 44.0
-offset_bottom = 40.0
-texture = ExtResource("4_qccq3")
+offset_left = -95.0
+offset_top = -54.0
+offset_right = 2025.0
+offset_bottom = 2066.0
+texture = ExtResource("6_0pcyt")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="TextBox" type="Sprite2D" parent="AngryKing"]
-position = Vector2(980, 795)
-scale = Vector2(0.579745, 0.490741)
+position = Vector2(1046.75, 276.75)
+scale = Vector2(0.588281, 0.397685)
 texture = ExtResource("3_2vj1n")
 
 [node name="Label" type="Label" parent="AngryKing"]
-layout_mode = 0
-offset_left = 582.0
-offset_top = 704.0
-offset_right = 1397.0
-offset_bottom = 876.0
+offset_left = 642.75
+offset_top = 198.75
+offset_right = 1457.75
+offset_bottom = 370.75
 scale = Vector2(0.99668, 1)
 theme_override_colors/font_color = Color(0.336189, 0, 0.0626673, 1)
 theme_override_colors/font_shadow_color = Color(0.292376, 0.227954, 0.0796962, 1)
@@ -95,12 +142,13 @@ theme_override_colors/font_outline_color = Color(0.955534, 0.922653, 0.744937, 1
 theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 10
 theme_override_fonts/font = ExtResource("4_x2kis")
-theme_override_font_sizes/font_size = 55
-text = "King Figglebottom is 
+theme_override_font_sizes/font_size = 52
+text = "The Figglebottoms are utterly
 APPALLED by your lack of skills!"
 horizontal_alignment = 1
 
 [node name="Back Button" type="Button" parent="."]
+visible = false
 offset_left = 52.0
 offset_top = 31.0
 offset_right = 232.0
@@ -109,12 +157,334 @@ theme_override_font_sizes/font_size = 50
 text = "Back"
 
 [node name="Next Button" type="Button" parent="."]
+visible = false
 offset_left = 1695.0
 offset_top = 925.0
 offset_right = 1875.0
 offset_bottom = 1030.0
 theme_override_font_sizes/font_size = 50
 text = "Next"
+
+[node name="Recipe1" type="Node2D" parent="."]
+visible = false
+
+[node name="PeaBowl1" type="Sprite2D" parent="Recipe1"]
+position = Vector2(822, 734)
+scale = Vector2(0.0592532, 0.0592532)
+texture = ExtResource("8_agqqh")
+
+[node name="Cheese1" type="Sprite2D" parent="Recipe1/PeaBowl1"]
+position = Vector2(-742.576, -101.261)
+rotation = -0.388229
+scale = Vector2(0.15637, 0.156369)
+texture = ExtResource("9_cvj41")
+
+[node name="Cheese2" type="Sprite2D" parent="Recipe1/PeaBowl1"]
+position = Vector2(-101.26, -354.411)
+rotation = 0.312102
+scale = Vector2(0.195773, 0.195773)
+texture = ExtResource("9_cvj41")
+
+[node name="Cheese3" type="Sprite2D" parent="Recipe1/PeaBowl1"]
+position = Vector2(540.055, -33.7539)
+rotation = 0.312102
+scale = Vector2(0.164205, 0.164205)
+texture = ExtResource("9_cvj41")
+flip_h = true
+
+[node name="Bacon1" type="Sprite2D" parent="Recipe1/PeaBowl1"]
+position = Vector2(-472.549, -253.151)
+rotation = 0.462927
+scale = Vector2(0.244379, 0.196846)
+texture = ExtResource("10_ioje1")
+
+[node name="Bacon2" type="Sprite2D" parent="Recipe1/PeaBowl1"]
+position = Vector2(455.671, -286.904)
+rotation = 1.83252
+scale = Vector2(-0.266502, -0.210098)
+texture = ExtResource("11_s4yye")
+
+[node name="Bacon3" type="Sprite2D" parent="Recipe1/PeaBowl1"]
+position = Vector2(64.2882, 10.5559)
+rotation = 1.84153
+scale = Vector2(0.283354, 0.258388)
+texture = ExtResource("12_7c81x")
+
+[node name="PeaBowl2" type="Sprite2D" parent="Recipe1"]
+position = Vector2(477, 731)
+scale = Vector2(0.0592532, 0.0592532)
+texture = ExtResource("8_agqqh")
+
+[node name="Cheese1" type="Sprite2D" parent="Recipe1/PeaBowl2"]
+position = Vector2(-742.576, -101.261)
+rotation = -0.388229
+scale = Vector2(0.15637, 0.156369)
+texture = ExtResource("9_cvj41")
+
+[node name="Cheese2" type="Sprite2D" parent="Recipe1/PeaBowl2"]
+position = Vector2(-101.26, -354.411)
+rotation = 0.312102
+scale = Vector2(0.195773, 0.195773)
+texture = ExtResource("9_cvj41")
+
+[node name="Cheese3" type="Sprite2D" parent="Recipe1/PeaBowl2"]
+position = Vector2(540.055, -33.7539)
+rotation = 0.312102
+scale = Vector2(0.164205, 0.164205)
+texture = ExtResource("9_cvj41")
+flip_h = true
+
+[node name="Bacon1" type="Sprite2D" parent="Recipe1/PeaBowl2"]
+position = Vector2(-472.549, -253.151)
+rotation = 0.462927
+scale = Vector2(0.244379, 0.196846)
+texture = ExtResource("10_ioje1")
+
+[node name="Bacon2" type="Sprite2D" parent="Recipe1/PeaBowl2"]
+position = Vector2(455.671, -286.904)
+rotation = 1.83252
+scale = Vector2(-0.266502, -0.210098)
+texture = ExtResource("11_s4yye")
+
+[node name="Bacon3" type="Sprite2D" parent="Recipe1/PeaBowl2"]
+position = Vector2(64.2882, 10.5559)
+rotation = 1.84153
+scale = Vector2(0.283354, 0.258388)
+texture = ExtResource("12_7c81x")
+
+[node name="PeaBowl3" type="Sprite2D" parent="Recipe1"]
+position = Vector2(1524, 735)
+scale = Vector2(0.0592532, 0.0592532)
+texture = ExtResource("8_agqqh")
+
+[node name="Cheese1" type="Sprite2D" parent="Recipe1/PeaBowl3"]
+position = Vector2(-742.576, -101.261)
+rotation = -0.388229
+scale = Vector2(0.15637, 0.156369)
+texture = ExtResource("9_cvj41")
+
+[node name="Cheese2" type="Sprite2D" parent="Recipe1/PeaBowl3"]
+position = Vector2(-101.26, -354.411)
+rotation = 0.312102
+scale = Vector2(0.195773, 0.195773)
+texture = ExtResource("9_cvj41")
+
+[node name="Cheese3" type="Sprite2D" parent="Recipe1/PeaBowl3"]
+position = Vector2(540.055, -33.7539)
+rotation = 0.312102
+scale = Vector2(0.164205, 0.164205)
+texture = ExtResource("9_cvj41")
+flip_h = true
+
+[node name="Bacon1" type="Sprite2D" parent="Recipe1/PeaBowl3"]
+position = Vector2(-472.549, -253.151)
+rotation = 0.462927
+scale = Vector2(0.244379, 0.196846)
+texture = ExtResource("10_ioje1")
+
+[node name="Bacon2" type="Sprite2D" parent="Recipe1/PeaBowl3"]
+position = Vector2(455.671, -286.904)
+rotation = 1.83252
+scale = Vector2(-0.266502, -0.210098)
+texture = ExtResource("11_s4yye")
+
+[node name="Bacon3" type="Sprite2D" parent="Recipe1/PeaBowl3"]
+position = Vector2(64.2882, 10.5559)
+rotation = 1.84153
+scale = Vector2(0.283354, 0.258388)
+texture = ExtResource("12_7c81x")
+
+[node name="PeaBowl4" type="Sprite2D" parent="Recipe1"]
+position = Vector2(1186, 734)
+scale = Vector2(0.0592532, 0.0592532)
+texture = ExtResource("8_agqqh")
+
+[node name="Cheese1" type="Sprite2D" parent="Recipe1/PeaBowl4"]
+position = Vector2(-742.576, -101.261)
+rotation = -0.388229
+scale = Vector2(0.15637, 0.156369)
+texture = ExtResource("9_cvj41")
+
+[node name="Cheese2" type="Sprite2D" parent="Recipe1/PeaBowl4"]
+position = Vector2(-101.26, -354.411)
+rotation = 0.312102
+scale = Vector2(0.195773, 0.195773)
+texture = ExtResource("9_cvj41")
+
+[node name="Cheese3" type="Sprite2D" parent="Recipe1/PeaBowl4"]
+position = Vector2(540.055, -33.7539)
+rotation = 0.312102
+scale = Vector2(0.164205, 0.164205)
+texture = ExtResource("9_cvj41")
+flip_h = true
+
+[node name="Bacon1" type="Sprite2D" parent="Recipe1/PeaBowl4"]
+position = Vector2(-472.549, -253.151)
+rotation = 0.462927
+scale = Vector2(0.244379, 0.196846)
+texture = ExtResource("10_ioje1")
+
+[node name="Bacon2" type="Sprite2D" parent="Recipe1/PeaBowl4"]
+position = Vector2(455.671, -286.904)
+rotation = 1.83252
+scale = Vector2(-0.266502, -0.210098)
+texture = ExtResource("11_s4yye")
+
+[node name="Bacon3" type="Sprite2D" parent="Recipe1/PeaBowl4"]
+position = Vector2(64.2882, 10.5559)
+rotation = 1.84153
+scale = Vector2(0.283354, 0.258388)
+texture = ExtResource("12_7c81x")
+
+[node name="Recipe2" type="Node2D" parent="."]
+visible = false
+
+[node name="PeaBowl1" type="Sprite2D" parent="Recipe2"]
+position = Vector2(846, 755)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("13_8jktp")
+
+[node name="Carrot1" type="Sprite2D" parent="Recipe2/PeaBowl1"]
+position = Vector2(-529.707, -248.016)
+rotation = -0.225658
+scale = Vector2(0.359286, 0.359286)
+texture = ExtResource("14_s46a4")
+
+[node name="Carrot2" type="Sprite2D" parent="Recipe2/PeaBowl1"]
+position = Vector2(-643.423, -114.285)
+rotation = -0.333498
+scale = Vector2(0.429539, -0.378679)
+texture = ExtResource("14_s46a4")
+
+[node name="Carrot3" type="Sprite2D" parent="Recipe2/PeaBowl1"]
+position = Vector2(-486.279, -0.000419617)
+rotation = -0.551053
+scale = Vector2(0.338549, 0.332334)
+texture = ExtResource("14_s46a4")
+
+[node name="Potato" type="Sprite2D" parent="Recipe2/PeaBowl1"]
+position = Vector2(285.715, -371.429)
+rotation = 1.49297
+scale = Vector2(0.61341, 0.789162)
+texture = ExtResource("15_bgddg")
+region_enabled = true
+region_rect = Rect2(0, 0, 845.283, 1080)
+
+[node name="PeaBowl2" type="Sprite2D" parent="Recipe2"]
+position = Vector2(502, 753)
+scale = Vector2(0.070177, 0.070177)
+texture = ExtResource("13_8jktp")
+
+[node name="Potato2" type="Sprite2D" parent="Recipe2/PeaBowl2"]
+position = Vector2(341.993, -384.741)
+rotation = 1.49297
+scale = Vector2(0.611863, 0.787171)
+texture = ExtResource("15_bgddg")
+region_enabled = true
+region_rect = Rect2(0, 0, 845.283, 1080)
+
+[node name="Carrot4" type="Sprite2D" parent="Recipe2/PeaBowl2"]
+position = Vector2(-542.62, -261.641)
+rotation = -0.225658
+scale = Vector2(0.35838, 0.35838)
+texture = ExtResource("14_s46a4")
+
+[node name="Carrot5" type="Sprite2D" parent="Recipe2/PeaBowl2"]
+position = Vector2(-656.05, -128.246)
+rotation = -0.333498
+scale = Vector2(0.428456, -0.377724)
+texture = ExtResource("14_s46a4")
+
+[node name="Carrot6" type="Sprite2D" parent="Recipe2/PeaBowl2"]
+position = Vector2(-499.303, -14.2498)
+rotation = -0.551053
+scale = Vector2(0.337696, 0.331496)
+texture = ExtResource("14_s46a4")
+
+[node name="PeaBowl3" type="Sprite2D" parent="Recipe2"]
+position = Vector2(1481, 758)
+scale = Vector2(0.0681474, 0.0681474)
+texture = ExtResource("13_8jktp")
+
+[node name="Potato3" type="Sprite2D" parent="Recipe2/PeaBowl3"]
+position = Vector2(322.831, -396.199)
+rotation = 1.49297
+scale = Vector2(0.630086, 0.810616)
+texture = ExtResource("15_bgddg")
+region_enabled = true
+region_rect = Rect2(0, 0, 845.283, 1080)
+
+[node name="Carrot7" type="Sprite2D" parent="Recipe2/PeaBowl3"]
+position = Vector2(-529.433, -269.431)
+rotation = -0.225658
+scale = Vector2(0.369054, 0.369054)
+texture = ExtResource("14_s46a4")
+
+[node name="Carrot8" type="Sprite2D" parent="Recipe2/PeaBowl3"]
+position = Vector2(-646.242, -132.064)
+rotation = -0.333498
+scale = Vector2(0.441217, -0.388974)
+texture = ExtResource("14_s46a4")
+
+[node name="Carrot9" type="Sprite2D" parent="Recipe2/PeaBowl3"]
+position = Vector2(-484.826, -14.6725)
+rotation = -0.551053
+scale = Vector2(0.347753, 0.341369)
+texture = ExtResource("14_s46a4")
+
+[node name="PeaBowl4" type="Sprite2D" parent="Recipe2"]
+position = Vector2(1178, 753)
+scale = Vector2(0.0703456, 0.0703456)
+texture = ExtResource("13_8jktp")
+
+[node name="Carrot10" type="Sprite2D" parent="Recipe2/PeaBowl4"]
+position = Vector2(-555.535, -261.013)
+rotation = -0.225658
+scale = Vector2(0.357521, 0.357521)
+texture = ExtResource("14_s46a4")
+
+[node name="Carrot11" type="Sprite2D" parent="Recipe2/PeaBowl4"]
+position = Vector2(-668.693, -127.938)
+rotation = -0.333498
+scale = Vector2(0.427429, -0.376818)
+texture = ExtResource("14_s46a4")
+
+[node name="Carrot12" type="Sprite2D" parent="Recipe2/PeaBowl4"]
+position = Vector2(-512.32, -14.2153)
+rotation = -0.551053
+scale = Vector2(0.336886, 0.330701)
+texture = ExtResource("14_s46a4")
+
+[node name="Potato4" type="Sprite2D" parent="Recipe2/PeaBowl4"]
+position = Vector2(326.957, -383.819)
+rotation = 1.49297
+scale = Vector2(0.610397, 0.785285)
+texture = ExtResource("15_bgddg")
+region_enabled = true
+region_rect = Rect2(0, 0, 845.283, 1080)
+
+[node name="Recipe3" type="Node2D" parent="."]
+visible = false
+
+[node name="PeaBowl1" type="Sprite2D" parent="Recipe3"]
+position = Vector2(824, 726)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("16_iqod3")
+
+[node name="PeaBowl2" type="Sprite2D" parent="Recipe3"]
+position = Vector2(510, 726)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("16_iqod3")
+
+[node name="PeaBowl3" type="Sprite2D" parent="Recipe3"]
+position = Vector2(1210, 732)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("16_iqod3")
+
+[node name="PeaBowl4" type="Sprite2D" parent="Recipe3"]
+position = Vector2(1514, 731)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("16_iqod3")
 
 [connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Next Button" to="." method="_on_next_button_pressed"]

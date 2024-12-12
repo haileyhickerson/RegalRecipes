@@ -3,24 +3,26 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cadne302r2unw"
-path="res://.godot/imported/6.png-0a38d2fd7650637eccfd1089504f701f.ctex"
+path.bptc="res://.godot/imported/6.png-0a38d2fd7650637eccfd1089504f701f.bptc.ctex"
+path.astc="res://.godot/imported/6.png-0a38d2fd7650637eccfd1089504f701f.astc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/ArrowFrames/6.png"
-dest_files=["res://.godot/imported/6.png-0a38d2fd7650637eccfd1089504f701f.ctex"]
+dest_files=["res://.godot/imported/6.png-0a38d2fd7650637eccfd1089504f701f.bptc.ctex", "res://.godot/imported/6.png-0a38d2fd7650637eccfd1089504f701f.astc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
-compress/channel_pack=0
+compress/channel_pack=1
 mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0

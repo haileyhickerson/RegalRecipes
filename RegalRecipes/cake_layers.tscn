@@ -1,8 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://ce1hxiu7vhgmu"]
+[gd_scene load_steps=23 format=3 uid="uid://ce1hxiu7vhgmu"]
 
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="1_jdp80"]
 [ext_resource type="Script" path="res://cake_layers.gd" id="1_xnitr"]
 [ext_resource type="Script" path="res://sponge_layers.gd" id="2_hojnh"]
+[ext_resource type="Texture2D" uid="uid://cdkg3jv25y58v" path="res://art/StackingPlate.png" id="3_3aocp"]
 [ext_resource type="Texture2D" uid="uid://bfr6wuosll7lq" path="res://art/CakeLayer.png" id="4_djw5g"]
 [ext_resource type="Texture2D" uid="uid://oiobcrt2yych" path="res://art/CakeLayer_Click.png" id="5_0q5l8"]
 [ext_resource type="Texture2D" uid="uid://bymbqme831o70" path="res://art/CakeLayer_Hover.png" id="6_8vnqd"]
@@ -27,12 +28,18 @@ size = Vector2(432, 162)
 size = Vector2(228, 51)
 
 [node name="CakeLayers" type="Node2D"]
+position = Vector2(-13, -32)
 script = ExtResource("1_xnitr")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("1_jdp80")
+
+[node name="StackingPlate" type="Sprite2D" parent="."]
+position = Vector2(962, 896)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_3aocp")
 
 [node name="Line2D" type="Line2D" parent="."]
 visible = false

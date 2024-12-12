@@ -180,7 +180,7 @@ func _on_pea_target_area_entered(area: Area2D) -> void:
 	if area.is_in_group("peas"):
 		print("peas are in correct location!")
 		peas_correct = true;
-		add_score(10)
+		add_score(40)
 		
 
 # checks when center of peas has exited pea target area
@@ -188,21 +188,21 @@ func _on_pea_target_area_exited(area: Area2D) -> void:
 	if area.is_in_group("peas"):
 		print("peas are no longer in correct location!")
 		peas_correct = false;
-		subtract_score(10)
+		subtract_score(40)
 
 # checks when center of a cheese has entered cheese target area 1
 func _on_cheese_target_1_area_entered(area: Area2D) -> void:
 	if area.is_in_group("cheese"):
 		print("cheese 1 is in correct location!")
 		cheese1_correct = true;
-		add_score(15)
+		add_score(10)
 
 # checks when center of a cheese has exited cheese target area 1
 func _on_cheese_target_1_area_exited(area: Area2D) -> void:
 	if area.is_in_group("cheese"):
 		print("cheese 1 is no longer in correct location!")
 		cheese1_correct = false;
-		subtract_score(15)
+		subtract_score(10)
 
 
 # checks when center of a cheese has entered cheese target area 2
@@ -210,14 +210,14 @@ func _on_cheese_target_2_area_entered(area: Area2D) -> void:
 	if area.is_in_group("cheese"):
 		print("cheese 2 is in correct location!")
 		cheese2_correct = true;
-		add_score(15)
+		add_score(10)
 
 # checks when center of a cheese has exited cheese target area 2
 func _on_cheese_target_2_area_exited(area: Area2D) -> void:
 	if area.is_in_group("cheese"):
 		print("cheese 2 is no longer in correct location!")
 		cheese2_correct = false;
-		subtract_score(15)
+		subtract_score(10)
 
 		
 # checks when center of a cheese has entered cheese target area 3
@@ -225,14 +225,14 @@ func _on_cheese_target_3_area_entered(area: Area2D) -> void:
 	if area.is_in_group("cheese"):
 		print("cheese 3 is in correct location!")
 		cheese3_correct = true;
-		add_score(15)
+		add_score(10)
 
 # checks when center of a cheese has exited cheese target area 3
 func _on_cheese_target_3_area_exited(area: Area2D) -> void:
 	if area.is_in_group("cheese"):
 		print("cheese 3 is no longer in correct location!")
 		cheese3_correct = false;
-		subtract_score(15)
+		subtract_score(10)
 
 
 # checks when center of a piece of bacon has entered bacon target area 1
@@ -240,14 +240,14 @@ func _on_bacon_target_1_area_entered(area: Area2D) -> void:
 	if area.is_in_group("bacon"):
 		print("bacon 1 is in correct location!")
 		bacon1_correct = true;
-		add_score(15)
+		add_score(10)
 
 # checks when center of a piece of bacon has exited bacon target area 1
 func _on_bacon_target_1_area_exited(area: Area2D) -> void:
 	if area.is_in_group("bacon"):
 		print("bacon 1 is no longer in correct location!")
 		bacon1_correct = false;
-		subtract_score(15)
+		subtract_score(10)
 
 
 # checks when center of a piece of bacon has entered bacon target area 2
@@ -255,14 +255,14 @@ func _on_bacon_target_2_area_entered(area: Area2D) -> void:
 	if area.is_in_group("bacon"):
 		print("bacon 2 is in correct location!")
 		bacon2_correct = true;
-		add_score(15)
+		add_score(10)
 
 # checks when center of a piece of bacon has exited bacon target area 2
 func _on_bacon_target_2_area_exited(area: Area2D) -> void:
 	if area.is_in_group("bacon"):
 		print("bacon 2 is no longer in correct location!")
 		bacon2_correct = false;
-		subtract_score(15)
+		subtract_score(10)
 
 
 # checks when center of a piece of bacon has entered bacon target area 3
@@ -270,14 +270,14 @@ func _on_bacon_target_3_area_entered(area: Area2D) -> void:
 	if area.is_in_group("bacon"):
 		print("bacon 3 is in correct location!")
 		bacon3_correct = true;
-		add_score(15)
+		add_score(10)
 
 # checks when center of a piece of bacon has exited bacon target area 3
 func _on_bacon_target_3_area_exited(area: Area2D) -> void:
 	if area.is_in_group("bacon"):
 		print("bacon 3 is no longer in correct location!")
 		bacon3_correct = false;
-		subtract_score(15)
+		subtract_score(10)
 
 func _on_continue_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://taste_test.tscn")

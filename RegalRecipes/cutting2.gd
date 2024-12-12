@@ -36,7 +36,6 @@ func _input(event):
 	if event is InputEventMouseButton and event.pressed:
 		if first_space_pressed== true:
 			if total_cuts < 4:
-				total_cuts += 1
 				print(total_cuts)
 				##use marker2d position for knife
 				var knife_position_x= $Knife/KnifeTip.global_position.x
@@ -44,9 +43,11 @@ func _input(event):
 				if check_cut(knife_position_x):
 					var points_loss= calculate_deduction(knife_position_x)
 					print("cut is made", points_loss)
+					total_cuts += 1
 					$ChopSound.play()
 				else:
 					$ErrorSound.play()
+					$Missed.play()
 					print("no cut is made")
 					score-= deduction_cut
 				update_score_display()
@@ -60,6 +61,7 @@ func _input(event):
 				$Cut1.visible= false
 				$Cut2.visible= false
 				$Cut3.visible= true
+				ideal_cut_points.append(1167)
 				update_score_display()
 				score= max(score,0)
 				
@@ -74,13 +76,14 @@ func _input(event):
 
 func check_cut(knife_position_x):
 	var cut_made = false
-	for i in range(1,len(ideal_cut_points)):
+	for i in range(0,len(ideal_cut_points)):
 		var cut_point= ideal_cut_points[i]
 	#for cut_point in ideal_cut_points:
 		print("cutx:",cut_point)
 		if abs(knife_position_x - cut_point) <= cut_threshold:
 			print("Successful cut at position:", knife_position_x,"and cut point", cut_point)
 			lines[i].hide()
+			ideal_cut_points.remove_at(i)
 			cut_made= true
 			break
 		else:

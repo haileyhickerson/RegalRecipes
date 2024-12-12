@@ -1,9 +1,56 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5kee4ldma51b"]
+[gd_scene load_steps=6 format=3 uid="uid://b5kee4ldma51b"]
 
-[ext_resource type="Texture2D" uid="uid://ctan7k6oc6pjy" path="res://music&sounds/Untitled (Presentation) (11).png" id="1_u24cr"]
+[ext_resource type="Texture2D" uid="uid://ctqajorwlbayr" path="res://art/RoyalsArt/HappyRoyals.png" id="1_m7cvl"]
+[ext_resource type="Script" path="res://thanks_for_playing.gd" id="1_ou07n"]
+[ext_resource type="Texture2D" uid="uid://cs2rh6gt2psqx" path="res://art/ButterspoonFull.png" id="2_2mfi6"]
+[ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="3_jqou6"]
+[ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="4_03q1h"]
 
 [node name="ThanksForPlaying" type="Node2D"]
+script = ExtResource("1_ou07n")
 
 [node name="Untitled(presentation)(11)" type="Sprite2D" parent="."]
-position = Vector2(963, 547)
-texture = ExtResource("1_u24cr")
+position = Vector2(778, 584)
+scale = Vector2(0.570246, 0.570246)
+texture = ExtResource("1_m7cvl")
+
+[node name="ButterspoonFull" type="Sprite2D" parent="."]
+position = Vector2(1694, 758)
+scale = Vector2(0.445829, 0.445829)
+texture = ExtResource("2_2mfi6")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 746.0
+offset_top = 833.0
+offset_right = 1026.0
+offset_bottom = 910.0
+scale = Vector2(1.53955, 1.53955)
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/h_separation = 15
+theme_override_fonts/font = ExtResource("4_03q1h")
+theme_override_font_sizes/font_size = 50
+text = "Main Menu"
+
+[node name="SmallTextBox" type="Sprite2D" parent="."]
+position = Vector2(843.5, 245)
+scale = Vector2(0.845313, 0.447315)
+texture = ExtResource("3_jqou6")
+
+[node name="Label" type="Label" parent="SmallTextBox"]
+offset_left = -641.775
+offset_top = -203.436
+offset_right = 900.225
+offset_bottom = 9.5638
+scale = Vector2(0.884808, 1.80673)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("4_03q1h")
+theme_override_font_sizes/font_size = 50
+text = "Congratulations! Due to your excellent culinary skills, the 
+Figglebottoms have officially decided to hire you as their new head chef.
+Welcome to the Royal Family!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

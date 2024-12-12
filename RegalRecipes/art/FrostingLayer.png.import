@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2eucllhk60ku"
-path="res://.godot/imported/FrostingLayer.png-568c7ab19190ad1c2eb43a61ec5e35ec.ctex"
+path.s3tc="res://.godot/imported/FrostingLayer.png-568c7ab19190ad1c2eb43a61ec5e35ec.s3tc.ctex"
+path.etc2="res://.godot/imported/FrostingLayer.png-568c7ab19190ad1c2eb43a61ec5e35ec.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/FrostingLayer.png"
-dest_files=["res://.godot/imported/FrostingLayer.png-568c7ab19190ad1c2eb43a61ec5e35ec.ctex"]
+dest_files=["res://.godot/imported/FrostingLayer.png-568c7ab19190ad1c2eb43a61ec5e35ec.s3tc.ctex", "res://.godot/imported/FrostingLayer.png-568c7ab19190ad1c2eb43a61ec5e35ec.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

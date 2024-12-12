@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dh7a77tjt2pm2"]
+[gd_scene load_steps=24 format=3 uid="uid://dh7a77tjt2pm2"]
 
 [ext_resource type="Script" path="res://cutting2.gd" id="1_6rne2"]
 [ext_resource type="Texture2D" uid="uid://b7paioai6w1g5" path="res://art/CuttingBoard.png" id="2_uxtnr"]
@@ -12,6 +12,14 @@
 [ext_resource type="AudioStream" uid="uid://c130kk5w6p27c" path="res://music&sounds/error.wav" id="10_rapid"]
 [ext_resource type="AudioStream" uid="uid://c26aa08an6ydu" path="res://music&sounds/chop2.wav" id="11_7kwmt"]
 [ext_resource type="Texture2D" uid="uid://qbopve72181c" path="res://art/Plate.png" id="12_4get2"]
+[ext_resource type="Texture2D" uid="uid://bo8bn2ynuf74q" path="res://art/XBlank.png" id="13_ha60q"]
+[ext_resource type="Texture2D" uid="uid://cjbl4vvkic4oa" path="res://art/X6.png" id="14_5i2q4"]
+[ext_resource type="Texture2D" uid="uid://dwop0fynh6wue" path="res://art/X5.png" id="15_4xy21"]
+[ext_resource type="Texture2D" uid="uid://dlbn2mvts7wn" path="res://art/X4.png" id="16_ebge4"]
+[ext_resource type="Texture2D" uid="uid://bvap7te02jfvq" path="res://art/X3.png" id="17_1s1fq"]
+[ext_resource type="Texture2D" uid="uid://cjmt3o25rpbp2" path="res://art/X2.png" id="18_1vekt"]
+[ext_resource type="Texture2D" uid="uid://b3rfqcvdq2mlc" path="res://art/X1.png" id="19_y0qal"]
+[ext_resource type="Texture2D" uid="uid://bjy73310ch3go" path="res://art/X.png" id="20_esoar"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0hlai"]
 animations = [{
@@ -26,6 +34,92 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y8gqb"]
 size = Vector2(25.3293, 344.501)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7d5uj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_ha60q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5i2q4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4xy21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ebge4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1s1fq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1vekt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_y0qal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_esoar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_esoar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_esoar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_esoar")
+}, {
+"duration": 20.0,
+"texture": ExtResource("20_esoar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_esoar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_esoar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_esoar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_esoar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_esoar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_esoar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_esoar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_y0qal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1vekt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1s1fq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ebge4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4xy21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5i2q4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ha60q")
+}],
+"loop": false,
+"name": &"X",
+"speed": 40.0
+}]
 
 [node name="Cutting2" type="Node2D"]
 script = ExtResource("1_6rne2")
@@ -174,6 +268,12 @@ text = "b
 "
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="Missed" type="AnimatedSprite2D" parent="."]
+position = Vector2(371, 329)
+scale = Vector2(0.119207, 0.119207)
+sprite_frames = SubResource("SpriteFrames_7d5uj")
+animation = &"X"
 
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="timeout" from="Knife/Cutting_Timer" to="." method="_on_cutting_timer_timeout"]

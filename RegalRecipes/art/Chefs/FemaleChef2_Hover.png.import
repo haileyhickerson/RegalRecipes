@@ -3,20 +3,22 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jtsxhewmaayh"
-path="res://.godot/imported/FemaleChef2_Hover.png-73e766cc04854f1372eb6da42c1c7ce2.ctex"
+path.bptc="res://.godot/imported/FemaleChef2_Hover.png-73e766cc04854f1372eb6da42c1c7ce2.bptc.ctex"
+path.astc="res://.godot/imported/FemaleChef2_Hover.png-73e766cc04854f1372eb6da42c1c7ce2.astc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/Chefs/FemaleChef2_Hover.png"
-dest_files=["res://.godot/imported/FemaleChef2_Hover.png-73e766cc04854f1372eb6da42c1c7ce2.ctex"]
+dest_files=["res://.godot/imported/FemaleChef2_Hover.png-73e766cc04854f1372eb6da42c1c7ce2.bptc.ctex", "res://.godot/imported/FemaleChef2_Hover.png-73e766cc04854f1372eb6da42c1c7ce2.astc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

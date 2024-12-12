@@ -3,20 +3,22 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jc1lkp7wujrg"
-path="res://.godot/imported/BeefSauce3.png-5935c96d54358d2c8c5af4a32b8b10d9.ctex"
+path.bptc="res://.godot/imported/BeefSauce3.png-5935c96d54358d2c8c5af4a32b8b10d9.bptc.ctex"
+path.astc="res://.godot/imported/BeefSauce3.png-5935c96d54358d2c8c5af4a32b8b10d9.astc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/BeefSauce3.png"
-dest_files=["res://.godot/imported/BeefSauce3.png-5935c96d54358d2c8c5af4a32b8b10d9.ctex"]
+dest_files=["res://.godot/imported/BeefSauce3.png-5935c96d54358d2c8c5af4a32b8b10d9.bptc.ctex", "res://.godot/imported/BeefSauce3.png-5935c96d54358d2c8c5af4a32b8b10d9.astc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

@@ -3,20 +3,22 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi0psb2mi2r74"
-path="res://.godot/imported/FemaleChef1_Mask.png-61f899993358e24e82d0fd279b7ea997.ctex"
+path.bptc="res://.godot/imported/FemaleChef1_Mask.png-61f899993358e24e82d0fd279b7ea997.bptc.ctex"
+path.astc="res://.godot/imported/FemaleChef1_Mask.png-61f899993358e24e82d0fd279b7ea997.astc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/Chefs/FemaleChef1_Mask.png"
-dest_files=["res://.godot/imported/FemaleChef1_Mask.png-61f899993358e24e82d0fd279b7ea997.ctex"]
+dest_files=["res://.godot/imported/FemaleChef1_Mask.png-61f899993358e24e82d0fd279b7ea997.bptc.ctex", "res://.godot/imported/FemaleChef1_Mask.png-61f899993358e24e82d0fd279b7ea997.astc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

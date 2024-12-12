@@ -3,24 +3,26 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6m6j5xs1yw2q"
-path="res://.godot/imported/BeefSauced4.png-c4414e2e5514f10e1919ea9f2acdf105.ctex"
+path.bptc="res://.godot/imported/BeefSauced4.png-c4414e2e5514f10e1919ea9f2acdf105.bptc.ctex"
+path.astc="res://.godot/imported/BeefSauced4.png-c4414e2e5514f10e1919ea9f2acdf105.astc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/MixingSauceFrames/BeefSauced4.png"
-dest_files=["res://.godot/imported/BeefSauced4.png-c4414e2e5514f10e1919ea9f2acdf105.ctex"]
+dest_files=["res://.godot/imported/BeefSauced4.png-c4414e2e5514f10e1919ea9f2acdf105.bptc.ctex", "res://.godot/imported/BeefSauced4.png-c4414e2e5514f10e1919ea9f2acdf105.astc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
-compress/channel_pack=0
+compress/channel_pack=1
 mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0

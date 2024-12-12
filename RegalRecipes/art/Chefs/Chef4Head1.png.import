@@ -3,20 +3,22 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3v5utdl6sq5g"
-path="res://.godot/imported/Chef4Head1.png-57ee7925358fb8b60b7aa83186697229.ctex"
+path.bptc="res://.godot/imported/Chef4Head1.png-57ee7925358fb8b60b7aa83186697229.bptc.ctex"
+path.astc="res://.godot/imported/Chef4Head1.png-57ee7925358fb8b60b7aa83186697229.astc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/Chefs/Chef4Head1.png"
-dest_files=["res://.godot/imported/Chef4Head1.png-57ee7925358fb8b60b7aa83186697229.ctex"]
+dest_files=["res://.godot/imported/Chef4Head1.png-57ee7925358fb8b60b7aa83186697229.bptc.ctex", "res://.godot/imported/Chef4Head1.png-57ee7925358fb8b60b7aa83186697229.astc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

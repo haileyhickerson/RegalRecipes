@@ -3,20 +3,22 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b18m0772uijl1"
-path="res://.godot/imported/BlueBowl.png-31ac888e1a0202cc3568c99cc8385d0d.ctex"
+path.bptc="res://.godot/imported/BlueBowl.png-31ac888e1a0202cc3568c99cc8385d0d.bptc.ctex"
+path.astc="res://.godot/imported/BlueBowl.png-31ac888e1a0202cc3568c99cc8385d0d.astc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/BlueBowl.png"
-dest_files=["res://.godot/imported/BlueBowl.png-31ac888e1a0202cc3568c99cc8385d0d.ctex"]
+dest_files=["res://.godot/imported/BlueBowl.png-31ac888e1a0202cc3568c99cc8385d0d.bptc.ctex", "res://.godot/imported/BlueBowl.png-31ac888e1a0202cc3568c99cc8385d0d.astc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

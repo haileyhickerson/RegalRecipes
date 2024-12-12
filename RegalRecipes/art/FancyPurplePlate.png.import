@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bprcpf63o5abq"
-path="res://.godot/imported/FancyPurplePlate.png-a7c261c45c65b6edef89910e1cd91dc8.ctex"
+path.s3tc="res://.godot/imported/FancyPurplePlate.png-a7c261c45c65b6edef89910e1cd91dc8.s3tc.ctex"
+path.etc2="res://.godot/imported/FancyPurplePlate.png-a7c261c45c65b6edef89910e1cd91dc8.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/FancyPurplePlate.png"
-dest_files=["res://.godot/imported/FancyPurplePlate.png-a7c261c45c65b6edef89910e1cd91dc8.ctex"]
+dest_files=["res://.godot/imported/FancyPurplePlate.png-a7c261c45c65b6edef89910e1cd91dc8.s3tc.ctex", "res://.godot/imported/FancyPurplePlate.png-a7c261c45c65b6edef89910e1cd91dc8.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

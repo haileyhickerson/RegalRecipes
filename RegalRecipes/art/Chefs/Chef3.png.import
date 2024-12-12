@@ -3,24 +3,26 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpxvml2y32vvi"
-path="res://.godot/imported/Chef3.png-396ed3a691523f2ab5b14f6e98f09599.ctex"
+path.bptc="res://.godot/imported/Chef3.png-396ed3a691523f2ab5b14f6e98f09599.bptc.ctex"
+path.astc="res://.godot/imported/Chef3.png-396ed3a691523f2ab5b14f6e98f09599.astc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/Chefs/Chef3.png"
-dest_files=["res://.godot/imported/Chef3.png-396ed3a691523f2ab5b14f6e98f09599.ctex"]
+dest_files=["res://.godot/imported/Chef3.png-396ed3a691523f2ab5b14f6e98f09599.bptc.ctex", "res://.godot/imported/Chef3.png-396ed3a691523f2ab5b14f6e98f09599.astc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
-compress/channel_pack=0
+compress/channel_pack=1
 mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0

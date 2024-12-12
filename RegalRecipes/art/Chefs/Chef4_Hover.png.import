@@ -3,20 +3,22 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kl2mf6f3fjoa"
-path="res://.godot/imported/Chef4_Hover.png-7c5879853e485536928a72e642977149.ctex"
+path.bptc="res://.godot/imported/Chef4_Hover.png-7c5879853e485536928a72e642977149.bptc.ctex"
+path.astc="res://.godot/imported/Chef4_Hover.png-7c5879853e485536928a72e642977149.astc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/Chefs/Chef4_Hover.png"
-dest_files=["res://.godot/imported/Chef4_Hover.png-7c5879853e485536928a72e642977149.ctex"]
+dest_files=["res://.godot/imported/Chef4_Hover.png-7c5879853e485536928a72e642977149.bptc.ctex", "res://.godot/imported/Chef4_Hover.png-7c5879853e485536928a72e642977149.astc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

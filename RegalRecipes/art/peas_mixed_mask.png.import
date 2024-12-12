@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cr25s5fbae5ku"
+path="res://.godot/imported/peas_mixed_mask.png-4a537217d0e73d1bdbe363e56c91dc07.res"
+
+[deps]
+
+source_file="res://art/peas_mixed_mask.png"
+dest_files=["res://.godot/imported/peas_mixed_mask.png-4a537217d0e73d1bdbe363e56c91dc07.res"]
+
+[params]
+
+create_from=0
+threshold=0.33

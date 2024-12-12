@@ -3,20 +3,22 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpmes2cwg0vi4"
-path="res://.godot/imported/Bacon2_Click.png-217617d450a1b5aac74056fc8d098fa1.ctex"
+path.bptc="res://.godot/imported/Bacon2_Click.png-217617d450a1b5aac74056fc8d098fa1.bptc.ctex"
+path.astc="res://.godot/imported/Bacon2_Click.png-217617d450a1b5aac74056fc8d098fa1.astc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://art/Bacon2_Click.png"
-dest_files=["res://.godot/imported/Bacon2_Click.png-217617d450a1b5aac74056fc8d098fa1.ctex"]
+dest_files=["res://.godot/imported/Bacon2_Click.png-217617d450a1b5aac74056fc8d098fa1.bptc.ctex", "res://.godot/imported/Bacon2_Click.png-217617d450a1b5aac74056fc8d098fa1.astc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
