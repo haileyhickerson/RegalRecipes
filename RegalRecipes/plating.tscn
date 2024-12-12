@@ -92,6 +92,7 @@ scale = Vector2(0.388448, 0.387528)
 texture = ExtResource("5_xm8gc")
 
 [node name="Taste Test Button" type="Button" parent="."]
+visible = false
 offset_left = 806.0
 offset_top = 883.0
 offset_right = 1178.0

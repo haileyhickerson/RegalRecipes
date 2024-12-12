@@ -675,11 +675,13 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="FancyCircle" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1802.61, 614.944)
 scale = Vector2(0.234465, 0.234465)
 texture = ExtResource("35_oolft")
 
 [node name="ButterspoonHead" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1793, 614)
 scale = Vector2(0.125031, 0.125031)
 texture = ExtResource("36_ooni6")

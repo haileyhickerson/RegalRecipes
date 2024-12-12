@@ -19,6 +19,7 @@ var cut_threshold = 30
 var first_space_pressed
 # Ready function
 func _ready() -> void:
+	first_space_pressed = false
 	$NextButton.hide()
 
 	for child in get_children():

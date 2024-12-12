@@ -45,10 +45,14 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if PlayerVariables.curr_recipe == 0:
+		$FancyCircle.show()
+		$ButterspoonHead.show()
 		if Input.is_action_pressed("move_up") or Input.is_action_pressed("move_down") or Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right"):
 			PlayerVariables.first_move = true
 	else:
 		PlayerVariables.first_move = true
+		$FancyCircle.hide()
+		$ButterspoonHead.hide()
 	
 	if not PlayerVariables.first_move:
 		$ChefText/MoveText.show()

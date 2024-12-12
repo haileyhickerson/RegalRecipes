@@ -100,6 +100,8 @@ func _on_taste_test_button_pressed()-> void:
 
 
 func _on_timer_1_timeout() -> void:
+	if !PlayerVariables.plating_completed:
+		$"Taste Test Button".show()
 	ReferencePic.visible= false
 	bowl_sprites.visible= true
 	$FancyCircle.visible=true
