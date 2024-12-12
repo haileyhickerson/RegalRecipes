@@ -281,9 +281,6 @@ func _on_continue_button_pressed() -> void:
 
 func _on_hint_button_pressed() -> void:
 	$HintButton.hide()
-	$FancyCircle.visible=false
-	$ButterspoonHead.visible= false
-	$HintText.visible=false
 	$HintReferencePic.visible= true
 	$HintTimer.wait_time= 1.0
 	$HintTimer.start()
