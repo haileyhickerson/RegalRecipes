@@ -68,7 +68,7 @@ func _process(delta: float) -> void:
 func update_score_label():
 	if score2<0:
 		score2=0
-	ScoringLabel.text= "Final Score: "+ str(score2)
+	ScoringLabel.text= "Final Score: "+ str(score2) + "/100"
 	
 func add_score(points2):
 	score2+= points2

@@ -37,9 +37,6 @@ func _ready():
 	#Timer1.wait_time= 3.0
 	#Timer1.start()
 	ScoreTextBox.visible= false
-	$FancyCircle.visible=false
-	$ButterspoonHead.visible= false
-	$HintText.visible=false
 	$ContinueButton.hide()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -74,7 +71,7 @@ func _process(delta: float) -> void:
 func update_score_label():
 	if score<0:
 		score=0
-	ScoringLabel.text= "Final Score: "+ str(score)
+	ScoringLabel.text= "Final Score: "+ str(score) + "/100"
 	
 func add_score(points):
 	score+= points
@@ -104,9 +101,6 @@ func _on_timer_1_timeout() -> void:
 		$"Taste Test Button".show()
 	ReferencePic.visible= false
 	bowl_sprites.visible= true
-	$FancyCircle.visible=true
-	$ButterspoonHead.visible= true
-	$HintText.visible=true
 	$HintButton.show()
 
 

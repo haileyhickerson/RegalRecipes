@@ -93,6 +93,6 @@ func update_score_display():
 
 
 func _on_timer_timeout() -> void:
-	$ScoreTextBox/Scoring.text = "Final Score: " + str(total_score)
+	$ScoreTextBox/Scoring.text = "Final Score: " + str(total_score) + "/100"
 	$ScoreTextBox.visible = true
 	station_completed = true

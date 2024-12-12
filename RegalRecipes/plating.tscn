@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://cvr2aoqdlckoa"]
+[gd_scene load_steps=47 format=3 uid="uid://cvr2aoqdlckoa"]
 
 [ext_resource type="Script" path="res://plating.gd" id="1_w55mi"]
 [ext_resource type="Texture2D" uid="uid://bs86vtvk24xme" path="res://art/WoodBackground.png" id="2_efjw4"]
@@ -39,8 +39,6 @@
 [ext_resource type="Texture2D" uid="uid://cftay0hmrkhd5" path="res://art/SmallTextBox.png" id="37_wvajo"]
 [ext_resource type="FontFile" uid="uid://cdnc67ivaiwec" path="res://fonts/DellaRespira-Regular.ttf" id="38_7o3ny"]
 [ext_resource type="AudioStream" uid="uid://djomc6da7lwrx" path="res://music&sounds/Plop.wav" id="41_r153b"]
-[ext_resource type="Texture2D" uid="uid://clopys7kwhryi" path="res://art/FancyCircle (1).png" id="42_ny8xw"]
-[ext_resource type="Texture2D" uid="uid://62217bqvvk7l" path="res://art/ButterspoonHead.png" id="43_gp3ct"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7l5m4"]
 radius = 34.6811
@@ -408,37 +406,6 @@ theme_override_font_sizes/font_size = 50
 text = "Continue!"
 
 [node name="HintTimer" type="Timer" parent="."]
-
-[node name="HintText" type="Sprite2D" parent="."]
-position = Vector2(205, 320)
-scale = Vector2(0.237839, 0.231018)
-texture = ExtResource("37_wvajo")
-metadata/_edit_group_ = true
-
-[node name="HintLabel" type="Label" parent="HintText"]
-offset_left = -729.443
-offset_top = -141.64
-offset_right = 764.557
-offset_bottom = 363.36
-theme_override_colors/font_color = Color(0.313726, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.317647, 0.0980392, 0.0980392, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("38_7o3ny")
-theme_override_font_sizes/font_size = 100
-text = "Can't remember? Take another look-- but points will be deducted!"
-horizontal_alignment = 1
-autowrap_mode = 3
-metadata/_edit_use_anchors_ = true
-
-[node name="FancyCircle" type="Sprite2D" parent="."]
-position = Vector2(365.611, 153.611)
-scale = Vector2(0.234465, 0.234465)
-texture = ExtResource("42_ny8xw")
-
-[node name="ButterspoonHead" type="Sprite2D" parent="."]
-position = Vector2(361.611, 154.41)
-scale = Vector2(0.125962, 0.125962)
-texture = ExtResource("43_gp3ct")
 
 [node name="PlopSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("41_r153b")
